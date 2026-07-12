@@ -125,22 +125,25 @@
   },
   "projects": {
     "title": "Proyek Terpilih",
-    "subtitle": "Riset, proyek akademik, dan personal di bidang data science dan software development.",
-    "openProject": "Lihat proyek",
-    "items": [
-      {
-        "title": "Prediksi Kualitas Udara PM2.5",
-        "description": "Riset skripsi menggunakan hybrid SCA-LSTM untuk memprediksi kualitas udara PM2.5. Meliputi preprocessing dataset, feature engineering, optimasi model, dan evaluasi dengan metrik RMSE, MAPE, dan R²."
+    "subtitle": "Pilih kategori yang ingin kamu jelajahi.",
+    "explore": "Jelajahi",
+    "back": "Kembali ke proyek",
+    "categoryEmptyTitle": "Proyek segera hadir",
+    "categoryEmptyDescription": "Karya dalam kategori ini sedang disiapkan. Pantau terus untuk notebook, dashboard, dan aplikasi.",
+    "categories": {
+      "ai-ml": {
+        "title": "AI & Machine Learning",
+        "description": "Membangun model prediktif dan sistem cerdas berbasis machine learning dan deep learning."
       },
-      {
-        "title": "Sistem Informasi Web — MPTI",
-        "description": "Memimpin pengembangan sistem informasi berbasis web di Universitas Ahmad Dahlan. Mengelola koordinasi tim, desain UI/UX, dan implementasi full stack dari perencanaan hingga deployment."
+      "dashboards": {
+        "title": "Interactive Dashboards",
+        "description": "Mengubah data menjadi dashboard interaktif dan insight bisnis yang bermakna."
       },
-      {
-        "title": "Studi Kasus Machine Learning",
-        "description": "Kumpulan proyek data science dari pelatihan Digital Talent Scholarship — predictive modeling, visualisasi data dengan Tableau, dan pipeline ML menggunakan ekosistem Python."
+      "software-dev": {
+        "title": "Software Development",
+        "description": "Membangun aplikasi web modern, REST API, dan solusi digital yang scalable."
       }
-    ]
+    }
   },
   "blog": {
     "title": "Catatan",

@@ -25,10 +25,11 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b-[3px] border-border bg-card">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:h-[4.5rem]">
-        <Link href="/" className="flex items-center gap-3">
-          <span className="sticker bg-accent-2 px-3 py-1.5 font-display text-sm font-black sm:text-base">
-            {siteConfig.logo}
-          </span>
+        <Link
+          href="/"
+          className="pop-btn pop-btn-primary px-3 py-1.5 font-display text-sm font-black sm:text-base"
+        >
+          {siteConfig.logo}
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
@@ -39,9 +40,9 @@ export function Navbar() {
                 <Link
                   href={route.href}
                   className={cn(
-                    "px-4 py-2 text-sm font-black uppercase tracking-wide transition-colors",
+                    "px-4 py-2 text-sm font-black uppercase tracking-wide",
                     isActive
-                      ? "sticker bg-accent-4 text-fg"
+                      ? "pop-btn bg-accent-4 text-fg"
                       : "text-muted hover:text-fg",
                   )}
                 >
@@ -63,7 +64,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="sticker flex h-10 w-10 items-center justify-center bg-card"
+            className="pop-btn pop-btn-ghost flex h-10 w-10 items-center justify-center"
             aria-label={isOpen ? t("closeMenu") : t("openMenu")}
           >
             {isOpen ? <X size={18} /> : <Menu size={18} />}

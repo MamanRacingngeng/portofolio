@@ -1,0 +1,65 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import { FolderOpen } from "lucide-react";
+import { Link } from "@/i18n/navigation";
+import type { ProjectCategoryId } from "@/data/portfolio";
+import { SectionTitle } from "@/components/ui/SectionTitle";
+
+type CategoryCopy = {
+  title: string;
+  description: string;
+};
+
+const accentMap = {
+  "ai-ml": "sky" as const,
+  dashboards: "pink" as const,
+  "software-dev": "lime" as const,
+};
+
+interface ProjectCategoryPageProps {
+  categoryId: ProjectCategoryId;
+}
+
+export function ProjectCategoryPage({ categoryId }: ProjectCategoryPageProps) {
+  const t = useTranslations("projects");
+  const categories = t.raw("categories") as Record<ProjectCategoryId, CategoryCopy>;
+  const copy = categories[categoryId];
+
+  return (
+    <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <div className="mx-auto max-w-4xl">
+        <div className="mb-8 border-b-[3px] border-border/10 pb-6 sm:mb-10 sm:pb-8">
+          <Link
+            href="/proyek"
+            className="pop-btn pop-btn-ghost inline-flex items-center px-4 py-2 text-sm"
+          >
+            {t("back")}
+          </Link>
+        </div>
+
+        <SectionTitle
+          title={copy.title}
+          subtitle={copy.description}
+          accent={accentMap[categoryId]}
+          align="center"
+          size="md"
+          showPolkadots
+          className="mb-10 sm:mb-12"
+        />
+
+        <div className="brutal-card flex min-h-[280px] flex-col items-center justify-center rounded-3xl p-10 text-center">
+          <div className="sticker mb-6 flex h-16 w-16 items-center justify-center bg-accent-2">
+            <FolderOpen size={28} />
+          </div>
+          <p className="text-xl font-black uppercase sm:text-2xl">
+            {t("categoryEmptyTitle")}
+          </p>
+          <p className="mt-4 max-w-md text-base text-muted">
+            {t("categoryEmptyDescription")}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

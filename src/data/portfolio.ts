@@ -55,6 +55,7 @@ export const techCategories: { id: string; items: TechItem[] }[] = [
       { id: "laravel", name: "Laravel", icon: "🔥", logo: "/images/tech/laravel.png", color: "#FF2D20" },
       { id: "react", name: "React", icon: "⚛", logo: "/images/tech/react.png", color: "#61DAFB" },
       { id: "nextjs", name: "Next.js", icon: "▲", logo: "/images/tech/nextjs.svg", color: "#000000" },
+      { id: "vercel", name: "Vercel", icon: "▲", logo: "/images/tech/vercel.png", color: "#000000" },
       { id: "nodejs", name: "Node.js", icon: "🟩", logo: "/images/tech/nodejs.png", color: "#339933" },
       { id: "codeigniter", name: "CodeIgniter", icon: "🔥", logo: "/images/tech/codeigniter.png", color: "#DD4814" },
     ],
@@ -84,11 +85,31 @@ export const techCategories: { id: string; items: TechItem[] }[] = [
   },
 ];
 
-export const projectMeta = [
-  { id: "pm25", tags: ["Python", "TensorFlow", "LSTM"], liveUrl: "#" },
-  { id: "webinfo", tags: ["Laravel", "React", "MySQL"], liveUrl: "#" },
-  { id: "ml", tags: ["Scikit-learn", "Pandas", "Tableau"], liveUrl: "#" },
+export const projectMeta: {
+  id: string;
+  tags: string[];
+  liveUrl: string;
+}[] = [];
+
+export const projectCategories = [
+  {
+    id: "ai-ml" as const,
+    slug: "ai-ml",
+    image: "/images/projects/ai-ml.png",
+  },
+  {
+    id: "dashboards" as const,
+    slug: "dashboards",
+    image: "/images/projects/dashboards.png",
+  },
+  {
+    id: "software-dev" as const,
+    slug: "software-dev",
+    image: "/images/projects/software-dev.png",
+  },
 ];
+
+export type ProjectCategoryId = (typeof projectCategories)[number]["id"];
 
 export const heroStats = [
   { value: "10+", key: "projects" as const },

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ProjectGrid } from "@/components/proyek/ProjectGrid";
+import { ProjectCategories } from "@/components/proyek/ProjectCategories";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -20,5 +20,5 @@ export default async function ProyekPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <ProjectGrid />;
+  return <ProjectCategories />;
 }

@@ -39,6 +39,44 @@ export const spaceFloatGentle = (duration: number, delay = 0) => ({
   },
 });
 
+export const spaceFloatVertical = (duration: number, delay = 0) => ({
+  animate: {
+    y: [0, -6, 4, -5, 0],
+  },
+  transition: {
+    duration,
+    repeat: Infinity,
+    ease: "easeInOut" as const,
+    delay,
+  },
+});
+
+export const spaceFloatSoft = (duration: number, delay = 0) => ({
+  animate: {
+    y: [0, -6, 2, -5, 0],
+  },
+  transition: {
+    duration: duration + 3,
+    repeat: Infinity,
+    ease: "easeInOut" as const,
+    delay,
+  },
+});
+
+export const spaceFloatPolkadot = (duration: number, delay = 0) => ({
+  animate: {
+    y: [0, -8, 4, -7, 0],
+    x: [0, 4, -3, 2, 0],
+    rotate: [-2, 1.5, -2.5, 1, -2],
+  },
+  transition: {
+    duration: duration + 2,
+    repeat: Infinity,
+    ease: "easeInOut" as const,
+    delay,
+  },
+});
+
 export const floatDurations = {
   lime: 8,
   sky: 9.5,
