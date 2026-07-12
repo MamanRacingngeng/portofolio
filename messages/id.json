@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "home": {
+      "title": "RAHMAN NENDHIARTO — Data Engineer & AI Enthusiast",
+      "description": "Portofolio Rahman Nendhiarto — Data Engineer, AI Enthusiast, dan Software Engineer."
+    },
+    "projects": {
+      "title": "Proyek — RAHN.",
+      "description": "Proyek pengembangan perangkat lunak dan machine learning."
+    },
+    "blog": {
+      "title": "Catatan — RAHN.",
+      "description": "Tulisan teknis, catatan riset, dan log pengembangan."
+    },
+    "certificates": {
+      "title": "Sertifikat — RAHN.",
+      "description": "Sertifikasi profesional dan credensial."
+    },
+    "guestbook": {
+      "title": "Ruang Pesan — RAHN.",
+      "description": "Tinggalkan pesan — sapa atau mulai percakapan."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "blog": "Blog",
+    "certificates": "Certificates",
+    "guestbook": "Guestbook",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu"
+  },
+  "hero": {
+    "badge": "PENGEMBANGAN PERANGKAT LUNAK • REKAYASA DATA • KECERDASAN BUATAN",
+    "taglineLines": [
+      "Membangun solusi digital yang cerdas melalui",
+      "pengembangan web modern, rekayasa data,",
+      "dan kecerdasan buatan."
+    ],
+    "tagline": "Saya membangun solusi cerdas berbasis data dengan menggabungkan Data Engineering, Artificial Intelligence, dan Software Development untuk menyelesaikan masalah dunia nyata. Passion saya terletak pada transformasi data mentah menjadi insight yang actionable dan aplikasi yang scalable untuk menghasilkan dampak yang bermakna.",
+    "bioParagraphs": [
+      "Didukung oleh sertifikasi profesional sebagai Associate Data Scientist (BNSP), riset machine learning secara hands-on, dan pengalaman memimpin proyek pengembangan perangkat lunak, saya telah mengembangkan keahlian di seluruh siklus data—mulai dari akuisisi data, preprocessing, dan feature engineering hingga predictive modeling, evaluasi, visualisasi, dan pengembangan aplikasi.",
+      "Di luar data engineering, saya merancang dan mengembangkan aplikasi web end-to-end sambil menciptakan antarmuka yang intuitif dan berpusat pada pengguna melalui prinsip UI/UX. Latar belakang multidisiplin saya memungkinkan saya menjembatani data engineering, artificial intelligence, dan software engineering menjadi solusi digital yang scalable, efisien, dan berdampak.",
+      "Saya passionate dalam continuous learning, mengadopsi teknologi baru, dan menyelesaikan masalah kompleks melalui analytical thinking. Tujuan saya adalah membangun sistem yang reliable, efisien, dan cerdas yang memberdayakan organisasi untuk membuat keputusan lebih baik, meningkatkan efisiensi operasional, dan mempercepat transformasi digital."
+    ],
+    "exploreProjects": "Lihat Proyek",
+    "downloadCv": "Unduh Resume",
+    "profilePhoto": "Foto profil",
+    "status": "Terbuka untuk peluang",
+    "roleBadge": "Data & AI",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "githubAria": "Kunjungi profil GitHub",
+      "linkedinAria": "Kunjungi profil LinkedIn"
+    },
+    "stats": {
+      "projects": "Proyek",
+      "certs": "Sertifikasi",
+      "roles": "Peran"
+    }
+  },
+  "timeline": {
+    "title": "Pengalaman",
+    "subtitle": "Peta visual milestone akademik, profesional, dan riset saya.",
+    "years": [
+      {
+        "year": "2025",
+        "entries": [
+          {
+            "title": "Riset Skripsi",
+            "hasDetail": true,
+            "detailId": "ml-research"
+          },
+          {
+            "title": "Full Stack Developer Intern",
+            "hasDetail": true,
+            "detailId": "bbkb-intern"
+          }
+        ]
+      },
+      {
+        "year": "2024",
+        "entries": [
+          {
+            "title": "Project Manager & UI/UX Designer",
+            "hasDetail": true,
+            "detailId": "istana-sayur"
+          }
+        ]
+      }
+    ],
+    "details": {
+      "ml-research": {
+        "period": "2025 – Sekarang",
+        "role": "Undergraduate Researcher",
+        "organization": "Universitas Ahmad Dahlan",
+        "project": "Riset Prediksi Kualitas Udara PM2.5",
+        "description": "Melakukan riset skripsi fokus pada prediksi kualitas udara PM2.5 menggunakan model hybrid Sine Cosine Algorithm (SCA) dan Long Short-Term Memory (LSTM). Bertanggung jawab atas pengumpulan dan preprocessing dataset, feature engineering, optimasi model deep learning, serta evaluasi performa prediksi menggunakan RMSE, MAPE, dan R². Riset ini mendemonstrasikan penerapan praktis teknik machine learning untuk menyelesaikan tantangan lingkungan nyata dan menjadi fondasi publikasi ilmiah."
+      },
+      "bbkb-intern": {
+        "period": "2025",
+        "role": "Full Stack Developer Intern",
+        "organization": "BBSPJIKB Yogyakarta",
+        "project": "Kementerian Perindustrian Republik Indonesia",
+        "description": "Berkontribusi dalam pengembangan SIMAGANG, sistem web pendaftaran dan manajemen magang yang dirancang untuk digitalisasi administrasi magang di BBSPJIKB Yogyakarta. Berkolaborasi dengan tim pengembang untuk membangun fitur frontend dan backend, mengintegrasikan fungsionalitas database, mengimplementasikan autentikasi, serta mengoptimalkan alur kerja aplikasi. Pengalaman ini memperkuat keterampilan praktis saya dalam pengembangan full-stack, kerja tim, dan penyampaian solusi digital yang aman, scalable, dan berpusat pada pengguna."
+      },
+      "istana-sayur": {
+        "period": "2024 – 2025",
+        "role": "Project Manager & UI/UX Designer",
+        "organization": "Istana Sayur Buah",
+        "project": "Proyek E-Commerce Klien",
+        "description": "Memimpin pengembangan end-to-end website e-commerce untuk Istana Sayur Buah, mengkoordinasikan tim multidisiplin dari perencanaan proyek hingga deployment. Berkolaborasi langsung dengan stakeholder untuk mengumpulkan kebutuhan bisnis, mendefinisikan scope proyek, dan memastikan solusi yang dihasilkan selaras dengan kebutuhan klien. Berkontribusi pada desain UI/UX dengan menciptakan user flow yang intuitif dan antarmuka responsif sambil mendukung development, testing, dan deployment. Proyek ini memperkuat keahlian leadership, komunikasi, project management, dan product development dalam menyampaikan solusi digital nyata."
+      }
+    }
+  },
+  "tech": {
+    "title": "Tech Stack",
+    "categories": {
+      "dataEngineering": "Machine Learning & AI",
+      "softwareDev": "Pengembangan Perangkat Lunak",
+      "databaseTools": "Database & Tools",
+      "frontendUi": "Frontend & UI"
+    }
+  },
+  "projects": {
+    "title": "Proyek Terpilih",
+    "subtitle": "Riset, proyek akademik, dan personal di bidang data science dan software development.",
+    "openProject": "Lihat proyek",
+    "items": [
+      {
+        "title": "Prediksi Kualitas Udara PM2.5",
+        "description": "Riset skripsi menggunakan hybrid SCA-LSTM untuk memprediksi kualitas udara PM2.5. Meliputi preprocessing dataset, feature engineering, optimasi model, dan evaluasi dengan metrik RMSE, MAPE, dan R²."
+      },
+      {
+        "title": "Sistem Informasi Web — MPTI",
+        "description": "Memimpin pengembangan sistem informasi berbasis web di Universitas Ahmad Dahlan. Mengelola koordinasi tim, desain UI/UX, dan implementasi full stack dari perencanaan hingga deployment."
+      },
+      {
+        "title": "Studi Kasus Machine Learning",
+        "description": "Kumpulan proyek data science dari pelatihan Digital Talent Scholarship — predictive modeling, visualisasi data dengan Tableau, dan pipeline ML menggunakan ekosistem Python."
+      }
+    ]
+  },
+  "blog": {
+    "title": "Catatan",
+    "subtitle": "Catatan riset, tulisan teknis, dan refleksi pembelajaran.",
+    "emptyTitle": "Belum ada tulisan yang diterbitkan",
+    "emptyDescription": "Update jurnal dan catatan teknis akan muncul di sini."
+  },
+  "certificates": {
+    "title": "Certificates",
+    "subtitle": "Sertifikasi profesional dan credensial dari pelatihan serta assessment.",
+    "emptyTitle": "Sertifikat segera hadir",
+    "emptyDescription": "Dokumen sertifikasi dan credensial akan ditampilkan di sini."
+  },
+  "stackPage": {
+    "title": "Arsenal Teknologi",
+    "subtitle": "Alat dan teknologi yang saya gunakan di Data Engineering, AI, dan Software Development.",
+    "stackTitle": "Tech Stack"
+  },
+  "guestbook": {
+    "title": "Ruang Pesan",
+    "subtitle": "Ingin terhubung? Tinggalkan pesan — saya akan membacanya.",
+    "formTitle": "Sapa saya",
+    "formDescription": "Pesan Anda akan dibaca — tidak perlu formal.",
+    "nameLabel": "Nama",
+    "namePlaceholder": "misalnya developer lain",
+    "messageLabel": "Pesan",
+    "messagePlaceholder": "Sapa, diskusi AI, atau berikan masukan...",
+    "submit": "Kirim pesan",
+    "submitted": "Pesan terkirim!"
+  },
+  "footer": {
+    "roles": "Pengembangan Perangkat Lunak • Rekayasa Data • Kecerdasan Buatan",
+    "description": "Membangun solusi digital cerdas melalui pengembangan perangkat lunak modern dan teknologi berbasis data.",
+    "getInTouch": "Get In Touch",
+    "marquee": "ENGINEERING IDEAS INTO IMPACTFUL DIGITAL SOLUTIONS",
+    "modal": {
+      "title": "Let's Connect 👋",
+      "close": "Tutup"
+    },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email",
+      "resume": "Resume",
+      "whatsapp": "WhatsApp",
+      "githubAria": "Kunjungi profil GitHub",
+      "linkedinAria": "Kunjungi profil LinkedIn",
+      "emailAria": "Kirim email",
+      "resumeAria": "Unduh resume",
+      "whatsappAria": "Chat via WhatsApp"
+    }
+  },
+  "theme": {
+    "dark": "Mode gelap",
+    "light": "Mode terang"
+  },
+  "language": {
+    "label": "Bahasa",
+    "id": "Indonesia",
+    "en": "English"
+  }
+}

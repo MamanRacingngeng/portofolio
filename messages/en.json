@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "home": {
+      "title": "RAHMAN NENDHIARTO — Data Engineer & AI Enthusiast",
+      "description": "Portfolio of Rahman Nendhiarto — Data Engineer, AI Enthusiast, and Software Engineer."
+    },
+    "projects": {
+      "title": "Projects — RAHN.",
+      "description": "Software development and machine learning projects."
+    },
+    "blog": {
+      "title": "Notes — RAHN.",
+      "description": "Technical writing, research notes, and development logs."
+    },
+    "certificates": {
+      "title": "Certificates — RAHN.",
+      "description": "Professional certifications and credentials."
+    },
+    "guestbook": {
+      "title": "Message Board — RAHN.",
+      "description": "Leave a message — say hello or start a conversation."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "blog": "Blog",
+    "certificates": "Certificates",
+    "guestbook": "Guestbook",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "badge": "SOFTWARE DEVELOPMENT • DATA ENGINEERING • ARTIFICIAL INTELLIGENCE",
+    "taglineLines": [
+      "Building intelligent digital solutions through",
+      "modern web development, data engineering,",
+      "and artificial intelligence."
+    ],
+    "tagline": "I build intelligent, data-driven solutions by combining Data Engineering, Artificial Intelligence, and Software Development to solve real-world problems. My passion lies in transforming raw data into actionable insights and scalable applications that drive meaningful impact.",
+    "bioParagraphs": [
+      "Supported by professional certification as an Associate Data Scientist (BNSP), hands-on machine learning research, and experience leading software development projects, I have developed expertise across the entire data lifecycle—from data acquisition, preprocessing, and feature engineering to predictive modeling, evaluation, visualization, and application development.",
+      "Beyond data engineering, I design and develop end-to-end web applications while creating intuitive, user-centered interfaces through UI/UX principles. My multidisciplinary background enables me to bridge data engineering, artificial intelligence, and software engineering into scalable, efficient, and impactful digital solutions.",
+      "I am passionate about continuous learning, embracing emerging technologies, and solving complex problems through analytical thinking. My goal is to build reliable, efficient, and intelligent systems that empower organizations to make better decisions, improve operational efficiency, and accelerate digital transformation."
+    ],
+    "exploreProjects": "View Projects",
+    "downloadCv": "Download Resume",
+    "profilePhoto": "Profile photo",
+    "status": "Open to opportunities",
+    "roleBadge": "Data & AI",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "githubAria": "Visit GitHub profile",
+      "linkedinAria": "Visit LinkedIn profile"
+    },
+    "stats": {
+      "projects": "Projects",
+      "certs": "Certifications",
+      "roles": "Roles"
+    }
+  },
+  "timeline": {
+    "title": "Experience",
+    "subtitle": "A visual map of my academic, professional, and research milestones.",
+    "years": [
+      {
+        "year": "2025",
+        "entries": [
+          {
+            "title": "Undergraduate Research",
+            "hasDetail": true,
+            "detailId": "ml-research"
+          },
+          {
+            "title": "Full Stack Developer Intern",
+            "hasDetail": true,
+            "detailId": "bbkb-intern"
+          }
+        ]
+      },
+      {
+        "year": "2024",
+        "entries": [
+          {
+            "title": "Project Manager & UI/UX Designer",
+            "hasDetail": true,
+            "detailId": "istana-sayur"
+          }
+        ]
+      }
+    ],
+    "details": {
+      "ml-research": {
+        "period": "2025 – Present",
+        "role": "Undergraduate Researcher",
+        "organization": "Universitas Ahmad Dahlan",
+        "project": "PM2.5 Air Quality Prediction Research",
+        "description": "Conducting undergraduate research focused on PM2.5 air quality prediction using a hybrid Sine Cosine Algorithm (SCA) and Long Short-Term Memory (LSTM) model. Responsible for collecting and preprocessing datasets, performing feature engineering, optimizing deep learning models, and evaluating prediction performance using RMSE, MAPE, and R². The research demonstrates the practical application of machine learning techniques to address real-world environmental challenges and serves as the foundation for scientific publication."
+      },
+      "bbkb-intern": {
+        "period": "2025",
+        "role": "Full Stack Developer Intern",
+        "organization": "BBSPJIKB Yogyakarta",
+        "project": "Ministry of Industry of the Republic of Indonesia",
+        "description": "Contributed to the development of SIMAGANG, a web-based internship registration and management system designed to digitize internship administration within BBSPJIKB Yogyakarta. Collaborated with the development team to build frontend and backend features, integrate database functionality, implement authentication, and optimize application workflows. This experience strengthened my practical skills in full-stack software development, teamwork, and delivering secure, scalable, and user-centered digital solutions."
+      },
+      "istana-sayur": {
+        "period": "2024 – 2025",
+        "role": "Project Manager & UI/UX Designer",
+        "organization": "Istana Sayur Buah",
+        "project": "Client E-Commerce Project",
+        "description": "Led the end-to-end development of an e-commerce website for Istana Sayur Buah, coordinating a multidisciplinary team from project planning through deployment. Collaborated directly with stakeholders to gather business requirements, define project scope, and ensure the delivered solution aligned with client needs. Contributed to UI/UX design by creating intuitive user flows and responsive interfaces while supporting development, testing, and deployment. This project strengthened my leadership, communication, project management, and product development skills in delivering real-world digital solutions."
+      }
+    }
+  },
+  "tech": {
+    "title": "Tech Stack",
+    "categories": {
+      "dataEngineering": "Machine Learning & AI",
+      "softwareDev": "Software Development",
+      "databaseTools": "Database & Tools",
+      "frontendUi": "Frontend & UI"
+    }
+  },
+  "projects": {
+    "title": "Selected Projects",
+    "subtitle": "Research, academic, and personal projects across data science and software development.",
+    "openProject": "View project",
+    "items": [
+      {
+        "title": "PM2.5 Air Quality Prediction",
+        "description": "Undergraduate research using hybrid SCA-LSTM for predicting PM2.5 air quality. Includes dataset preprocessing, feature engineering, model optimization, and evaluation with RMSE, MAPE, and R² metrics."
+      },
+      {
+        "title": "Web Information System — MPTI",
+        "description": "Led development of a web-based information system at Universitas Ahmad Dahlan. Managed team coordination, UI/UX design, and full stack implementation from planning to deployment."
+      },
+      {
+        "title": "Machine Learning Case Studies",
+        "description": "Collection of data science projects from Digital Talent Scholarship training — predictive modeling, data visualization with Tableau, and ML pipelines using Python ecosystem."
+      }
+    ]
+  },
+  "blog": {
+    "title": "Notes",
+    "subtitle": "Research notes, technical writing, and learning reflections.",
+    "emptyTitle": "No articles published yet",
+    "emptyDescription": "Journal updates and technical notes will appear here when ready."
+  },
+  "certificates": {
+    "title": "Certificates",
+    "subtitle": "Professional certifications and credentials earned through training and assessment.",
+    "emptyTitle": "Certificates coming soon",
+    "emptyDescription": "Certification documents and credentials will be listed here."
+  },
+  "stackPage": {
+    "title": "Tech Arsenal",
+    "subtitle": "Tools and technologies I use across Data Engineering, AI, and Software Development.",
+    "stackTitle": "Tech Stack"
+  },
+  "guestbook": {
+    "title": "Message Board",
+    "subtitle": "Want to connect? Leave a message — I'll read every one.",
+    "formTitle": "Say hello",
+    "formDescription": "Your message will be read — no need to be formal.",
+    "nameLabel": "Name",
+    "namePlaceholder": "e.g. fellow developer",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Say hello, discuss AI, or share feedback...",
+    "submit": "Send message",
+    "submitted": "Message sent!"
+  },
+  "footer": {
+    "roles": "Software Development • Data Engineering • Artificial Intelligence",
+    "description": "Building intelligent digital solutions through modern software development and data-driven technologies.",
+    "getInTouch": "Get In Touch",
+    "marquee": "ENGINEERING IDEAS INTO IMPACTFUL DIGITAL SOLUTIONS",
+    "modal": {
+      "title": "Let's Connect 👋",
+      "close": "Close"
+    },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email",
+      "resume": "Resume",
+      "whatsapp": "WhatsApp",
+      "githubAria": "Visit GitHub profile",
+      "linkedinAria": "Visit LinkedIn profile",
+      "emailAria": "Send an email",
+      "resumeAria": "Download resume",
+      "whatsappAria": "Chat on WhatsApp"
+    }
+  },
+  "theme": {
+    "dark": "Dark mode",
+    "light": "Light mode"
+  },
+  "language": {
+    "label": "Language",
+    "id": "Indonesia",
+    "en": "English"
+  }
+}

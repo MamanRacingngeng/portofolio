@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portofolio Website
 
-## Getting Started
+Website portofolio pribadi dibangun dengan **Next.js 16**, **React 19**, **TypeScript**, dan **Tailwind CSS v4**.
 
-First, run the development server:
+## Fitur
+
+- Desain modern dengan dark theme
+- Responsif (mobile, tablet, desktop)
+- Navigasi smooth scroll
+- Section: Hero, Tentang, Keahlian, Proyek, Kontak
+- Data terpusat — mudah dikustomisasi
+- SEO-ready dengan metadata Open Graph
+
+## Memulai
 
 ```bash
+# Install dependencies
+npm install
+
+# Jalankan development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) di browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Kustomisasi
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit file `src/data/portfolio.ts` untuk mengubah:
 
-## Learn More
+- Nama, judul, dan tagline
+- Email dan link sosial media
+- Teks tentang saya
+- Daftar keahlian
+- Daftar proyek
 
-To learn more about Next.js, take a look at the following resources:
+## Struktur Proyek
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/
+│   ├── layout.tsx      # Layout utama & metadata
+│   ├── page.tsx        # Halaman utama
+│   └── globals.css     # Global styles
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Skills.tsx
+│   ├── Projects.tsx
+│   ├── Contact.tsx
+│   ├── Footer.tsx
+│   └── SectionHeading.tsx
+├── data/
+│   └── portfolio.ts    # Data portofolio (edit di sini)
+└── lib/
+    └── utils.ts
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
+Deploy ke [Vercel](https://vercel.com) dengan satu klik:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Scripts
+
+| Command       | Deskripsi              |
+|---------------|------------------------|
+| `npm run dev` | Development server     |
+| `npm run build` | Build production     |
+| `npm run start` | Jalankan production |
+| `npm run lint` | Lint kode             |

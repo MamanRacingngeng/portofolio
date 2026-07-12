@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <mask id="nextjs-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="180" height="180" style="mask-type:alpha">
+    <circle cx="90" cy="90" r="90" fill="#000"/>
+  </mask>
+  <g mask="url(#nextjs-mask)">
+    <circle cx="90" cy="90" r="90" fill="#000"/>
+    <path d="M149.508 157.52L69.142 54H54V125.77H66.1136V69.3836L139.999 164.185C143.333 162.66 146.509 160.932 149.508 159.02Z" fill="url(#nextjs-gradient-a)"/>
+    <path d="M149.508 157.52L69.142 54H54V125.77H66.1136V69.3836L139.999 164.185C143.333 162.66 146.509 160.932 149.508 159.02Z" fill="url(#nextjs-gradient-b)"/>
+    <path d="M149.508 157.52L69.142 54H54V125.77H66.1136V69.3836L139.999 164.185C143.333 162.66 146.509 160.932 149.508 159.02Z" stroke="url(#nextjs-gradient-c)"/>
+  </g>
+  <defs>
+    <linearGradient id="nextjs-gradient-a" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="nextjs-gradient-b" x1="121" y1="54" x2="120.799" y2="106.875" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="nextjs-gradient-c" x1="121" y1="54" x2="120.799" y2="106.875" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

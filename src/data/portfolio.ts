@@ -1,0 +1,97 @@
+const contactEmail = "rahmanarto634@gmail.com";
+
+export const siteConfig = {
+  logo: "RAHN.",
+  firstName: "RAHMAN",
+  lastName: "NENDHIARTO",
+  fullName: "Rahman Nendhiarto",
+  email: contactEmail,
+  emailComposeUrl: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contactEmail)}`,
+  profileImage: "/images/profile.png",
+  resumeUrl: "/cv.pdf",
+  social: {
+    github: "https://github.com/MamanRacingngeng",
+    linkedin: "https://www.linkedin.com/in/rahmanarto",
+  },
+  whatsapp: "6282241159116",
+  /** Set true to show the animated polka-dot wave divider between sections */
+  showWavyPolkaDivider: false,
+};
+
+export const navRoutes = [
+  { key: "home" as const, href: "/" },
+  { key: "projects" as const, href: "/proyek" },
+  { key: "blog" as const, href: "/blog" },
+  { key: "certificates" as const, href: "/sertifikat" },
+  { key: "guestbook" as const, href: "/buku-tamu" },
+];
+
+export type TechItem = {
+  id: string;
+  name: string;
+  icon: string;
+  logo?: string;
+  logoScale?: number;
+  logoBlend?: "multiply";
+  labelLines?: [string, string];
+  color: string;
+};
+
+export const techCategories: { id: string; items: TechItem[] }[] = [
+  {
+    id: "dataEngineering",
+    items: [
+      { id: "python", name: "Python", icon: "🐍", logo: "/images/tech/python.png", color: "#3776AB" },
+      { id: "pandas", name: "Pandas", icon: "🐼", logo: "/images/tech/pandas.png", color: "#150458" },
+      { id: "numpy", name: "NumPy", icon: "📊", logo: "/images/tech/numpy.png", color: "#013243" },
+      { id: "tensorflow", name: "TensorFlow", icon: "🧠", logo: "/images/tech/tensorflow.png", color: "#FF6F00" },
+      { id: "keras", name: "Keras", icon: "⚡", logo: "/images/tech/keras.png", color: "#D00000" },
+      { id: "sklearn", name: "Scikit-learn", icon: "🤖", logo: "/images/tech/scikit-learn.png", color: "#F7931E" },
+    ],
+  },
+  {
+    id: "softwareDev",
+    items: [
+      { id: "laravel", name: "Laravel", icon: "🔥", logo: "/images/tech/laravel.png", color: "#FF2D20" },
+      { id: "react", name: "React", icon: "⚛", logo: "/images/tech/react.png", color: "#61DAFB" },
+      { id: "nextjs", name: "Next.js", icon: "▲", logo: "/images/tech/nextjs.svg", color: "#000000" },
+      { id: "nodejs", name: "Node.js", icon: "🟩", logo: "/images/tech/nodejs.png", color: "#339933" },
+      { id: "codeigniter", name: "CodeIgniter", icon: "🔥", logo: "/images/tech/codeigniter.png", color: "#DD4814" },
+    ],
+  },
+  {
+    id: "databaseTools",
+    items: [
+      { id: "mysql", name: "MySQL", icon: "🐬", logo: "/images/tech/mysql.png", color: "#4479A1" },
+      { id: "xampp", name: "XAMPP", icon: "🟧", logo: "/images/tech/xampp.png", logoBlend: "multiply", color: "#FB7C26" },
+      { id: "supabase", name: "Supabase", icon: "⚡", logo: "/images/tech/supabase.png", color: "#3ECF8E" },
+      { id: "git", name: "Git", icon: "🐙", logo: "/images/tech/git.png", color: "#F05032" },
+      { id: "github", name: "GitHub", icon: "📦", logo: "/images/tech/github.png", color: "#181717" },
+      { id: "cursor", name: "Cursor", icon: "⌨", logo: "/images/tech/cursor.png", color: "#000000" },
+      { id: "colab", name: "Google Colab", icon: "📓", logo: "/images/tech/colab.png", logoScale: 0.72, labelLines: ["Google", "Colab"], color: "#F9AB00" },
+    ],
+  },
+  {
+    id: "frontendUi",
+    items: [
+      { id: "html", name: "HTML5", icon: "🌐", logo: "/images/tech/html5.png", color: "#E34F26" },
+      { id: "css", name: "CSS3", icon: "🎨", logo: "/images/tech/css3.png", color: "#1572B6" },
+      { id: "javascript", name: "JavaScript", icon: "🟨", logo: "/images/tech/javascript.png", color: "#F7DF1E" },
+      { id: "tailwind", name: "Tailwind CSS", icon: "💨", logo: "/images/tech/tailwind.png", color: "#06B6D4" },
+      { id: "bootstrap", name: "Bootstrap", icon: "🅱", logo: "/images/tech/bootstrap.png", color: "#7952B3" },
+      { id: "figma", name: "Figma", icon: "🖌️", logo: "/images/tech/figma.png", color: "#F24E1E" },
+    ],
+  },
+];
+
+export const projectMeta = [
+  { id: "pm25", tags: ["Python", "TensorFlow", "LSTM"], liveUrl: "#" },
+  { id: "webinfo", tags: ["Laravel", "React", "MySQL"], liveUrl: "#" },
+  { id: "ml", tags: ["Scikit-learn", "Pandas", "Tableau"], liveUrl: "#" },
+];
+
+export const heroStats = [
+  { value: "10+", key: "projects" as const },
+  { value: "2", key: "certs" as const },
+  { value: "5+", key: "roles" as const },
+];
