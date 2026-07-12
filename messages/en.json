@@ -125,22 +125,25 @@
   },
   "projects": {
     "title": "Selected Projects",
-    "subtitle": "Research, academic, and personal projects across data science and software development.",
-    "openProject": "View project",
-    "items": [
-      {
-        "title": "PM2.5 Air Quality Prediction",
-        "description": "Undergraduate research using hybrid SCA-LSTM for predicting PM2.5 air quality. Includes dataset preprocessing, feature engineering, model optimization, and evaluation with RMSE, MAPE, and R² metrics."
+    "subtitle": "Choose what you want to explore.",
+    "explore": "Explore",
+    "back": "Back to projects",
+    "categoryEmptyTitle": "Projects coming soon",
+    "categoryEmptyDescription": "Works in this category are being prepared. Check back soon for notebooks, dashboards, and apps.",
+    "categories": {
+      "ai-ml": {
+        "title": "AI & Machine Learning",
+        "description": "Building predictive models and intelligent systems powered by machine learning and deep learning."
       },
-      {
-        "title": "Web Information System — MPTI",
-        "description": "Led development of a web-based information system at Universitas Ahmad Dahlan. Managed team coordination, UI/UX design, and full stack implementation from planning to deployment."
+      "dashboards": {
+        "title": "Interactive Dashboards",
+        "description": "Transforming data into interactive dashboards and meaningful business insights."
       },
-      {
-        "title": "Machine Learning Case Studies",
-        "description": "Collection of data science projects from Digital Talent Scholarship training — predictive modeling, data visualization with Tableau, and ML pipelines using Python ecosystem."
+      "software-dev": {
+        "title": "Software Development",
+        "description": "Building modern web applications, REST APIs, and scalable digital solutions."
       }
-    ]
+    }
   },
   "blog": {
     "title": "Notes",

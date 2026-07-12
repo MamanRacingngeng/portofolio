@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { spaceFloatGentle } from "@/lib/animations";
+import { spaceFloatGentle, spaceFloatPolkadot } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
 type DotAccent = "lime" | "sky" | "pink";
@@ -25,26 +25,49 @@ const dotThemes: Record<
 };
 
 const dotPositions = [
-  "-right-2 -top-2 sm:-right-2.5 sm:-top-2.5",
-  "-left-2 -bottom-2 sm:-left-2.5 sm:-bottom-2.5",
+  "right-0 top-0 translate-x-[calc(100%-6px)] -translate-y-[calc(100%-6px)] sm:translate-x-[calc(100%-7px)] sm:-translate-y-[calc(100%-7px)]",
+  "left-0 bottom-0 -translate-x-[calc(100%-6px)] translate-y-[calc(100%-6px)] sm:-translate-x-[calc(100%-7px)] sm:translate-y-[calc(100%-7px)]",
 ];
 
-export function SectionPolkadots({ accent }: { accent: DotAccent }) {
+const sideDotPositions = [
+  "-left-5 top-1/2 -translate-y-1/2 sm:-left-6",
+  "-right-5 top-1/2 -translate-y-1/2 sm:-right-6",
+];
+
+export function SectionPolkadots({
+  accent,
+  layout = "corners",
+  soft = false,
+}: {
+  accent: DotAccent;
+  layout?: "corners" | "sides";
+  soft?: boolean;
+}) {
   const dots = dotThemes[accent];
+  const positions = layout === "sides" ? sideDotPositions : dotPositions;
 
   return (
     <>
       {dots.map((dot, index) => (
-        <motion.span
+        <span
           key={index}
           aria-hidden
-          {...spaceFloatGentle(dot.duration, dot.delay)}
           className={cn(
-            "pointer-events-none absolute z-10 h-3.5 w-3.5 rounded-full border-[3px] border-border shadow-[2px_2px_0_var(--border)] sm:h-4 sm:w-4",
-            dot.bg,
-            dotPositions[index]
+            "pointer-events-none absolute z-10",
+            positions[index],
           )}
-        />
+        >
+          <motion.span
+            {...(soft
+              ? spaceFloatPolkadot(dot.duration, dot.delay)
+              : spaceFloatGentle(dot.duration, dot.delay))}
+            className={cn(
+              "block rounded-full border-[3px] border-border shadow-[2px_2px_0_var(--border)]",
+              layout === "sides" ? "h-3.5 w-3.5 sm:h-4 sm:w-4" : "h-3.5 w-3.5 sm:h-4 sm:w-4",
+              dot.bg,
+            )}
+          />
+        </span>
       ))}
     </>
   );
