@@ -1,208 +1,2136 @@
 {
-  "meta": {
-    "home": {
-      "title": "RAHMAN NENDHIARTO — Data Engineer & AI Enthusiast",
-      "description": "Portfolio of Rahman Nendhiarto — Data Engineer, AI Enthusiast, and Software Engineer."
-    },
-    "projects": {
-      "title": "Projects — RAHN.",
-      "description": "Software development and machine learning projects."
-    },
-    "blog": {
-      "title": "Notes — RAHN.",
-      "description": "Technical writing, research notes, and development logs."
-    },
-    "certificates": {
-      "title": "Certificates — RAHN.",
-      "description": "Professional certifications and credentials."
-    },
-    "guestbook": {
-      "title": "Message Board — RAHN.",
-      "description": "Leave a message — say hello or start a conversation."
-    }
-  },
-  "nav": {
-    "home": "Home",
-    "projects": "Projects",
-    "blog": "Blog",
-    "certificates": "Certificates",
-    "guestbook": "Guestbook",
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu"
-  },
-  "hero": {
-    "badge": "SOFTWARE DEVELOPMENT • DATA ENGINEERING • ARTIFICIAL INTELLIGENCE",
+ "meta": {
+ "home": {
+    "title": "RAHMAN NENDHIARTO — Data Scientist & Software Developer",
+    "description": "Portfolio of Rahman Nendhiarto — Data Scientist and Software Developer building ML-driven applications and scalable web solutions."
+ },
+ "projects": {
+ "title": "Projects — RAHN.",
+ "description": "Software development and machine learning projects."
+ },
+ "blog": {
+ "title": "Notes — RAHN.",
+ "description": "Technical writing, research notes, and development logs."
+ },
+ "certificates": {
+ "title": "Certificates — RAHN.",
+ "description": "Professional certifications, training records, language proficiency, and achievements."
+ },
+ "guestbook": {
+ "title": "Message Board — RAHN.",
+ "description": "Leave a message — say hello or start a conversation."
+ }
+ },
+ "nav": {
+ "home": "Home",
+ "projects": "Projects",
+ "blog": "Blog",
+ "certificates": "Certificates",
+ "guestbook": "Guestbook",
+ "openMenu": "Open menu",
+ "closeMenu": "Close menu"
+ },
+ "errors": {
+ "title": "Something went wrong",
+ "heading": "Page failed to load",
+ "description": "The connection to the server was interrupted. This often happens during development when the page is still compiling — try again.",
+ "retry": "Try again"
+ },
+ "hero": {
+    "badge": "DATA SCIENCE • SOFTWARE DEVELOPMENT",
     "taglineLines": [
-      "Building intelligent digital solutions through",
-      "modern web development, data engineering,",
-      "and artificial intelligence."
+      "Turning data into insight and",
+      "building production-ready digital solutions",
+      "with machine learning at the core."
     ],
-    "tagline": "I build intelligent, data-driven solutions by combining Data Engineering, Artificial Intelligence, and Software Development to solve real-world problems. My passion lies in transforming raw data into actionable insights and scalable applications that drive meaningful impact.",
-    "bioParagraphs": [
-      "Supported by professional certification as an Associate Data Scientist (BNSP), hands-on machine learning research, and experience leading software development projects, I have developed expertise across the entire data lifecycle—from data acquisition, preprocessing, and feature engineering to predictive modeling, evaluation, visualization, and application development.",
-      "Beyond data engineering, I design and develop end-to-end web applications while creating intuitive, user-centered interfaces through UI/UX principles. My multidisciplinary background enables me to bridge data engineering, artificial intelligence, and software engineering into scalable, efficient, and impactful digital solutions.",
-      "I am passionate about continuous learning, embracing emerging technologies, and solving complex problems through analytical thinking. My goal is to build reliable, efficient, and intelligent systems that empower organizations to make better decisions, improve operational efficiency, and accelerate digital transformation."
-    ],
-    "exploreProjects": "View Projects",
-    "downloadCv": "Download Resume",
-    "profilePhoto": "Profile photo",
-    "status": "Open to opportunities",
-    "roleBadge": "Data & AI",
-    "social": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn",
-      "githubAria": "Visit GitHub profile",
-      "linkedinAria": "Visit LinkedIn profile"
-    },
-    "stats": {
-      "projects": "Projects",
-      "certs": "Certifications",
-      "roles": "Roles"
-    }
-  },
-  "timeline": {
-    "title": "Experience",
-    "subtitle": "A visual map of my academic, professional, and research milestones.",
-    "years": [
-      {
-        "year": "2025",
-        "entries": [
-          {
-            "title": "Undergraduate Research",
-            "hasDetail": true,
-            "detailId": "ml-research"
-          },
-          {
-            "title": "Full Stack Developer Intern",
-            "hasDetail": true,
-            "detailId": "bbkb-intern"
-          }
-        ]
-      },
-      {
-        "year": "2024",
-        "entries": [
-          {
-            "title": "Project Manager & UI/UX Designer",
-            "hasDetail": true,
-            "detailId": "istana-sayur"
-          }
-        ]
-      }
-    ],
-    "details": {
-      "ml-research": {
-        "period": "2025 – Present",
-        "role": "Undergraduate Researcher",
-        "organization": "Universitas Ahmad Dahlan",
-        "project": "PM2.5 Air Quality Prediction Research",
-        "description": "Conducting undergraduate research focused on PM2.5 air quality prediction using a hybrid Sine Cosine Algorithm (SCA) and Long Short-Term Memory (LSTM) model. Responsible for collecting and preprocessing datasets, performing feature engineering, optimizing deep learning models, and evaluating prediction performance using RMSE, MAPE, and R². The research demonstrates the practical application of machine learning techniques to address real-world environmental challenges and serves as the foundation for scientific publication."
-      },
-      "bbkb-intern": {
-        "period": "2025",
-        "role": "Full Stack Developer Intern",
-        "organization": "BBSPJIKB Yogyakarta",
-        "project": "Ministry of Industry of the Republic of Indonesia",
-        "description": "Contributed to the development of SIMAGANG, a web-based internship registration and management system designed to digitize internship administration within BBSPJIKB Yogyakarta. Collaborated with the development team to build frontend and backend features, integrate database functionality, implement authentication, and optimize application workflows. This experience strengthened my practical skills in full-stack software development, teamwork, and delivering secure, scalable, and user-centered digital solutions."
-      },
-      "istana-sayur": {
-        "period": "2024 – 2025",
-        "role": "Project Manager & UI/UX Designer",
-        "organization": "Istana Sayur Buah",
-        "project": "Client E-Commerce Project",
-        "description": "Led the end-to-end development of an e-commerce website for Istana Sayur Buah, coordinating a multidisciplinary team from project planning through deployment. Collaborated directly with stakeholders to gather business requirements, define project scope, and ensure the delivered solution aligned with client needs. Contributed to UI/UX design by creating intuitive user flows and responsive interfaces while supporting development, testing, and deployment. This project strengthened my leadership, communication, project management, and product development skills in delivering real-world digital solutions."
-      }
-    }
-  },
-  "tech": {
-    "title": "Tech Stack",
-    "categories": {
-      "dataEngineering": "Machine Learning & AI",
+    "bio": "I build data-driven digital products by combining machine learning, analytics, and full-stack software development to turn data into solutions that create real impact. My work spans the entire development process — from data exploration and feature engineering to model training, evaluation, and deploying web applications that users can rely on. With BNSP Associate Data Scientist certification, hands-on machine learning research, and experience building diverse applications, I bridge Data Science and Software Development. I develop data pipelines, predictive models, analytics dashboards, and modern web applications using Python, TensorFlow, Next.js, React, and Laravel — so the models I build are not only accurate, but also usable in production-ready products. I believe a model's value does not stop at evaluation metrics, but when it is implemented as a stable, scalable digital solution that helps organizations make faster, sharper, data-driven decisions.",
+ "exploreProjects": "View Projects",
+ "downloadCv": "Download Resume",
+ "profilePhoto": "Profile photo",
+ "status": "Open to opportunities",
+ "roleBadge": "Data & AI",
+ "social": {
+ "github": "GitHub",
+ "linkedin": "LinkedIn",
+ "githubAria": "Visit GitHub profile",
+ "linkedinAria": "Visit LinkedIn profile"
+ },
+ "stats": {
+ "projects": "Projects",
+ "certs": "Certifications",
+ "roles": "Roles"
+ }
+ },
+ "timeline": {
+ "title": "Experience",
+ "subtitle": "A visual map of my academic, professional, and research milestones.",
+ "years": [
+ {
+ "year": "2025",
+ "entries": [
+ {
+ "title": "Undergraduate Research",
+ "hasDetail": true,
+ "detailId": "ml-research"
+ },
+ {
+ "title": "Full Stack Developer Intern",
+ "hasDetail": true,
+ "detailId": "bbkb-intern"
+ }
+ ]
+ },
+ {
+ "year": "2024",
+ "entries": [
+ {
+        "title": "Lead Developer & Project Manager",
+ "hasDetail": true,
+ "detailId": "istana-sayur"
+ }
+ ]
+ }
+ ],
+ "details": {
+ "ml-research": {
+ "period": "2025 – Present",
+ "role": "Undergraduate Researcher",
+ "organization": "Universitas Ahmad Dahlan",
+ "project": "PM2.5 Air Quality Prediction Research",
+ "description": "Conducting undergraduate research focused on PM2.5 air quality prediction using a hybrid Sine Cosine Algorithm (SCA) and Long Short-Term Memory (LSTM) model. Responsible for collecting and preprocessing datasets, performing feature engineering, optimizing deep learning models, and evaluating prediction performance using RMSE, MAPE, and R². The research demonstrates the practical application of machine learning techniques to address real-world environmental challenges and serves as the foundation for scientific publication."
+ },
+ "bbkb-intern": {
+ "period": "2025",
+ "role": "Full Stack Developer Intern",
+ "organization": "BBSPJIKB Yogyakarta",
+ "project": "Ministry of Industry of the Republic of Indonesia",
+ "description": "Contributed to the development of SIMAGANG, a web-based internship registration and management system designed to digitize internship administration within BBSPJIKB Yogyakarta. Collaborated with the development team to build frontend and backend features, integrate database functionality, implement authentication, and optimize application workflows. This experience strengthened my practical skills in full-stack software development, teamwork, and delivering secure, scalable, and user-centered digital solutions."
+ },
+ "istana-sayur": {
+ "period": "2024 – 2025",
+      "role": "Lead Developer & Project Manager",
+      "organization": "Istana Sayur Buah",
+      "project": "Client E-Commerce Project",
+      "description": "Led the end-to-end development of a production e-commerce website for Istana Sayur Buah, coordinating a multidisciplinary team from planning through deployment. Gathered business requirements with stakeholders, scoped the product, and delivered a responsive full-stack storefront with category-led catalog, trust pages, and a complete shopping flow. This project strengthened my leadership, communication, project management, and full-stack delivery skills in a real client engagement."
+ }
+ }
+ },
+ "tech": {
+ "title": "Tech Stack",
+ "close": "Close",
+ "categories": {
+      "dataScience": "Machine Learning & AI",
       "softwareDev": "Software Development",
       "databaseTools": "Database & Tools",
-      "frontendUi": "Frontend & UI"
+      "frontendUi": "Frontend Development"
+ },
+ "items": {
+ "python": {
+        "description": "Primary language for data analysis, machine learning, and backend scripting — versatile, readable, and widely used across the data science and ML workflow."
+ },
+ "pandas": {
+ "description": "Data manipulation library for cleaning, transforming, and analyzing structured datasets with DataFrames — essential for preprocessing before modeling."
+ },
+ "numpy": {
+ "description": "Foundation library for numerical computing — provides fast array operations, linear algebra, and mathematical functions that power ML workflows."
+ },
+ "tensorflow": {
+ "description": "Open-source deep learning framework for building and training neural networks — used for predictive modeling and AI-driven applications."
+ },
+ "keras": {
+ "description": "High-level neural network API that simplifies model building on top of TensorFlow — ideal for rapid prototyping of deep learning solutions."
+ },
+ "sklearn": {
+ "description": "Scikit-learn provides classic machine learning algorithms, preprocessing tools, and model evaluation utilities for structured data problems."
+ },
+ "powerbi": {
+ "description": "Microsoft business intelligence platform for building interactive dashboards, KPI reports, and data storytelling — turning model outputs and datasets into decision-ready visuals."
+ },
+ "tableau": {
+ "description": "Leading data visualization tool for exploring, analyzing, and presenting insights through interactive charts and dashboards — ideal for communicating ML and analytics results to stakeholders."
+ },
+ "laravel": {
+ "description": "PHP framework for building robust web applications with elegant syntax, MVC architecture, authentication, and REST API support."
+ },
+ "react": {
+ "description": "JavaScript library for building interactive user interfaces with component-based architecture, efficient rendering, and a rich ecosystem."
+ },
+ "nextjs": {
+ "description": "React framework for production-grade web apps with server-side rendering, routing, and optimized performance out of the box."
+ },
+ "vercel": {
+ "description": "Cloud platform for deploying and hosting modern web applications — seamless integration with Next.js and fast global delivery."
+ },
+ "nodejs": {
+ "description": "JavaScript runtime for server-side development — enables building scalable APIs, real-time apps, and full-stack JavaScript solutions."
+ },
+ "codeigniter": {
+ "description": "Lightweight PHP framework for rapid web development with a simple MVC pattern — used for building structured backend applications."
+ },
+ "mysql": {
+ "description": "Relational database management system for storing, querying, and managing structured application data with SQL."
+ },
+ "xampp": {
+ "description": "Local development stack bundling Apache, MySQL, and PHP — used for building and testing web applications on a local machine."
+ },
+ "supabase": {
+ "description": "Open-source Firebase alternative with PostgreSQL, authentication, storage, and real-time APIs for modern app backends."
+ },
+ "git": {
+ "description": "Version control system for tracking code changes, collaborating with teams, and managing project history across branches."
+ },
+ "github": {
+ "description": "Platform for hosting Git repositories, code collaboration, pull requests, and open-source project management."
+ },
+ "cursor": {
+ "description": "AI-powered code editor that accelerates development with intelligent autocomplete, refactoring, and pair-programming assistance."
+ },
+ "colab": {
+ "description": "Cloud-based Jupyter notebook environment by Google — ideal for running Python, training ML models, and sharing data science work."
+ },
+ "html": {
+ "description": "Standard markup language for structuring web content — the semantic foundation of every web page and application interface."
+ },
+ "css": {
+ "description": "Stylesheet language for designing layout, typography, colors, and responsive visual presentation across web interfaces."
+ },
+ "javascript": {
+ "description": "Core programming language of the web — powers interactivity, dynamic content, and full-stack development with modern frameworks."
+ },
+ "tailwind": {
+ "description": "Utility-first CSS framework for rapidly building custom, responsive, and consistent user interfaces without leaving your HTML."
+ },
+ "bootstrap": {
+ "description": "Popular CSS framework with pre-built components and a responsive grid system for fast, mobile-friendly web UI development."
+ },
+ "figma": {
+ "description": "Collaborative design tool for wireframing, prototyping, and crafting user-centered interface systems before development."
+ }
+ }
+ },
+ "projects": {
+ "title": "Selected Projects",
+ "subtitle": "Choose what you want to explore.",
+ "explore": "Explore",
+ "visitSite": "Visit site",
+ "caseStudyBtn": "Case Study",
+ "back": "Back to projects",
+ "tagLabels": {
+ "nextjs": "Next.js",
+ "full-stack": "Full Stack",
+ "marketplace": "Marketplace",
+ "data": "Data",
+ "forecasting": "Forecasting",
+ "kkn": "KKN",
+ "community": "Community",
+ "branding": "Branding",
+ "brochure": "Brochure",
+ "digital-agency": "Digital Agency",
+ "poster": "Poster",
+ "promotional": "Promotional",
+ "fnb": "F&B",
+ "campaign": "Campaign",
+ "gemastik": "Gemastik",
+ "merchandise": "Merchandise",
+ "t-shirt": "T-Shirt",
+ "industrial-engineering": "Industrial Engineering",
+ "collage": "Collage",
+ "fan-art": "Fan Art",
+ "editorial": "Editorial",
+ "automotive": "Automotive",
+ "e-commerce": "E-Commerce",
+ "manokwari": "Manokwari",
+ "mobile-app": "Mobile App",
+ "health": "Health",
+ "ui-ux-competency": "UI/UX Competency",
+ "sumpiuh": "Sumpiuh",
+ "lstm": "LSTM",
+ "sca": "SCA",
+ "nlp": "NLP",
+ "sentiment": "Sentiment",
+ "predictive-maintenance": "Predictive Maintenance",
+ "oil-gas": "Oil & Gas",
+ "random-forest": "Random Forest",
+ "regression": "Regression",
+ "k-means": "K-Means",
+ "clustering": "Clustering",
+ "knn": "KNN",
+ "classification": "Classification",
+ "pattern-recognition": "Pattern Recognition",
+ "svm": "SVM",
+ "ecg": "ECG",
+ "healthcare": "Healthcare",
+ "mfcc": "MFCC",
+ "svc": "SVC",
+ "audio-ml": "Audio ML",
+ "cnn": "CNN",
+ "pytorch": "PyTorch",
+ "medical-imaging": "Medical Imaging",
+ "wavelet": "Wavelet",
+ "workshop": "Workshop",
+ "advanced": "Advanced",
+ "foundations": "Foundations",
+ "statistics": "Statistics",
+ "distance": "Distance",
+ "fundamentals": "Fundamentals",
+ "preprocessing": "Preprocessing",
+ "dataset": "Dataset",
+ "eda": "EDA",
+ "feature-extraction": "Feature Extraction",
+ "iris": "IRIS",
+ "decision-tree": "Decision Tree",
+ "breast-cancer": "Breast Cancer",
+ "agglomerative": "Agglomerative",
+ "mnist": "MNIST",
+ "histogram": "Histogram",
+ "bioinformatics": "Bioinformatics",
+ "k-mer": "k-mer",
+ "fasta": "FASTA",
+ "rnn": "RNN",
+ "gru": "GRU",
+ "sentiment-analysis": "Sentiment Analysis",
+ "count-vectorizer": "CountVectorizer",
+ "text-mining": "Text Mining",
+ "seq2seq": "Seq2Seq",
+ "attention": "Attention",
+ "nmt": "NMT",
+ "transformer": "Transformer",
+ "tensorflow": "TensorFlow",
+ "gan": "GAN",
+ "image-generation": "Image Generation",
+ "neural-style-transfer": "Neural Style Transfer",
+ "cifar-10": "CIFAR-10",
+ "image-classification": "Image Classification",
+ "transfer-learning": "Transfer Learning",
+ "vgg16": "VGG16",
+ "resnet50": "ResNet50",
+ "fast-r-cnn": "Fast R-CNN",
+ "object-detection": "Object Detection",
+ "tensorflow-hub": "TensorFlow Hub"
+ },
+ "graphicDesign": {
+ "featured": "Featured Work",
+ "merch": "Merchandise Design",
+ "lightVariant": "Light",
+ "darkVariant": "Dark",
+ "viewWork": "View work",
+ "highlights": "Design Highlights",
+ "tools": "Tools & Medium"
+ },
+ "uiUxDesign": {
+ "featured": "Featured App",
+ "clientProject": "Client Project",
+ "competencyProject": "Competency Project",
+ "campusRepresentative": "Campus Representative",
+ "mobileApp": "Mobile App",
+ "webDesign": "Web Design",
+    "screens": "{count} Screens",
+    "viewScreens": "View screens",
+    "selectScreen": "Select screen",
+    "statProjects": "{count} Projects",
+    "statScreens": "{count} Screens",
+    "statPlatforms": "{web} Web · {mobile} Mobile",
+    "highlights": "UX Highlights",
+ "tools": "Tools & Process"
+ },
+ "aiMl": {
+ "featured": "Featured Project",
+ "viewNotebook": "View project",
+ "downloadNotebook": "Download .ipynb",
+ "highlights": "ML Highlights",
+ "tools": "Stack & Libraries",
+ "filterLabel": "Filter by type",
+ "statNotebooks": "Projects",
+ "statAlgorithms": "Algorithms",
+ "statDomains": "Domains",
+ "filters": {
+ "all": "All",
+ "forecast": "Forecasting",
+ "classification": "Classification",
+ "signal": "Signal",
+ "eda": "EDA",
+ "nlp": "NLP"
+ }
+ },
+ "dashboards": {
+ "featured": "Featured Dashboard",
+ "viewDashboard": "View dashboard",
+ "openPortfolio": "Open portfolio PDF",
+ "highlights": "Dashboard Highlights",
+ "workflow": "Analytics Workflow",
+ "caseStudyBadge": "Industrial AI Case Study",
+ "heroTitle": "Oil & Gas Predictive Maintenance",
+ "heroDescription": "Interactive analytics & predictive maintenance dashboards for pipeline thickness loss modeling using publicly available industrial datasets. Built with Python, Plotly, and Google Colab.",
+ "metaIndustryLabel": "Industry",
+ "metaIndustry": "Oil & Gas",
+ "metaDatasetLabel": "Dataset",
+ "metaDataset": "Public Dataset (Kaggle)",
+ "metaMethodsLabel": "Methods",
+ "metaMethods": "LSTM • Random Forest • K-Means",
+ "metaPlatformLabel": "Platform",
+ "metaPlatform": "Python • Plotly • Google Colab",
+ "heroTags": [
+ "Machine Learning",
+ "Predictive Maintenance",
+ "Oil & Gas",
+ "Plotly",
+ "Python",
+ "Public Dataset"
+ ],
+ "themes": {
+ "lstm": "LSTM Forecasting",
+ "rf": "Random Forest",
+ "clustering": "K-Means Clustering"
+ }
+ },
+ "categoryEmptyTitle": "Projects coming soon",
+ "categoryEmptyDescription": "Works in this category are being prepared. Check back soon for notebooks, dashboards, and apps.",
+ "categories": {
+ "ai-ml": {
+ "title": "AI & Machine Learning",
+ "description": "Building predictive models and intelligent systems powered by machine learning and deep learning."
+ },
+ "dashboards": {
+ "title": "Interactive Dashboards",
+ "description": "Transforming data into interactive dashboards and meaningful business insights."
+ },
+    "software-dev": {
+      "title": "Software Development",
+      "description": "Building modern web applications, REST APIs, and scalable digital solutions."
     }
   },
-  "projects": {
-    "title": "Selected Projects",
-    "subtitle": "Choose what you want to explore.",
-    "explore": "Explore",
-    "back": "Back to projects",
-    "categoryEmptyTitle": "Projects coming soon",
-    "categoryEmptyDescription": "Works in this category are being prepared. Check back soon for notebooks, dashboards, and apps.",
-    "categories": {
-      "ai-ml": {
-        "title": "AI & Machine Learning",
-        "description": "Building predictive models and intelligent systems powered by machine learning and deep learning."
-      },
-      "dashboards": {
-        "title": "Interactive Dashboards",
-        "description": "Transforming data into interactive dashboards and meaningful business insights."
-      },
-      "software-dev": {
-        "title": "Software Development",
-        "description": "Building modern web applications, REST APIs, and scalable digital solutions."
-      }
-    }
-  },
-  "blog": {
-    "title": "Notes",
-    "subtitle": "Research notes, technical writing, and learning reflections.",
-    "emptyTitle": "No articles published yet",
-    "emptyDescription": "Journal updates and technical notes will appear here when ready."
-  },
-  "certificates": {
-    "title": "Certificates",
-    "subtitle": "Professional certifications and credentials earned through training and assessment.",
-    "emptyTitle": "Certificates coming soon",
-    "emptyDescription": "Certification documents and credentials will be listed here."
-  },
-  "stackPage": {
-    "title": "Tech Arsenal",
-    "subtitle": "Tools and technologies I use across Data Engineering, AI, and Software Development.",
-    "stackTitle": "Tech Stack"
-  },
-  "guestbook": {
-    "title": "Message Board",
-    "subtitle": "Want to connect? Leave a message — I'll read every one.",
-    "formTitle": "Say hello",
-    "formDescription": "Your message will be read — no need to be formal.",
-    "nameLabel": "Name",
-    "namePlaceholder": "e.g. fellow developer",
-    "messageLabel": "Message",
-    "messagePlaceholder": "Say hello, discuss AI, or share feedback...",
-    "submit": "Send message",
-    "submitted": "Message sent!"
-  },
-  "footer": {
-    "roles": "Software Development • Data Engineering • Artificial Intelligence",
-    "description": "Building intelligent digital solutions through modern software development and data-driven technologies.",
-    "getInTouch": "Get In Touch",
-    "marquee": "ENGINEERING IDEAS INTO IMPACTFUL DIGITAL SOLUTIONS",
-    "modal": {
-      "title": "Let's Connect 👋",
-      "close": "Close"
-    },
-    "social": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn",
-      "email": "Email",
-      "resume": "Resume",
-      "whatsapp": "WhatsApp",
-      "githubAria": "Visit GitHub profile",
-      "linkedinAria": "Visit LinkedIn profile",
-      "emailAria": "Send an email",
-      "resumeAria": "Download resume",
-      "whatsappAria": "Chat on WhatsApp"
-    }
-  },
-  "theme": {
-    "dark": "Dark mode",
-    "light": "Light mode"
-  },
-  "language": {
-    "label": "Language",
-    "id": "Indonesia",
-    "en": "English"
-  }
+ "items": {
+ "istana-sayur-buah": {
+ "title": "Istana Sayur Buah",
+ "description": "Production e-commerce website for a fresh vegetable and fruit store in Manokwari — category-led product catalog, organic brand storytelling, trust-building pages, and a responsive shopping flow under the Freshly brand.",
+ "detail": "Client Project · E-Commerce · istanasayurbuah.com"
+ },
+ "exporetrade": {
+ "title": "Exporetrade",
+ "description": "Global product sourcing platform connecting buyers and suppliers — submit requests, send offers, and manage delivery in one place.",
+ "detail": "Buyer & Supplier Marketplace · Vercel"
+ },
+ "simagang-bbkb": {
+ "title": "SIMAGANG BBKB",
+ "description": "Internship registration and management portal for Balai Besar Kerajinan & Batik Yogyakarta — landing page, application workflow, internship listings, gallery, and demo admin access.",
+ "detail": "Internship Platform · Ministry of Industry · Vercel"
+ },
+ "udaracast": {
+ "title": "UdaraCast",
+ "description": "Public air quality platform for PM2.5 forecasting by city and year, with health category insights based on Global Air Quality data.",
+ "detail": "Air Quality Forecast · Vercel"
+ },
+ "kedokploso": {
+ "title": "Dusun Kedokploso",
+ "description": "Community profile website for Dusun Kedokploso — village history, local potential, interactive map, gallery, and contact information.",
+ "detail": "KKN Community Website · Vercel"
+ },
+ "pipilo-agency": {
+ "title": "Pipilo Agency",
+ "description": "Tri-fold brochure for a digital creative agency — playful space-themed branding with service overview, pricing packages, and contact information.",
+ "detail": "Agency Brochure · Front & Back"
+ },
+ "freshly-poster": {
+ "title": "Freshly Promo",
+ "description": "Promotional poster for Freshly grocery app — collage-style layout with bold sticker typography and fresh produce visuals.",
+ "detail": "Social Promo · Mobile App Launch"
+ },
+ "dont-food-waste": {
+ "title": "Don't Food Waste",
+ "description": "Campaign poster for anti-food waste awareness — sandwich collage typography with bold message and Gemastik XVII identity.",
+ "detail": "Gemastik XVII · Awareness Campaign"
+ },
+ "ie-merch": {
+ "title": "Industrial Engineering Merch",
+ "description": "Faculty t-shirt design for Industrial Engineering — layered typography with gear motifs, front chest mark and full back graphic in light and dark variants.",
+ "detail": "Faculty Merch · Front & Back · Light & Dark"
+ },
+ "lana-del-rey": {
+ "title": "Lana Del Rey",
+ "description": "Dreamy editorial collage — layered portraits over misty golden landscape with bold stacked typography and soft vintage tones.",
+ "detail": "Fan Art Collage · Editorial"
+ },
+ "paul-walker": {
+ "title": "Paul Walker Tribute",
+ "description": "Y2K-inspired tribute collage — ghosted portrait layers, sticker-style Nissan Skyline typography, and desert road atmosphere.",
+ "detail": "Fan Art Collage · Fast & Furious Tribute"
+ },
+ "food-discovery": {
+ "title": "Food Discovery App",
+ "description": "Food delivery & discovery mobile UI — promo banners, restaurant recommendations, map-based location picker, and bottom navigation flow.",
+ "detail": "F&B Mobile · Home & Map Screens"
+ },
+ "freshly": {
+ "title": "Freshly — Istana Toko Sayur dan Buah",
+ "description": "End-to-end e-commerce web UI for a fresh produce store in Manokwari, Papua — organic hero messaging, category discovery, product catalog, trust-building About page, and a cohesive green brand system.",
+ "detail": "Client Project · Manokwari, Papua · Web E-Commerce"
+ },
+ "sehatin": {
+ "title": "Sehatin",
+ "description": "Campus UI/UX competency mobile app for holistic wellness — splash branding, multi-step onboarding, iOS notification permission, calorie dashboard, and fitness, nutrition, and mental health modules.",
+ "detail": "UI/UX Competency · Campus Representative · Health Mobile"
+ },
+ "miso": {
+ "title": "MISO — Mie Ayam & Bakso",
+ "description": "Client mobile ordering app for a mie ayam and bakso restaurant in Sumpiuh — playful intro branding, menu discovery with category filters, product detail with quantity control, and a cheerful order-success confirmation.",
+ "detail": "Client Project · Sumpiuh · Food Ordering Mobile"
+ },
+ "food-onboarding": {
+ "title": "Food Safety Onboarding",
+ "description": "Onboarding flow for a food marketplace — safety guarantees with illustrated food icons, checklist trust points, and location setup screen.",
+ "detail": "F&B Mobile · Onboarding & Location"
+ },
+ "burhans-cell": {
+ "title": "Om Burhans Cell",
+ "description": "Electronics store mobile commerce UI — product catalog, brand filters, iPhone detail page with variant selectors, and add-to-cart flow.",
+ "detail": "E-Commerce Mobile · Shop & Product Detail"
+ },
+ "sehatku": {
+ "title": "Sehatku",
+ "description": "Health & wellness app UI — daily calorie tracker, fitness categories, doctor search, consultation banner, and profile-driven home experience.",
+ "detail": "Health Mobile · Dashboard & Doctor Search"
+ },
+ "pm25-sca-lstm": {
+ "title": "Global PM2.5 Forecast — SCA-LSTM",
+ "description": "Research notebook on sine-cosine LSTM tuning for global PM2.5 air quality forecasting — full pipeline from preprocessing to evaluation with RMSE, MAPE, and R² metrics.",
+ "detail": "Deep Learning · Air Quality Forecasting"
+ },
+ "imdb-sentiment-lstm": {
+ "title": "IMDB Sentiment Analysis — LSTM",
+ "description": "Deep learning notebook for movie review sentiment classification on IMDB — text preprocessing, embedding, LSTM architecture, and model evaluation.",
+ "detail": "NLP · Sentiment Classification"
+ },
+ "airline-lstm": {
+ "title": "Airline Passenger Surge — LSTM",
+ "description": "Time-series analysis notebook for predicting airline passenger surges — LSTM modeling with trend visualization, training curves, and forecast evaluation.",
+ "detail": "Deep Learning · Time Series Forecasting"
+ },
+ "mnist-knn": {
+ "title": "MNIST Digit Classification",
+ "description": "Handwritten digit recognition using histogram features and k-Nearest Neighbors — from pixel exploration to classification report and test predictions.",
+ "detail": "Classical ML · MNIST + KNN"
+ },
+ "breast-cancer-dt": {
+ "title": "Breast Cancer Detection",
+ "description": "Comparative classification study on medical data — Logistic Regression, KNN, SVM, and Random Forest with confusion matrix and accuracy benchmarking.",
+ "detail": "Healthcare ML · Model Comparison"
+ },
+ "sms-spam": {
+ "title": "SMS Spam Classification",
+ "description": "Text classification pipeline for SMS spam detection — text preprocessing, feature extraction, and classifier evaluation on labeled message data.",
+ "detail": "NLP · Binary Text Classification"
+ },
+ "ecg-analysis": {
+ "title": "ECG Signal Analysis",
+ "description": "Biomedical signal processing notebook — ECG time-domain visualization and frequency analysis using Fast Fourier Transform (FFT).",
+ "detail": "Signal Processing · Time & Frequency Domain"
+ },
+ "feature-extraction-viz": {
+ "title": "Feature Extraction & Visualization",
+ "description": "Data characterization with first-order feature extraction — statistical modeling, stacked visualizations, and distribution analysis across cases.",
+ "detail": "EDA · Feature Engineering + Statsmodels"
+ },
+ "student-pca": {
+ "title": "Student Academic Data — PCA",
+ "description": "Exploratory analysis of student academic records — preprocessing, PCA dimensionality reduction, and categorical distribution visualizations.",
+ "detail": "EDA · PCA + Academic Dataset"
+ },
+ "iris-knn": {
+ "title": "Iris Classification — KNN",
+ "description": "Classic Iris dataset on Kaggle — parallel coordinates, Andrews curves, pair plots, box plots, and 3D PCA visualization with KNN model training.",
+ "detail": "Classification · Iris + Multivariate EDA"
+ },
+ "motorcycle-ml": {
+ "title": "Used Motorcycle Sales ML",
+ "description": "Dummy used-motorcycle sales dataset — business question framing, data wrangling, EDA visualizations, clustering, and classification pipeline.",
+ "detail": "EDA · Clustering + Classification"
+ },
+ "cifar10-cnn": {
+ "title": "CIFAR-10 Image Classification",
+ "description": "Convolutional Neural Network for CIFAR-10 — data augmentation, dropout regularization, training curves, and multi-class image classification evaluation.",
+ "detail": "Deep Learning · CNN + Augmentation"
+ },
+ "nmt-attention": {
+ "title": "Neural Machine Translation — Attention",
+ "description": "Seq2seq NMT with attention mechanism for Spanish–English translation — encoder-decoder architecture, attention weights, and bilingual sequence modeling.",
+ "detail": "NLP · Attention-based NMT"
+ },
+ "transformer-nmt": {
+ "title": "Transformer Language Translation",
+ "description": "Transformer model with self-attention for language translation — multi-head attention, positional encoding, and end-to-end neural translation pipeline.",
+ "detail": "Deep Learning · Transformer + Self-Attention"
+ },
+ "ecg-analysis-alt": {
+ "title": "ECG Signal Analysis — Colab II",
+ "description": "Additional biomedical signal processing notebook — extended ECG waveform exploration, FFT spectrum analysis, and multi-subject comparison.",
+ "detail": "Signal Processing · Extended FFT Analysis"
+ },
+ "sms-spam-alt": {
+ "title": "SMS Spam Classification — Colab II",
+ "description": "Alternate text classification notebook for SMS spam — preprocessing pipeline, feature extraction, and classifier evaluation on labeled messages.",
+ "detail": "NLP · Alternate Classification Run"
+ },
+ "pm25-sca-lstm-alt": {
+ "title": "Global PM2.5 Forecast — SCA-LSTM II",
+ "description": "Extended air quality forecasting notebook — sine-cosine temporal encoding with LSTM for multi-step PM2.5 prediction and model diagnostics.",
+ "detail": "Deep Learning · Extended Forecasting Run"
+ },
+ "feature-extraction-viz-alt": {
+ "title": "Feature Extraction & Visualization — Colab II",
+ "description": "Alternate EDA notebook — first-order feature extraction, Statsmodels regression, stacked charts, and distribution analysis across cases.",
+ "detail": "EDA · Alternate Feature Engineering Run"
+ },
+ "pertamina-lstm-pipes": {
+ "title": "LSTM Pipe Predictive Maintenance",
+ "description": "Industrial ML notebook — LSTM model for oil & gas pipe thickness loss prediction with preprocessing, outlier analysis, and comparison against linear regression.",
+ "detail": "Oil & Gas · LSTM · Predictive Maintenance"
+ },
+ "pertamina-rf-pipes": {
+ "title": "Random Forest Pipe Analytics",
+ "description": "Random Forest regression notebook for pipe thickness loss in oil & gas — EDA, correlation analysis, feature importance, and predictive maintenance support.",
+ "detail": "Oil & Gas · Random Forest · Regression"
+ },
+ "pertamina-kmeans-refinery": {
+ "title": "Refinery Operation Patterns — K-Means",
+ "description": "Unsupervised learning notebook applying K-Means clustering to oil refinery operation data — feature scaling, cluster profiling, and 3D visualization.",
+ "detail": "Oil & Gas · K-Means · Clustering"
+ },
+ "pattern-knn": {
+ "title": "Pattern Recognition — KNN",
+ "description": "Introduction to pattern recognition using k-Nearest Neighbors — dataset exploration, model training, and classification evaluation.",
+ "detail": "Classical ML · KNN · Pattern Recognition"
+ },
+ "pattern-svm": {
+ "title": "Pattern Recognition — SVM",
+ "description": "Support Vector Machine notebook for pattern recognition — hyperparameter tuning, decision boundary visualization, and classifier performance analysis.",
+ "detail": "Classical ML · SVM · Pattern Recognition"
+ },
+ "ecg-rf-coronary": {
+ "title": "ECG Heartbeat — Random Forest",
+ "description": "Random Forest classifier for ECG heartbeat analysis and coronary heart disease detection — feature extraction, model training, and medical classification evaluation.",
+ "detail": "Healthcare ML · ECG · Random Forest"
+ },
+ "voice-emotion-mfcc": {
+ "title": "Voice Emotion Recognition — MFCC",
+ "description": "Audio emotion classification using MFCC features with SVC and Random Forest — signal preprocessing, feature extraction, and multi-class emotion prediction.",
+ "detail": "Signal ML · MFCC · SVC & Random Forest"
+ },
+ "diabetic-retinopathy-cnn": {
+ "title": "Diabetic Retinopathy Detection — CNN",
+ "description": "PyTorch CNN notebook for diabetic retinopathy detection from retinal images — data augmentation, training pipeline, and medical image classification.",
+ "detail": "Deep Learning · PyTorch CNN · Medical Imaging"
+ },
+ "heartbeat-cnn-wavelet": {
+ "title": "Heartbeat Classification — Wavelet CNN",
+ "description": "CNN architecture for heartbeat classification with wavelet-based feature extraction — time-frequency analysis and deep learning on ECG signals.",
+ "detail": "Deep Learning · Wavelet · ECG Classification"
+ },
+ "responsi-pattern": {
+ "title": "Pattern Recognition — Applied Classification",
+ "description": "Applied pattern recognition project — dataset exploration, classifier training, and structured evaluation workflow.",
+ "detail": "Pattern Recognition · Classification"
+ },
+ "praktikum8-pattern": {
+ "title": "Pattern Recognition — Advanced Methods",
+ "description": "Advanced pattern recognition — classification techniques, visualization, and comparative model evaluation.",
+ "detail": "Pattern Recognition · Advanced Classification"
+ },
+ "praktikum5-pattern": {
+ "title": "Pattern Recognition — Classification Foundations",
+ "description": "Foundational classification methods — decision boundaries, train/test evaluation, and core performance metrics.",
+ "detail": "Pattern Recognition · Classification"
+ },
+ "praktikum1-pattern": {
+ "title": "Pattern Recognition — Statistical Foundations",
+ "description": "Core pattern recognition fundamentals — Euclidean distance, descriptive statistics, and multi-case analytical exercises.",
+ "detail": "Pattern Recognition · Fundamentals"
+ },
+ "praktikum2-pattern": {
+ "title": "Pattern Recognition — Data Pipeline",
+ "description": "End-to-end data preparation — dataset loading, merging, preprocessing, and exploratory analysis for modeling workflows.",
+ "detail": "Pattern Recognition · Data Preparation"
+ },
+ "praktikum3-pattern": {
+ "title": "Pattern Recognition — IRIS Feature Engineering",
+ "description": "Feature extraction on the IRIS dataset — first-order statistics, distribution analysis, and feature visualization.",
+ "detail": "Pattern Recognition · Feature Extraction"
+ },
+ "praktikum4-pattern": {
+ "title": "Pattern Recognition — Breast Cancer Diagnostics",
+ "description": "Breast cancer classification with Decision Trees — data cleaning, train/test split, and confusion matrix evaluation.",
+ "detail": "Pattern Recognition · Decision Tree"
+ },
+ "praktikum6-pattern": {
+ "title": "Pattern Recognition — Student Clustering",
+ "description": "Student performance segmentation with K-Means and Agglomerative Clustering on UCI data — normalization and cluster interpretation.",
+ "detail": "Pattern Recognition · Clustering"
+ },
+ "praktikum7-pattern": {
+ "title": "Pattern Recognition — MNIST Digit Recognition",
+ "description": "MNIST digit recognition using pixel histogram feature extraction and KNN classification with full evaluation pipeline.",
+ "detail": "Pattern Recognition · MNIST · KNN"
+ },
+ "praktikum10-pattern": {
+ "title": "Pattern Recognition — Bioinformatics Sequences",
+ "description": "Bioinformatics pattern recognition — FASTA parsing, k-mer feature extraction, and promoter sequence classification.",
+ "detail": "Pattern Recognition · Bioinformatics"
+ },
+ "dl7-lstm-forecast": {
+ "title": "Deep Learning — LSTM Forecasting",
+ "description": "Time-series forecasting with Long Short-Term Memory (LSTM) networks — data preprocessing, sequence modeling, and prediction evaluation.",
+ "detail": "Deep Learning · LSTM · Forecasting"
+ },
+ "dl8-gru-sentiment": {
+ "title": "Deep Learning — GRU Sentiment Analysis",
+ "description": "Twitter sentiment classification using Gated Recurrent Unit (GRU) on the GOP Debate dataset with text preprocessing and multi-class evaluation.",
+ "detail": "Deep Learning · GRU · Sentiment Analysis"
+ },
+ "dl9-text-vectorization": {
+ "title": "Deep Learning — Text Vectorization",
+ "description": "Text-to-numeric representation with CountVectorizer, document-term matrices, and foundational NLP preprocessing.",
+ "detail": "Deep Learning · Text Mining"
+ },
+ "dl9-nmt-attention": {
+ "title": "Deep Learning — NMT with Attention",
+ "description": "Sequence-to-Sequence neural machine translation with attention mechanism for bilingual language pair translation.",
+ "detail": "Deep Learning · Seq2Seq · Attention · NMT"
+ },
+ "dl10-transformer-nmt": {
+ "title": "Deep Learning — Transformer NMT",
+ "description": "Machine translation with the Transformer architecture (Portuguese to English) using TensorFlow and attention-based sequence modeling.",
+ "detail": "Deep Learning · Transformer · NMT"
+ },
+ "dl11-gan": {
+ "title": "Deep Learning — GAN Image Generation",
+ "description": "Generative Adversarial Network for MNIST digit image generation with discriminator and generator adversarial training.",
+ "detail": "Deep Learning · GAN · Image Generation"
+ },
+ "responsi-neural-style-transfer": {
+ "title": "Deep Learning — Neural Style Transfer",
+ "description": "Neural Style Transfer combining content and style images using deep convolutional networks in TensorFlow.",
+ "detail": "Deep Learning · Neural Style Transfer · CNN"
+ },
+ "dl4-cnn": {
+ "title": "Deep Learning — Convolutional Neural Networks",
+ "description": "Image classification on CIFAR-10 using a Sequential CNN built with TensorFlow Keras — from data loading to training and evaluation.",
+ "detail": "Deep Learning · CNN · CIFAR-10"
+ },
+ "dl5-transfer-learning": {
+ "title": "Deep Learning — Transfer Learning",
+ "description": "Transfer learning with pre-trained VGG16 and ResNet50 (ImageNet) applied to a custom image classification dataset with fine-tuning.",
+ "detail": "Deep Learning · Transfer Learning · VGG16 & ResNet50"
+ },
+ "dl6-fastrcnn": {
+ "title": "Deep Learning — Fast R-CNN Object Detection",
+ "description": "Object detection with Fast R-CNN using TensorFlow Hub — bounding box prediction and visual detection on sample images.",
+ "detail": "Deep Learning · Fast R-CNN · Object Detection"
+ }
+ },
+ "caseStudy": {
+ "title": "Case Study",
+ "close": "Close",
+ "visitSite": "Visit site",
+ "labels": {
+ "overview": "Overview",
+ "problem": "Problem",
+ "solution": "Solution",
+ "role": "My Role",
+ "features": "Key Features",
+ "techStack": "Tech Stack",
+ "challenges": "Challenges",
+ "result": "Result",
+ "pipeline": "Machine Learning Pipeline",
+ "modelPerformance": "Model Performance",
+ "research": "Research",
+ "rmse": "RMSE",
+ "mape": "MAPE",
+ "r2": "R²"
+ },
+ "titles": {
+ "istana-sayur-buah": "Istana Sayur Buah",
+ "exporetrade": "Exporetrade",
+ "simagang-bbkb": "SIMAGANG BBKB",
+ "udaracast": "UdaraCast",
+ "kedokploso": "Dusun Kedokploso"
+ },
+ "items": {
+ "istana-sayur-buah": {
+ "overview": "Istana Sayur Buah (Freshly) is a live e-commerce website for a fresh produce retailer in Manokwari, Papua. The platform digitizes a local vegetable and fruit business into a trustworthy online storefront — from homepage messaging and category discovery to product listings, store story, and customer-facing service information.",
+ "problem": "The store relied on offline ordering and informal communication, making product discovery, pricing visibility, and customer reach limited beyond walk-in and local word-of-mouth channels.",
+ "solution": "Delivered a responsive e-commerce website with structured navigation, category-based shopping, product cards with pricing, and brand pages that communicate quality, freshness, and store credibility.",
+ "roles": [
+ "Project Manager",
+ "UI/UX Designer",
+ "Full Stack Developer",
+ "Team Coordinator",
+ "Client Stakeholder Liaison"
+ ],
+ "features": [
+ "Homepage with fresh-produce hero and category entry points",
+ "Shop catalog with vegetable, fruit, juice, and peanuts filters",
+ "Product cards with pricing and add-to-cart flow",
+ "About Us page with store story, metrics, and team profiles",
+ "Contact and service-trust sections (free shipping, quality, support)",
+ "Responsive layout for mobile and desktop",
+ "Freshly brand system — green palette, produce logo, clean hierarchy"
+ ],
+ "techStack": [
+ "HTML/CSS",
+ "JavaScript",
+ "PHP",
+ "MySQL",
+ "Responsive Web Design"
+ ],
+ "challenges": "Aligning multidisciplinary team output with client expectations while translating a local retail business into a clear, conversion-friendly digital experience.",
+ "result": "Successfully launched a production e-commerce website that centralizes product discovery, brand storytelling, and customer trust for Istana Sayur Buah."
+ },
+ "exporetrade": {
+ "overview": "Exporetrade is a full-stack marketplace platform that connects buyers and suppliers in one integrated ecosystem. The platform enables buyers to submit sourcing requests, receive supplier offers, manage negotiations, and monitor order fulfillment through a modern web application.",
+ "problem": "Many sourcing processes are still handled manually through email or messaging applications, making supplier management, quotation tracking, and communication inefficient.",
+ "solution": "Developed a centralized marketplace platform where buyers and suppliers can interact through a structured workflow, from request submission to order completion.",
+ "roles": [
+ "Full Stack Developer",
+ "UI Implementation",
+ "Database Design",
+ "API Development",
+ "Deployment"
+ ],
+ "features": [
+ "Buyer Dashboard",
+ "Supplier Dashboard",
+ "Product Request",
+ "Quotation System",
+ "Order Management",
+ "Authentication",
+ "Responsive Design"
+ ],
+ "techStack": [
+ "Next.js",
+ "TypeScript",
+ "Tailwind CSS",
+ "Supabase / PostgreSQL",
+ "Vercel"
+ ],
+ "challenges": "Designing a scalable marketplace workflow that supports multiple user roles while maintaining a simple user experience.",
+ "result": "Successfully developed a production-ready marketplace platform with responsive UI and scalable architecture."
+ },
+ "simagang-bbkb": {
+ "overview": "SIMAGANG is a web-based internship registration and management system for Balai Besar Kerajinan & Batik (BBKB) Yogyakarta under the Ministry of Industry. The platform digitizes internship administration — from public discovery and application submission to structured onboarding for craft and batik internship programs.",
+ "problem": "Internship administration at BBKB was largely manual, making registration, document handling, applicant tracking, and communication inefficient for both participants and administrators.",
+ "solution": "Built a modern web portal with a clear registration flow, internship listings, program information, gallery showcase, and demo system access — helping applicants and admins move through a structured digital workflow.",
+ "roles": [
+ "Full Stack Developer Intern",
+ "Frontend Implementation",
+ "Backend Integration",
+ "Database Functionality",
+ "Authentication & Workflow Optimization"
+ ],
+ "features": [
+ "Public landing with BBKB branding and program overview",
+ "3-step registration flow: Create Account, Apply, Selection & Onboarding",
+ "Internship listings (Design, Digital Marketing, Production)",
+ "About, process, and gallery sections",
+ "Impact stats: participants, programs, certificates",
+ "Demo portfolio and admin demo access",
+ "Responsive layout for mobile and desktop"
+ ],
+ "techStack": [
+ "Next.js",
+ "TypeScript",
+ "Tailwind CSS",
+ "PostgreSQL",
+ "Vercel"
+ ],
+ "challenges": "Designing a secure, scalable internship workflow that serves both public applicants and internal administrators while keeping the experience simple and trustworthy.",
+ "result": "Delivered a production-deployed internship portal that centralizes BBKB Yogyakarta's internship registration and management experience."
+ },
+ "udaracast": {
+ "overview": "UdaraCast is an intelligent air quality forecasting platform that predicts PM2.5 concentration using Long Short-Term Memory (LSTM) enhanced with Sine-Cosine feature transformation.",
+ "problem": "Air quality information is generally limited to historical monitoring and lacks predictive insights that help users anticipate pollution levels.",
+ "solution": "Developed a forecasting platform capable of predicting PM2.5 levels while presenting visualization dashboards and health category recommendations.",
+ "roles": [
+ "AI Engineer",
+ "Data Scientist",
+ "Full Stack Developer"
+ ],
+ "features": [
+ "PM2.5 Prediction",
+ "Historical Visualization",
+ "Interactive Dashboard",
+ "Health Recommendation",
+ "City Comparison",
+ "Forecast Visualization",
+ "Machine Learning Pipeline"
+ ],
+ "pipeline": [
+ "Data Collection",
+ "Data Cleaning",
+ "Feature Engineering",
+ "Sine-Cosine Transformation",
+ "LSTM Training",
+ "Evaluation",
+ "Deployment"
+ ],
+ "metrics": {
+ "rmse": "0.1042",
+ "mape": "0.8847",
+ "r2": "0.9787"
+ },
+ "metricsSummary": "The SCA-LSTM model achieved RMSE of 0.1042, MAPE of 0.8847, and a coefficient of determination (R²) of 0.9787.",
+ "modelName": "SCA-LSTM Model",
+ "chartSeries": {
+ "actual": [
+ 0.34,
+ 0.4,
+ 0.47,
+ 0.53,
+ 0.49,
+ 0.56,
+ 0.63,
+ 0.59,
+ 0.69,
+ 0.65
+ ],
+ "predicted": [
+ 0.42,
+ 0.33,
+ 0.54,
+ 0.46,
+ 0.57,
+ 0.49,
+ 0.71,
+ 0.53,
+ 0.77,
+ 0.58
+ ]
+ },
+ "chartCaption": "Actual vs predicted PM2.5 — SCA-LSTM (R² = 0.9787)",
+ "techStack": [
+ "Python",
+ "TensorFlow",
+ "Pandas",
+ "NumPy",
+ "Next.js",
+ "PostgreSQL"
+ ],
+ "challenges": "Building an accurate forecasting model while integrating AI inference into a modern web application.",
+ "research": "Based on undergraduate research focused on hybrid Sine-Cosine Algorithm (SCA) and LSTM for PM2.5 air quality prediction."
+ },
+ "kedokploso": {
+ "overview": "Official village information system designed to provide digital public services, tourism information, and local community activities.",
+ "problem": "Village information was previously scattered across social media and offline announcements, making public access difficult.",
+ "solution": "Developed a modern village website that centralizes public information, tourism content, maps, announcements, and village profiles.",
+ "roles": [
+ "Frontend Developer",
+ "Backend Developer",
+ "UI Designer"
+ ],
+ "features": [
+ "Village Profile",
+ "Tourism Information",
+ "Interactive Map",
+ "News",
+ "Gallery",
+ "Contact"
+ ],
+ "techStack": [
+ "Next.js",
+ "Tailwind CSS",
+ "PostgreSQL",
+ "Vercel"
+ ],
+ "challenges": "Creating an accessible information platform for both local residents and visitors.",
+ "result": "Successfully digitized village information into a responsive and user-friendly platform."
+ },
+ "pipilo-agency": {
+ "overview": "A full brochure design for Pipilo Digital Creative Agency featuring a playful space theme, service breakdown, work process, pricing tiers, and contact details — crafted to feel energetic rather than corporate.",
+ "highlights": [
+ "Space-themed visual identity with astronaut and rocket motifs",
+ "Tri-fold layout: branding, about us, services & contact",
+ "Pricing packages: Basic, Pro, and Premium",
+ "Work process flow from consultation to hosting"
+ ],
+ "tools": [
+ "Figma",
+ "Typography",
+ "Collage",
+ "Print Layout"
+ ]
+ },
+ "freshly-poster": {
+ "overview": "Promotional poster announcing Freshly's availability on the web — combining realistic produce photography with sticker-style typography for a fresh, appetizing campaign look.",
+ "highlights": [
+ "Sticker-style bold typography in multi-color blocks",
+ "Smartphone mockup showcasing the app UI",
+ "Layered vegetable collage for depth and energy",
+ "High-contrast promo message for social sharing"
+ ],
+ "tools": [
+ "Figma",
+ "Photo Collage",
+ "Typography",
+ "Mockup"
+ ]
+ },
+ "dont-food-waste": {
+ "overview": "Awareness poster for the Don't Food Waste campaign — using sandwich-layer food imagery integrated into typography to deliver a strong anti-waste message for Gemastik XVII.",
+ "highlights": [
+ "Sandwich collage integrated into letterforms",
+ "Bold serif headline with strike-through emphasis",
+ "Megaphone icon reinforcing campaign tone",
+ "Gemastik & university branding strip"
+ ],
+ "tools": [
+ "Figma",
+ "Collage",
+ "Campaign Design",
+ "Typography"
+ ]
+ },
+ "ie-merch": {
+ "overview": "Faculty merchandise design for Industrial Engineering — a cohesive t-shirt system with a compact front chest mark and a larger back graphic featuring layered typography, gear icons, and faculty tagline in both white and black garment variants.",
+ "highlights": [
+ "Dual layout: minimal front mark and full back graphic",
+ "Layered Industrial + script Engineering typography",
+ "Gear motif reinforcing engineering identity",
+ "Light and dark mockups for print-ready presentation"
+ ],
+ "tools": [
+ "Figma",
+ "Typography",
+ "Mockup",
+ "Merchandise Design"
+ ]
+ },
+ "lana-del-rey": {
+ "overview": "Editorial fan-art collage celebrating Lana Del Rey — combining multiple portrait layers with a hazy forest landscape and bold vertical name typography in a warm, cinematic palette.",
+ "highlights": [
+ "Layered portrait collage with soft feathered edges",
+ "Misty golden landscape background for depth",
+ "Bold stacked LANA DEL REY typography",
+ "Warm sepia and gold color grading"
+ ],
+ "tools": [
+ "Figma",
+ "Photo Collage",
+ "Typography",
+ "Color Grading"
+ ]
+ },
+ "paul-walker": {
+ "overview": "Tribute collage for Paul Walker and the iconic Nissan Skyline — Y2K sticker aesthetic with ghosted portrait repeats, glitter-textured type, and a cinematic desert road backdrop.",
+ "highlights": [
+ "Ghosted portrait layers with yellow halo glow",
+ "Sticker-cut Skyline R34 GT-R focal element",
+ "Glitter-textured diagonal Skyline & Nissan type",
+ "Desert highway atmosphere with blue-gold sky"
+ ],
+ "tools": [
+ "Figma",
+ "Photo Collage",
+ "Typography",
+ "Sticker Style"
+ ]
+ },
+ "food-discovery": {
+ "overview": "Mobile food discovery experience combining home browsing and map-based location selection — designed for quick restaurant exploration with promo visibility and intuitive navigation.",
+ "highlights": [
+ "Home feed with promo banner and recommendation cards",
+ "Map view with radius slider and location search",
+ "Bottom navigation with clear active states",
+ "Purple accent system for CTAs and highlights"
+ ],
+ "tools": [
+ "Figma",
+ "UI Design",
+ "Mobile Prototyping",
+ "Design System"
+ ]
+ },
+ "freshly": {
+ "overview": "Freshly is a client-facing e-commerce experience for Istana Toko Sayur dan Buah — a fresh vegetable and fruit retailer in Manokwari, Papua. The design translates a local produce business into a trustworthy digital storefront with clear navigation, category-led shopping, and brand storytelling that emphasizes organic quality and community trust.",
+ "highlights": [
+ "Hero homepage with bold fresh-produce messaging and category entry points",
+ "Shop catalog with vegetable, fruit, juice, and peanuts filters plus priced product cards",
+ "About Us page with store story, customer metrics, service promises, and team profiles",
+ "Consistent FRESHLY identity — produce logo mark, leaf-green palette, and clean sans-serif hierarchy",
+ "Testimonials and value pillars (free shipping, always fresh, quality, 24/7 support) for conversion trust"
+ ],
+ "tools": [
+ "Figma",
+ "UI/UX Design",
+ "Web Design",
+ "Design System",
+ "Client Presentation"
+ ],
+ "screenLabels": [
+ "Home",
+ "About Us",
+ "Shop"
+ ]
+ },
+ "sehatin": {
+ "overview": "Sehatin is a mobile wellness app designed for a campus UI/UX competency project — representing the university with a complete health companion experience. The flow covers first launch, guided onboarding across physical and mental health themes, system notification permission, and a feature-rich home dashboard for daily calorie and activity tracking.",
+ "highlights": [
+ "Splash screen with runner icon and soft purple Sehatin identity",
+ "Four-step onboarding: health program, mental wellness, rich features, and user benefits",
+ "Native iOS notification permission dialog with clear copy",
+ "Home dashboard with Physical Fitness, Nutritious Food, and Mental Health cards",
+ "Calorie ring tracker with target, consumed, and burned metrics plus daily activity goals",
+ "Bottom navigation — Home, AI, Consultation, and Profile"
+ ],
+ "tools": [
+ "Figma",
+ "UI/UX Design",
+ "Mobile Prototyping",
+ "User Flow",
+ "Design System"
+ ],
+ "screenLabels": [
+ "Splash",
+ "Onboarding — Health Program",
+ "Onboarding — Mental Health",
+ "Onboarding — Features",
+ "Onboarding — Benefits",
+ "Notifications",
+ "Home"
+ ]
+ },
+ "miso": {
+ "overview": "MISO is a mobile food ordering experience designed for a noodle and meatball restaurant client in Sumpiuh. The app turns a local favorite into a friendly digital ordering flow — from bold orange branding and menu browsing to product storytelling, quantity control, and a warm success screen that closes the purchase loop.",
+ "highlights": [
+ "Intro splash with expressive MISO wordmark and orange brand personality",
+ "Menu home with search, category chips (All, Meatball, Noodle, Toppings), and product cards",
+ "Chili Oil Chicken Noodle detail with description, quantity stepper, and sticky order button",
+ "Order success screen with celebratory copy and return action",
+ "Rounded card UI, circular food photography, and consistent orange accent system"
+ ],
+ "tools": [
+ "Figma",
+ "UI/UX Design",
+ "Mobile Prototyping",
+ "Food Ordering UX",
+ "Client Presentation"
+ ],
+ "screenLabels": [
+ "Intro",
+ "Menu Home",
+ "Product Detail",
+ "Order Success"
+ ]
+ },
+ "food-onboarding": {
+ "overview": "Trust-building onboarding for a food marketplace — communicating safety guarantees before users set their location, with friendly illustration and step-by-step flow.",
+ "highlights": [
+ "Illustrated food icons with playful dotted paths",
+ "Safety checklist with checkmark trust indicators",
+ "Onboarding copy focused on consumption confidence",
+ "Location picker with current-location CTA"
+ ],
+ "tools": [
+ "Figma",
+ "UI Design",
+ "Illustration",
+ "User Flow"
+ ]
+ },
+ "burhans-cell": {
+ "overview": "Electronics retail mobile app for Om Burhans Cell — shop homepage with brand discovery, product recommendations, and a detailed iPhone product page with storage/color variants.",
+ "highlights": [
+ "Category pills and horizontal product recommendations",
+ "Brand logo row for quick filtering",
+ "Product detail with variant chips and review stats",
+ "Sticky price bar with add-to-cart action"
+ ],
+ "tools": [
+ "Figma",
+ "UI Design",
+ "E-Commerce UX",
+ "Component Library"
+ ]
+ },
+ "sehatku": {
+ "overview": "Health companion app Sehatku — balancing daily wellness tracking with doctor discovery, using a soft purple palette and card-based layout for approachable health UX.",
+ "highlights": [
+ "Circular calorie tracker with progress gauge",
+ "Category tiles for fitness, nutrition, and mental health",
+ "Doctor search with specialty filters",
+ "Consultation banner and doctor listing cards"
+ ],
+ "tools": [
+ "Figma",
+ "UI Design",
+ "Health UX",
+ "Mobile Prototyping"
+ ]
+ },
+ "pm25-sca-lstm": {
+ "overview": "Research notebook for global PM2.5 air quality forecasting using SCA-LSTM — combining sine-cosine temporal encoding with LSTM networks to capture seasonal patterns in pollution data.",
+ "highlights": [
+ "Sine-cosine feature transformation for cyclical patterns",
+ "LSTM sequence modeling for multi-step forecasting",
+ "Hyperparameter tuning and model evaluation",
+ "Deployed as UdaraCast public forecasting platform"
+ ],
+ "pipeline": [
+ "Data Collection",
+ "Cleaning & Normalization",
+ "Sine-Cosine Encoding",
+ "LSTM Training",
+ "Evaluation",
+ "Deployment"
+ ],
+ "metrics": {
+ "rmse": "0.1042",
+ "mape": "0.8847",
+ "r2": "0.9787"
+ },
+ "metricsSummary": "SCA-LSTM achieved RMSE 0.1042, MAPE 0.8847, and R² 0.9787 on PM2.5 forecasting.",
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Pandas",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "imdb-sentiment-lstm": {
+ "overview": "IMDB movie review sentiment classification using LSTM — text tokenization, sequence padding, embedding layer, and binary sentiment prediction with training history visualization.",
+ "highlights": [
+ "IMDB dataset preprocessing and vocabulary building",
+ "LSTM recurrent network for sequence classification",
+ "Training/validation accuracy and loss curves",
+ "Confusion matrix and classification report"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "pattern-knn": {
+ "overview": "Pattern recognition fundamentals with k-Nearest Neighbors — exploring labeled datasets, choosing k, and evaluating classifier performance on test data.",
+ "highlights": [
+ "Dataset visualization and feature exploration",
+ "KNN model training with Scikit-learn",
+ "Train/test split and accuracy evaluation",
+ "Decision region and neighbor analysis"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "pattern-svm": {
+ "overview": "Pattern recognition with Support Vector Machines — kernel selection, margin optimization, and visualizing decision boundaries for multi-class classification.",
+ "highlights": [
+ "SVM classifier with linear and RBF kernels",
+ "Hyperparameter tuning with cross-validation",
+ "Decision boundary visualization",
+ "Precision, recall, and F1-score evaluation"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "ecg-rf-coronary": {
+ "overview": "ECG heartbeat classification for coronary heart disease detection using Random Forest — signal preprocessing, feature extraction, and medical diagnostic evaluation.",
+ "highlights": [
+ "ECG signal preprocessing and heartbeat segmentation",
+ "Random Forest multi-class classification",
+ "Confusion matrix and classification report",
+ "Coronary heart disease detection pipeline"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "voice-emotion-mfcc": {
+ "overview": "Voice emotion recognition from audio using MFCC features — comparing SVC and Random Forest classifiers on emotional speech datasets.",
+ "highlights": [
+ "MFCC feature extraction from audio signals",
+ "SVC and Random Forest model comparison",
+ "Multi-class emotion classification",
+ "Audio preprocessing and spectrogram analysis"
+ ],
+ "tools": [
+ "Python",
+ "Librosa",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "diabetic-retinopathy-cnn": {
+ "overview": "Diabetic retinopathy detection using PyTorch CNN — training convolutional networks on retinal fundus images with augmentation and medical imaging evaluation.",
+ "highlights": [
+ "PyTorch CNN architecture for image classification",
+ "Retinal image preprocessing and augmentation",
+ "Training/validation loss and accuracy tracking",
+ "Medical imaging classification pipeline"
+ ],
+ "tools": [
+ "Python",
+ "PyTorch",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "heartbeat-cnn-wavelet": {
+ "overview": "Heartbeat classification with wavelet-transform feature extraction and CNN — combining time-frequency analysis with deep learning for ECG signal classification.",
+ "highlights": [
+ "Wavelet transform for ECG feature extraction",
+ "CNN architecture for heartbeat pattern recognition",
+ "Time-frequency domain visualization",
+ "Multi-class ECG classification evaluation"
+ ],
+ "tools": [
+ "Python",
+ "PyTorch",
+ "PyWavelets",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "responsi-pattern": {
+ "overview": "Applied pattern recognition project with hands-on classification — dataset exploration, model training, and performance evaluation.",
+ "highlights": [
+ "Dataset exploration and visualization",
+ "Classifier training and tuning",
+ "Performance metric evaluation",
+ "Interactive responsi exercises"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "praktikum8-pattern": {
+ "overview": "Advanced pattern recognition methods with visualization and multi-model comparison exercises.",
+ "highlights": [
+ "Advanced pattern recognition techniques",
+ "Multi-model comparison",
+ "Decision boundary visualization",
+ "Classification performance analysis"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "praktikum5-pattern": {
+ "overview": "Foundational classification workflow including dataset splitting, training, and evaluation metrics.",
+ "highlights": [
+ "Foundational classification workflow",
+ "Train/test split and cross-validation",
+ "Decision boundary plots",
+ "Accuracy and confusion matrix evaluation"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "praktikum1-pattern": {
+ "overview": "Core pattern recognition concepts — Euclidean distance, descriptive statistics, and hands-on analytical cases.",
+ "highlights": [
+ "Euclidean distance with Pythagorean theorem",
+ "Mean, variance, and basic statistical measures",
+ "NumPy array operations on sample data",
+ "Multi-case introductory pattern exercises"
+ ],
+ "tools": [
+ "Python",
+ "NumPy",
+ "Math",
+ "Jupyter"
+ ]
+ },
+ "praktikum2-pattern": {
+ "overview": "Data preparation pipeline — loading CSV datasets, merging sources, and preprocessing before modeling.",
+ "highlights": [
+ "Google Colab and Drive dataset integration",
+ "Multi-dataset concatenation",
+ "Data inspection and preprocessing steps",
+ "Pre-model exploratory workflow"
+ ],
+ "tools": [
+ "Python",
+ "Pandas",
+ "Google Colab",
+ "Jupyter"
+ ]
+ },
+ "praktikum3-pattern": {
+ "overview": "Feature extraction from the IRIS dataset — first-order statistical features, distribution shape analysis, and visualization.",
+ "highlights": [
+ "IRIS dataset loading and exploration",
+ "First-order feature extraction per numeric column",
+ "Kurtosis and skewness analysis with SciPy",
+ "Feature distribution visualization"
+ ],
+ "tools": [
+ "Python",
+ "Pandas",
+ "NumPy",
+ "SciPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "praktikum4-pattern": {
+ "overview": "Decision Tree classification on the Wisconsin Breast Cancer dataset — cleaning, splitting, training, and confusion matrix evaluation.",
+ "highlights": [
+ "Breast cancer dataset preprocessing",
+ "Removal of unused ID columns",
+ "Decision Tree classifier training",
+ "Confusion matrix performance analysis"
+ ],
+ "tools": [
+ "Python",
+ "Pandas",
+ "Scikit-learn",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "praktikum6-pattern": {
+ "overview": "K-Means and Agglomerative Clustering on student performance data from UCI — normalization, clustering, and group interpretation.",
+ "highlights": [
+ "UCI student performance dataset",
+ "StandardScaler normalization pipeline",
+ "K-Means and Agglomerative Clustering",
+ "Four-group student segmentation analysis"
+ ],
+ "tools": [
+ "Python",
+ "Pandas",
+ "Scikit-learn",
+ "ucimlrepo",
+ "Jupyter"
+ ]
+ },
+ "praktikum7-pattern": {
+ "overview": "MNIST digit classifier — custom histogram feature extraction from 28×28 images and KNN-based classification.",
+ "highlights": [
+ "MNIST CSV loading and image visualization",
+ "Custom 256-bin pixel histogram features",
+ "Train/test split and KNN training",
+ "Digit recognition evaluation"
+ ],
+ "tools": [
+ "Python",
+ "Pandas",
+ "NumPy",
+ "Scikit-learn",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "praktikum10-pattern": {
+ "overview": "Bioinformatics pattern recognition — parsing FASTA genome sequences, extracting k-mer frequency features, and classifying promoter regions.",
+ "highlights": [
+ "NCBI FASTA download and Biopython parsing",
+ "k-mer (trinucleotide) frequency feature extraction",
+ "Promoter vs non-promoter sequence labeling",
+ "Sequence-based classification workflow"
+ ],
+ "tools": [
+ "Python",
+ "Biopython",
+ "Scikit-learn",
+ "Pandas",
+ "Jupyter"
+ ]
+ },
+ "dl7-lstm-forecast": {
+ "overview": "LSTM time-series forecasting project — data loading, sequence preparation, training, and prediction visualization.",
+ "highlights": [
+ "Time-series data loading and visualization",
+ "LSTM architecture for sequence prediction",
+ "Train/test split with temporal windows",
+ "Forecast vs actual comparison plots"
+ ],
+ "pipeline": [
+ "Data Loading",
+ "Preprocessing",
+ "Sequence Windowing",
+ "LSTM Training",
+ "Forecast Evaluation"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "Pandas",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl8-gru-sentiment": {
+ "overview": "Sentiment analysis on Twitter data using GRU networks to classify tweets as positive, negative, or neutral from the GOP Debate dataset.",
+ "highlights": [
+ "Twitter sentiment dataset preprocessing",
+ "Text tokenization and padding pipeline",
+ "GRU recurrent network architecture",
+ "Multi-class sentiment classification evaluation"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "Pandas",
+ "NumPy",
+ "Jupyter"
+ ]
+ },
+ "dl9-text-vectorization": {
+ "overview": "Foundational text mining with Scikit-learn CountVectorizer — converting raw sentences to document-term matrices for machine learning.",
+ "highlights": [
+ "Text-to-numeric representation with CountVectorizer",
+ "Document-term matrix construction",
+ "Train and test text transformation",
+ "Foundational NLP preprocessing workflow"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl9-nmt-attention": {
+ "overview": "Seq2Seq neural machine translation with attention — encoder-decoder architecture and bilingual translation evaluation.",
+ "highlights": [
+ "Seq2Seq encoder-decoder model",
+ "Attention mechanism for alignment",
+ "Text preprocessing with TensorFlow Text",
+ "Translation quality evaluation"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "TensorFlow Text",
+ "Einops",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl10-transformer-nmt": {
+ "overview": "Transformer-based neural machine translation from Portuguese to English using multi-head attention, positional encoding, and TensorFlow.",
+ "highlights": [
+ "Full Transformer architecture implementation",
+ "Multi-head self-attention and feed-forward layers",
+ "Portuguese-to-English translation pipeline",
+ "Training and BLEU-style evaluation"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "TensorFlow Datasets",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl11-gan": {
+ "overview": "GAN training on MNIST digits with separate discriminator and generator networks for synthetic image generation.",
+ "highlights": [
+ "GAN discriminator and generator architecture",
+ "MNIST dataset normalization pipeline",
+ "Adversarial training loop",
+ "Generated digit visualization"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "responsi-neural-style-transfer": {
+ "overview": "Neural Style Transfer — combining content and style images using deep CNN feature representations and iterative optimization in TensorFlow.",
+ "highlights": [
+ "Content and style image loading",
+ "VGG-based feature extraction",
+ "Style loss and content loss optimization",
+ "Stylized output image generation"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl4-cnn": {
+ "overview": "Convolutional Neural Network with TensorFlow Keras for CIFAR-10 image classification — preprocessing, architecture design, training, and accuracy evaluation.",
+ "highlights": [
+ "CIFAR-10 dataset loading and normalization",
+ "Sequential CNN architecture with Keras",
+ "Model training and validation",
+ "Classification accuracy and prediction visualization"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl5-transfer-learning": {
+ "overview": "Transfer learning with pre-trained VGG16 and ResNet50 on a custom image dataset — feature extraction, fine-tuning, and classification evaluation.",
+ "highlights": [
+ "Pre-trained VGG16 and ResNet50 from ImageNet",
+ "Custom dataset loading and augmentation",
+ "Fine-tuning top layers for new classes",
+ "Transfer learning vs training from scratch comparison"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl6-fastrcnn": {
+ "overview": "Object detection with Fast R-CNN via TensorFlow Hub — detecting and localizing objects in images with bounding boxes and confidence scores.",
+ "highlights": [
+ "TensorFlow Hub object detection model loading",
+ "Image preprocessing for detection pipeline",
+ "Bounding box prediction and visualization",
+ "Multi-object detection on sample images"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "TensorFlow Hub",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "airline-lstm": {
+ "overview": "Time-series forecasting of airline passenger surges using LSTM — analyzing historical passenger volume patterns, training recurrent networks, and evaluating forecast accuracy on seasonal travel demand.",
+ "highlights": [
+ "Historical passenger trend visualization",
+ "LSTM sequence model for surge prediction",
+ "Train/test split with temporal validation",
+ "Forecast vs actual comparison plots"
+ ],
+ "pipeline": [
+ "Data Loading",
+ "Time Series Preprocessing",
+ "Sequence Windowing",
+ "LSTM Training",
+ "Forecast Evaluation"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Pandas",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "mnist-knn": {
+ "overview": "End-to-end MNIST digit classification workflow — extracting histogram features from 28×28 grayscale images and training a k-Nearest Neighbors classifier with strong per-class precision and recall.",
+ "highlights": [
+ "Histogram-based feature extraction from pixel data",
+ "Sample digit visualization and label distribution",
+ "Classification report with ~98% overall accuracy",
+ "Test prediction visualization on unseen digits"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "breast-cancer-dt": {
+ "overview": "Medical classification benchmark comparing four algorithms on breast cancer detection data — evaluating accuracy, confusion matrix, and F1-score across Logistic Regression, KNN, SVM, and Random Forest.",
+ "highlights": [
+ "Multi-model comparison with accuracy bar charts",
+ "Confusion matrix heatmap for best performer",
+ "KNN achieved highest accuracy (~95%)",
+ "Feature scaling and train-test split pipeline"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "Seaborn",
+ "Jupyter"
+ ]
+ },
+ "sms-spam": {
+ "overview": "SMS spam detection using text classification methods — preprocessing raw messages, extracting text features, and training classifiers to distinguish spam from legitimate SMS.",
+ "highlights": [
+ "Text preprocessing and tokenization pipeline",
+ "Feature vectorization for SMS messages",
+ "Binary classification evaluation metrics",
+ "End-to-end notebook from data load to results"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NLTK",
+ "Pandas",
+ "Jupyter"
+ ]
+ },
+ "ecg-analysis": {
+ "overview": "ECG biomedical signal analysis covering both time and frequency domains — loading patient signal CSV data, plotting waveforms, and applying FFT to identify frequency components and noise patterns.",
+ "highlights": [
+ "Time-domain ECG waveform visualization",
+ "Fast Fourier Transform frequency spectrum",
+ "Multi-subject signal comparison",
+ "Analysis of power-line interference patterns (~50Hz)"
+ ],
+ "tools": [
+ "Python",
+ "NumPy",
+ "SciPy",
+ "Matplotlib",
+ "Pandas",
+ "Jupyter"
+ ]
+ },
+ "feature-extraction-viz": {
+ "overview": "Data visualization and characterization using first-order feature extraction — statistical regression with Statsmodels, stacked bar charts, and overlaid histogram distributions across multiple cases.",
+ "highlights": [
+ "OLS regression with Statsmodels correlation analysis",
+ "Stacked bar chart for multi-category comparison",
+ "Overlaid histograms for distribution analysis",
+ "Two-case study workflow (Kasus 1 & Kasus 2)"
+ ],
+ "tools": [
+ "Python",
+ "Statsmodels",
+ "Pandas",
+ "Matplotlib",
+ "Seaborn",
+ "Jupyter"
+ ]
+ },
+ "student-pca": {
+ "overview": "Academic student data exploration — preprocessing survey records, applying PCA for 2D dimensionality reduction, and visualizing subject scores and categorical distributions for major recommendation insights.",
+ "highlights": [
+ "Missing value handling and column cleaning",
+ "PCA scatter plot (PC1 vs PC2) for cluster patterns",
+ "Bar charts for student space and graduation timeline categories",
+ "Multi-subject score feature analysis"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "Matplotlib",
+ "Seaborn",
+ "Jupyter"
+ ]
+ },
+ "iris-knn": {
+ "overview": "Multivariate exploration of the Iris dataset on Kaggle — advanced visualizations including parallel coordinates, Andrews curves, and pair plots, followed by KNN classification across three species.",
+ "highlights": [
+ "Parallel coordinates and Andrews curves for class separation",
+ "Seaborn pair plot with species color coding",
+ "Box plots comparing sepal and petal measurements",
+ "3D PCA scatter plot for dimensionality reduction"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "Matplotlib",
+ "Seaborn",
+ "Jupyter"
+ ]
+ },
+ "motorcycle-ml": {
+ "overview": "End-to-end analysis of a dummy used-motorcycle sales dataset — from business questions and data wrangling through EDA bar charts to clustering and classification experiments.",
+ "highlights": [
+ "Business question definition and data gathering",
+ "Missing value and duplicate assessment pipeline",
+ "Sales performance visualizations by category",
+ "Clustering and classification model training"
+ ],
+ "tools": [
+ "Python",
+ "Pandas",
+ "Matplotlib",
+ "Seaborn",
+ "Scikit-learn",
+ "Jupyter"
+ ]
+ },
+ "cifar10-cnn": {
+ "overview": "Deep learning image classification on CIFAR-10 — building a Convolutional Neural Network with data augmentation and dropout to classify 10 object categories from 32×32 color images.",
+ "highlights": [
+ "CNN architecture with convolution and pooling layers",
+ "Data augmentation for improved generalization",
+ "Dropout regularization to reduce overfitting",
+ "Training loss/accuracy curves and class evaluation"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "nmt-attention": {
+ "overview": "Attention-based Neural Machine Translation for Spanish–English — seq2seq encoder-decoder model where attention mechanism aligns source and target tokens for improved translation quality.",
+ "highlights": [
+ "Encoder-decoder seq2seq architecture",
+ "Attention mechanism for token alignment",
+ "Bilingual sequence preprocessing pipeline",
+ "Translation inference and evaluation workflow"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Jupyter"
+ ]
+ },
+ "transformer-nmt": {
+ "overview": "Transformer-based language translation model — implementing self-attention and multi-head attention layers with positional encoding for parallel sequence processing without recurrence.",
+ "highlights": [
+ "Self-attention mechanism replacing RNN recurrence",
+ "Multi-head attention for diverse representation learning",
+ "Positional encoding for sequence order information",
+ "End-to-end translation training pipeline"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Jupyter"
+ ]
+ },
+ "ecg-analysis-alt": {
+ "overview": "Extended ECG biomedical signal notebook — additional waveform plots, FFT spectrum exploration, and multi-subject signal comparison from an alternate Colab export.",
+ "highlights": [
+ "Extended time-domain ECG visualization",
+ "FFT frequency spectrum and noise inspection",
+ "Multi-subject waveform comparison",
+ "Power-line interference analysis (~50Hz)"
+ ],
+ "tools": [
+ "Python",
+ "NumPy",
+ "SciPy",
+ "Matplotlib",
+ "Pandas",
+ "Jupyter"
+ ]
+ },
+ "sms-spam-alt": {
+ "overview": "Alternate SMS spam classification notebook — text preprocessing, feature vectorization, and binary classifier evaluation on labeled message datasets.",
+ "highlights": [
+ "Text cleaning and tokenization pipeline",
+ "Feature extraction for short SMS text",
+ "Spam vs ham classification metrics",
+ "Confusion matrix and accuracy evaluation"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NLTK",
+ "Pandas",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "pm25-sca-lstm-alt": {
+ "overview": "Extended PM2.5 forecasting notebook using SCA-LSTM — alternate Colab run with sine-cosine encoding, LSTM training, and RMSE/MAPE/R² evaluation.",
+ "highlights": [
+ "Sine-cosine cyclical feature encoding",
+ "LSTM multi-step sequence forecasting",
+ "Model performance metrics (RMSE, MAPE, R²)",
+ "Training diagnostics and prediction plots"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "Pandas",
+ "NumPy",
+ "Jupyter"
+ ]
+ },
+ "feature-extraction-viz-alt": {
+ "overview": "Alternate feature extraction and visualization notebook — Statsmodels regression, stacked bar charts, and distribution overlays for multi-case data characterization.",
+ "highlights": [
+ "First-order feature extraction pipeline",
+ "OLS regression with Statsmodels",
+ "Stacked bar chart comparisons",
+ "Overlaid histogram distribution analysis"
+ ],
+ "tools": [
+ "Python",
+ "Statsmodels",
+ "Pandas",
+ "Matplotlib",
+ "Seaborn",
+ "Jupyter"
+ ]
+ },
+ "pertamina-lstm-pipes": {
+ "overview": "Predictive maintenance dashboard for oil & gas pipe thickness loss using LSTM — full pipeline from Google Colab data loading through preprocessing, outlier boxplots, normalization, to LSTM training with superior performance over linear regression.",
+ "highlights": [
+ "LSTM achieved R² 0.9795 vs Linear Regression R² 0.8703",
+ "MAE 0.3057 and MSE 0.1793 on thickness loss prediction",
+ "Outlier analysis and feature normalization pipeline",
+ "Dashboard mockup with heatmap, residuals, and actual vs predicted plots"
+ ],
+ "pipeline": [
+ "Data Loading",
+ "Preprocessing & Encoding",
+ "Outlier Analysis",
+ "Normalization",
+ "LSTM Training",
+ "Model Comparison",
+ "Dashboard Visualization"
+ ],
+ "metrics": {
+ "r2": "0.9795",
+ "mae": "0.3057",
+ "mse": "0.1793"
+ },
+ "metricsSummary": "LSTM outperformed Linear Regression with R² 0.9795, MAE 0.3057, and MSE 0.1793 on pipe thickness loss prediction.",
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Pandas",
+ "Plotly",
+ "Google Colab",
+ "Scikit-learn"
+ ]
+ },
+ "pertamina-rf-pipes": {
+ "overview": "Random Forest regression dashboard for predicting pipe thickness loss in the oil & gas sector — combining EDA, correlation analysis, permutation feature importance, and interactive Plotly scatter visualization by pipe condition.",
+ "highlights": [
+ "Random Forest Regressor with R² score 0.98",
+ "Correlation heatmap revealing pipe size vs thickness relationship",
+ "Permutation importance: Condition, Material Loss, Thickness",
+ "Interactive Thickness Loss vs Time scatter by Moderate/Critical/Normal"
+ ],
+ "pipeline": [
+ "Data Loading",
+ "Preprocessing",
+ "Exploratory Analysis",
+ "Correlation Map",
+ "Random Forest Training",
+ "Feature Importance",
+ "Interactive Visualization"
+ ],
+ "metrics": {
+ "r2": "0.98"
+ },
+ "metricsSummary": "Random Forest model achieved R² 0.98 for pipe thickness loss prediction supporting predictive maintenance.",
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "Plotly",
+ "Google Colab",
+ "Matplotlib"
+ ]
+ },
+ "pertamina-kmeans-refinery": {
+ "overview": "K-Means clustering analysis of oil refinery operation patterns — clustering on yield, gravity, vapour pressure, and distillation features with 3D cluster plot and interactive Plotly visualization.",
+ "highlights": [
+ "Feature scaling after zero missing-value validation",
+ "K-Means cluster labeling on refinery operation data",
+ "3D K-Means cluster visualization",
+ "Interactive Plotly scatter: Gravity vs Percentage Yield"
+ ],
+ "pipeline": [
+ "Data Loading",
+ "Missing Value Check",
+ "Feature Scaling",
+ "K-Means Clustering",
+ "3D Visualization",
+ "Interactive Plotly Dashboard"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "Plotly",
+ "Google Colab"
+ ]
+ }
+ }
+ }
+ },
+ "blog": {
+ "title": "Notes",
+ "subtitle": "Research notes, technical writing, and learning reflections.",
+ "emptyTitle": "No articles published yet",
+ "emptyDescription": "Journal updates and technical notes will appear here when ready."
+ },
+ "certificates": {
+ "title": "Certificates",
+ "subtitle": "Professional certifications, training records, language proficiency, and achievements.",
+ "preview": "Preview",
+ "view": "View",
+ "viewSoon": "Coming soon",
+ "close": "Close",
+ "openDocument": "Open document",
+ "backToCertificates": "Back to certificates",
+ "documentSoon": "Certificate file will be uploaded soon.",
+ "pageOf": "Page {current} / {total}",
+ "filters": {
+ "all": "All",
+ "certification": "Certification",
+ "training": "Training",
+ "language": "Language",
+ "achievement": "Achievement"
+ },
+ "items": {
+ "ads-bnsp": {
+ "description": "National professional competency certificate (BNSP) for Associate Data Scientist in Artificial Intelligence, issued by LSP Universitas Ahmad Dahlan — valid for 3 years.",
+ "competencyTitle": "Competency Units",
+ "competencyUnits": [
+ "Collecting Data",
+ "Analyzing Data",
+ "Validating Data",
+ "Defining a Data Object",
+ "Cleaning Data",
+ "Constructing Data",
+ "Specifying Data Labels",
+ "Building the Model",
+ "Evaluating Modeling Results"
+ ]
+ },
+ "ads-digital-talent": {
+ "description": "Digital Talent Scholarship microskill certification in Associate Data Scientist, covering practical data science and machine learning competencies."
+ },
+ "pelatihan-data-science": {
+ "description": "Structured data science training certificate covering analytics workflows, modeling fundamentals, and applied data skills."
+ },
+ "ui-ux": {
+ "description": "UI/UX design training certificate covering user-centered design principles, interface design, and digital product usability."
+ },
+ "adept-uad": {
+ "description": "Ahmad Dahlan English Proficiency Test (ADEPT) certificate — Listening 53, Structure & Written Expression 80, Reading 52, with a total score of 476."
+ },
+ "magang-bbspjikb": {
+ "description": "Internship certificate from BBSPJIKB Yogyakarta, Ministry of Industry — Full Stack Developer Intern in the Data and Information Division (Oct 2025 – Jan 2026)."
+ },
+ "soft-skills-uad": {
+ "description": "Participant certificate for Student Soft Skills Training Phase II, organized by the Career Development Center, Universitas Ahmad Dahlan."
+ },
+ "literasi-ms-word": {
+ "description": "Scientific writing literacy training certificate for Microsoft Word — document formatting and academic writing support tools."
+ },
+ "literasi-database": {
+ "description": "Scientific writing literacy training certificate for academic database usage and research resource management."
+ },
+ "literasi-mendeley": {
+ "description": "Training certificate for Mendeley reference management — citation organization and bibliography workflows for academic writing."
+ },
+ "literasi-penelusuran-database": {
+ "description": "Training certificate for online database search techniques — finding and evaluating scholarly literature effectively."
+ }
+ },
+ "emptyTitle": "Certificates coming soon",
+ "emptyDescription": "Certification documents and credentials will be listed here.",
+ "emptyFilterTitle": "No certificates in this category",
+ "emptyFilterDescription": "Try another filter or check back later."
+ },
+ "stackPage": {
+ "title": "Tech Arsenal",
+    "subtitle": "Tools and technologies I use across Data Science and Software Development.",
+ "stackTitle": "Tech Stack"
+ },
+ "guestbook": {
+ "title": "Message Board",
+ "subtitle": "Want to connect? Leave a message — I'll read every one.",
+ "formTitle": "Say hello",
+ "formDescription": "Your message will be read — no need to be formal.",
+ "nameLabel": "Name",
+ "namePlaceholder": "e.g. fellow developer",
+ "messageLabel": "Message",
+ "messagePlaceholder": "Say hello, discuss AI, or share feedback...",
+ "submit": "Send message",
+ "submitted": "Message sent!"
+ },
+ "footer": {
+    "roles": "Data Science • Software Development",
+ "description": "Building intelligent digital solutions through modern software development and data-driven technologies.",
+ "getInTouch": "Get In Touch",
+ "marquee": "ENGINEERING IDEAS INTO IMPACTFUL DIGITAL SOLUTIONS",
+ "modal": {
+ "title": "Let's Connect 👋",
+ "close": "Close"
+ },
+ "social": {
+ "github": "GitHub",
+ "linkedin": "LinkedIn",
+ "email": "Email",
+ "resume": "Resume",
+ "whatsapp": "WhatsApp",
+ "githubAria": "Visit GitHub profile",
+ "linkedinAria": "Visit LinkedIn profile",
+ "emailAria": "Send an email",
+ "resumeAria": "Download resume",
+ "whatsappAria": "Chat on WhatsApp"
+ }
+ },
+ "theme": {
+ "dark": "Dark mode",
+ "light": "Light mode"
+ },
+ "language": {
+ "label": "Language",
+ "id": "Indonesia",
+ "en": "English"
+ }
 }

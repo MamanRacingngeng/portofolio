@@ -1,208 +1,2136 @@
 {
-  "meta": {
-    "home": {
-      "title": "RAHMAN NENDHIARTO — Data Engineer & AI Enthusiast",
-      "description": "Portofolio Rahman Nendhiarto — Data Engineer, AI Enthusiast, dan Software Engineer."
-    },
-    "projects": {
-      "title": "Proyek — RAHN.",
-      "description": "Proyek pengembangan perangkat lunak dan machine learning."
-    },
-    "blog": {
-      "title": "Catatan — RAHN.",
-      "description": "Tulisan teknis, catatan riset, dan log pengembangan."
-    },
-    "certificates": {
-      "title": "Sertifikat — RAHN.",
-      "description": "Sertifikasi profesional dan credensial."
-    },
-    "guestbook": {
-      "title": "Ruang Pesan — RAHN.",
-      "description": "Tinggalkan pesan — sapa atau mulai percakapan."
-    }
-  },
-  "nav": {
-    "home": "Home",
-    "projects": "Projects",
-    "blog": "Blog",
-    "certificates": "Certificates",
-    "guestbook": "Guestbook",
-    "openMenu": "Buka menu",
-    "closeMenu": "Tutup menu"
-  },
-  "hero": {
-    "badge": "PENGEMBANGAN PERANGKAT LUNAK • REKAYASA DATA • KECERDASAN BUATAN",
+ "meta": {
+ "home": {
+    "title": "RAHMAN NENDHIARTO — Data Scientist & Software Developer",
+    "description": "Portofolio Rahman Nendhiarto — Data Scientist dan Software Developer yang membangun aplikasi berbasis ML dan solusi web yang scalable."
+ },
+ "projects": {
+ "title": "Proyek — RAHN.",
+ "description": "Proyek pengembangan perangkat lunak dan machine learning."
+ },
+ "blog": {
+ "title": "Catatan — RAHN.",
+ "description": "Tulisan teknis, catatan riset, dan log pengembangan."
+ },
+ "certificates": {
+ "title": "Sertifikat — RAHN.",
+ "description": "Sertifikasi profesional, rekam jejak pelatihan, kemampuan bahasa, dan pencapaian."
+ },
+ "guestbook": {
+ "title": "Ruang Pesan — RAHN.",
+ "description": "Tinggalkan pesan — sapa atau mulai percakapan."
+ }
+ },
+ "nav": {
+ "home": "Beranda",
+ "projects": "Proyek",
+ "blog": "Catatan",
+ "certificates": "Sertifikat",
+ "guestbook": "Buku Tamu",
+ "openMenu": "Buka menu",
+ "closeMenu": "Tutup menu"
+ },
+ "errors": {
+ "title": "Terjadi kesalahan",
+ "heading": "Halaman gagal dimuat",
+ "description": "Koneksi ke server terputus. Coba lagi — jika sedang development, restart dev server setelah update besar.",
+ "retry": "Coba lagi"
+ },
+ "hero": {
+    "badge": "SAINS DATA • PENGEMBANGAN PERANGKAT LUNAK",
     "taglineLines": [
-      "Membangun solusi digital yang cerdas melalui",
-      "pengembangan web modern, rekayasa data,",
-      "dan kecerdasan buatan."
+      "Mengubah data menjadi insight dan",
+      "membangun solusi digital siap produksi",
+      "dengan machine learning sebagai inti."
     ],
-    "tagline": "Saya membangun solusi cerdas berbasis data dengan menggabungkan Data Engineering, Artificial Intelligence, dan Software Development untuk menyelesaikan masalah dunia nyata. Passion saya terletak pada transformasi data mentah menjadi insight yang actionable dan aplikasi yang scalable untuk menghasilkan dampak yang bermakna.",
-    "bioParagraphs": [
-      "Didukung oleh sertifikasi profesional sebagai Associate Data Scientist (BNSP), riset machine learning secara hands-on, dan pengalaman memimpin proyek pengembangan perangkat lunak, saya telah mengembangkan keahlian di seluruh siklus data—mulai dari akuisisi data, preprocessing, dan feature engineering hingga predictive modeling, evaluasi, visualisasi, dan pengembangan aplikasi.",
-      "Di luar data engineering, saya merancang dan mengembangkan aplikasi web end-to-end sambil menciptakan antarmuka yang intuitif dan berpusat pada pengguna melalui prinsip UI/UX. Latar belakang multidisiplin saya memungkinkan saya menjembatani data engineering, artificial intelligence, dan software engineering menjadi solusi digital yang scalable, efisien, dan berdampak.",
-      "Saya passionate dalam continuous learning, mengadopsi teknologi baru, dan menyelesaikan masalah kompleks melalui analytical thinking. Tujuan saya adalah membangun sistem yang reliable, efisien, dan cerdas yang memberdayakan organisasi untuk membuat keputusan lebih baik, meningkatkan efisiensi operasional, dan mempercepat transformasi digital."
-    ],
-    "exploreProjects": "Lihat Proyek",
-    "downloadCv": "Unduh Resume",
-    "profilePhoto": "Foto profil",
-    "status": "Terbuka untuk peluang",
-    "roleBadge": "Data & AI",
-    "social": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn",
-      "githubAria": "Kunjungi profil GitHub",
-      "linkedinAria": "Kunjungi profil LinkedIn"
-    },
-    "stats": {
-      "projects": "Proyek",
-      "certs": "Sertifikasi",
-      "roles": "Peran"
-    }
-  },
-  "timeline": {
-    "title": "Pengalaman",
-    "subtitle": "Peta visual milestone akademik, profesional, dan riset saya.",
-    "years": [
-      {
-        "year": "2025",
-        "entries": [
-          {
-            "title": "Riset Skripsi",
-            "hasDetail": true,
-            "detailId": "ml-research"
-          },
-          {
-            "title": "Full Stack Developer Intern",
-            "hasDetail": true,
-            "detailId": "bbkb-intern"
-          }
-        ]
-      },
-      {
-        "year": "2024",
-        "entries": [
-          {
-            "title": "Project Manager & UI/UX Designer",
-            "hasDetail": true,
-            "detailId": "istana-sayur"
-          }
-        ]
-      }
-    ],
-    "details": {
-      "ml-research": {
-        "period": "2025 – Sekarang",
-        "role": "Undergraduate Researcher",
-        "organization": "Universitas Ahmad Dahlan",
-        "project": "Riset Prediksi Kualitas Udara PM2.5",
-        "description": "Melakukan riset skripsi fokus pada prediksi kualitas udara PM2.5 menggunakan model hybrid Sine Cosine Algorithm (SCA) dan Long Short-Term Memory (LSTM). Bertanggung jawab atas pengumpulan dan preprocessing dataset, feature engineering, optimasi model deep learning, serta evaluasi performa prediksi menggunakan RMSE, MAPE, dan R². Riset ini mendemonstrasikan penerapan praktis teknik machine learning untuk menyelesaikan tantangan lingkungan nyata dan menjadi fondasi publikasi ilmiah."
-      },
-      "bbkb-intern": {
-        "period": "2025",
-        "role": "Full Stack Developer Intern",
-        "organization": "BBSPJIKB Yogyakarta",
-        "project": "Kementerian Perindustrian Republik Indonesia",
-        "description": "Berkontribusi dalam pengembangan SIMAGANG, sistem web pendaftaran dan manajemen magang yang dirancang untuk digitalisasi administrasi magang di BBSPJIKB Yogyakarta. Berkolaborasi dengan tim pengembang untuk membangun fitur frontend dan backend, mengintegrasikan fungsionalitas database, mengimplementasikan autentikasi, serta mengoptimalkan alur kerja aplikasi. Pengalaman ini memperkuat keterampilan praktis saya dalam pengembangan full-stack, kerja tim, dan penyampaian solusi digital yang aman, scalable, dan berpusat pada pengguna."
-      },
-      "istana-sayur": {
-        "period": "2024 – 2025",
-        "role": "Project Manager & UI/UX Designer",
-        "organization": "Istana Sayur Buah",
-        "project": "Proyek E-Commerce Klien",
-        "description": "Memimpin pengembangan end-to-end website e-commerce untuk Istana Sayur Buah, mengkoordinasikan tim multidisiplin dari perencanaan proyek hingga deployment. Berkolaborasi langsung dengan stakeholder untuk mengumpulkan kebutuhan bisnis, mendefinisikan scope proyek, dan memastikan solusi yang dihasilkan selaras dengan kebutuhan klien. Berkontribusi pada desain UI/UX dengan menciptakan user flow yang intuitif dan antarmuka responsif sambil mendukung development, testing, dan deployment. Proyek ini memperkuat keahlian leadership, komunikasi, project management, dan product development dalam menyampaikan solusi digital nyata."
-      }
-    }
-  },
-  "tech": {
-    "title": "Tech Stack",
-    "categories": {
-      "dataEngineering": "Machine Learning & AI",
-      "softwareDev": "Pengembangan Perangkat Lunak",
-      "databaseTools": "Database & Tools",
-      "frontendUi": "Frontend & UI"
-    }
-  },
-  "projects": {
-    "title": "Proyek Terpilih",
-    "subtitle": "Pilih kategori yang ingin kamu jelajahi.",
-    "explore": "Jelajahi",
-    "back": "Kembali ke proyek",
-    "categoryEmptyTitle": "Proyek segera hadir",
-    "categoryEmptyDescription": "Karya dalam kategori ini sedang disiapkan. Pantau terus untuk notebook, dashboard, dan aplikasi.",
-    "categories": {
-      "ai-ml": {
-        "title": "AI & Machine Learning",
-        "description": "Membangun model prediktif dan sistem cerdas berbasis machine learning dan deep learning."
-      },
-      "dashboards": {
-        "title": "Interactive Dashboards",
-        "description": "Mengubah data menjadi dashboard interaktif dan insight bisnis yang bermakna."
-      },
-      "software-dev": {
-        "title": "Software Development",
-        "description": "Membangun aplikasi web modern, REST API, dan solusi digital yang scalable."
-      }
-    }
-  },
-  "blog": {
-    "title": "Catatan",
-    "subtitle": "Catatan riset, tulisan teknis, dan refleksi pembelajaran.",
-    "emptyTitle": "Belum ada tulisan yang diterbitkan",
-    "emptyDescription": "Update jurnal dan catatan teknis akan muncul di sini."
-  },
-  "certificates": {
-    "title": "Certificates",
-    "subtitle": "Sertifikasi profesional dan credensial dari pelatihan serta assessment.",
-    "emptyTitle": "Sertifikat segera hadir",
-    "emptyDescription": "Dokumen sertifikasi dan credensial akan ditampilkan di sini."
-  },
-  "stackPage": {
-    "title": "Arsenal Teknologi",
-    "subtitle": "Alat dan teknologi yang saya gunakan di Data Engineering, AI, dan Software Development.",
-    "stackTitle": "Tech Stack"
-  },
-  "guestbook": {
-    "title": "Ruang Pesan",
-    "subtitle": "Ingin terhubung? Tinggalkan pesan — saya akan membacanya.",
-    "formTitle": "Sapa saya",
-    "formDescription": "Pesan Anda akan dibaca — tidak perlu formal.",
-    "nameLabel": "Nama",
-    "namePlaceholder": "misalnya developer lain",
-    "messageLabel": "Pesan",
-    "messagePlaceholder": "Sapa, diskusi AI, atau berikan masukan...",
-    "submit": "Kirim pesan",
-    "submitted": "Pesan terkirim!"
-  },
-  "footer": {
-    "roles": "Pengembangan Perangkat Lunak • Rekayasa Data • Kecerdasan Buatan",
-    "description": "Membangun solusi digital cerdas melalui pengembangan perangkat lunak modern dan teknologi berbasis data.",
-    "getInTouch": "Get In Touch",
-    "marquee": "ENGINEERING IDEAS INTO IMPACTFUL DIGITAL SOLUTIONS",
-    "modal": {
-      "title": "Let's Connect 👋",
-      "close": "Tutup"
-    },
-    "social": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn",
-      "email": "Email",
-      "resume": "Resume",
-      "whatsapp": "WhatsApp",
-      "githubAria": "Kunjungi profil GitHub",
-      "linkedinAria": "Kunjungi profil LinkedIn",
-      "emailAria": "Kirim email",
-      "resumeAria": "Unduh resume",
-      "whatsappAria": "Chat via WhatsApp"
-    }
-  },
-  "theme": {
-    "dark": "Mode gelap",
-    "light": "Mode terang"
-  },
-  "language": {
-    "label": "Bahasa",
-    "id": "Indonesia",
-    "en": "English"
-  }
+    "bio": "Saya membangun produk digital berbasis data dengan menggabungkan machine learning, analitik, dan pengembangan perangkat lunak full-stack untuk mengubah data menjadi solusi yang memberikan dampak nyata. Pekerjaan saya mencakup seluruh proses pengembangan, mulai dari eksplorasi data, feature engineering, pelatihan dan evaluasi model, hingga deployment aplikasi web yang siap digunakan oleh pengguna. Berbekal sertifikasi BNSP Associate Data Scientist, pengalaman riset machine learning, serta pengalaman mengembangkan berbagai aplikasi, saya mampu menjembatani dunia Data Science dan Software Development. Saya mengembangkan pipeline data, model prediktif, dashboard analitik, hingga aplikasi web modern menggunakan Python, TensorFlow, Next.js, React, dan Laravel, sehingga model yang dibangun tidak hanya akurat, tetapi juga dapat dimanfaatkan dalam produk yang siap digunakan. Saya percaya bahwa nilai sebuah model tidak berhenti pada metrik evaluasi, tetapi ketika berhasil diimplementasikan menjadi solusi digital yang stabil, skalabel, dan mampu membantu organisasi mengambil keputusan dengan lebih cepat, lebih tepat, dan berbasis data.",
+ "exploreProjects": "Lihat Proyek",
+ "downloadCv": "Unduh Resume",
+ "profilePhoto": "Foto profil",
+ "status": "Terbuka untuk peluang",
+ "roleBadge": "Data & AI",
+ "social": {
+ "github": "GitHub",
+ "linkedin": "LinkedIn",
+ "githubAria": "Kunjungi profil GitHub",
+ "linkedinAria": "Kunjungi profil LinkedIn"
+ },
+ "stats": {
+ "projects": "Proyek",
+ "certs": "Sertifikasi",
+ "roles": "Peran"
+ }
+ },
+ "timeline": {
+ "title": "Pengalaman",
+ "subtitle": "Peta visual milestone akademik, profesional, dan riset saya.",
+ "years": [
+ {
+ "year": "2025",
+ "entries": [
+ {
+ "title": "Riset Skripsi",
+ "hasDetail": true,
+ "detailId": "ml-research"
+ },
+ {
+ "title": "Full Stack Developer Intern",
+ "hasDetail": true,
+ "detailId": "bbkb-intern"
+ }
+ ]
+ },
+ {
+ "year": "2024",
+ "entries": [
+ {
+        "title": "Lead Developer & Project Manager",
+ "hasDetail": true,
+ "detailId": "istana-sayur"
+ }
+ ]
+ }
+ ],
+ "details": {
+ "ml-research": {
+ "period": "2025 – Sekarang",
+ "role": "Undergraduate Researcher",
+ "organization": "Universitas Ahmad Dahlan",
+ "project": "Riset Prediksi Kualitas Udara PM2.5",
+ "description": "Melakukan riset skripsi fokus pada prediksi kualitas udara PM2.5 menggunakan model hybrid Sine Cosine Algorithm (SCA) dan Long Short-Term Memory (LSTM). Bertanggung jawab atas pengumpulan dan preprocessing dataset, feature engineering, optimasi model deep learning, serta evaluasi performa prediksi menggunakan RMSE, MAPE, dan R². Riset ini mendemonstrasikan penerapan praktis teknik machine learning untuk menyelesaikan tantangan lingkungan nyata dan menjadi fondasi publikasi ilmiah."
+ },
+ "bbkb-intern": {
+ "period": "2025",
+ "role": "Full Stack Developer Intern",
+ "organization": "BBSPJIKB Yogyakarta",
+ "project": "Kementerian Perindustrian Republik Indonesia",
+ "description": "Berkontribusi dalam pengembangan SIMAGANG, sistem web pendaftaran dan manajemen magang yang dirancang untuk digitalisasi administrasi magang di BBSPJIKB Yogyakarta. Berkolaborasi dengan tim pengembang untuk membangun fitur frontend dan backend, mengintegrasikan fungsionalitas database, mengimplementasikan autentikasi, serta mengoptimalkan alur kerja aplikasi. Pengalaman ini memperkuat keterampilan praktis saya dalam pengembangan full-stack, kerja tim, dan penyampaian solusi digital yang aman, scalable, dan berpusat pada pengguna."
+ },
+ "istana-sayur": {
+ "period": "2024 – 2025",
+      "role": "Lead Developer & Project Manager",
+      "organization": "Istana Sayur Buah",
+      "project": "Proyek E-Commerce Klien",
+      "description": "Memimpin pengembangan end-to-end website e-commerce produksi untuk Istana Sayur Buah, mengkoordinasikan tim multidisiplin dari perencanaan hingga deployment. Mengumpulkan kebutuhan bisnis bersama stakeholder, menentukan scope produk, dan mengirim storefront full-stack responsif dengan katalog berbasis kategori, halaman kepercayaan, dan alur belanja lengkap. Proyek ini memperkuat keahlian leadership, komunikasi, project management, dan delivery full-stack dalam engagement klien nyata."
+ }
+ }
+ },
+ "tech": {
+ "title": "Tech Stack",
+ "close": "Tutup",
+ "categories": {
+ "dataScience": "Machine Learning & AI",
+ "softwareDev": "Pengembangan Perangkat Lunak",
+ "databaseTools": "Database & Tools",
+ "frontendUi": "Pengembangan Frontend"
+ },
+ "items": {
+ "python": {
+ "description": "Bahasa utama untuk analisis data, machine learning, dan scripting backend — serbaguna, mudah dibaca, dan banyak dipakai di alur sains data dan ML."
+ },
+ "pandas": {
+ "description": "Library manipulasi data untuk membersihkan, mentransformasi, dan menganalisis dataset terstruktur dengan DataFrame — penting untuk preprocessing sebelum modeling."
+ },
+ "numpy": {
+ "description": "Library fondasi untuk komputasi numerik — menyediakan operasi array cepat, aljabar linear, dan fungsi matematika yang menopang workflow ML."
+ },
+ "tensorflow": {
+ "description": "Framework deep learning open-source untuk membangun dan melatih neural network — dipakai untuk predictive modeling dan aplikasi berbasis AI."
+ },
+ "keras": {
+ "description": "API neural network level tinggi yang menyederhanakan pembuatan model di atas TensorFlow — ideal untuk prototyping solusi deep learning dengan cepat."
+ },
+ "sklearn": {
+ "description": "Scikit-learn menyediakan algoritma machine learning klasik, tools preprocessing, dan evaluasi model untuk masalah data terstruktur."
+ },
+ "powerbi": {
+ "description": "Platform business intelligence Microsoft untuk membangun dashboard interaktif, laporan KPI, dan data storytelling — mengubah output model dan dataset menjadi visual yang siap dipakai untuk keputusan."
+ },
+ "tableau": {
+ "description": "Tool visualisasi data terkemuka untuk mengeksplorasi, menganalisis, dan menyajikan insight lewat chart serta dashboard interaktif — ideal untuk mengkomunikasikan hasil ML dan analitik ke stakeholder."
+ },
+ "laravel": {
+ "description": "Framework PHP untuk membangun aplikasi web robust dengan sintaks elegan, arsitektur MVC, autentikasi, dan dukungan REST API."
+ },
+ "react": {
+ "description": "Library JavaScript untuk membangun antarmuka interaktif dengan arsitektur berbasis komponen, rendering efisien, dan ekosistem yang kaya."
+ },
+ "nextjs": {
+ "description": "Framework React untuk aplikasi web production dengan server-side rendering, routing, dan performa yang dioptimalkan out of the box."
+ },
+ "vercel": {
+ "description": "Platform cloud untuk deploy dan hosting aplikasi web modern — integrasi mulus dengan Next.js dan delivery global yang cepat."
+ },
+ "nodejs": {
+ "description": "Runtime JavaScript untuk pengembangan sisi server — memungkinkan pembuatan API scalable, aplikasi real-time, dan solusi full-stack JavaScript."
+ },
+ "codeigniter": {
+ "description": "Framework PHP ringan untuk pengembangan web cepat dengan pola MVC sederhana — dipakai untuk membangun aplikasi backend yang terstruktur."
+ },
+ "mysql": {
+ "description": "Sistem manajemen database relasional untuk menyimpan, query, dan mengelola data aplikasi terstruktur dengan SQL."
+ },
+ "xampp": {
+ "description": "Stack development lokal yang menggabungkan Apache, MySQL, dan PHP — dipakai untuk membangun dan menguji aplikasi web di mesin lokal."
+ },
+ "supabase": {
+ "description": "Alternatif open-source Firebase dengan PostgreSQL, autentikasi, storage, dan API real-time untuk backend aplikasi modern."
+ },
+ "git": {
+ "description": "Sistem version control untuk melacak perubahan kode, kolaborasi tim, dan mengelola riwayat proyek di berbagai branch."
+ },
+ "github": {
+ "description": "Platform hosting repository Git, kolaborasi kode, pull request, dan manajemen proyek open-source."
+ },
+ "cursor": {
+ "description": "Code editor berbasis AI yang mempercepat development dengan autocomplete cerdas, refactoring, dan bantuan pair-programming."
+ },
+ "colab": {
+ "description": "Lingkungan Jupyter notebook berbasis cloud dari Google — ideal untuk menjalankan Python, melatih model ML, dan berbagi karya data science."
+ },
+ "html": {
+ "description": "Bahasa markup standar untuk struktur konten web — fondasi semantik setiap halaman dan antarmuka aplikasi."
+ },
+ "css": {
+ "description": "Bahasa stylesheet untuk layout, tipografi, warna, dan tampilan visual responsif di seluruh antarmuka web."
+ },
+ "javascript": {
+ "description": "Bahasa pemrograman inti web — menggerakkan interaktivitas, konten dinamis, dan pengembangan full-stack dengan framework modern."
+ },
+ "tailwind": {
+ "description": "Framework CSS utility-first untuk membangun antarmuka custom, responsif, dan konsisten dengan cepat tanpa keluar dari HTML."
+ },
+ "bootstrap": {
+ "description": "Framework CSS populer dengan komponen siap pakai dan grid responsif untuk pengembangan UI web yang mobile-friendly."
+ },
+ "figma": {
+ "description": "Tool desain kolaboratif untuk wireframing, prototyping, dan merancang sistem antarmuka berpusat pada pengguna sebelum development."
+ }
+ }
+ },
+ "projects": {
+ "title": "Proyek Terpilih",
+ "subtitle": "Pilih kategori yang ingin kamu jelajahi.",
+ "explore": "Jelajahi",
+ "visitSite": "Kunjungi situs",
+ "caseStudyBtn": "Case Study",
+ "back": "Kembali ke proyek",
+ "tagLabels": {
+ "nextjs": "Next.js",
+ "full-stack": "Full Stack",
+ "marketplace": "Marketplace",
+ "data": "Data",
+ "forecasting": "Prediksi",
+ "kkn": "KKN",
+ "community": "Komunitas",
+ "branding": "Branding",
+ "brochure": "Brosur",
+ "digital-agency": "Agensi Digital",
+ "poster": "Poster",
+ "promotional": "Promosi",
+ "fnb": "Makanan & Minuman",
+ "campaign": "Kampanye",
+ "gemastik": "Gemastik",
+ "merchandise": "Merchandise",
+ "t-shirt": "Kaos",
+ "industrial-engineering": "Teknik Industri",
+ "collage": "Kolase",
+ "fan-art": "Fan Art",
+ "editorial": "Editorial",
+ "automotive": "Otomotif",
+ "e-commerce": "E-Commerce",
+ "manokwari": "Manokwari",
+ "mobile-app": "Aplikasi Mobile",
+ "health": "Kesehatan",
+ "ui-ux-competency": "Kompetensi UI/UX",
+ "sumpiuh": "Sumpiuh",
+ "lstm": "LSTM",
+ "sca": "SCA",
+ "nlp": "NLP",
+ "sentiment": "Sentimen",
+ "predictive-maintenance": "Predictive Maintenance",
+ "oil-gas": "Minyak & Gas",
+ "random-forest": "Random Forest",
+ "regression": "Regresi",
+ "k-means": "K-Means",
+ "clustering": "Clustering",
+ "knn": "KNN",
+ "classification": "Klasifikasi",
+ "pattern-recognition": "Pengenalan Pola",
+ "svm": "SVM",
+ "ecg": "EKG",
+ "healthcare": "Kesehatan",
+ "mfcc": "MFCC",
+ "svc": "SVC",
+ "audio-ml": "Audio ML",
+ "cnn": "CNN",
+ "pytorch": "PyTorch",
+ "medical-imaging": "Pencitraan Medis",
+ "wavelet": "Wavelet",
+ "workshop": "Workshop",
+ "advanced": "Lanjutan",
+ "foundations": "Dasar",
+ "statistics": "Statistika",
+ "distance": "Jarak",
+ "fundamentals": "Fundamental",
+ "preprocessing": "Preprocessing",
+ "dataset": "Dataset",
+ "eda": "EDA",
+ "feature-extraction": "Ekstraksi Fitur",
+ "iris": "IRIS",
+ "decision-tree": "Decision Tree",
+ "breast-cancer": "Kanker Payudara",
+ "agglomerative": "Agglomerative",
+ "mnist": "MNIST",
+ "histogram": "Histogram",
+ "bioinformatics": "Bioinformatika",
+ "k-mer": "k-mer",
+ "fasta": "FASTA",
+ "rnn": "RNN",
+ "gru": "GRU",
+ "sentiment-analysis": "Analisis Sentimen",
+ "count-vectorizer": "CountVectorizer",
+ "text-mining": "Text Mining",
+ "seq2seq": "Seq2Seq",
+ "attention": "Attention",
+ "nmt": "NMT",
+ "transformer": "Transformer",
+ "tensorflow": "TensorFlow",
+ "gan": "GAN",
+ "image-generation": "Generasi Gambar",
+ "neural-style-transfer": "Neural Style Transfer",
+ "cifar-10": "CIFAR-10",
+ "image-classification": "Klasifikasi Gambar",
+ "transfer-learning": "Transfer Learning",
+ "vgg16": "VGG16",
+ "resnet50": "ResNet50",
+ "fast-r-cnn": "Fast R-CNN",
+ "object-detection": "Deteksi Objek",
+ "tensorflow-hub": "TensorFlow Hub"
+ },
+ "graphicDesign": {
+ "featured": "Karya Unggulan",
+ "merch": "Desain Merchandise",
+ "lightVariant": "Terang",
+ "darkVariant": "Gelap",
+ "viewWork": "Lihat karya",
+ "highlights": "Sorotan Desain",
+ "tools": "Perangkat & Media"
+ },
+ "uiUxDesign": {
+ "featured": "Aplikasi Unggulan",
+ "clientProject": "Proyek Klien",
+ "competencyProject": "Proyek Kompetensi",
+ "campusRepresentative": "Mewakili Kampus",
+ "mobileApp": "Aplikasi Mobile",
+ "webDesign": "Desain Web",
+    "screens": "{count} Layar",
+    "viewScreens": "Lihat layar",
+    "selectScreen": "Pilih layar",
+    "statProjects": "{count} Proyek",
+    "statScreens": "{count} Layar",
+    "statPlatforms": "{web} Web · {mobile} Mobile",
+    "highlights": "Sorotan UX",
+ "tools": "Perangkat & Proses"
+ },
+ "aiMl": {
+ "featured": "Proyek Unggulan",
+ "viewNotebook": "Lihat proyek",
+ "downloadNotebook": "Unduh .ipynb",
+ "highlights": "Sorotan ML",
+ "tools": "Stack & Pustaka",
+ "filterLabel": "Filter tipe",
+ "statNotebooks": "Proyek",
+ "statAlgorithms": "Algoritma",
+ "statDomains": "Domain",
+ "filters": {
+ "all": "Semua",
+ "forecast": "Prediksi",
+ "classification": "Klasifikasi",
+ "signal": "Sinyal",
+ "eda": "EDA",
+ "nlp": "NLP"
+ }
+ },
+ "dashboards": {
+ "featured": "Dashboard Unggulan",
+ "viewDashboard": "Lihat dashboard",
+ "openPortfolio": "Buka PDF portfolio",
+ "highlights": "Sorotan Dashboard",
+ "workflow": "Alur Analitik",
+ "caseStudyBadge": "Studi Kasus AI Industri",
+ "heroTitle": "Predictive Maintenance Minyak & Gas",
+ "heroDescription": "Dashboard analitik interaktif & predictive maintenance untuk modeling kehilangan ketebalan pipa menggunakan dataset industri publik. Dibangun dengan Python, Plotly, dan Google Colab.",
+ "metaIndustryLabel": "Industri",
+ "metaIndustry": "Minyak & Gas",
+ "metaDatasetLabel": "Dataset",
+ "metaDataset": "Dataset Publik (Kaggle)",
+ "metaMethodsLabel": "Metode",
+ "metaMethods": "LSTM • Random Forest • K-Means",
+ "metaPlatformLabel": "Platform",
+ "metaPlatform": "Python • Plotly • Google Colab",
+ "heroTags": [
+ "Machine Learning",
+ "Predictive Maintenance",
+ "Minyak & Gas",
+ "Plotly",
+ "Python",
+ "Dataset Publik"
+ ],
+ "themes": {
+ "lstm": "Forecasting LSTM",
+ "rf": "Random Forest",
+ "clustering": "K-Means Clustering"
+ }
+ },
+ "categoryEmptyTitle": "Proyek segera hadir",
+ "categoryEmptyDescription": "Karya dalam kategori ini sedang disiapkan. Pantau terus untuk notebook, dashboard, dan aplikasi.",
+ "categories": {
+ "ai-ml": {
+ "title": "AI & Machine Learning",
+ "description": "Membangun model prediktif dan sistem cerdas berbasis machine learning dan deep learning."
+ },
+ "dashboards": {
+ "title": "Interactive Dashboards",
+ "description": "Mengubah data menjadi dashboard interaktif dan insight bisnis yang bermakna."
+ },
+ "software-dev": {
+ "title": "Pengembangan Perangkat Lunak",
+ "description": "Membangun aplikasi web modern, REST API, dan solusi digital yang scalable."
+ }
+ },
+ "items": {
+ "istana-sayur-buah": {
+ "title": "Istana Sayur Buah",
+ "description": "Website e-commerce produksi untuk toko sayur dan buah segar di Manokwari — katalog produk berbasis kategori, storytelling brand organik, halaman kepercayaan pelanggan, dan alur belanja responsif dengan brand Freshly.",
+ "detail": "Proyek Klien · E-Commerce · istanasayurbuah.com"
+ },
+ "exporetrade": {
+ "title": "Exporetrade",
+ "description": "Platform sourcing produk global untuk buyer dan supplier — ajukan kebutuhan, kirim penawaran, dan kelola pengiriman dalam satu tempat.",
+ "detail": "Marketplace Buyer & Supplier · Vercel"
+ },
+ "simagang-bbkb": {
+ "title": "SIMAGANG BBKB",
+ "description": "Portal pendaftaran dan manajemen magang untuk Balai Besar Kerajinan & Batik Yogyakarta — landing page, alur pendaftaran, lowongan magang, galeri, dan akses demo admin.",
+ "detail": "Platform Magang · Kemenperin · Vercel"
+ },
+ "udaracast": {
+ "title": "UdaraCast",
+ "description": "Platform informasi kualitas udara untuk prediksi PM2.5 per kota dan tahun, lengkap dengan kategori kesehatan berbasis data Global Air Quality.",
+ "detail": "Prediksi Kualitas Udara · Vercel"
+ },
+ "kedokploso": {
+ "title": "Dusun Kedokploso",
+ "description": "Website profil komunitas Dusun Kedokploso — sejarah dusun, potensi lokal, peta interaktif, galeri, dan informasi kontak.",
+ "detail": "Website KKN Komunitas · Vercel"
+ },
+ "pipilo-agency": {
+ "title": "Pipilo Agency",
+ "description": "Brosur tri-fold untuk agensi digital kreatif — branding bertema luar angkasa dengan overview layanan, paket harga, dan informasi kontak.",
+ "detail": "Brosur Agensi · Depan & Belakang"
+ },
+ "freshly-poster": {
+ "title": "Freshly Promo",
+ "description": "Poster promosi aplikasi grocery Freshly — layout collage dengan tipografi sticker tebal dan visual sayur segar.",
+ "detail": "Promo Sosial · Launch Aplikasi"
+ },
+ "dont-food-waste": {
+ "title": "Don't Food Waste",
+ "description": "Poster kampanye anti-food waste — tipografi collage sandwich dengan pesan bold dan identitas Gemastik XVII.",
+ "detail": "Gemastik XVII · Kampanye Awareness"
+ },
+ "ie-merch": {
+ "title": "Merch Industrial Engineering",
+ "description": "Desain kaos fakultas Industrial Engineering — tipografi berlapis dengan motif gear, mark dada depan dan grafik belakang penuh dalam varian terang dan gelap.",
+ "detail": "Merch Fakultas · Depan & Belakang · Terang & Gelap"
+ },
+ "lana-del-rey": {
+ "title": "Lana Del Rey",
+ "description": "Collage editorial dreamy — portrait berlapis di atas landscape emas berkabut dengan tipografi tebal vertikal dan nuansa vintage lembut.",
+ "detail": "Fan Art Collage · Editorial"
+ },
+ "paul-walker": {
+ "title": "Tribute Paul Walker",
+ "description": "Collage tribute bergaya Y2K — lapisan portrait ghosted, tipografi Nissan Skyline ala sticker, dan atmosfer jalan desert.",
+ "detail": "Fan Art Collage · Tribute Fast & Furious"
+ },
+ "food-discovery": {
+ "title": "Food Discovery App",
+ "description": "UI mobile food delivery & discovery — banner promo, rekomendasi restoran, pemilih lokasi berbasis peta, dan alur bottom navigation.",
+ "detail": "Mobile F&B · Layar Home & Map"
+ },
+ "freshly": {
+ "title": "Freshly — Istana Toko Sayur dan Buah",
+ "description": "Antarmuka web e-commerce end-to-end untuk toko sayur dan buah segar di Manokwari, Papua — hero organik, penemuan kategori, katalog produk, halaman tentang kami yang membangun kepercayaan, dan sistem brand hijau yang konsisten.",
+ "detail": "Proyek Klien · Manokwari, Papua · E-Commerce Web"
+ },
+ "sehatin": {
+ "title": "Sehatin",
+ "description": "Aplikasi mobile kesehatan untuk proyek kompetensi UI/UX kampus — layar awal, onboarding multi-langkah, izin notifikasi iOS, dashboard kalori, serta modul kebugaran, gizi, dan kesehatan mental.",
+ "detail": "Kompetensi UI/UX · Mewakili Kampus · Mobile Kesehatan"
+ },
+ "miso": {
+ "title": "MISO — Mie Ayam & Bakso",
+ "description": "Aplikasi mobile pemesanan untuk klien resto mie ayam dan bakso di Sumpiuh — intro branding, penelusuran menu dengan filter kategori, detail produk dengan kontrol jumlah, dan konfirmasi pesanan sukses.",
+ "detail": "Proyek Klien · Sumpiuh · Pemesanan Makanan Mobile"
+ },
+ "food-onboarding": {
+ "title": "Food Safety Onboarding",
+ "description": "Alur onboarding marketplace makanan — jaminan keamanan dengan ikon ilustrasi makanan, checklist kepercayaan, dan setup lokasi.",
+ "detail": "Mobile F&B · Onboarding & Lokasi"
+ },
+ "burhans-cell": {
+ "title": "Om Burhans Cell",
+ "description": "UI mobile commerce toko elektronik — katalog produk, filter brand, halaman detail iPhone dengan varian, dan alur add-to-cart.",
+ "detail": "Mobile E-Commerce · Toko & Detail Produk"
+ },
+ "sehatku": {
+ "title": "Sehatku",
+ "description": "UI app kesehatan & wellness — tracker kalori harian, kategori kebugaran, pencarian dokter, banner konsultasi, dan home berbasis profil.",
+ "detail": "Mobile Health · Dashboard & Cari Dokter"
+ },
+ "pm25-sca-lstm": {
+ "title": "Prediksi PM2.5 Global — SCA-LSTM",
+ "description": "Notebook riset tuning LSTM sine-cosine untuk forecasting PM2.5 global — pipeline lengkap dari preprocessing hingga evaluasi RMSE, MAPE, dan R².",
+ "detail": "Deep Learning · Prediksi Kualitas Udara"
+ },
+ "imdb-sentiment-lstm": {
+ "title": "Analisis Sentimen IMDB — LSTM",
+ "description": "Notebook deep learning untuk klasifikasi sentimen ulasan film IMDB — preprocessing teks, embedding, arsitektur LSTM, dan evaluasi model.",
+ "detail": "NLP · Klasifikasi Sentimen"
+ },
+ "airline-lstm": {
+ "title": "Prediksi Lonjakan Penumpang Maskapai — LSTM",
+ "description": "Notebook analisis deret waktu untuk prediksi lonjakan penumpang maskapai — modeling LSTM dengan visualisasi tren, kurva training, dan evaluasi forecast.",
+ "detail": "Deep Learning · Time Series Forecasting"
+ },
+ "mnist-knn": {
+ "title": "Klasifikasi Digit MNIST",
+ "description": "Pengenalan digit tulisan tangan dengan fitur histogram dan k-Nearest Neighbors — dari eksplorasi pixel hingga classification report dan prediksi test.",
+ "detail": "Classical ML · MNIST + KNN"
+ },
+ "breast-cancer-dt": {
+ "title": "Deteksi Kanker Payudara",
+ "description": "Studi klasifikasi komparatif pada data medis — Logistic Regression, KNN, SVM, dan Random Forest dengan confusion matrix dan benchmarking akurasi.",
+ "detail": "Healthcare ML · Perbandingan Model"
+ },
+ "sms-spam": {
+ "title": "Klasifikasi SMS Spam",
+ "description": "Pipeline klasifikasi teks untuk deteksi spam SMS — preprocessing teks, ekstraksi fitur, dan evaluasi classifier pada data pesan berlabel.",
+ "detail": "NLP · Klasifikasi Teks Biner"
+ },
+ "ecg-analysis": {
+ "title": "Analisis Sinyal EKG",
+ "description": "Notebook biomedical signal processing — visualisasi domain waktu sinyal EKG dan analisis frekuensi menggunakan Fast Fourier Transform (FFT).",
+ "detail": "Signal Processing · Domain Waktu & Frekuensi"
+ },
+ "feature-extraction-viz": {
+ "title": "Ekstraksi Fitur & Visualisasi",
+ "description": "Karakterisasi data dengan ekstraksi fitur ordo pertama — pemodelan statistik, visualisasi stacked, dan analisis distribusi antar kasus.",
+ "detail": "EDA · Feature Engineering + Statsmodels"
+ },
+ "student-pca": {
+ "title": "Data Akademik Mahasiswa — PCA",
+ "description": "Analisis eksplorasi rekam akademik mahasiswa — preprocessing, reduksi dimensi PCA, dan visualisasi distribusi kategorikal.",
+ "detail": "EDA · PCA + Dataset Akademik"
+ },
+ "iris-knn": {
+ "title": "Klasifikasi Iris — KNN",
+ "description": "Dataset Iris klasik di Kaggle — parallel coordinates, Andrews curves, pair plot, box plot, visualisasi PCA 3D, dan training model KNN.",
+ "detail": "Klasifikasi · Iris + EDA Multivariat"
+ },
+ "motorcycle-ml": {
+ "title": "ML Penjualan Motor Bekas",
+ "description": "Dataset dummy penjualan motor bekas — framing pertanyaan bisnis, data wrangling, visualisasi EDA, clustering, dan pipeline klasifikasi.",
+ "detail": "EDA · Clustering + Klasifikasi"
+ },
+ "cifar10-cnn": {
+ "title": "Klasifikasi Gambar CIFAR-10",
+ "description": "Convolutional Neural Network untuk CIFAR-10 — data augmentation, dropout regularization, kurva training, dan evaluasi klasifikasi multi-kelas.",
+ "detail": "Deep Learning · CNN + Augmentation"
+ },
+ "nmt-attention": {
+ "title": "Neural Machine Translation — Attention",
+ "description": "NMT seq2seq dengan mekanisme attention untuk terjemahan Spanyol–Inggris — arsitektur encoder-decoder, attention weights, dan modeling sekuens bilingual.",
+ "detail": "NLP · NMT Berbasis Attention"
+ },
+ "transformer-nmt": {
+ "title": "Transformer Penerjemahan Bahasa",
+ "description": "Model Transformer dengan self-attention untuk penerjemahan bahasa — multi-head attention, positional encoding, dan pipeline neural translation end-to-end.",
+ "detail": "Deep Learning · Transformer + Self-Attention"
+ },
+ "ecg-analysis-alt": {
+ "title": "Analisis Sinyal EKG — Colab II",
+ "description": "Notebook biomedical signal processing tambahan — eksplorasi waveform EKG, analisis spektrum FFT, dan perbandingan multi-subjek.",
+ "detail": "Signal Processing · Analisis FFT Lanjutan"
+ },
+ "sms-spam-alt": {
+ "title": "Klasifikasi SMS Spam — Colab II",
+ "description": "Notebook klasifikasi teks alternatif untuk spam SMS — pipeline preprocessing, ekstraksi fitur, dan evaluasi classifier pada pesan berlabel.",
+ "detail": "NLP · Run Klasifikasi Alternatif"
+ },
+ "pm25-sca-lstm-alt": {
+ "title": "Prediksi PM2.5 Global — SCA-LSTM II",
+ "description": "Notebook forecasting kualitas udara extended — encoding temporal sine-cosine dengan LSTM untuk prediksi PM2.5 multi-step dan diagnostik model.",
+ "detail": "Deep Learning · Run Forecasting Lanjutan"
+ },
+ "feature-extraction-viz-alt": {
+ "title": "Ekstraksi Fitur & Visualisasi — Colab II",
+ "description": "Notebook EDA alternatif — ekstraksi fitur ordo pertama, regresi Statsmodels, stacked chart, dan analisis distribusi antar kasus.",
+ "detail": "EDA · Run Feature Engineering Alternatif"
+ },
+ "pertamina-lstm-pipes": {
+ "title": "Predictive Maintenance Pipa — LSTM",
+ "description": "Notebook ML industri — model LSTM untuk prediksi kehilangan ketebalan pipa minyak & gas dengan preprocessing, analisis outlier, dan perbandingan linear regression.",
+ "detail": "Oil & Gas · LSTM · Predictive Maintenance"
+ },
+ "pertamina-rf-pipes": {
+ "title": "Analitik Pipa — Random Forest",
+ "description": "Notebook regresi Random Forest untuk kehilangan ketebalan pipa — EDA, analisis korelasi, feature importance, dan dukungan pemeliharaan prediktif.",
+ "detail": "Oil & Gas · Random Forest · Regresi"
+ },
+ "pertamina-kmeans-refinery": {
+ "title": "Pola Operasi Kilang — K-Means",
+ "description": "Notebook unsupervised learning dengan K-Means pada data operasi kilang — feature scaling, profil cluster, dan visualisasi 3D.",
+ "detail": "Oil & Gas · K-Means · Clustering"
+ },
+ "pattern-knn": {
+ "title": "Pengenalan Pola — KNN",
+ "description": "Pengenalan pola dengan k-Nearest Neighbors — eksplorasi dataset, training model, dan evaluasi klasifikasi.",
+ "detail": "Classical ML · KNN · Pengenalan Pola"
+ },
+ "pattern-svm": {
+ "title": "Pengenalan Pola — SVM",
+ "description": "Support Vector Machine untuk pengenalan pola — tuning hyperparameter, visualisasi decision boundary, dan analisis performa classifier.",
+ "detail": "Classical ML · SVM · Pengenalan Pola"
+ },
+ "ecg-rf-coronary": {
+ "title": "Detak Jantung EKG — Random Forest",
+ "description": "Klasifikasi Random Forest untuk analisis detak jantung EKG dan deteksi penyakit jantung koroner — ekstraksi fitur, training model, dan evaluasi medis.",
+ "detail": "Healthcare ML · EKG · Random Forest"
+ },
+ "voice-emotion-mfcc": {
+ "title": "Pengenalan Emosi Suara — MFCC",
+ "description": "Klasifikasi emosi dari audio menggunakan fitur MFCC dengan SVC dan Random Forest — preprocessing sinyal, ekstraksi fitur, dan prediksi emosi multi-kelas.",
+ "detail": "Signal ML · MFCC · SVC & Random Forest"
+ },
+ "diabetic-retinopathy-cnn": {
+ "title": "Deteksi Retinopati Diabetik — CNN",
+ "description": "Notebook PyTorch CNN untuk deteksi retinopati diabetik dari gambar retina — data augmentation, pipeline training, dan klasifikasi medical imaging.",
+ "detail": "Deep Learning · PyTorch CNN · Medical Imaging"
+ },
+ "heartbeat-cnn-wavelet": {
+ "title": "Klasifikasi Detak Jantung — Wavelet CNN",
+ "description": "Arsitektur CNN untuk klasifikasi detak jantung dengan ekstraksi fitur wavelet — analisis time-frequency dan deep learning pada sinyal EKG.",
+ "detail": "Deep Learning · Wavelet · Klasifikasi EKG"
+ },
+ "responsi-pattern": {
+ "title": "Pengenalan Pola — Klasifikasi Terapan",
+ "description": "Proyek pengenalan pola terapan — eksplorasi dataset, training classifier, dan workflow evaluasi terstruktur.",
+ "detail": "Pengenalan Pola · Klasifikasi"
+ },
+ "praktikum8-pattern": {
+ "title": "Pengenalan Pola — Metode Lanjutan",
+ "description": "Pengenalan pola lanjutan — teknik klasifikasi, visualisasi, dan evaluasi model komparatif.",
+ "detail": "Pengenalan Pola · Klasifikasi Lanjutan"
+ },
+ "praktikum5-pattern": {
+ "title": "Pengenalan Pola — Dasar Klasifikasi",
+ "description": "Metode klasifikasi dasar — decision boundary, evaluasi train/test, dan metrik performa inti.",
+ "detail": "Pengenalan Pola · Klasifikasi"
+ },
+ "praktikum1-pattern": {
+ "title": "Pengenalan Pola — Fondasi Statistik",
+ "description": "Fondasi pengenalan pola — jarak Euclidean, statistik deskriptif, dan latihan analitis multi-kasus.",
+ "detail": "Pengenalan Pola · Fondasi"
+ },
+ "praktikum2-pattern": {
+ "title": "Pengenalan Pola — Pipeline Data",
+ "description": "Persiapan data end-to-end — load dataset, merge data, preprocessing, dan analisis eksploratori untuk workflow modeling.",
+ "detail": "Pengenalan Pola · Persiapan Data"
+ },
+ "praktikum3-pattern": {
+ "title": "Pengenalan Pola — Feature Engineering IRIS",
+ "description": "Ekstraksi fitur pada dataset IRIS — statistik orde pertama, analisis distribusi, dan visualisasi fitur.",
+ "detail": "Pengenalan Pola · Ekstraksi Fitur"
+ },
+ "praktikum4-pattern": {
+ "title": "Pengenalan Pola — Diagnostik Breast Cancer",
+ "description": "Klasifikasi breast cancer dengan Decision Tree — pembersihan data, train/test split, dan evaluasi confusion matrix.",
+ "detail": "Pengenalan Pola · Decision Tree"
+ },
+ "praktikum6-pattern": {
+ "title": "Pengenalan Pola — Clustering Kinerja Siswa",
+ "description": "Segmentasi kinerja siswa dengan K-Means dan Agglomerative Clustering pada data UCI — normalisasi dan interpretasi cluster.",
+ "detail": "Pengenalan Pola · Clustering"
+ },
+ "praktikum7-pattern": {
+ "title": "Pengenalan Pola — Pengenalan Digit MNIST",
+ "description": "Pengenalan digit MNIST dengan ekstraksi fitur histogram piksel dan klasifikasi KNN beserta pipeline evaluasi lengkap.",
+ "detail": "Pengenalan Pola · MNIST · KNN"
+ },
+ "praktikum10-pattern": {
+ "title": "Pengenalan Pola — Sekuens Bioinformatika",
+ "description": "Pengenalan pola bioinformatika — parsing FASTA, ekstraksi fitur k-mer, dan klasifikasi sekuens promotor.",
+ "detail": "Pengenalan Pola · Bioinformatika"
+ },
+ "dl7-lstm-forecast": {
+ "title": "Deep Learning — Peramalan LSTM",
+ "description": "Peramalan time-series dengan jaringan Long Short-Term Memory (LSTM) — preprocessing data, sequence modeling, dan evaluasi prediksi.",
+ "detail": "Deep Learning · LSTM · Forecasting"
+ },
+ "dl8-gru-sentiment": {
+ "title": "Deep Learning — Analisis Sentimen GRU",
+ "description": "Klasifikasi sentimen Twitter menggunakan Gated Recurrent Unit (GRU) pada dataset GOP Debate dengan preprocessing teks dan evaluasi multi-kelas.",
+ "detail": "Deep Learning · GRU · Analisis Sentimen"
+ },
+ "dl9-text-vectorization": {
+ "title": "Deep Learning — Vektorisasi Teks",
+ "description": "Representasi teks ke numerik dengan CountVectorizer, document-term matrix, dan preprocessing NLP dasar.",
+ "detail": "Deep Learning · Text Mining"
+ },
+ "dl9-nmt-attention": {
+ "title": "Deep Learning — NMT dengan Attention",
+ "description": "Neural machine translation Sequence-to-Sequence dengan mekanisme attention untuk terjemahan pasangan bahasa.",
+ "detail": "Deep Learning · Seq2Seq · Attention · NMT"
+ },
+ "dl10-transformer-nmt": {
+ "title": "Deep Learning — Transformer NMT",
+ "description": "Machine translation dengan arsitektur Transformer (Portugis ke Inggris) menggunakan TensorFlow dan sequence modeling berbasis attention.",
+ "detail": "Deep Learning · Transformer · NMT"
+ },
+ "dl11-gan": {
+ "title": "Deep Learning — GAN Image Generation",
+ "description": "Generative Adversarial Network untuk generasi gambar digit MNIST dengan training adversarial discriminator dan generator.",
+ "detail": "Deep Learning · GAN · Generasi Gambar"
+ },
+ "responsi-neural-style-transfer": {
+ "title": "Deep Learning — Neural Style Transfer",
+ "description": "Neural Style Transfer menggabungkan gambar konten dan gaya menggunakan deep convolutional network di TensorFlow.",
+ "detail": "Deep Learning · Neural Style Transfer · CNN"
+ },
+ "dl4-cnn": {
+ "title": "Deep Learning — Convolutional Neural Networks",
+ "description": "Klasifikasi gambar CIFAR-10 dengan CNN Sequential TensorFlow Keras — dari load data hingga training dan evaluasi model.",
+ "detail": "Deep Learning · CNN · CIFAR-10"
+ },
+ "dl5-transfer-learning": {
+ "title": "Deep Learning — Transfer Learning",
+ "description": "Transfer learning dengan VGG16 dan ResNet50 pre-trained (ImageNet) diterapkan pada dataset klasifikasi citra custom dengan fine-tuning.",
+ "detail": "Deep Learning · Transfer Learning · VGG16 & ResNet50"
+ },
+ "dl6-fastrcnn": {
+ "title": "Deep Learning — Fast R-CNN Object Detection",
+ "description": "Deteksi objek dengan Fast R-CNN menggunakan TensorFlow Hub — prediksi bounding box dan visualisasi deteksi pada gambar.",
+ "detail": "Deep Learning · Fast R-CNN · Object Detection"
+ }
+ },
+ "caseStudy": {
+ "title": "Case Study",
+ "close": "Tutup",
+ "visitSite": "Kunjungi situs",
+ "labels": {
+ "overview": "Ringkasan",
+ "problem": "Masalah",
+ "solution": "Solusi",
+ "role": "Peran Saya",
+ "features": "Fitur Utama",
+ "techStack": "Tech Stack",
+ "challenges": "Tantangan",
+ "result": "Hasil",
+ "pipeline": "Pipeline Machine Learning",
+ "modelPerformance": "Performa Model",
+ "research": "Riset",
+ "rmse": "RMSE",
+ "mape": "MAPE",
+ "r2": "R²"
+ },
+ "titles": {
+ "istana-sayur-buah": "Istana Sayur Buah",
+ "exporetrade": "Exporetrade",
+ "simagang-bbkb": "SIMAGANG BBKB",
+ "udaracast": "UdaraCast",
+ "kedokploso": "Dusun Kedokploso"
+ },
+ "items": {
+ "istana-sayur-buah": {
+ "overview": "Istana Sayur Buah (Freshly) adalah website e-commerce live untuk retailer sayur dan buah segar di Manokwari, Papua. Platform ini mendigitalisasi bisnis produk lokal menjadi toko online yang terpercaya — dari pesan hero homepage dan penemuan kategori hingga daftar produk, cerita toko, dan informasi layanan pelanggan.",
+ "problem": "Toko masih mengandalkan pemesanan offline dan komunikasi informal, sehingga penemuan produk, visibilitas harga, dan jangkauan pelanggan terbatas di luar kunjungan langsung dan word-of-mouth lokal.",
+ "solution": "Menyampaikan website e-commerce responsif dengan navigasi terstruktur, belanja berbasis kategori, kartu produk dengan harga, dan halaman brand yang mengkomunikasikan kualitas, kesegaran, dan kredibilitas toko.",
+ "roles": [
+ "Project Manager",
+ "UI/UX Designer",
+ "Full Stack Developer",
+ "Koordinator Tim",
+ "Liaison Stakeholder Klien"
+ ],
+ "features": [
+ "Homepage dengan hero sayur segar dan entry point kategori",
+ "Katalog shop dengan filter sayur, buah, jus, dan kacang",
+ "Kartu produk dengan harga dan alur add-to-cart",
+ "Halaman About Us dengan cerita toko, metrik, dan profil tim",
+ "Kontak dan section kepercayaan layanan (free shipping, kualitas, support)",
+ "Layout responsif untuk mobile dan desktop",
+ "Sistem brand Freshly — palet hijau, logo produce, hierarki bersih"
+ ],
+ "techStack": [
+ "HTML/CSS",
+ "JavaScript",
+ "PHP",
+ "MySQL",
+ "Responsive Web Design"
+ ],
+ "challenges": "Menyelaraskan output tim multidisiplin dengan ekspektasi klien sambil mentransformasi bisnis retail lokal menjadi pengalaman digital yang jelas dan conversion-friendly.",
+ "result": "Berhasil meluncurkan website e-commerce produksi yang memusatkan penemuan produk, storytelling brand, dan kepercayaan pelanggan untuk Istana Sayur Buah."
+ },
+ "exporetrade": {
+ "overview": "Exporetrade adalah platform marketplace full-stack yang menghubungkan buyer dan supplier dalam satu ekosistem terintegrasi. Platform ini memungkinkan buyer mengajukan permintaan sourcing, menerima penawaran supplier, mengelola negosiasi, dan memantau pemenuhan pesanan melalui aplikasi web modern.",
+ "problem": "Banyak proses sourcing masih dilakukan manual melalui email atau aplikasi pesan, sehingga manajemen supplier, pelacakan penawaran, dan komunikasi menjadi tidak efisien.",
+ "solution": "Mengembangkan platform marketplace terpusat di mana buyer dan supplier dapat berinteraksi melalui alur kerja terstruktur, dari pengajuan permintaan hingga penyelesaian pesanan.",
+ "roles": [
+ "Full Stack Developer",
+ "Implementasi UI",
+ "Desain Database",
+ "Pengembangan API",
+ "Deployment"
+ ],
+ "features": [
+ "Dashboard Buyer",
+ "Dashboard Supplier",
+ "Permintaan Produk",
+ "Sistem Penawaran",
+ "Manajemen Pesanan",
+ "Autentikasi",
+ "Desain Responsif"
+ ],
+ "techStack": [
+ "Next.js",
+ "TypeScript",
+ "Tailwind CSS",
+ "Supabase / PostgreSQL",
+ "Vercel"
+ ],
+ "challenges": "Merancang alur marketplace yang scalable untuk banyak peran pengguna sambil tetap menjaga pengalaman pengguna yang sederhana.",
+ "result": "Berhasil mengembangkan platform marketplace production-ready dengan UI responsif dan arsitektur yang scalable."
+ },
+ "simagang-bbkb": {
+ "overview": "SIMAGANG adalah sistem web pendaftaran dan manajemen magang untuk Balai Besar Kerajinan & Batik (BBKB) Yogyakarta di bawah Kementerian Perindustrian. Platform ini mendigitalisasi administrasi magang — dari discovery publik dan pengajuan lamaran hingga onboarding terstruktur untuk program magang kerajinan dan batik.",
+ "problem": "Administrasi magang di BBKB sebelumnya masih manual, sehingga pendaftaran, pengelolaan berkas, pelacakan pelamar, dan komunikasi menjadi tidak efisien bagi peserta maupun admin.",
+ "solution": "Membangun portal web modern dengan alur pendaftaran yang jelas, daftar lowongan magang, informasi program, showcase galeri, dan akses demo sistem — membantu pelamar dan admin menjalankan workflow digital yang terstruktur.",
+ "roles": [
+ "Full Stack Developer Intern",
+ "Implementasi Frontend",
+ "Integrasi Backend",
+ "Fungsionalitas Database",
+ "Autentikasi & Optimasi Alur Kerja"
+ ],
+ "features": [
+ "Landing publik dengan branding BBKB dan overview program",
+ "Alur pendaftaran 3 langkah: Buat Akun, Ajukan Lamaran, Seleksi & Onboarding",
+ "Lowongan magang (Desain Batik, Pemasaran Digital, Produksi Kerajinan)",
+ "Halaman tentang, alur, dan galeri magang",
+ "Statistik dampak: peserta, program, sertifikat",
+ "Demo portfolio dan akses demo admin",
+ "Layout responsif untuk mobile dan desktop"
+ ],
+ "techStack": [
+ "Next.js",
+ "TypeScript",
+ "Tailwind CSS",
+ "PostgreSQL",
+ "Vercel"
+ ],
+ "challenges": "Merancang workflow magang yang aman dan scalable untuk pelamar publik sekaligus admin internal, sambil menjaga pengalaman tetap sederhana dan terpercaya.",
+ "result": "Menyampaikan portal magang yang di-deploy produksi dan memusatkan pengalaman pendaftaran serta manajemen magang BBKB Yogyakarta."
+ },
+ "udaracast": {
+ "overview": "UdaraCast adalah platform prediksi kualitas udara cerdas yang memprediksi konsentrasi PM2.5 menggunakan Long Short-Term Memory (LSTM) dengan peningkatan transformasi fitur Sine-Cosine.",
+ "problem": "Informasi kualitas udara umumnya terbatas pada pemantauan historis dan kurang memiliki insight prediktif yang membantu pengguna mengantisipasi tingkat polusi.",
+ "solution": "Mengembangkan platform forecasting yang mampu memprediksi level PM2.5 sambil menampilkan dashboard visualisasi dan rekomendasi kategori kesehatan.",
+ "roles": [
+ "AI Engineer",
+ "Data Scientist",
+ "Full Stack Developer"
+ ],
+ "features": [
+ "Prediksi PM2.5",
+ "Visualisasi Historis",
+ "Dashboard Interaktif",
+ "Rekomendasi Kesehatan",
+ "Perbandingan Kota",
+ "Visualisasi Forecast",
+ "Pipeline Machine Learning"
+ ],
+ "pipeline": [
+ "Pengumpulan Data",
+ "Pembersihan Data",
+ "Feature Engineering",
+ "Transformasi Sine-Cosine",
+ "Pelatihan LSTM",
+ "Evaluasi",
+ "Deployment"
+ ],
+ "metrics": {
+ "rmse": "0,1042",
+ "mape": "0,8847",
+ "r2": "0,9787"
+ },
+ "metricsSummary": "Model SCA-LSTM menghasilkan nilai Root Mean Square Error (RMSE) sebesar 0,1042, Mean Absolute Percentage Error (MAPE) sebesar 0,8847, dan koefisien determinasi (R²) sebesar 0,9787.",
+ "modelName": "Model SCA-LSTM",
+ "chartSeries": {
+ "actual": [
+ 0.34,
+ 0.4,
+ 0.47,
+ 0.53,
+ 0.49,
+ 0.56,
+ 0.63,
+ 0.59,
+ 0.69,
+ 0.65
+ ],
+ "predicted": [
+ 0.42,
+ 0.33,
+ 0.54,
+ 0.46,
+ 0.57,
+ 0.49,
+ 0.71,
+ 0.53,
+ 0.77,
+ 0.58
+ ]
+ },
+ "chartCaption": "PM2.5 aktual vs prediksi — SCA-LSTM (R² = 0,9787)",
+ "techStack": [
+ "Python",
+ "TensorFlow",
+ "Pandas",
+ "NumPy",
+ "Next.js",
+ "PostgreSQL"
+ ],
+ "challenges": "Membangun model forecasting yang akurat sekaligus mengintegrasikan inferensi AI ke dalam aplikasi web modern.",
+ "research": "Berdasarkan riset skripsi dengan model hybrid Sine-Cosine Algorithm (SCA) dan LSTM untuk prediksi kualitas udara PM2.5."
+ },
+ "kedokploso": {
+ "overview": "Sistem informasi resmi desa yang dirancang untuk menyediakan layanan publik digital, informasi wisata, dan kegiatan komunitas lokal.",
+ "problem": "Informasi desa sebelumnya tersebar di media sosial dan pengumuman offline, sehingga sulit diakses oleh masyarakat.",
+ "solution": "Mengembangkan website desa modern yang memusatkan informasi publik, konten wisata, peta, pengumuman, dan profil desa.",
+ "roles": [
+ "Frontend Developer",
+ "Backend Developer",
+ "UI Designer"
+ ],
+ "features": [
+ "Profil Desa",
+ "Informasi Wisata",
+ "Peta Interaktif",
+ "Berita",
+ "Galeri",
+ "Kontak"
+ ],
+ "techStack": [
+ "Next.js",
+ "Tailwind CSS",
+ "PostgreSQL",
+ "Vercel"
+ ],
+ "challenges": "Menciptakan platform informasi yang mudah diakses baik oleh warga lokal maupun pengunjung.",
+ "result": "Berhasil digitalisasi informasi desa menjadi platform yang responsif dan mudah digunakan."
+ },
+ "pipilo-agency": {
+ "overview": "Desain brosur lengkap untuk Pipilo Digital Creative Agency dengan tema luar angkasa yang playful, breakdown layanan, alur proses kerja, tier harga, dan detail kontak — dibuat terasa energik, bukan kaku.",
+ "highlights": [
+ "Identitas visual bertema space dengan astronaut & roket",
+ "Layout tri-fold: branding, tentang kami, layanan & kontak",
+ "Paket harga Basic, Pro, dan Premium",
+ "Alur proses kerja dari konsultasi hingga hosting"
+ ],
+ "tools": [
+ "Figma",
+ "Typography",
+ "Collage",
+ "Print Layout"
+ ]
+ },
+ "freshly-poster": {
+ "overview": "Poster promosi pengumuman ketersediaan Freshly di website — menggabungkan fotografi produk realistis dengan tipografi gaya sticker untuk tampilan kampanye segar dan appetizing.",
+ "highlights": [
+ "Tipografi bold gaya sticker dengan blok warna",
+ "Mockup smartphone menampilkan UI aplikasi",
+ "Collage sayur berlapis untuk depth & energi",
+ "Pesan promo kontras tinggi untuk social media"
+ ],
+ "tools": [
+ "Figma",
+ "Photo Collage",
+ "Typography",
+ "Mockup"
+ ]
+ },
+ "dont-food-waste": {
+ "overview": "Poster awareness kampanye Don't Food Waste — imagery makanan berlapis sandwich yang disatukan dengan tipografi untuk pesan anti-food waste yang kuat di Gemastik XVII.",
+ "highlights": [
+ "Collage sandwich terintegrasi ke letterform",
+ "Headline serif bold dengan emphasis coret",
+ "Ikon megaphone memperkuat tone kampanye",
+ "Branding strip Gemastik & universitas"
+ ],
+ "tools": [
+ "Figma",
+ "Collage",
+ "Campaign Design",
+ "Typography"
+ ]
+ },
+ "ie-merch": {
+ "overview": "Desain merchandise fakultas Industrial Engineering — sistem kaos dengan mark dada depan yang ringkas dan grafik belakang lebih besar berisi tipografi berlapis, ikon gear, serta tagline fakultas dalam varian kaos putih dan hitam.",
+ "highlights": [
+ "Layout ganda: mark depan minimal dan grafik belakang penuh",
+ "Tipografi Industrial + script Engineering berlapis",
+ "Motif gear memperkuat identitas engineering",
+ "Mockup terang dan gelap siap presentasi cetak"
+ ],
+ "tools": [
+ "Figma",
+ "Typography",
+ "Mockup",
+ "Merchandise Design"
+ ]
+ },
+ "lana-del-rey": {
+ "overview": "Collage fan-art editorial untuk Lana Del Rey — menggabungkan beberapa lapisan portrait dengan landscape hutan berkabut dan tipografi nama vertikal tebal dalam palet hangat dan cinematic.",
+ "highlights": [
+ "Collage portrait berlapis dengan tepi feathered lembut",
+ "Background landscape emas berkabut untuk depth",
+ "Tipografi LANA DEL REY vertikal tebal",
+ "Color grading sepia dan gold hangat"
+ ],
+ "tools": [
+ "Figma",
+ "Photo Collage",
+ "Typography",
+ "Color Grading"
+ ]
+ },
+ "paul-walker": {
+ "overview": "Collage tribute untuk Paul Walker dan Nissan Skyline ikonik — estetika sticker Y2K dengan repeat portrait ghosted, type bertekstur glitter, dan backdrop jalan desert cinematic.",
+ "highlights": [
+ "Lapisan portrait ghosted dengan glow halo kuning",
+ "Elemen fokus Skyline R34 GT-R ala sticker-cut",
+ "Tipografi Skyline & Nissan diagonal bertekstur glitter",
+ "Atmosfer highway desert dengan langit blue-gold"
+ ],
+ "tools": [
+ "Figma",
+ "Photo Collage",
+ "Typography",
+ "Sticker Style"
+ ]
+ },
+ "food-discovery": {
+ "overview": "Pengalaman mobile food discovery yang menggabungkan browsing home dan pemilihan lokasi berbasis peta — dirancang untuk eksplorasi restoran cepat dengan visibilitas promo dan navigasi intuitif.",
+ "highlights": [
+ "Home feed dengan banner promo dan kartu rekomendasi",
+ "Map view dengan slider radius dan pencarian lokasi",
+ "Bottom navigation dengan active state jelas",
+ "Sistem aksen purple untuk CTA dan highlight"
+ ],
+ "tools": [
+ "Figma",
+ "UI Design",
+ "Mobile Prototyping",
+ "Design System"
+ ]
+ },
+ "freshly": {
+ "overview": "Freshly adalah pengalaman e-commerce untuk klien Istana Toko Sayur dan Buah — retailer sayur dan buah segar di Manokwari, Papua Barat. Desain ini mentransformasi bisnis produk lokal menjadi toko digital yang terpercaya, dengan navigasi jelas, belanja berbasis kategori, dan storytelling brand yang menonjolkan kualitas organik serta kepercayaan pelanggan.",
+ "highlights": [
+ "Beranda hero dengan pesan sayur & buah segar plus pintu masuk kategori",
+ "Katalog toko dengan filter sayuran, buah, jus, dan kacang beserta kartu produk berharga",
+ "Halaman tentang kami berisi cerita toko, metrik pelanggan, janji layanan, dan profil tim",
+ "Identitas FRESHLY konsisten — logo produk segar, palet hijau daun, dan hierarki tipografi bersih",
+ "Testimoni dan pilar nilai (gratis ongkir, selalu segar, kualitas, dukungan 24/7) untuk membangun kepercayaan konversi"
+ ],
+ "tools": [
+ "Figma",
+ "Desain UI/UX",
+ "Desain Web",
+ "Design System",
+ "Presentasi Klien"
+ ],
+ "screenLabels": [
+ "Beranda",
+ "Tentang Kami",
+ "Toko"
+ ]
+ },
+ "sehatin": {
+ "overview": "Sehatin adalah aplikasi mobile kesehatan untuk proyek kompetensi UI/UX kampus — mewakili universitas dengan pengalaman pendamping kesehatan yang lengkap. Alurnya mencakup peluncuran pertama, onboarding terpandu untuk tema kesehatan fisik dan mental, izin notifikasi sistem, serta beranda kaya fitur untuk pelacakan kalori dan aktivitas harian.",
+ "highlights": [
+ "Layar awal dengan ikon pelari dan identitas Sehatin ungu lembut",
+ "Onboarding empat langkah: program kesehatan, kesehatan mental, fitur lengkap, dan manfaat pengguna",
+ "Dialog izin notifikasi iOS native dengan teks Bahasa Indonesia yang jelas",
+ "Beranda dengan kartu Kebugaran Jasmani, Makanan Bergizi, dan Kesehatan Mental",
+ "Pelacak kalori melingkar dengan target, konsumsi, dan kalori terbakar plus target aktivitas harian",
+ "Navigasi bawah — Beranda, AI, Konsultasi, dan Profil"
+ ],
+ "tools": [
+ "Figma",
+ "Desain UI/UX",
+ "Prototipe Mobile",
+ "Alur Pengguna",
+ "Design System"
+ ],
+ "screenLabels": [
+ "Layar Awal",
+ "Onboarding — Program Kesehatan",
+ "Onboarding — Kesehatan Mental",
+ "Onboarding — Fitur",
+ "Onboarding — Manfaat",
+ "Notifikasi",
+ "Beranda"
+ ]
+ },
+ "miso": {
+ "overview": "MISO adalah pengalaman pemesanan makanan mobile untuk klien resto mie ayam dan bakso di Sumpiuh. Aplikasi ini mentransformasi warung lokal favorit menjadi alur pesan digital yang ramah — dari branding oranye tegas dan penelusuran menu hingga cerita produk, kontrol jumlah pesanan, dan layar sukses yang hangat untuk menutup siklus transaksi.",
+ "highlights": [
+ "Intro dengan logo tulisan MISO ekspresif dan karakter brand oranye",
+ "Beranda menu dengan pencarian, chip kategori (Semua, Bakso, Mie Ayam, Toping), dan kartu produk",
+ "Detail produk Mie Ayam Chili Oil dengan deskripsi, pengatur jumlah, dan tombol pesan tetap di bawah",
+ "Layar sukses pesanan dengan ucapan apresiasi dan aksi kembali",
+ "UI kartu rounded, fotografi makanan circular, dan sistem aksen oranye konsisten"
+ ],
+ "tools": [
+ "Figma",
+ "Desain UI/UX",
+ "Prototipe Mobile",
+ "UX Pemesanan Makanan",
+ "Presentasi Klien"
+ ],
+ "screenLabels": [
+ "Intro",
+ "Beranda Menu",
+ "Detail Produk",
+ "Pesanan Berhasil"
+ ]
+ },
+ "food-onboarding": {
+ "overview": "Onboarding trust-building untuk marketplace makanan — mengkomunikasikan jaminan keamanan sebelum user set lokasi, dengan ilustrasi friendly dan alur step-by-step.",
+ "highlights": [
+ "Ikon makanan ilustrasi dengan dotted path playful",
+ "Checklist keamanan dengan indikator checkmark",
+ "Copy onboarding fokus kepercayaan konsumsi",
+ "Location picker dengan CTA lokasi saat ini"
+ ],
+ "tools": [
+ "Figma",
+ "UI Design",
+ "Illustration",
+ "User Flow"
+ ]
+ },
+ "burhans-cell": {
+ "overview": "Aplikasi mobile retail elektronik Om Burhans Cell — homepage toko dengan brand discovery, rekomendasi produk, dan halaman detail iPhone dengan varian storage/warna.",
+ "highlights": [
+ "Category pill dan rekomendasi produk horizontal",
+ "Baris logo brand untuk filter cepat",
+ "Detail produk dengan variant chip dan stat review",
+ "Sticky price bar dengan aksi add-to-cart"
+ ],
+ "tools": [
+ "Figma",
+ "UI Design",
+ "E-Commerce UX",
+ "Component Library"
+ ]
+ },
+ "sehatku": {
+ "overview": "App companion kesehatan Sehatku — menyeimbangkan tracking wellness harian dengan discovery dokter, palet purple lembut dan layout card-based untuk UX kesehatan yang approachable.",
+ "highlights": [
+ "Tracker kalori circular dengan progress gauge",
+ "Tile kategori fitness, nutrisi, dan mental health",
+ "Pencarian dokter dengan filter spesialisasi",
+ "Banner konsultasi dan kartu listing dokter"
+ ],
+ "tools": [
+ "Figma",
+ "UI Design",
+ "Health UX",
+ "Mobile Prototyping"
+ ]
+ },
+ "pm25-sca-lstm": {
+ "overview": "Notebook riset prediksi PM2.5 kualitas udara global menggunakan SCA-LSTM — menggabungkan encoding temporal sine-cosine dengan jaringan LSTM untuk menangkap pola musiman polusi.",
+ "highlights": [
+ "Transformasi fitur sine-cosine untuk pola siklik",
+ "Sequence modeling LSTM untuk multi-step forecasting",
+ "Hyperparameter tuning dan evaluasi model",
+ "Dideploy sebagai platform forecasting publik UdaraCast"
+ ],
+ "pipeline": [
+ "Pengumpulan Data",
+ "Cleaning & Normalisasi",
+ "Encoding Sine-Cosine",
+ "Training LSTM",
+ "Evaluasi",
+ "Deployment"
+ ],
+ "metrics": {
+ "rmse": "0.1042",
+ "mape": "0.8847",
+ "r2": "0.9787"
+ },
+ "metricsSummary": "SCA-LSTM mencapai RMSE 0.1042, MAPE 0.8847, dan R² 0.9787 pada prediksi PM2.5.",
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Pandas",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "imdb-sentiment-lstm": {
+ "overview": "Klasifikasi sentimen ulasan film IMDB menggunakan LSTM — tokenisasi teks, sequence padding, embedding layer, dan prediksi sentimen biner dengan visualisasi training history.",
+ "highlights": [
+ "Preprocessing dataset IMDB dan pembangunan vocabulary",
+ "Jaringan rekurrent LSTM untuk klasifikasi sekuens",
+ "Kurva akurasi/loss training dan validasi",
+ "Confusion matrix dan classification report"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "pattern-knn": {
+ "overview": "Dasar pengenalan pola dengan k-Nearest Neighbors — eksplorasi dataset berlabel, pemilihan k, dan evaluasi performa classifier pada data uji.",
+ "highlights": [
+ "Visualisasi dataset dan eksplorasi fitur",
+ "Training model KNN dengan Scikit-learn",
+ "Train/test split dan evaluasi akurasi",
+ "Analisis decision region dan tetangga terdekat"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "pattern-svm": {
+ "overview": "Pengenalan pola dengan Support Vector Machine — pemilihan kernel, optimasi margin, dan visualisasi decision boundary untuk klasifikasi multi-kelas.",
+ "highlights": [
+ "Classifier SVM dengan kernel linear dan RBF",
+ "Hyperparameter tuning dengan cross-validation",
+ "Visualisasi decision boundary",
+ "Evaluasi precision, recall, dan F1-score"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "ecg-rf-coronary": {
+ "overview": "Klasifikasi detak jantung EKG untuk deteksi penyakit jantung koroner menggunakan Random Forest — preprocessing sinyal, ekstraksi fitur, dan evaluasi diagnostik medis.",
+ "highlights": [
+ "Preprocessing sinyal EKG dan segmentasi heartbeat",
+ "Klasifikasi multi-kelas Random Forest",
+ "Confusion matrix dan classification report",
+ "Pipeline deteksi penyakit jantung koroner"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "voice-emotion-mfcc": {
+ "overview": "Pengenalan emosi suara dari audio menggunakan fitur MFCC — membandingkan classifier SVC dan Random Forest pada dataset emosi bicara.",
+ "highlights": [
+ "Ekstraksi fitur MFCC dari sinyal audio",
+ "Perbandingan model SVC dan Random Forest",
+ "Klasifikasi emosi multi-kelas",
+ "Preprocessing audio dan analisis spectrogram"
+ ],
+ "tools": [
+ "Python",
+ "Librosa",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "diabetic-retinopathy-cnn": {
+ "overview": "Deteksi retinopati diabetik menggunakan PyTorch CNN — melatih jaringan konvolusi pada gambar fundus retina dengan augmentation dan evaluasi medical imaging.",
+ "highlights": [
+ "Arsitektur PyTorch CNN untuk klasifikasi gambar",
+ "Preprocessing dan augmentation gambar retina",
+ "Tracking loss dan akurasi training/validasi",
+ "Pipeline klasifikasi medical imaging"
+ ],
+ "tools": [
+ "Python",
+ "PyTorch",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "heartbeat-cnn-wavelet": {
+ "overview": "Klasifikasi detak jantung dengan ekstraksi fitur transform wavelet dan CNN — menggabungkan analisis time-frequency dengan deep learning untuk sinyal EKG.",
+ "highlights": [
+ "Transform wavelet untuk ekstraksi fitur EKG",
+ "Arsitektur CNN untuk pengenalan pola heartbeat",
+ "Visualisasi domain waktu-frekuensi",
+ "Evaluasi klasifikasi EKG multi-kelas"
+ ],
+ "tools": [
+ "Python",
+ "PyTorch",
+ "PyWavelets",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "responsi-pattern": {
+ "overview": "Proyek pengenalan pola terapan dengan klasifikasi hands-on — eksplorasi dataset, training model, dan evaluasi performa.",
+ "highlights": [
+ "Eksplorasi dan visualisasi dataset",
+ "Training dan tuning classifier",
+ "Evaluasi metrik performa",
+ "Latihan responsi interaktif"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "praktikum8-pattern": {
+ "overview": "Metode pengenalan pola lanjutan dengan visualisasi dan latihan perbandingan multi-model.",
+ "highlights": [
+ "Teknik pengenalan pola lanjutan",
+ "Perbandingan multi-model",
+ "Visualisasi decision boundary",
+ "Analisis performa klasifikasi"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "praktikum5-pattern": {
+ "overview": "Workflow klasifikasi dasar termasuk train/test split, training, dan metrik evaluasi.",
+ "highlights": [
+ "Workflow klasifikasi dasar",
+ "Train/test split dan cross-validation",
+ "Plot decision boundary",
+ "Evaluasi akurasi dan confusion matrix"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "praktikum1-pattern": {
+ "overview": "Konsep inti pengenalan pola — jarak Euclidean, statistik deskriptif, dan latihan kasus hands-on.",
+ "highlights": [
+ "Jarak Euclidean dengan teorema Pythagoras",
+ "Mean, varians, dan ukuran statistik dasar",
+ "Operasi array NumPy pada data sampel",
+ "Latihan pengenalan pola multi-kasus"
+ ],
+ "tools": [
+ "Python",
+ "NumPy",
+ "Math",
+ "Jupyter"
+ ]
+ },
+ "praktikum2-pattern": {
+ "overview": "Pipeline persiapan data — load dataset CSV, merge sumber data, dan preprocessing sebelum modeling.",
+ "highlights": [
+ "Integrasi dataset Google Colab & Drive",
+ "Concatenation multi-dataset",
+ "Inspeksi data dan langkah preprocessing",
+ "Workflow eksploratori pra-model"
+ ],
+ "tools": [
+ "Python",
+ "Pandas",
+ "Google Colab",
+ "Jupyter"
+ ]
+ },
+ "praktikum3-pattern": {
+ "overview": "Ekstraksi fitur dari dataset IRIS — fitur statistik orde pertama, analisis bentuk distribusi, dan visualisasi.",
+ "highlights": [
+ "Load dan eksplorasi dataset IRIS",
+ "Ekstraksi fitur orde pertama per kolom numerik",
+ "Analisis kurtosis dan skewness dengan SciPy",
+ "Visualisasi distribusi fitur"
+ ],
+ "tools": [
+ "Python",
+ "Pandas",
+ "NumPy",
+ "SciPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "praktikum4-pattern": {
+ "overview": "Klasifikasi Decision Tree pada dataset Wisconsin Breast Cancer — cleaning, splitting, training, dan evaluasi confusion matrix.",
+ "highlights": [
+ "Preprocessing dataset breast cancer",
+ "Penghapusan kolom ID yang tidak digunakan",
+ "Training classifier Decision Tree",
+ "Analisis performa confusion matrix"
+ ],
+ "tools": [
+ "Python",
+ "Pandas",
+ "Scikit-learn",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "praktikum6-pattern": {
+ "overview": "K-Means dan Agglomerative Clustering pada data kinerja siswa UCI — normalisasi, clustering, dan interpretasi grup.",
+ "highlights": [
+ "Dataset kinerja siswa UCI",
+ "Pipeline normalisasi StandardScaler",
+ "K-Means dan Agglomerative Clustering",
+ "Analisis segmentasi siswa ke 4 grup"
+ ],
+ "tools": [
+ "Python",
+ "Pandas",
+ "Scikit-learn",
+ "ucimlrepo",
+ "Jupyter"
+ ]
+ },
+ "praktikum7-pattern": {
+ "overview": "Classifier digit MNIST — ekstraksi fitur histogram custom dari gambar 28×28 dan klasifikasi berbasis KNN.",
+ "highlights": [
+ "Load MNIST CSV dan visualisasi gambar",
+ "Fitur histogram piksel 256-bin custom",
+ "Train/test split dan training KNN",
+ "Evaluasi pengenalan digit"
+ ],
+ "tools": [
+ "Python",
+ "Pandas",
+ "NumPy",
+ "Scikit-learn",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "praktikum10-pattern": {
+ "overview": "Pengenalan pola bioinformatika — parsing sekuens genom FASTA, ekstraksi frekuensi k-mer, dan klasifikasi region promotor.",
+ "highlights": [
+ "Download FASTA NCBI dan parsing Biopython",
+ "Ekstraksi fitur frekuensi k-mer (trinucleotide)",
+ "Labeling sekuens promotor vs non-promotor",
+ "Workflow klasifikasi berbasis sekuens"
+ ],
+ "tools": [
+ "Python",
+ "Biopython",
+ "Scikit-learn",
+ "Pandas",
+ "Jupyter"
+ ]
+ },
+ "dl7-lstm-forecast": {
+ "overview": "Proyek peramalan time-series LSTM — load data, persiapan sekuens, training, dan visualisasi prediksi.",
+ "highlights": [
+ "Load dan visualisasi data time-series",
+ "Arsitektur LSTM untuk prediksi sekuens",
+ "Train/test split dengan temporal window",
+ "Plot perbandingan forecast vs actual"
+ ],
+ "pipeline": [
+ "Load Data",
+ "Preprocessing",
+ "Sequence Windowing",
+ "Training LSTM",
+ "Evaluasi Forecast"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "Pandas",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl8-gru-sentiment": {
+ "overview": "Analisis sentimen pada data Twitter menggunakan jaringan GRU untuk mengklasifikasikan tweet positif, negatif, atau netral dari dataset GOP Debate.",
+ "highlights": [
+ "Preprocessing dataset sentimen Twitter",
+ "Pipeline tokenisasi dan padding teks",
+ "Arsitektur jaringan rekurrent GRU",
+ "Evaluasi klasifikasi sentimen multi-kelas"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "Pandas",
+ "NumPy",
+ "Jupyter"
+ ]
+ },
+ "dl9-text-vectorization": {
+ "overview": "Text mining dasar dengan Scikit-learn CountVectorizer — mengubah kalimat mentah menjadi document-term matrix untuk machine learning.",
+ "highlights": [
+ "Representasi teks ke numerik dengan CountVectorizer",
+ "Konstruksi document-term matrix",
+ "Transformasi teks train dan test",
+ "Workflow preprocessing NLP dasar"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl9-nmt-attention": {
+ "overview": "Neural machine translation Seq2Seq dengan attention — arsitektur encoder-decoder dan evaluasi terjemahan bilingual.",
+ "highlights": [
+ "Model encoder-decoder Seq2Seq",
+ "Mekanisme attention untuk alignment",
+ "Preprocessing teks dengan TensorFlow Text",
+ "Evaluasi kualitas terjemahan"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "TensorFlow Text",
+ "Einops",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl10-transformer-nmt": {
+ "overview": "Neural machine translation berbasis Transformer dari Portugis ke Inggris dengan multi-head attention, positional encoding, dan TensorFlow.",
+ "highlights": [
+ "Implementasi arsitektur Transformer lengkap",
+ "Multi-head self-attention dan feed-forward layers",
+ "Pipeline terjemahan Portugis ke Inggris",
+ "Training dan evaluasi BLEU-style"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "TensorFlow Datasets",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl11-gan": {
+ "overview": "Training GAN pada digit MNIST dengan jaringan discriminator dan generator terpisah untuk generasi gambar sintetis.",
+ "highlights": [
+ "Arsitektur discriminator dan generator GAN",
+ "Pipeline normalisasi dataset MNIST",
+ "Loop training adversarial",
+ "Visualisasi digit hasil generasi"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "responsi-neural-style-transfer": {
+ "overview": "Neural Style Transfer — menggabungkan gambar konten dan gaya menggunakan representasi fitur deep CNN dan optimisasi iteratif di TensorFlow.",
+ "highlights": [
+ "Load gambar konten dan gaya",
+ "Ekstraksi fitur berbasis VGG",
+ "Optimisasi style loss dan content loss",
+ "Generasi output gambar bergaya"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl4-cnn": {
+ "overview": "Convolutional Neural Network dengan TensorFlow Keras untuk klasifikasi gambar CIFAR-10 — preprocessing, arsitektur model, training, dan evaluasi akurasi.",
+ "highlights": [
+ "Load dan normalisasi dataset CIFAR-10",
+ "Arsitektur CNN Sequential dengan Keras",
+ "Training dan validasi model",
+ "Visualisasi akurasi dan prediksi klasifikasi"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl5-transfer-learning": {
+ "overview": "Transfer learning dengan model VGG16 dan ResNet50 pre-trained pada dataset gambar custom — ekstraksi fitur, fine-tuning, dan evaluasi klasifikasi.",
+ "highlights": [
+ "VGG16 dan ResNet50 pre-trained dari ImageNet",
+ "Load dataset custom dan augmentasi",
+ "Fine-tuning layer atas untuk kelas baru",
+ "Perbandingan transfer learning vs training from scratch"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "dl6-fastrcnn": {
+ "overview": "Deteksi objek dengan Fast R-CNN via TensorFlow Hub — mendeteksi dan melokalisasi objek dalam gambar dengan bounding box dan confidence score.",
+ "highlights": [
+ "Load model object detection TensorFlow Hub",
+ "Preprocessing gambar untuk pipeline deteksi",
+ "Prediksi dan visualisasi bounding box",
+ "Multi-object detection pada gambar sampel"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "TensorFlow Hub",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "airline-lstm": {
+ "overview": "Forecasting time-series lonjakan penumpang maskapai menggunakan LSTM — menganalisis pola volume penumpang historis, melatih jaringan rekurrent, dan mengevaluasi akurasi forecast pada permintaan travel musiman.",
+ "highlights": [
+ "Visualisasi tren penumpang historis",
+ "Model sekuens LSTM untuk prediksi lonjakan",
+ "Train/test split dengan validasi temporal",
+ "Plot perbandingan forecast vs actual"
+ ],
+ "pipeline": [
+ "Load Data",
+ "Preprocessing Time Series",
+ "Sequence Windowing",
+ "Training LSTM",
+ "Evaluasi Forecast"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Pandas",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "mnist-knn": {
+ "overview": "Workflow klasifikasi digit MNIST end-to-end — mengekstrak fitur histogram dari gambar grayscale 28×28 dan melatih classifier k-Nearest Neighbors dengan precision dan recall kuat per kelas.",
+ "highlights": [
+ "Ekstraksi fitur histogram dari data pixel",
+ "Visualisasi sample digit dan distribusi label",
+ "Classification report dengan akurasi ~98%",
+ "Visualisasi prediksi test pada digit unseen"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "breast-cancer-dt": {
+ "overview": "Benchmark klasifikasi medis membandingkan empat algoritma pada data deteksi kanker payudara — mengevaluasi akurasi, confusion matrix, dan F1-score untuk Logistic Regression, KNN, SVM, dan Random Forest.",
+ "highlights": [
+ "Perbandingan multi-model dengan bar chart akurasi",
+ "Confusion matrix heatmap untuk model terbaik",
+ "KNN mencapai akurasi tertinggi (~95%)",
+ "Pipeline feature scaling dan train-test split"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "Seaborn",
+ "Jupyter"
+ ]
+ },
+ "sms-spam": {
+ "overview": "Deteksi spam SMS menggunakan metode klasifikasi teks — preprocessing pesan mentah, ekstraksi fitur teks, dan melatih classifier untuk membedakan spam dari SMS legitimate.",
+ "highlights": [
+ "Pipeline preprocessing dan tokenisasi teks",
+ "Vectorization fitur untuk pesan SMS",
+ "Metrik evaluasi klasifikasi biner",
+ "Notebook end-to-end dari load data hingga hasil"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NLTK",
+ "Pandas",
+ "Jupyter"
+ ]
+ },
+ "ecg-analysis": {
+ "overview": "Analisis sinyal biomedical EKG mencakup domain waktu dan frekuensi — load data CSV sinyal pasien, plotting waveform, dan menerapkan FFT untuk identifikasi komponen frekuensi dan pola noise.",
+ "highlights": [
+ "Visualisasi waveform EKG domain waktu",
+ "Spektrum frekuensi Fast Fourier Transform",
+ "Perbandingan sinyal multi-subjek",
+ "Analisis interferensi power-line (~50Hz)"
+ ],
+ "tools": [
+ "Python",
+ "NumPy",
+ "SciPy",
+ "Matplotlib",
+ "Pandas",
+ "Jupyter"
+ ]
+ },
+ "feature-extraction-viz": {
+ "overview": "Visualisasi dan karakterisasi data dengan ekstraksi fitur ordo pertama — regresi statistik Statsmodels, stacked bar chart, dan histogram overlay untuk analisis distribusi antar kasus.",
+ "highlights": [
+ "Regresi OLS dengan analisis korelasi Statsmodels",
+ "Stacked bar chart perbandingan multi-kategori",
+ "Histogram overlay untuk analisis distribusi",
+ "Workflow dua kasus studi (Kasus 1 & Kasus 2)"
+ ],
+ "tools": [
+ "Python",
+ "Statsmodels",
+ "Pandas",
+ "Matplotlib",
+ "Seaborn",
+ "Jupyter"
+ ]
+ },
+ "student-pca": {
+ "overview": "Eksplorasi data akademik mahasiswa — preprocessing record survei, menerapkan PCA untuk reduksi dimensi 2D, dan visualisasi skor mata pelajaran serta distribusi kategorikal untuk insight rekomendasi jurusan.",
+ "highlights": [
+ "Penanganan missing value dan pembersihan kolom",
+ "Scatter plot PCA (PC1 vs PC2) untuk pola cluster",
+ "Bar chart kategori ruang mahasiswa dan masa kuliah",
+ "Analisis fitur skor multi-mata pelajaran"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "Matplotlib",
+ "Seaborn",
+ "Jupyter"
+ ]
+ },
+ "iris-knn": {
+ "overview": "Eksplorasi multivariat dataset Iris di Kaggle — visualisasi advanced termasuk parallel coordinates, Andrews curves, dan pair plot, diikuti klasifikasi KNN untuk tiga spesies.",
+ "highlights": [
+ "Parallel coordinates dan Andrews curves untuk separasi kelas",
+ "Seaborn pair plot dengan color coding spesies",
+ "Box plot perbandingan pengukuran sepal dan petal",
+ "Scatter plot PCA 3D untuk reduksi dimensi"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "Matplotlib",
+ "Seaborn",
+ "Jupyter"
+ ]
+ },
+ "motorcycle-ml": {
+ "overview": "Analisis end-to-end dataset dummy penjualan motor bekas — dari pertanyaan bisnis dan data wrangling hingga bar chart EDA dan eksperimen clustering serta klasifikasi.",
+ "highlights": [
+ "Definisi pertanyaan bisnis dan pengumpulan data",
+ "Pipeline assessment missing value dan duplikat",
+ "Visualisasi performa penjualan per kategori",
+ "Training model clustering dan klasifikasi"
+ ],
+ "tools": [
+ "Python",
+ "Pandas",
+ "Matplotlib",
+ "Seaborn",
+ "Scikit-learn",
+ "Jupyter"
+ ]
+ },
+ "cifar10-cnn": {
+ "overview": "Klasifikasi gambar deep learning pada CIFAR-10 — membangun Convolutional Neural Network dengan data augmentation dan dropout untuk klasifikasi 10 kategori objek dari gambar warna 32×32.",
+ "highlights": [
+ "Arsitektur CNN dengan convolution dan pooling layer",
+ "Data augmentation untuk generalisasi lebih baik",
+ "Dropout regularization mengurangi overfitting",
+ "Kurva loss/accuracy training dan evaluasi kelas"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "nmt-attention": {
+ "overview": "Neural Machine Translation berbasis attention untuk Spanyol–Inggris — model seq2seq encoder-decoder di mana mekanisme attention menyelaraskan token source dan target untuk kualitas terjemahan lebih baik.",
+ "highlights": [
+ "Arsitektur seq2seq encoder-decoder",
+ "Mekanisme attention untuk alignment token",
+ "Pipeline preprocessing sekuens bilingual",
+ "Workflow inferensi dan evaluasi terjemahan"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Jupyter"
+ ]
+ },
+ "transformer-nmt": {
+ "overview": "Model penerjemahan bahasa berbasis Transformer — mengimplementasikan self-attention dan multi-head attention layer dengan positional encoding untuk pemrosesan sekuens paralel tanpa rekurensi.",
+ "highlights": [
+ "Mekanisme self-attention menggantikan rekurensi RNN",
+ "Multi-head attention untuk representasi learning beragam",
+ "Positional encoding untuk informasi urutan sekuens",
+ "Pipeline training penerjemahan end-to-end"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "NumPy",
+ "Jupyter"
+ ]
+ },
+ "ecg-analysis-alt": {
+ "overview": "Notebook sinyal biomedical EKG extended — visualisasi waveform tambahan, eksplorasi spektrum FFT, dan perbandingan sinyal multi-subjek dari export Colab alternatif.",
+ "highlights": [
+ "Visualisasi EKG domain waktu extended",
+ "Spektrum FFT dan inspeksi noise",
+ "Perbandingan waveform multi-subjek",
+ "Analisis interferensi power-line (~50Hz)"
+ ],
+ "tools": [
+ "Python",
+ "NumPy",
+ "SciPy",
+ "Matplotlib",
+ "Pandas",
+ "Jupyter"
+ ]
+ },
+ "sms-spam-alt": {
+ "overview": "Notebook klasifikasi SMS spam alternatif — preprocessing teks, vektorisasi fitur, dan evaluasi classifier biner pada dataset pesan berlabel.",
+ "highlights": [
+ "Pipeline pembersihan teks dan tokenisasi",
+ "Ekstraksi fitur untuk teks SMS pendek",
+ "Metrik klasifikasi spam vs ham",
+ "Confusion matrix dan evaluasi akurasi"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "NLTK",
+ "Pandas",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "pm25-sca-lstm-alt": {
+ "overview": "Notebook forecasting PM2.5 extended menggunakan SCA-LSTM — run Colab alternatif dengan encoding sine-cosine, training LSTM, dan evaluasi RMSE/MAPE/R².",
+ "highlights": [
+ "Encoding fitur siklik sine-cosine",
+ "Forecasting sekuens multi-step dengan LSTM",
+ "Metrik performa model (RMSE, MAPE, R²)",
+ "Diagnostik training dan plot prediksi"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "Pandas",
+ "NumPy",
+ "Jupyter"
+ ]
+ },
+ "feature-extraction-viz-alt": {
+ "overview": "Notebook ekstraksi fitur dan visualisasi alternatif — regresi Statsmodels, stacked bar chart, dan overlay distribusi untuk karakterisasi data multi-kasus.",
+ "highlights": [
+ "Pipeline ekstraksi fitur ordo pertama",
+ "Regresi OLS dengan Statsmodels",
+ "Perbandingan stacked bar chart",
+ "Analisis distribusi histogram overlay"
+ ],
+ "tools": [
+ "Python",
+ "Statsmodels",
+ "Pandas",
+ "Matplotlib",
+ "Seaborn",
+ "Jupyter"
+ ]
+ },
+ "pertamina-lstm-pipes": {
+ "overview": "Dashboard predictive maintenance kehilangan ketebalan pipa minyak & gas menggunakan LSTM — pipeline lengkap dari load data Google Colab, preprocessing, boxplot outlier, normalisasi, hingga training LSTM dengan performa unggul dibanding linear regression.",
+ "highlights": [
+ "LSTM mencapai R² 0.9795 vs Linear Regression R² 0.8703",
+ "MAE 0.3057 dan MSE 0.1793 pada prediksi thickness loss",
+ "Pipeline analisis outlier dan normalisasi fitur",
+ "Mockup dashboard dengan heatmap, residual, dan actual vs predicted"
+ ],
+ "pipeline": [
+ "Load Data",
+ "Preprocessing & Encoding",
+ "Analisis Outlier",
+ "Normalisasi",
+ "Training LSTM",
+ "Perbandingan Model",
+ "Visualisasi Dashboard"
+ ],
+ "metrics": {
+ "r2": "0.9795",
+ "mae": "0.3057",
+ "mse": "0.1793"
+ },
+ "metricsSummary": "LSTM mengungguli Linear Regression dengan R² 0.9795, MAE 0.3057, dan MSE 0.1793 pada prediksi kehilangan ketebalan pipa.",
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Pandas",
+ "Plotly",
+ "Google Colab",
+ "Scikit-learn"
+ ]
+ },
+ "pertamina-rf-pipes": {
+ "overview": "Dashboard regresi Random Forest untuk prediksi kehilangan ketebalan pipa di sektor oil & gas — menggabungkan EDA, analisis korelasi, permutation feature importance, dan visualisasi scatter Plotly interaktif berdasarkan kondisi pipa.",
+ "highlights": [
+ "Random Forest Regressor dengan skor R² 0.98",
+ "Heatmap korelasi hubungan ukuran vs ketebalan pipa",
+ "Permutation importance: Condition, Material Loss, Thickness",
+ "Scatter interaktif Thickness Loss vs Time per Moderate/Critical/Normal"
+ ],
+ "pipeline": [
+ "Load Data",
+ "Preprocessing",
+ "Analisis Eksploratif",
+ "Peta Korelasi",
+ "Training Random Forest",
+ "Feature Importance",
+ "Visualisasi Interaktif"
+ ],
+ "metrics": {
+ "r2": "0.98"
+ },
+ "metricsSummary": "Model Random Forest mencapai R² 0.98 untuk prediksi kehilangan ketebalan pipa mendukung predictive maintenance.",
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "Plotly",
+ "Google Colab",
+ "Matplotlib"
+ ]
+ },
+ "pertamina-kmeans-refinery": {
+ "overview": "Analisis clustering K-Means pola operasi kilang minyak — clustering pada fitur yield, gravity, tekanan uap, dan distilasi dengan plot cluster 3D dan visualisasi Plotly interaktif.",
+ "highlights": [
+ "Feature scaling setelah validasi zero missing value",
+ "Label cluster K-Means pada data operasi kilang",
+ "Visualisasi cluster K-Means 3D",
+ "Scatter Plotly interaktif: Gravity vs Percentage Yield"
+ ],
+ "pipeline": [
+ "Load Data",
+ "Cek Missing Value",
+ "Feature Scaling",
+ "K-Means Clustering",
+ "Visualisasi 3D",
+ "Dashboard Plotly Interaktif"
+ ],
+ "tools": [
+ "Python",
+ "Scikit-learn",
+ "Pandas",
+ "Plotly",
+ "Google Colab"
+ ]
+ }
+ }
+ }
+ },
+ "blog": {
+ "title": "Catatan",
+ "subtitle": "Catatan riset, tulisan teknis, dan refleksi pembelajaran.",
+ "emptyTitle": "Belum ada tulisan yang diterbitkan",
+ "emptyDescription": "Update jurnal dan catatan teknis akan muncul di sini."
+ },
+ "certificates": {
+ "title": "Certificates",
+ "subtitle": "Sertifikasi profesional, rekam jejak pelatihan, kemampuan bahasa, dan pencapaian.",
+ "preview": "Pratinjau",
+ "view": "Lihat",
+ "viewSoon": "Segera hadir",
+ "close": "Tutup",
+ "openDocument": "Buka dokumen",
+ "backToCertificates": "Kembali ke sertifikat",
+ "documentSoon": "File sertifikat akan segera diunggah.",
+ "pageOf": "Halaman {current} / {total}",
+ "filters": {
+ "all": "Semua",
+ "certification": "Sertifikasi",
+ "training": "Pelatihan",
+ "language": "Bahasa",
+ "achievement": "Pencapaian"
+ },
+ "items": {
+ "ads-bnsp": {
+ "description": "Sertifikat kompetensi profesi nasional (BNSP) Associate Data Scientist bidang Artificial Intelligence, diterbitkan LSP Universitas Ahmad Dahlan — berlaku 3 tahun.",
+ "competencyTitle": "Unit Kompetensi",
+ "competencyUnits": [
+ "Mengumpulkan Data",
+ "Menelaah Data",
+ "Memvalidasi Data",
+ "Menentukan Objek Data",
+ "Membersihkan Data",
+ "Mengkonstruksi Data",
+ "Menentukan Label Data",
+ "Membangun Model",
+ "Mengevaluasi Hasil Pemodelan"
+ ]
+ },
+ "ads-digital-talent": {
+ "description": "Sertifikat microskill Digital Talent Scholarship Associate Data Scientist, mencakup kompetensi praktis data science dan machine learning."
+ },
+ "pelatihan-data-science": {
+ "description": "Sertifikat pelatihan data science terstruktur mencakup workflow analitik, fondasi modeling, dan keterampilan data terapan."
+ },
+ "ui-ux": {
+ "description": "Sertifikat pelatihan UI/UX design mencakup prinsip user-centered design, desain antarmuka, dan usability produk digital."
+ },
+ "adept-uad": {
+ "description": "Sertifikat Ahmad Dahlan English Proficiency Test (ADEPT) — Listening 53, Structure & Written Expression 80, Reading 52, dengan total skor 476."
+ },
+ "magang-bbspjikb": {
+ "description": "Sertifikat magang BBSPJIKB Yogyakarta, Kementerian Perindustrian — Full Stack Developer Intern di Bagian Data dan Informasi (Okt 2025 – Jan 2026)."
+ },
+ "soft-skills-uad": {
+ "description": "Sertifikat peserta Pelatihan Soft Skills Mahasiswa Tahap II, diselenggarakan Career Development Center Universitas Ahmad Dahlan."
+ },
+ "literasi-ms-word": {
+ "description": "Sertifikat pelatihan literasi ilmiah Microsoft Word — format dokumen dan penunjang penulisan akademik."
+ },
+ "literasi-database": {
+ "description": "Sertifikat pelatihan literasi ilmiah penggunaan database akademik dan manajemen sumber referensi penelitian."
+ },
+ "literasi-mendeley": {
+ "description": "Sertifikat pelatihan Mendeley reference management — pengelolaan sitasi dan bibliografi untuk penulisan ilmiah."
+ },
+ "literasi-penelusuran-database": {
+ "description": "Sertifikat pelatihan penelusuran database online — teknik menemukan dan mengevaluasi literatur ilmiah secara efektif."
+ }
+ },
+ "emptyTitle": "Sertifikat segera hadir",
+ "emptyDescription": "Dokumen sertifikasi dan credensial akan ditampilkan di sini.",
+ "emptyFilterTitle": "Belum ada sertifikat di kategori ini",
+ "emptyFilterDescription": "Coba filter lain atau kembali lagi nanti."
+ },
+ "stackPage": {
+ "title": "Arsenal Teknologi",
+ "subtitle": "Alat dan teknologi yang saya gunakan di Sains Data dan Pengembangan Perangkat Lunak.",
+ "stackTitle": "Tech Stack"
+ },
+ "guestbook": {
+ "title": "Ruang Pesan",
+ "subtitle": "Ingin terhubung? Tinggalkan pesan — saya akan membacanya.",
+ "formTitle": "Sapa saya",
+ "formDescription": "Pesan Anda akan dibaca — tidak perlu formal.",
+ "nameLabel": "Nama",
+ "namePlaceholder": "misalnya developer lain",
+ "messageLabel": "Pesan",
+ "messagePlaceholder": "Sapa, diskusi AI, atau berikan masukan...",
+ "submit": "Kirim pesan",
+ "submitted": "Pesan terkirim!"
+ },
+ "footer": {
+ "roles": "Sains Data • Pengembangan Perangkat Lunak",
+ "description": "Membangun solusi digital cerdas melalui pengembangan perangkat lunak modern dan teknologi berbasis data.",
+ "getInTouch": "Get In Touch",
+ "marquee": "ENGINEERING IDEAS INTO IMPACTFUL DIGITAL SOLUTIONS",
+ "modal": {
+ "title": "Let's Connect 👋",
+ "close": "Tutup"
+ },
+ "social": {
+ "github": "GitHub",
+ "linkedin": "LinkedIn",
+ "email": "Email",
+ "resume": "Resume",
+ "whatsapp": "WhatsApp",
+ "githubAria": "Kunjungi profil GitHub",
+ "linkedinAria": "Kunjungi profil LinkedIn",
+ "emailAria": "Kirim email",
+ "resumeAria": "Unduh resume",
+ "whatsappAria": "Chat via WhatsApp"
+ }
+ },
+ "theme": {
+ "dark": "Mode gelap",
+ "light": "Mode terang"
+ },
+ "language": {
+ "label": "Bahasa",
+ "id": "Indonesia",
+ "en": "English"
+ }
 }

@@ -6,6 +6,7 @@ import {
   projectCategories,
   type ProjectCategoryId,
 } from "@/data/portfolio";
+import { routing } from "@/i18n/routing";
 
 type Props = {
   params: Promise<{ locale: string; category: string }>;
@@ -18,7 +19,9 @@ function isProjectCategory(value: string): value is ProjectCategoryId {
 }
 
 export function generateStaticParams() {
-  return categoryIds.map((category) => ({ category }));
+  return routing.locales.flatMap((locale) =>
+    categoryIds.map((category) => ({ locale, category })),
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

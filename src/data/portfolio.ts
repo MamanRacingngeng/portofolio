@@ -39,7 +39,7 @@ export type TechItem = {
 
 export const techCategories: { id: string; items: TechItem[] }[] = [
   {
-    id: "dataEngineering",
+    id: "dataScience",
     items: [
       { id: "python", name: "Python", icon: "🐍", logo: "/images/tech/python.png", color: "#3776AB" },
       { id: "pandas", name: "Pandas", icon: "🐼", logo: "/images/tech/pandas.png", color: "#150458" },
@@ -70,6 +70,8 @@ export const techCategories: { id: string; items: TechItem[] }[] = [
       { id: "github", name: "GitHub", icon: "📦", logo: "/images/tech/github.png", color: "#181717" },
       { id: "cursor", name: "Cursor", icon: "⌨", logo: "/images/tech/cursor.png", color: "#000000" },
       { id: "colab", name: "Google Colab", icon: "📓", logo: "/images/tech/colab.png", logoScale: 0.72, labelLines: ["Google", "Colab"], color: "#F9AB00" },
+      { id: "powerbi", name: "Power BI", icon: "📈", logo: "/images/tech/power-bi-icon.png", logoScale: 1.12, color: "#F2C811" },
+      { id: "tableau", name: "Tableau", icon: "📊", logo: "/images/tech/tableau.png", logoScale: 1.05, color: "#E97627" },
     ],
   },
   {
@@ -113,6 +115,6 @@ export type ProjectCategoryId = (typeof projectCategories)[number]["id"];
 
 export const heroStats = [
   { value: "10+", key: "projects" as const },
-  { value: "2", key: "certs" as const },
+  { value: "11", key: "certs" as const },
   { value: "5+", key: "roles" as const },
 ];

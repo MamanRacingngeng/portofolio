@@ -7,6 +7,11 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 import { WavyPolkaDivider } from "@/components/ui/WavyPolkaDivider";
 import { siteConfig } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
+import {
+  revealViewport,
+  scrollRevealStaggerContainer,
+  scrollRevealStaggerItem,
+} from "@/lib/animations";
 
 type TimelineEntry = {
   title: string;
@@ -74,7 +79,13 @@ export function Timeline() {
             />
           </div>
 
-          <div className="space-y-8 sm:space-y-9">
+          <motion.div
+            variants={scrollRevealStaggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={revealViewport}
+            className="space-y-8 sm:space-y-9"
+          >
             {flatEntries.map((entry, index) => {
               const detail = entry.detailId ? details[entry.detailId] : null;
               const period = detail?.period ?? entry.year;
@@ -87,12 +98,17 @@ export function Timeline() {
               const isShort = !detail;
 
               return (
-                <article
+                <motion.article
                   key={`${entry.title}-${index}`}
+                  variants={scrollRevealStaggerItem}
                   className="relative pl-8 text-left sm:pl-10"
                 >
                   <motion.div
                     className="w-full border-[3px] border-border bg-card p-5 text-left shadow-[5px_5px_0_#111] sm:p-7"
+                    initial={{ boxShadow: "0px 0px 0 #111" }}
+                    whileInView={{ boxShadow: "5px 5px 0 #111" }}
+                    viewport={revealViewport}
+                    transition={{ delay: 0.15, duration: 0.4 }}
                     whileHover={{
                       backgroundColor: "rgba(212, 240, 106, 0.12)",
                       boxShadow: "7px 7px 0 #f9a8b8",
@@ -140,10 +156,10 @@ export function Timeline() {
                       </>
                     )}
                   </motion.div>
-                </article>
+                </motion.article>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </div>
       {siteConfig.showWavyPolkaDivider ? <WavyPolkaDivider seed={4} /> : null}

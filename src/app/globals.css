@@ -229,6 +229,116 @@ body {
   }
 }
 
+.project-card {
+  border: 3px solid var(--border);
+  box-shadow: 6px 6px 0 var(--shadow);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card--sky:hover {
+  border-color: var(--accent-4);
+  box-shadow: 10px 12px 0 var(--accent-4);
+}
+
+.project-card--pink:hover {
+  border-color: var(--accent-3);
+  box-shadow: 10px 12px 0 var(--accent-3);
+}
+
+.project-card--lime:hover {
+  border-color: var(--accent-2);
+  box-shadow: 10px 12px 0 var(--accent-2);
+}
+
+.project-card--purple:hover {
+  border-color: var(--accent);
+  box-shadow: 10px 12px 0 var(--accent);
+}
+
+.notebook-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.notebook-image {
+  image-rendering: auto;
+}
+
+.ui-mockup-image {
+  image-rendering: auto;
+}
+
+.ui-screen-rail {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.ui-screen-rail::-webkit-scrollbar {
+  height: 6px;
+}
+
+.ui-screen-rail::-webkit-scrollbar-thumb {
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.notebook-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.notebook-scroll::-webkit-scrollbar-thumb {
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.project-pill--sky:hover {
+  background-color: var(--accent-4);
+  color: #ffffff;
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--accent-4) 55%, var(--fg) 45%);
+  transform: translateY(-3px);
+}
+
+.project-pill--pink:hover {
+  background-color: var(--accent-3);
+  color: #ffffff;
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--accent-3) 55%, var(--fg) 45%);
+  transform: translateY(-3px);
+}
+
+.project-pill--purple:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--accent) 55%, var(--fg) 45%);
+  transform: translateY(-3px);
+}
+
+.project-pill {
+  border: none !important;
+  outline: none;
+  box-shadow: none;
+  transform: translateY(0);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.18s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-pill:active {
+  transform: translate(3px, 3px) scale(0.98);
+  box-shadow: none !important;
+  transition-duration: 0.08s;
+}
+
 @keyframes drift {
   from { transform: translate3d(0, 0, 0); }
   to { transform: translate3d(-50%, 0, 0); }

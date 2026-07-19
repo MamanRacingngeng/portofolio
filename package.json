@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000 --webpack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "cert-thumbnails": "node scripts/generate-cert-thumbnails.mjs",
+    "dashboard-thumbnails": "node scripts/generate-dashboard-thumbnails.mjs",
+    "process-notebooks": "node scripts/process-notebooks.mjs",
+    "project-images": "node scripts/regenerate-project-images.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -25,6 +29,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "pdf-to-img": "^6.2.0",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

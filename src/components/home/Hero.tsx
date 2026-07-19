@@ -1,12 +1,21 @@
 "use client";
 
+import { useRef } from "react";
 import { useTranslations, useMessages } from "next-intl";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { siteConfig } from "@/data/portfolio";
 import { AccentButton } from "@/components/ui/AccentButton";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
-import { spaceFloat, spaceFloatGentle, spaceFloatTilt } from "@/lib/animations";
+import {
+  revealViewport,
+  scrollRevealPop,
+  scrollRevealStaggerContainer,
+  scrollRevealStaggerItem,
+  spaceFloat,
+  spaceFloatGentle,
+  spaceFloatTilt,
+} from "@/lib/animations";
 import { cn } from "@/lib/utils";
 import { WavyPolkaDivider } from "@/components/ui/WavyPolkaDivider";
 
@@ -14,26 +23,35 @@ export function Hero() {
   const t = useTranslations("hero");
   const hero = useMessages().hero as {
     taglineLines: string[];
-    tagline: string;
-    bioParagraphs: string[];
+    bio: string;
   };
   const taglineLines = hero.taglineLines;
-  const bioText = [hero.tagline, ...hero.bioParagraphs].join(" ");
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  const textY = useTransform(scrollYProgress, [0, 1], [0, -24]);
+  const badgeY = useTransform(scrollYProgress, [0, 1], [0, -12]);
 
   return (
     <section
+      ref={sectionRef}
       className={cn(
         "relative overflow-x-hidden px-4 pt-14 sm:px-6 sm:pt-20 lg:px-8 lg:pt-24",
         siteConfig.showWavyPolkaDivider ? "pb-0" : "pb-14 sm:pb-16 lg:pb-20",
       )}
     >
       <div className="relative mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="mt-6 sm:mt-10"
-        >
-          <div className="relative inline-block">
+        <motion.div style={{ y: badgeY }} className="mt-6 sm:mt-10">
+          <motion.div
+            initial={{ opacity: 0, y: -20, rotate: -4 }}
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
+            transition={{ type: "spring", stiffness: 120, damping: 14 }}
+            className="relative inline-block"
+          >
             <motion.span
               aria-hidden
               {...spaceFloatGentle(12, 0.2)}
@@ -45,41 +63,63 @@ export function Hero() {
             >
               {t("badge")}
             </motion.div>
-          </div>
+          </motion.div>
         </motion.div>
 
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between sm:gap-8 lg:gap-12">
-          <div className="min-w-0 flex-1">
+          <motion.div style={{ y: textY }} className="min-w-0 flex-1">
             <motion.div {...spaceFloat(9, 0.4)}>
               <motion.h1
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.08 }}
+                initial={{ opacity: 0, y: 24, clipPath: "inset(0 0 100% 0)" }}
+                animate={{ opacity: 1, y: 0, clipPath: "inset(0 0 0% 0)" }}
+                transition={{
+                  delay: 0.08,
+                  duration: 0.7,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
                 className="font-display text-5xl font-black uppercase leading-[0.9] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl"
               >
-                <span className="block">{siteConfig.firstName}</span>
-                <span className="mt-1 block">
+                <motion.span
+                  initial={{ opacity: 0, x: -32 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.15, type: "spring", stiffness: 100 }}
+                  className="block"
+                >
+                  {siteConfig.firstName}
+                </motion.span>
+                <motion.span
+                  initial={{ opacity: 0, x: 32, scale: 0.95 }}
+                  animate={{ opacity: 1, x: 0, scale: 1 }}
+                  transition={{ delay: 0.28, type: "spring", stiffness: 100 }}
+                  className="mt-1 block"
+                >
                   <span className="name-highlight">{siteConfig.lastName}</span>
-                </span>
+                </motion.span>
               </motion.h1>
             </motion.div>
 
-            <div className="mt-6 max-w-xl border-l-[5px] border-accent-2 py-1 pl-5 sm:mt-8 sm:pl-6">
-              <p className="font-display text-base font-bold leading-[1.65] text-fg sm:text-lg">
-                {taglineLines.map((line) => (
-                  <span key={line} className="block">
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={revealViewport}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-5 max-w-xl border-l-[5px] border-accent-2 pl-4 sm:mt-6 sm:pl-5"
+            >
+              <p className="font-display text-[0.975rem] font-bold leading-[1.35] text-muted sm:text-lg sm:leading-[1.4]">
+                {taglineLines.map((line, index) => (
+                  <span key={`${index}-${line}`} className="block">
                     {line}
                   </span>
                 ))}
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.12 }}
-            className="mx-auto w-full shrink-0 sm:mx-0 sm:w-[260px] md:w-[280px] lg:w-[300px]"
+            initial={{ opacity: 0, scale: 0.9, rotate: 4 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ delay: 0.12, type: "spring", stiffness: 90, damping: 14 }}
+            className="relative z-0 mx-auto mb-8 w-full shrink-0 sm:mx-0 sm:mb-0 sm:w-[260px] md:w-[280px] lg:w-[300px]"
           >
             <div className="group/profile relative">
               <div
@@ -108,48 +148,64 @@ export function Hero() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.18 }}
-          className="brutal-card mt-10 p-6 sm:mt-12 sm:p-8"
+          variants={scrollRevealPop}
+          initial="hidden"
+          whileInView="visible"
+          viewport={revealViewport}
+          className="brutal-card relative z-10 mt-6 bg-card p-5 sm:mt-10 sm:p-7 lg:p-8"
         >
-          <p className="text-justify text-base font-medium leading-[1.75] text-fg sm:text-lg">
-            {bioText}
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={revealViewport}
+            transition={{ delay: 0.15, duration: 0.5 }}
+            className="text-pretty text-justify text-[0.975rem] font-medium leading-[1.8] text-fg sm:text-lg sm:leading-[1.85]"
+          >
+            {hero.bio}
+          </motion.p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.28 }}
+          variants={scrollRevealStaggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={revealViewport}
           className="relative z-0 mt-10 flex flex-wrap items-center gap-3 sm:mt-12 sm:gap-4"
         >
-          <AccentButton variant="primary" href="/proyek" className="px-6 py-3.5">
-            {t("exploreProjects")}
-          </AccentButton>
-          <AccentButton variant="secondary" href={siteConfig.resumeUrl} className="px-6 py-3.5">
-            {t("downloadCv")}
-          </AccentButton>
-          <a
-            href={siteConfig.social.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={t("social.githubAria")}
-            className="pop-btn bg-card px-5 py-3.5 text-fg"
-          >
-            <GithubIcon size={20} />
-            {t("social.github")}
-          </a>
-          <a
-            href={siteConfig.social.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={t("social.linkedinAria")}
-            className="pop-btn bg-accent-3 px-5 py-3.5 text-fg"
-          >
-            <LinkedinIcon size={20} />
-            {t("social.linkedin")}
-          </a>
+          <motion.div variants={scrollRevealStaggerItem}>
+            <AccentButton variant="primary" href="/proyek" className="px-6 py-3.5">
+              {t("exploreProjects")}
+            </AccentButton>
+          </motion.div>
+          <motion.div variants={scrollRevealStaggerItem}>
+            <AccentButton variant="secondary" href={siteConfig.resumeUrl} className="px-6 py-3.5">
+              {t("downloadCv")}
+            </AccentButton>
+          </motion.div>
+          <motion.div variants={scrollRevealStaggerItem}>
+            <a
+              href={siteConfig.social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("social.githubAria")}
+              className="pop-btn bg-card px-5 py-3.5 text-fg"
+            >
+              <GithubIcon size={20} />
+              {t("social.github")}
+            </a>
+          </motion.div>
+          <motion.div variants={scrollRevealStaggerItem}>
+            <a
+              href={siteConfig.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("social.linkedinAria")}
+              className="pop-btn bg-accent-3 px-5 py-3.5 text-fg"
+            >
+              <LinkedinIcon size={20} />
+              {t("social.linkedin")}
+            </a>
+          </motion.div>
         </motion.div>
       </div>
       {siteConfig.showWavyPolkaDivider ? <WavyPolkaDivider /> : null}

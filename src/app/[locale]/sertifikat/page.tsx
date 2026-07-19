@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { CertificatesEmpty } from "@/components/certificates/CertificatesEmpty";
+import { CertificatesGrid } from "@/components/certificates/CertificatesGrid";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -20,5 +20,5 @@ export default async function SertifikatPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <CertificatesEmpty />;
+  return <CertificatesGrid />;
 }
