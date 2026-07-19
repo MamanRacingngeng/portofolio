@@ -402,7 +402,7 @@
  "items": {
  "istana-sayur-buah": {
  "title": "Istana Sayur Buah",
- "description": "Production e-commerce website for a fresh vegetable and fruit store in Manokwari — category-led product catalog, organic brand storytelling, trust-building pages, and a responsive shopping flow under the Freshly brand.",
+ "description": "Production e-commerce website for a fresh vegetable and fruit store in Manokwari — category-led product catalog, organic brand storytelling, trust-building pages, and a responsive shopping flow under the Freshly brand. Originally deployed at istanasayurbuah.com; the domain has since expired after the client did not continue maintenance.",
  "detail": "Client Project · E-Commerce · istanasayurbuah.com"
  },
  "exporetrade": {
@@ -755,7 +755,7 @@
  },
  "items": {
  "istana-sayur-buah": {
- "overview": "Istana Sayur Buah (Freshly) is a live e-commerce website for a fresh produce retailer in Manokwari, Papua. The platform digitizes a local vegetable and fruit business into a trustworthy online storefront — from homepage messaging and category discovery to product listings, store story, and customer-facing service information.",
+ "overview": "Istana Sayur Buah (Freshly) is a production e-commerce website built for a fresh produce retailer in Manokwari, Papua. The platform digitizes a local vegetable and fruit business into a trustworthy online storefront — from homepage messaging and category discovery to product listings, store story, and customer-facing service information. The site was successfully deployed at istanasayurbuah.com; the domain later expired because the client chose not to continue hosting and maintenance.",
  "problem": "The store relied on offline ordering and informal communication, making product discovery, pricing visibility, and customer reach limited beyond walk-in and local word-of-mouth channels.",
  "solution": "Delivered a responsive e-commerce website with structured navigation, category-based shopping, product cards with pricing, and brand pages that communicate quality, freshness, and store credibility.",
  "roles": [
@@ -782,7 +782,7 @@
  "Responsive Web Design"
  ],
  "challenges": "Aligning multidisciplinary team output with client expectations while translating a local retail business into a clear, conversion-friendly digital experience.",
- "result": "Successfully launched a production e-commerce website that centralizes product discovery, brand storytelling, and customer trust for Istana Sayur Buah."
+ "result": "Successfully delivered and deployed a production e-commerce website for Istana Sayur Buah. The project demonstrates end-to-end client delivery — from design and development to launch — even though the live domain is no longer active after the client discontinued maintenance."
  },
  "exporetrade": {
  "overview": "Exporetrade is a full-stack marketplace platform that connects buyers and suppliers in one integrated ecosystem. The platform enables buyers to submit sourcing requests, receive supplier offers, manage negotiations, and monitor order fulfillment through a modern web application.",

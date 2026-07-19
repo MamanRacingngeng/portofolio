@@ -479,16 +479,18 @@ export function ProjectCaseStudyModal({
                   </CaseStudyBlock>
                 ) : null}
 
-                <div className="flex flex-wrap gap-3 pt-2">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-pill project-pill--sky inline-flex items-center rounded-full bg-accent-2 px-6 py-2.5 text-sm font-black uppercase tracking-wide"
-                  >
-                    {t("visitSite")}
-                  </a>
-                </div>
+                {project.liveUrl ? (
+                  <div className="flex flex-wrap gap-3 pt-2">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-pill project-pill--sky inline-flex items-center rounded-full bg-accent-2 px-6 py-2.5 text-sm font-black uppercase tracking-wide"
+                    >
+                      {t("visitSite")}
+                    </a>
+                  </div>
+                ) : null}
               </div>
             </div>
           </motion.div>

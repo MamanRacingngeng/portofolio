@@ -402,7 +402,7 @@
  "items": {
  "istana-sayur-buah": {
  "title": "Istana Sayur Buah",
- "description": "Website e-commerce produksi untuk toko sayur dan buah segar di Manokwari — katalog produk berbasis kategori, storytelling brand organik, halaman kepercayaan pelanggan, dan alur belanja responsif dengan brand Freshly.",
+ "description": "Website e-commerce produksi untuk toko sayur dan buah segar di Manokwari — katalog produk berbasis kategori, storytelling brand organik, halaman kepercayaan pelanggan, dan alur belanja responsif dengan brand Freshly. Sempat di-deploy di istanasayurbuah.com; domain sudah expired karena klien tidak melanjutkan pemeliharaan.",
  "detail": "Proyek Klien · E-Commerce · istanasayurbuah.com"
  },
  "exporetrade": {
@@ -755,7 +755,7 @@
  },
  "items": {
  "istana-sayur-buah": {
- "overview": "Istana Sayur Buah (Freshly) adalah website e-commerce live untuk retailer sayur dan buah segar di Manokwari, Papua. Platform ini mendigitalisasi bisnis produk lokal menjadi toko online yang terpercaya — dari pesan hero homepage dan penemuan kategori hingga daftar produk, cerita toko, dan informasi layanan pelanggan.",
+ "overview": "Istana Sayur Buah (Freshly) adalah website e-commerce produksi yang dibangun untuk retailer sayur dan buah segar di Manokwari, Papua. Platform ini mendigitalisasi bisnis produk lokal menjadi toko online yang terpercaya — dari pesan hero homepage dan penemuan kategori hingga daftar produk, cerita toko, dan informasi layanan pelanggan. Website sempat di-deploy di istanasayurbuah.com; domain kemudian expired karena klien tidak melanjutkan hosting dan pemeliharaan.",
  "problem": "Toko masih mengandalkan pemesanan offline dan komunikasi informal, sehingga penemuan produk, visibilitas harga, dan jangkauan pelanggan terbatas di luar kunjungan langsung dan word-of-mouth lokal.",
  "solution": "Menyampaikan website e-commerce responsif dengan navigasi terstruktur, belanja berbasis kategori, kartu produk dengan harga, dan halaman brand yang mengkomunikasikan kualitas, kesegaran, dan kredibilitas toko.",
  "roles": [
@@ -782,7 +782,7 @@
  "Responsive Web Design"
  ],
  "challenges": "Menyelaraskan output tim multidisiplin dengan ekspektasi klien sambil mentransformasi bisnis retail lokal menjadi pengalaman digital yang jelas dan conversion-friendly.",
- "result": "Berhasil meluncurkan website e-commerce produksi yang memusatkan penemuan produk, storytelling brand, dan kepercayaan pelanggan untuk Istana Sayur Buah."
+ "result": "Berhasil menyelesaikan dan mendeploy website e-commerce produksi untuk Istana Sayur Buah. Proyek ini menunjukkan pengalaman delivery end-to-end ke klien — dari desain dan development hingga launch — meskipun domain live sudah tidak aktif setelah klien menghentikan pemeliharaan."
  },
  "exporetrade": {
  "overview": "Exporetrade adalah platform marketplace full-stack yang menghubungkan buyer dan supplier dalam satu ekosistem terintegrasi. Platform ini memungkinkan buyer mengajukan permintaan sourcing, menerima penawaran supplier, mengelola negosiasi, dan memantau pemenuhan pesanan melalui aplikasi web modern.",
