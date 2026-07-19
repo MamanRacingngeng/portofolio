@@ -355,27 +355,27 @@
  "dashboards": {
  "featured": "Dashboard Unggulan",
  "viewDashboard": "Lihat dashboard",
- "openPortfolio": "Buka PDF portfolio",
+ "openPortfolio": "Lihat laporan",
  "highlights": "Sorotan Dashboard",
  "workflow": "Alur Analitik",
- "caseStudyBadge": "Studi Kasus AI Industri",
+ "caseStudyBadge": "Studi Kasus Kaggle",
  "heroTitle": "Predictive Maintenance Minyak & Gas",
- "heroDescription": "Dashboard analitik interaktif & predictive maintenance untuk modeling kehilangan ketebalan pipa menggunakan dataset industri publik. Dibangun dengan Python, Plotly, dan Google Colab.",
- "metaIndustryLabel": "Industri",
- "metaIndustry": "Minyak & Gas",
- "metaDatasetLabel": "Dataset",
- "metaDataset": "Dataset Publik (Kaggle)",
+ "heroDescription": "Studi kasus portofolio berbasis dataset industri publik dari Kaggle — dashboard Plotly interaktif yang menunjukkan alur analitik end-to-end dari eksplorasi hingga evaluasi model. Karya akademik mandiri, tidak terafiliasi dengan perusahaan manapun.",
+ "metaIndustryLabel": "Domain",
+ "metaIndustry": "Minyak & Gas · Predictive Maintenance",
+ "metaDatasetLabel": "Sumber",
+ "metaDataset": "Kaggle · Dataset Publik",
  "metaMethodsLabel": "Metode",
  "metaMethods": "LSTM • Random Forest • K-Means",
  "metaPlatformLabel": "Platform",
  "metaPlatform": "Python • Plotly • Google Colab",
  "heroTags": [
- "Machine Learning",
+ "Studi Kasus Kaggle",
+ "Plotly Interaktif",
  "Predictive Maintenance",
- "Minyak & Gas",
- "Plotly",
- "Python",
- "Dataset Publik"
+ "LSTM",
+ "Random Forest",
+ "K-Means"
  ],
  "themes": {
  "lstm": "Forecasting LSTM",
@@ -392,7 +392,7 @@
  },
  "dashboards": {
  "title": "Interactive Dashboards",
- "description": "Mengubah data menjadi dashboard interaktif dan insight bisnis yang bermakna."
+ "description": "Studi kasus analitik industri dengan Plotly berbasis dataset publik Kaggle — menunjukkan eksplorasi data, modeling, dan storytelling interaktif untuk review portofolio."
  },
  "software-dev": {
  "title": "Pengembangan Perangkat Lunak",
@@ -581,19 +581,19 @@
  "detail": "EDA · Run Feature Engineering Alternatif"
  },
  "pertamina-lstm-pipes": {
- "title": "Predictive Maintenance Pipa — LSTM",
- "description": "Notebook ML industri — model LSTM untuk prediksi kehilangan ketebalan pipa minyak & gas dengan preprocessing, analisis outlier, dan perbandingan linear regression.",
- "detail": "Oil & Gas · LSTM · Predictive Maintenance"
+ "title": "Kehilangan Ketebalan Pipa — Dashboard LSTM",
+ "description": "Dashboard studi kasus Kaggle untuk predictive maintenance pipa minyak & gas — diagnostik distribusi dan korelasi, actual vs predicted LSTM, serta analisis residual yang menunjukkan reliabilitas model.",
+ "detail": "Studi Kasus Kaggle · LSTM · Plotly"
  },
  "pertamina-rf-pipes": {
- "title": "Analitik Pipa — Random Forest",
- "description": "Notebook regresi Random Forest untuk kehilangan ketebalan pipa — EDA, analisis korelasi, feature importance, dan dukungan pemeliharaan prediktif.",
- "detail": "Oil & Gas · Random Forest · Regresi"
+ "title": "Analitik Pipa — Dashboard Random Forest",
+ "description": "Dashboard studi kasus Kaggle untuk analitik kehilangan ketebalan — histogram EDA, heatmap korelasi, scatter waktu berbasis kondisi, perbandingan material/grade, dan feature importance Random Forest.",
+ "detail": "Studi Kasus Kaggle · Random Forest · Plotly"
  },
  "pertamina-kmeans-refinery": {
- "title": "Pola Operasi Kilang — K-Means",
- "description": "Notebook unsupervised learning dengan K-Means pada data operasi kilang — feature scaling, profil cluster, dan visualisasi 3D.",
- "detail": "Oil & Gas · K-Means · Clustering"
+ "title": "Operasi Kilang — Dashboard K-Means",
+ "description": "Dashboard studi kasus Kaggle untuk segmentasi kilang — eksplorasi cluster 3D interaktif, scatter gravity vs yield, dan profil radar tujuh kelompok operasi.",
+ "detail": "Studi Kasus Kaggle · K-Means · Plotly"
  },
  "pattern-knn": {
  "title": "Pengenalan Pola — KNN",
@@ -1921,28 +1921,30 @@
  ]
  },
  "pertamina-lstm-pipes": {
- "overview": "Dashboard predictive maintenance kehilangan ketebalan pipa minyak & gas menggunakan LSTM — pipeline lengkap dari load data Google Colab, preprocessing, boxplot outlier, normalisasi, hingga training LSTM dengan performa unggul dibanding linear regression.",
+ "overview": "Studi kasus portofolio berbasis dataset pipa minyak & gas publik dari Kaggle. Dashboard interaktif ini membungkus workflow predictive maintenance LSTM — dari pemahaman data, hubungan fitur ter-encode, hingga evaluasi model dalam satu tampilan Plotly.",
  "highlights": [
- "LSTM mencapai R² 0.9795 vs Linear Regression R² 0.8703",
- "MAE 0.3057 dan MSE 0.1793 pada prediksi thickness loss",
- "Pipeline analisis outlier dan normalisasi fitur",
- "Mockup dashboard dengan heatmap, residual, dan actual vs predicted"
+ "LSTM mencapai R² 0.9795 — jauh di atas Linear Regression R² 0.8703",
+ "Titik actual vs predicted mengikuti garis identitas di rentang loss 0–10 mm",
+ "Residual terpusat di nol dengan distribusi bell-shaped yang sehat",
+ "Condition_Critical berkorelasi kuat dengan thickness loss (r = 0,86) pada fitur ter-encode"
+ ],
+ "chartInsights": [
+ "Papan evaluasi lima panel: distribusi target, matriks korelasi, akurasi prediksi, distribusi residual, dan uji homoskedastisitas — cerita lengkap dari EDA hingga kesiapan deployment."
  ],
  "pipeline": [
- "Load Data",
- "Preprocessing & Encoding",
- "Analisis Outlier",
- "Normalisasi",
- "Training LSTM",
- "Perbandingan Model",
- "Visualisasi Dashboard"
+ "Load & Encode Data Industri",
+ "Diagnostik Distribusi & Korelasi",
+ "Training LSTM vs Baseline Linear",
+ "Evaluasi Actual vs Predicted",
+ "Analisis Perilaku Residual",
+ "Publish Dashboard Plotly Interaktif"
  ],
  "metrics": {
  "r2": "0.9795",
  "mae": "0.3057",
  "mse": "0.1793"
  },
- "metricsSummary": "LSTM mengungguli Linear Regression dengan R² 0.9795, MAE 0.3057, dan MSE 0.1793 pada prediksi kehilangan ketebalan pipa.",
+ "metricsSummary": "Model LSTM memberikan akurasi setara produksi dengan R² 0.9795, MAE 0.3057, dan MSE 0.1793 — bukti kuat untuk use case predictive maintenance.",
  "tools": [
  "Python",
  "TensorFlow",
@@ -1953,26 +1955,31 @@
  ]
  },
  "pertamina-rf-pipes": {
- "overview": "Dashboard regresi Random Forest untuk prediksi kehilangan ketebalan pipa di sektor oil & gas — menggabungkan EDA, analisis korelasi, permutation feature importance, dan visualisasi scatter Plotly interaktif berdasarkan kondisi pipa.",
+ "overview": "Studi kasus portofolio pada dataset pipa publik Kaggle. Dashboard Random Forest ini menyusun histogram eksplorasi, struktur korelasi, degradasi berbasis kondisi over time, box plot komparatif, dan feature importance.",
  "highlights": [
- "Random Forest Regressor dengan skor R² 0.98",
- "Heatmap korelasi hubungan ukuran vs ketebalan pipa",
- "Permutation importance: Condition, Material Loss, Thickness",
- "Scatter interaktif Thickness Loss vs Time per Moderate/Critical/Normal"
+ "Random Forest Regressor mencapai R² 0,98 pada prediksi thickness loss",
+ "Condition_Normal menjadi prediktor terkuat di panel feature importance",
+ "Material loss percentage dan temperature juga masuk driver model utama",
+ "Thickness loss terstratifikasi rapi ke Normal, Moderate, dan Critical selama 25 tahun"
+ ],
+ "chartInsights": [
+ "Ringkasan eksekutif: scatter kondisi over time, perbandingan material & grade, dan feature importance Random Forest dalam satu layar.",
+ "Grid histogram delapan variabel mengekspos puncak ukuran pipa, skew material loss, dan dampak korosi yang merata di fleet.",
+ "Heatmap korelasi menonjolkan hubungan 0,91 antara ukuran pipa dan ketebalan dinding — relasi engineering kunci.",
+ "Scatter interaktif thickness loss vs tahun operasi, diwarnai tier Normal, Moderate, dan Critical."
  ],
  "pipeline": [
- "Load Data",
- "Preprocessing",
- "Analisis Eksploratif",
- "Peta Korelasi",
+ "Analisis Distribusi Eksplorasi",
+ "Pemetaan Korelasi",
+ "Segmentasi Kondisi",
  "Training Random Forest",
- "Feature Importance",
- "Visualisasi Interaktif"
+ "Ranking Feature Importance",
+ "Storytelling Plotly Interaktif"
  ],
  "metrics": {
  "r2": "0.98"
  },
- "metricsSummary": "Model Random Forest mencapai R² 0.98 untuk prediksi kehilangan ketebalan pipa mendukung predictive maintenance.",
+ "metricsSummary": "Random Forest mencapai R² 0,98, memberi tim maintenance lapisan regresi andal di atas diagnostik interaktif yang kaya.",
  "tools": [
  "Python",
  "Scikit-learn",
@@ -1983,20 +1990,25 @@
  ]
  },
  "pertamina-kmeans-refinery": {
- "overview": "Analisis clustering K-Means pola operasi kilang minyak — clustering pada fitur yield, gravity, tekanan uap, dan distilasi dengan plot cluster 3D dan visualisasi Plotly interaktif.",
+ "overview": "Studi kasus portofolio menggunakan data operasi kilang publik dari Kaggle. Dashboard analitik unsupervised ini segmentasi perilaku operasi dengan K-Means — tampilan 3D, scatter, dan radar interaktif mengekspos tujuh profil operasi berbeda.",
  "highlights": [
- "Feature scaling setelah validasi zero missing value",
- "Label cluster K-Means pada data operasi kilang",
- "Visualisasi cluster K-Means 3D",
- "Scatter Plotly interaktif: Gravity vs Percentage Yield"
+ "Tujuh cluster terpisah di ruang 3D gravity–yield–pressure",
+ "Radar chart membandingkan signature operasi rata-rata tiap cluster",
+ "Scatter 2D menampilkan outlier yield tinggi di nilai gravity ekstrem",
+ "Feature scaling diterapkan setelah validasi zero missing value"
+ ],
+ "chartInsights": [
+ "Putar dan jelajahi tujuh cluster kilang dalam 3D — gravity, percentage yield, dan vapour pressure membentuk pocket operasi masing-masing.",
+ "Scatter gravity vs percentage yield berwarna cluster ID — spot outlier dan kelompok operasi padat sekilas.",
+ "Profil radar menunjukkan trait distilasi dan tekanan uap yang membedakan perilaku rata-rata tiap cluster."
  ],
  "pipeline": [
- "Load Data",
- "Cek Missing Value",
- "Feature Scaling",
- "K-Means Clustering",
- "Visualisasi 3D",
- "Dashboard Plotly Interaktif"
+ "Validasi Kualitas Data",
+ "Scale Fitur Operasi",
+ "Jalankan K-Means (k = 7)",
+ "Profil Centroid Cluster",
+ "Bangun Eksplorer Plotly 3D",
+ "Publish Tampilan Radar & Scatter"
  ],
  "tools": [
  "Python",

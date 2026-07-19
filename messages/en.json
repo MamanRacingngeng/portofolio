@@ -355,27 +355,27 @@
  "dashboards": {
  "featured": "Featured Dashboard",
  "viewDashboard": "View dashboard",
- "openPortfolio": "Open portfolio PDF",
+ "openPortfolio": "View report",
  "highlights": "Dashboard Highlights",
  "workflow": "Analytics Workflow",
- "caseStudyBadge": "Industrial AI Case Study",
+ "caseStudyBadge": "Kaggle Case Study",
  "heroTitle": "Oil & Gas Predictive Maintenance",
- "heroDescription": "Interactive analytics & predictive maintenance dashboards for pipeline thickness loss modeling using publicly available industrial datasets. Built with Python, Plotly, and Google Colab.",
- "metaIndustryLabel": "Industry",
- "metaIndustry": "Oil & Gas",
- "metaDatasetLabel": "Dataset",
- "metaDataset": "Public Dataset (Kaggle)",
+ "heroDescription": "Portfolio case studies built on public Kaggle industrial datasets — interactive Plotly dashboards that demonstrate end-to-end analytics workflow from exploration to model evaluation. Independent academic work, not affiliated with any corporation.",
+ "metaIndustryLabel": "Domain",
+ "metaIndustry": "Oil & Gas · Predictive Maintenance",
+ "metaDatasetLabel": "Source",
+ "metaDataset": "Kaggle · Public Dataset",
  "metaMethodsLabel": "Methods",
  "metaMethods": "LSTM • Random Forest • K-Means",
  "metaPlatformLabel": "Platform",
  "metaPlatform": "Python • Plotly • Google Colab",
  "heroTags": [
- "Machine Learning",
+ "Kaggle Case Study",
+ "Interactive Plotly",
  "Predictive Maintenance",
- "Oil & Gas",
- "Plotly",
- "Python",
- "Public Dataset"
+ "LSTM",
+ "Random Forest",
+ "K-Means"
  ],
  "themes": {
  "lstm": "LSTM Forecasting",
@@ -392,7 +392,7 @@
  },
  "dashboards": {
  "title": "Interactive Dashboards",
- "description": "Transforming data into interactive dashboards and meaningful business insights."
+ "description": "Industrial analytics case studies built with Plotly on public Kaggle datasets — demonstrating data exploration, modeling, and interactive storytelling for portfolio review."
  },
     "software-dev": {
       "title": "Software Development",
@@ -581,19 +581,19 @@
  "detail": "EDA · Alternate Feature Engineering Run"
  },
  "pertamina-lstm-pipes": {
- "title": "LSTM Pipe Predictive Maintenance",
- "description": "Industrial ML notebook — LSTM model for oil & gas pipe thickness loss prediction with preprocessing, outlier analysis, and comparison against linear regression.",
- "detail": "Oil & Gas · LSTM · Predictive Maintenance"
+ "title": "Pipe Thickness Loss — LSTM Dashboard",
+ "description": "Kaggle case study dashboard for oil & gas pipeline predictive maintenance — distribution and correlation diagnostics, actual vs predicted LSTM output, and residual analysis demonstrating model reliability.",
+ "detail": "Kaggle Case Study · LSTM · Plotly"
  },
  "pertamina-rf-pipes": {
- "title": "Random Forest Pipe Analytics",
- "description": "Random Forest regression notebook for pipe thickness loss in oil & gas — EDA, correlation analysis, feature importance, and predictive maintenance support.",
- "detail": "Oil & Gas · Random Forest · Regression"
+ "title": "Pipe Analytics — Random Forest Dashboard",
+ "description": "Kaggle case study dashboard for thickness-loss analytics — EDA histograms, correlation heatmap, condition-based time scatter, material/grade comparisons, and Random Forest feature importance.",
+ "detail": "Kaggle Case Study · Random Forest · Plotly"
  },
  "pertamina-kmeans-refinery": {
- "title": "Refinery Operation Patterns — K-Means",
- "description": "Unsupervised learning notebook applying K-Means clustering to oil refinery operation data — feature scaling, cluster profiling, and 3D visualization.",
- "detail": "Oil & Gas · K-Means · Clustering"
+ "title": "Refinery Operations — K-Means Dashboard",
+ "description": "Kaggle case study dashboard for refinery segmentation — interactive 3D cluster exploration, gravity vs yield scatter, and radar profiles across seven operational groups.",
+ "detail": "Kaggle Case Study · K-Means · Plotly"
  },
  "pattern-knn": {
  "title": "Pattern Recognition — KNN",
@@ -1921,28 +1921,30 @@
  ]
  },
  "pertamina-lstm-pipes": {
- "overview": "Predictive maintenance dashboard for oil & gas pipe thickness loss using LSTM — full pipeline from Google Colab data loading through preprocessing, outlier boxplots, normalization, to LSTM training with superior performance over linear regression.",
+ "overview": "A portfolio case study built on a public Kaggle oil & gas pipeline dataset. This interactive dashboard packages a full LSTM predictive maintenance workflow — connecting data understanding, encoded feature relationships, and rigorous model evaluation in one Plotly view.",
  "highlights": [
- "LSTM achieved R² 0.9795 vs Linear Regression R² 0.8703",
- "MAE 0.3057 and MSE 0.1793 on thickness loss prediction",
- "Outlier analysis and feature normalization pipeline",
- "Dashboard mockup with heatmap, residuals, and actual vs predicted plots"
+ "LSTM reached R² 0.9795 — clearly outperforming Linear Regression at R² 0.8703",
+ "Actual vs predicted points hug the identity line across the full 0–10 mm loss range",
+ "Residuals center near zero with a healthy bell-shaped distribution",
+ "Condition_Critical correlates strongly with thickness loss (r = 0.86) in the encoded feature space"
+ ],
+ "chartInsights": [
+ "Five-panel evaluation board: target distribution, correlation matrix, prediction accuracy, residual distribution, and homoscedasticity check — the full story from EDA to deployment readiness."
  ],
  "pipeline": [
- "Data Loading",
- "Preprocessing & Encoding",
- "Outlier Analysis",
- "Normalization",
- "LSTM Training",
- "Model Comparison",
- "Dashboard Visualization"
+ "Load & Encode Industrial Data",
+ "Distribution & Correlation Diagnostics",
+ "Train LSTM vs Linear Baseline",
+ "Evaluate Actual vs Predicted",
+ "Analyze Residual Behavior",
+ "Publish Interactive Plotly Dashboard"
  ],
  "metrics": {
  "r2": "0.9795",
  "mae": "0.3057",
  "mse": "0.1793"
  },
- "metricsSummary": "LSTM outperformed Linear Regression with R² 0.9795, MAE 0.3057, and MSE 0.1793 on pipe thickness loss prediction.",
+ "metricsSummary": "The LSTM model delivers production-grade accuracy with R² 0.9795, MAE 0.3057, and MSE 0.1793 — strong evidence for predictive maintenance use cases.",
  "tools": [
  "Python",
  "TensorFlow",
@@ -1953,26 +1955,31 @@
  ]
  },
  "pertamina-rf-pipes": {
- "overview": "Random Forest regression dashboard for predicting pipe thickness loss in the oil & gas sector — combining EDA, correlation analysis, permutation feature importance, and interactive Plotly scatter visualization by pipe condition.",
+ "overview": "A portfolio case study on a public Kaggle pipeline dataset. This decision-oriented Random Forest dashboard layers exploratory histograms, correlation structure, condition-based degradation over time, comparative box plots, and feature importance.",
  "highlights": [
- "Random Forest Regressor with R² score 0.98",
- "Correlation heatmap revealing pipe size vs thickness relationship",
- "Permutation importance: Condition, Material Loss, Thickness",
- "Interactive Thickness Loss vs Time scatter by Moderate/Critical/Normal"
+ "Random Forest Regressor achieves R² 0.98 on thickness loss prediction",
+ "Condition_Normal is the strongest predictor in the feature importance panel",
+ "Material loss percentage and temperature also rank high in model drivers",
+ "Thickness loss stratifies cleanly into Normal, Moderate, and Critical bands over 25 years"
+ ],
+ "chartInsights": [
+ "Executive summary view: time-based condition scatter, material and grade comparisons, and Random Forest feature importance in one screen.",
+ "Eight-variable histogram grid reveals pipe size peaks, skewed material loss, and uniform corrosion impact across the fleet.",
+ "Correlation heatmap highlights the 0.91 link between pipe size and wall thickness — a key engineering relationship.",
+ "Interactive scatter of thickness loss vs operating years, color-coded by Normal, Moderate, and Critical condition tiers."
  ],
  "pipeline": [
- "Data Loading",
- "Preprocessing",
- "Exploratory Analysis",
- "Correlation Map",
+ "Exploratory Distribution Analysis",
+ "Correlation Mapping",
+ "Condition Segmentation",
  "Random Forest Training",
- "Feature Importance",
- "Interactive Visualization"
+ "Feature Importance Ranking",
+ "Interactive Plotly Storytelling"
  ],
  "metrics": {
  "r2": "0.98"
  },
- "metricsSummary": "Random Forest model achieved R² 0.98 for pipe thickness loss prediction supporting predictive maintenance.",
+ "metricsSummary": "Random Forest reaches R² 0.98, giving maintenance teams a reliable regression layer on top of rich interactive diagnostics.",
  "tools": [
  "Python",
  "Scikit-learn",
@@ -1983,20 +1990,25 @@
  ]
  },
  "pertamina-kmeans-refinery": {
- "overview": "K-Means clustering analysis of oil refinery operation patterns — clustering on yield, gravity, vapour pressure, and distillation features with 3D cluster plot and interactive Plotly visualization.",
+ "overview": "A portfolio case study using public Kaggle refinery operation data. This unsupervised analytics dashboard segments operating behavior with K-Means — interactive 3D, scatter, and radar views expose seven distinct operational profiles.",
  "highlights": [
- "Feature scaling after zero missing-value validation",
- "K-Means cluster labeling on refinery operation data",
- "3D K-Means cluster visualization",
- "Interactive Plotly scatter: Gravity vs Percentage Yield"
+ "Seven clusters separated in 3D gravity–yield–pressure space",
+ "Radar chart compares average operational signatures per cluster",
+ "2D scatter reveals isolated high-yield outliers at extreme gravity values",
+ "Feature scaling applied after zero missing-value validation"
+ ],
+ "chartInsights": [
+ "Rotate and explore seven refinery clusters in 3D — gravity, percentage yield, and vapour pressure define each operational pocket.",
+ "Gravity vs percentage yield scatter colored by cluster ID — spot outliers and dense operational groups at a glance.",
+ "Radar profiles show which distillation and vapour-pressure traits differentiate each cluster’s average behavior."
  ],
  "pipeline": [
- "Data Loading",
- "Missing Value Check",
- "Feature Scaling",
- "K-Means Clustering",
- "3D Visualization",
- "Interactive Plotly Dashboard"
+ "Validate Data Quality",
+ "Scale Operational Features",
+ "Run K-Means (k = 7)",
+ "Profile Cluster Centroids",
+ "Build 3D Plotly Explorer",
+ "Publish Radar & Scatter Views"
  ],
  "tools": [
  "Python",

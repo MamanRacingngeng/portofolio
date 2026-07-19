@@ -5,12 +5,9 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  ExternalLink,
   Factory,
-  FileText,
   Sparkles,
   X,
-  ZoomIn,
 } from "lucide-react";
 import type { DashboardTheme, ProjectItem } from "@/data/projects";
 import { cn } from "@/lib/utils";
@@ -24,6 +21,7 @@ type WorkCopy = {
 type DashboardCaseStudy = {
   overview: string;
   highlights: string[];
+  chartInsights?: string[];
   tools: string[];
   pipeline?: string[];
   metrics?: {
@@ -113,7 +111,7 @@ function PosterFrame({
       className={cn(
         "group/poster relative block w-full overflow-hidden rounded-2xl border-[3px] border-border p-3 shadow-[6px_6px_0_var(--shadow)] transition-transform duration-500 hover:-translate-y-1 sm:p-4",
         styles.frame,
-        onClick ? "cursor-zoom-in text-left" : "cursor-default",
+        onClick ? "cursor-pointer text-left" : "cursor-default",
       )}
     >
       <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(#000_1px,transparent_1px),linear-gradient(90deg,#000_1px,transparent_1px)] [background-size:24px_24px]" />
@@ -129,12 +127,6 @@ function PosterFrame({
           sizes="(max-width: 768px) 100vw, 560px"
         />
       </div>
-      {onClick ? (
-        <span className="pointer-events-none absolute bottom-5 right-5 inline-flex items-center gap-1.5 rounded-full border-2 border-border bg-card/95 px-3 py-1.5 text-[10px] font-black uppercase opacity-0 shadow-[3px_3px_0_var(--shadow)] transition-opacity duration-300 group-hover/poster:opacity-100 sm:text-xs">
-          <ZoomIn size={14} />
-          Zoom
-        </span>
-      ) : null}
     </button>
   );
 }
@@ -168,6 +160,8 @@ function DashboardModal({
 
   const work = t.raw(`items.${project.id}`) as WorkCopy;
   const caseStudy = tCase.raw(`items.${project.id}`) as DashboardCaseStudy | undefined;
+  const visuals = [project.image, ...(project.galleryImages ?? [])];
+  const visualCaptions = caseStudy?.chartInsights ?? [];
 
   return (
     <AnimatePresence>
@@ -212,8 +206,31 @@ function DashboardModal({
 
           <div className="min-h-0 flex-1 overflow-y-auto">
             <div className="grid gap-0 lg:grid-cols-2">
-              <div className={cn("border-b-[3px] border-border p-4 sm:p-5 lg:border-b-0 lg:border-r-[3px]", styles.frame)}>
+              <div className={cn("space-y-4 border-b-[3px] border-border p-4 sm:p-5 lg:border-b-0 lg:border-r-[3px]", styles.frame)}>
                 <PosterFrame src={project.image} alt={work.title} theme={theme} />
+                {visuals.length > 1 ? (
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {visuals.slice(1).map((src, index) => (
+                      <div key={src} className="space-y-2">
+                        <PosterFrame
+                          src={src}
+                          alt={`${work.title} ${index + 2}`}
+                          theme={theme}
+                        />
+                        {visualCaptions[index + 1] ? (
+                          <p className="px-1 text-[11px] font-bold leading-relaxed text-muted sm:text-xs">
+                            {visualCaptions[index + 1]}
+                          </p>
+                        ) : null}
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+                {visualCaptions[0] ? (
+                  <p className="px-1 text-xs font-bold leading-relaxed text-muted sm:text-sm">
+                    {visualCaptions[0]}
+                  </p>
+                ) : null}
               </div>
 
               <div className="space-y-4 p-5 sm:p-6">
@@ -300,13 +317,11 @@ function DashboardModal({
                     target="_blank"
                     rel="noopener noreferrer"
                     className={cn(
-                      "project-pill inline-flex items-center gap-2 rounded-full bg-accent-2 px-5 py-2.5 text-sm font-black uppercase tracking-wide",
+                      "project-pill inline-flex items-center rounded-full bg-accent-2 px-5 py-2.5 text-sm font-black uppercase tracking-wide",
                       styles.pill,
                     )}
                   >
-                    <FileText size={16} />
                     {t("dashboards.openPortfolio")}
-                    <ExternalLink size={14} />
                   </a>
                 ) : null}
               </div>
@@ -471,11 +486,10 @@ export function DashboardGallery({ items }: DashboardGalleryProps) {
                     type="button"
                     onClick={() => setSelected(featured)}
                     className={cn(
-                      "project-pill inline-flex items-center gap-2 rounded-full bg-accent-2 px-5 py-2.5 text-sm font-black uppercase tracking-wide",
+                      "project-pill inline-flex items-center rounded-full bg-accent-2 px-5 py-2.5 text-sm font-black uppercase tracking-wide",
                       themeStyles[featured.dashboardTheme ?? "lstm"].pill,
                     )}
                   >
-                    <ZoomIn size={16} />
                     {t("dashboards.viewDashboard")}
                   </button>
                   {featured.documentUrl ? (
@@ -483,10 +497,9 @@ export function DashboardGallery({ items }: DashboardGalleryProps) {
                       href={featured.documentUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="project-pill project-pill--pink inline-flex items-center gap-2 rounded-full bg-accent-3 px-5 py-2.5 text-sm font-black uppercase tracking-wide text-white"
+                      className="project-pill project-pill--pink inline-flex items-center rounded-full bg-accent-3 px-5 py-2.5 text-sm font-black uppercase tracking-wide text-white"
                     >
-                      <FileText size={16} />
-                      PDF
+                      {t("dashboards.openPortfolio")}
                     </a>
                   ) : null}
                 </div>
@@ -556,7 +569,7 @@ export function DashboardGallery({ items }: DashboardGalleryProps) {
                         type="button"
                         onClick={() => setSelected(project)}
                         className={cn(
-                          "project-pill inline-flex items-center gap-2 rounded-full bg-accent-2 px-4 py-2 text-xs font-black uppercase sm:text-sm",
+                          "project-pill inline-flex items-center rounded-full bg-accent-2 px-4 py-2 text-xs font-black uppercase sm:text-sm",
                           styles.pill,
                         )}
                       >
@@ -567,10 +580,9 @@ export function DashboardGallery({ items }: DashboardGalleryProps) {
                           href={project.documentUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="project-pill project-pill--pink inline-flex items-center gap-2 rounded-full bg-accent-3 px-4 py-2 text-xs font-black uppercase tracking-wide text-white sm:px-5 sm:py-2.5 sm:text-sm"
+                          className="project-pill project-pill--pink inline-flex items-center rounded-full bg-accent-3 px-4 py-2 text-xs font-black uppercase tracking-wide text-white sm:px-5 sm:py-2.5 sm:text-sm"
                         >
-                          <FileText size={16} />
-                          PDF
+                          {t("dashboards.openPortfolio")}
                         </a>
                       ) : null}
                     </div>
