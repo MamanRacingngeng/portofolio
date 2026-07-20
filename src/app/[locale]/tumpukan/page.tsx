@@ -32,7 +32,7 @@ export default async function TumpukanPage({ params }: Props) {
           showPolkadots
         />
       </div>
-      <TechGrid title={t("stackTitle")} showTitle={false} />
+      <TechGrid title={t("stackTitle")} showTitle={false} variant="grid" />
     </div>
   );
 }

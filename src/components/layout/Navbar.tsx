@@ -7,7 +7,6 @@ import { Menu, X } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { navRoutes, siteConfig } from "@/data/portfolio";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
-import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -23,8 +22,8 @@ export function Navbar() {
   }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b-[3px] border-border bg-card">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:h-[4.5rem]">
+    <header className="navbar-shell top-0 border-b-[3px] border-border bg-card">
+      <nav className="relative mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:h-[4.5rem]">
         <Link
           href="/"
           className="pop-btn pop-btn-primary px-3 py-1.5 font-display text-sm font-black sm:text-base"
@@ -53,13 +52,11 @@ export function Navbar() {
           })}
         </ul>
 
-        <div className="hidden items-center gap-1.5 md:flex">
-          <LanguageSwitcher />
+        <div className="hidden items-center md:flex">
           <ThemeToggle />
         </div>
 
-        <div className="flex items-center gap-1.5 md:hidden">
-          <LanguageSwitcher />
+        <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
           <button
             type="button"

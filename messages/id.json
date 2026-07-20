@@ -19,6 +19,10 @@
  "guestbook": {
  "title": "Ruang Pesan — RAHN.",
  "description": "Tinggalkan pesan — sapa atau mulai percakapan."
+ },
+ "stack": {
+ "title": "Tech Stack — RAHN.",
+ "description": "Teknologi dan tools yang saya gunakan untuk data science, machine learning, dan pengembangan perangkat lunak."
  }
  },
  "nav": {
@@ -52,14 +56,26 @@
  "social": {
  "github": "GitHub",
  "linkedin": "LinkedIn",
+ "discord": "Discord",
  "githubAria": "Kunjungi profil GitHub",
- "linkedinAria": "Kunjungi profil LinkedIn"
+ "linkedinAria": "Kunjungi profil LinkedIn",
+ "discordAria": "Kunjungi profil Discord @{username}"
  },
  "stats": {
  "projects": "Proyek",
  "certs": "Sertifikasi",
  "roles": "Peran"
  }
+ },
+ "homeShowcase": {
+ "label": "Yang Saya Bangun?",
+ "line1": "Web App, Dashboard ML, E-Commerce,",
+ "line2Before": "Platform Data, ",
+ "headlineHighlight": "Sistem Magang",
+ "line2After": ",",
+ "line3": "Alat Forecasting, Dan Lainnya.",
+ "viewProjects": "Lihat Proyek",
+ "viewAll": "Lihat semua proyek"
  },
  "timeline": {
  "title": "Pengalaman",
@@ -116,6 +132,7 @@
  }
  },
  "tech": {
+ "label": "Stack",
  "title": "Tech Stack",
  "close": "Tutup",
  "categories": {
@@ -217,6 +234,7 @@
  "back": "Kembali ke proyek",
  "tagLabels": {
  "nextjs": "Next.js",
+ "laravel": "Laravel",
  "full-stack": "Full Stack",
  "marketplace": "Marketplace",
  "data": "Data",
@@ -2126,11 +2144,13 @@
  "social": {
  "github": "GitHub",
  "linkedin": "LinkedIn",
+ "discord": "Discord",
  "email": "Email",
  "resume": "CV",
  "whatsapp": "WhatsApp",
  "githubAria": "Kunjungi profil GitHub",
  "linkedinAria": "Kunjungi profil LinkedIn",
+ "discordAria": "Kunjungi profil Discord @rusdidigital",
  "emailAria": "Kirim email",
  "resumeAria": "Unduh CV",
  "whatsappAria": "Chat via WhatsApp"

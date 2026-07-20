@@ -7,9 +7,6 @@ import {
   Brain,
   ChevronDown,
   Cpu,
-  ExternalLink,
-  FileText,
-  Filter,
   LineChart,
   Sparkles,
   X,
@@ -52,43 +49,43 @@ const mlThemeStyles: Record<
 > = {
   forecast: {
     card: "project-card--sky",
-    pill: "project-pill--sky",
-    stripe: "bg-[#0ea5e9]",
-    badge: "bg-[#e0f2fe] text-[#0369a1]",
+    pill: "pop-btn-secondary",
+    stripe: "bg-accent-4",
+    badge: "brutal-tag brutal-tag--sky",
     sticker: "bg-accent-4",
-    filterActive: "bg-accent-4 text-white",
+    filterActive: "brutal-chip--active brutal-chip--sky",
   },
   classification: {
     card: "project-card--lime",
-    pill: "project-pill--purple",
-    stripe: "bg-[#22c55e]",
-    badge: "bg-[#dcfce7] text-[#15803d]",
+    pill: "pop-btn-primary",
+    stripe: "bg-accent-2",
+    badge: "brutal-tag brutal-tag--lime",
     sticker: "bg-accent-2",
-    filterActive: "bg-accent-2 text-fg",
+    filterActive: "brutal-chip--active brutal-chip--lime",
   },
   signal: {
     card: "project-card--pink",
-    pill: "project-pill--pink",
-    stripe: "bg-[#f97316]",
-    badge: "bg-[#ffedd5] text-[#c2410c]",
+    pill: "bg-accent-3",
+    stripe: "bg-accent-3",
+    badge: "brutal-tag brutal-tag--pink",
     sticker: "bg-accent-3",
-    filterActive: "bg-accent-3 text-white",
+    filterActive: "brutal-chip--active brutal-chip--pink",
   },
   eda: {
     card: "project-card--purple",
-    pill: "project-pill--sky",
-    stripe: "bg-[#a855f7]",
-    badge: "bg-[#f3e8ff] text-[#7e22ce]",
+    pill: "bg-accent text-white",
+    stripe: "bg-accent",
+    badge: "brutal-tag brutal-tag--purple",
     sticker: "bg-accent",
-    filterActive: "bg-accent text-white",
+    filterActive: "brutal-chip--active brutal-chip--purple",
   },
   nlp: {
     card: "project-card--sky",
-    pill: "project-pill--pink",
-    stripe: "bg-[#6366f1]",
-    badge: "bg-[#e0e7ff] text-[#4338ca]",
+    pill: "pop-btn-secondary",
+    stripe: "bg-accent-4",
+    badge: "brutal-tag brutal-tag--sky",
     sticker: "bg-accent-4",
-    filterActive: "bg-accent-4 text-white",
+    filterActive: "brutal-chip--active brutal-chip--sky",
   },
 };
 
@@ -106,7 +103,7 @@ function PipelineSteps({ steps }: { steps: string[] }) {
     <ol className="space-y-0">
       {steps.map((step, index) => (
         <li key={step} className="flex flex-col items-center">
-          <span className="w-full rounded-xl border-[3px] border-border bg-card px-3 py-2 text-center text-xs font-bold text-fg sm:text-sm">
+          <span className="brutal-tag w-full px-3 py-2 text-center text-xs font-bold sm:text-sm">
             {step}
           </span>
           {index < steps.length - 1 ? (
@@ -162,7 +159,12 @@ function NotebookPreview({
         </span>
       </div>
 
-      <div className="notebook-scroll h-[calc(100%-36px)] overflow-y-auto overflow-x-hidden px-1.5 py-1 sm:px-2">
+      <div
+        className={cn(
+          "notebook-scroll h-[calc(100%-36px)] overflow-y-auto overflow-x-hidden px-1.5 sm:px-2",
+          expanded ? "pt-8 pb-2 sm:pt-10" : tall ? "pt-5 pb-1" : "py-1 pt-4",
+        )}
+      >
         {/* Native img keeps notebook pixels 1:1 when downscaled (no Next.js resize pass) */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -276,7 +278,7 @@ function AiMlModal({
                 {caseStudy?.metrics ? (
                   <div className="grid grid-cols-3 gap-2">
                     {caseStudy.metrics.rmse ? (
-                      <div className="rounded-xl border-[3px] border-border bg-accent-2 p-3 text-center">
+                      <div className="brutal-metric p-3">
                         <p className="text-[10px] font-black uppercase text-muted">
                           {tCase("labels.rmse")}
                         </p>
@@ -286,7 +288,7 @@ function AiMlModal({
                       </div>
                     ) : null}
                     {caseStudy.metrics.mape ? (
-                      <div className="rounded-xl border-[3px] border-border bg-accent-4/30 p-3 text-center">
+                      <div className="brutal-metric p-3">
                         <p className="text-[10px] font-black uppercase text-muted">
                           {tCase("labels.mape")}
                         </p>
@@ -296,8 +298,8 @@ function AiMlModal({
                       </div>
                     ) : null}
                     {caseStudy.metrics.r2 ? (
-                      <div className="rounded-xl border-[3px] border-border bg-accent p-3 text-center text-white">
-                        <p className="text-[10px] font-black uppercase text-white/80">
+                      <div className="brutal-metric p-3">
+                        <p className="text-[10px] font-black uppercase text-muted">
                           {tCase("labels.r2")}
                         </p>
                         <p className="mt-1 font-display text-lg font-black sm:text-xl">
@@ -310,7 +312,7 @@ function AiMlModal({
 
                 {caseStudy ? (
                   <>
-                    <div className="border-[3px] border-border bg-accent-2 p-4">
+                    <div className={cn("border-[3px] border-border p-4", styles.stripe)}>
                       <h3 className="text-xs font-black uppercase tracking-widest sm:text-sm">
                         {tCase("labels.overview")}
                       </h3>
@@ -354,7 +356,7 @@ function AiMlModal({
                           ))}
                         </ul>
                       </div>
-                      <div className="border-[3px] border-border bg-accent-4/20 p-4">
+                      <div className="border-[3px] border-border bg-card p-4">
                         <h3 className="text-xs font-black uppercase tracking-widest sm:text-sm">
                           {t("aiMl.tools")}
                         </h3>
@@ -362,7 +364,10 @@ function AiMlModal({
                           {caseStudy.tools.map((tool) => (
                             <span
                               key={tool}
-                              className="rounded-full border-2 border-border bg-card px-3 py-1 text-xs font-black uppercase"
+                              className={cn(
+                                "brutal-tag px-3 py-1 text-xs",
+                                styles.badge,
+                              )}
                             >
                               {tool}
                             </span>
@@ -374,42 +379,28 @@ function AiMlModal({
                 ) : null}
 
                 <div className="flex flex-wrap gap-3">
+                  {project.documentUrl ? (
+                    <a
+                      href={project.documentUrl}
+                      download={project.documentUrl.split("/").pop()}
+                      className="project-pill pop-btn bg-accent-3 px-5 py-2.5 text-sm"
+                    >
+                      {t("aiMl.downloadNotebook")}
+                    </a>
+                  ) : null}
                   {project.liveUrl ? (
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={cn(
-                        "project-pill inline-flex items-center gap-2 rounded-full bg-accent-2 px-5 py-2.5 text-sm font-black uppercase tracking-wide",
+                        "project-pill pop-btn px-5 py-2.5 text-sm",
                         styles.pill,
                       )}
                     >
                       {tCase("visitSite")}
-                      <ExternalLink size={14} />
                     </a>
                   ) : null}
-                  {project.documentUrl ? (
-                    <a
-                      href={project.documentUrl}
-                      download
-                      className="project-pill project-pill--pink inline-flex items-center gap-2 rounded-full bg-accent-3 px-5 py-2.5 text-sm font-black uppercase tracking-wide text-white"
-                    >
-                      <FileText size={16} />
-                      {t("aiMl.downloadNotebook")}
-                    </a>
-                  ) : null}
-                  <button
-                    type="button"
-                    onClick={onClose}
-                    className={cn(
-                      "project-pill inline-flex items-center rounded-full px-5 py-2.5 text-sm font-black uppercase tracking-wide",
-                      project.liveUrl || project.documentUrl
-                        ? "border-2 border-border bg-card"
-                        : cn("bg-accent-2", styles.pill),
-                    )}
-                  >
-                    {tCase("close")}
-                  </button>
                 </div>
               </div>
             </div>
@@ -432,20 +423,14 @@ export function AiMlGallery({ items }: AiMlGalleryProps) {
   const [activeFilter, setActiveFilter] = useState<MlTheme | "all">("all");
 
   const featured = items.find((item) => item.id === "pm25-sca-lstm") ?? items[0];
-  const rest = items.filter((item) => item.id !== featured?.id);
+  const showFeatured = Boolean(featured) && activeFilter === "all";
 
   const filtered = useMemo(() => {
-    if (activeFilter === "all") return rest;
-    return rest.filter((item) => item.mlTheme === activeFilter);
-  }, [rest, activeFilter]);
-
-  const themeCounts = useMemo(() => {
-    const counts: Record<string, number> = { all: items.length };
-    for (const item of items) {
-      if (item.mlTheme) counts[item.mlTheme] = (counts[item.mlTheme] ?? 0) + 1;
+    if (activeFilter === "all") {
+      return items.filter((item) => item.id !== featured?.id);
     }
-    return counts;
-  }, [items]);
+    return items.filter((item) => item.mlTheme === activeFilter);
+  }, [items, activeFilter, featured?.id]);
 
   return (
     <>
@@ -479,25 +464,25 @@ export function AiMlGallery({ items }: AiMlGalleryProps) {
           ))}
         </motion.div>
 
-        {featured ? (
+        {showFeatured && featured ? (
           <motion.article
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            className="project-card group relative overflow-hidden rounded-3xl bg-card project-card--sky"
+            className="project-card project-category-card group relative overflow-hidden bg-card project-card--sky"
           >
-            <div className="absolute inset-x-0 top-0 h-2 bg-[#0ea5e9]" aria-hidden />
+            <div className="absolute inset-x-0 top-0 h-2 border-b-[3px] border-border bg-accent-4" aria-hidden />
 
-            <div className="grid gap-6 p-5 sm:p-7 lg:grid-cols-12 lg:items-start lg:gap-8 lg:p-8">
-              <div className="space-y-4 lg:col-span-5">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#e0f2fe] px-3 py-1 text-[10px] font-black uppercase text-[#0369a1] sm:text-xs">
+            <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-12 lg:items-center lg:gap-10 lg:p-10">
+              <div className="flex flex-col gap-6 sm:gap-7 lg:col-span-5 lg:gap-8">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="brutal-tag inline-flex items-center gap-1.5 px-3 py-1 text-[10px] sm:text-xs">
                     <Sparkles size={12} strokeWidth={3} />
                     {t("aiMl.featured")}
                   </span>
                   {featured.metricHighlight ? (
-                    <span className="rounded-full border-2 border-border bg-accent px-3 py-1 text-[10px] font-black uppercase text-white sm:text-xs">
+                    <span className="brutal-tag brutal-tag--sky px-3 py-1 text-[10px] sm:text-xs">
                       {featured.metricHighlight}
                     </span>
                   ) : null}
@@ -507,16 +492,16 @@ export function AiMlGallery({ items }: AiMlGalleryProps) {
                   <h3 className="font-display text-2xl font-black uppercase leading-tight sm:text-3xl lg:text-4xl">
                     {copy[featured.id].title}
                   </h3>
-                  <p className="mt-2 text-sm font-bold text-fg sm:text-base">
+                  <p className="mt-3 text-sm font-bold text-fg sm:mt-4 sm:text-base">
                     {copy[featured.id].detail}
                   </p>
                 </div>
 
-                <p className="text-sm leading-relaxed text-muted sm:text-base">
+                <p className="text-sm leading-relaxed text-muted sm:text-base lg:max-w-prose">
                   {copy[featured.id].description}
                 </p>
 
-                <div className="grid grid-cols-3 gap-2">
+                <div className="grid grid-cols-3 gap-3 sm:gap-4">
                   {[
                     { label: "RMSE", value: "0.1042" },
                     { label: "MAPE", value: "0.8847" },
@@ -524,7 +509,7 @@ export function AiMlGallery({ items }: AiMlGalleryProps) {
                   ].map((metric) => (
                     <div
                       key={metric.label}
-                      className="rounded-xl border-[3px] border-border bg-accent-2 p-2.5 text-center sm:p-3"
+                      className="brutal-metric p-3 sm:p-4"
                     >
                       <p className="text-[9px] font-black uppercase text-muted sm:text-[10px]">
                         {metric.label}
@@ -536,41 +521,31 @@ export function AiMlGallery({ items }: AiMlGalleryProps) {
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {featured.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border-2 border-border bg-accent-2 px-3 py-1 text-[10px] font-black uppercase sm:text-xs"
+                      className="brutal-tag brutal-tag--sky px-3 py-1 text-[10px] sm:text-xs"
                     >
                       {getProjectTagLabel(tag, tagLabels)}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-4 pt-1 sm:pt-2">
                   <button
                     type="button"
                     onClick={() => setSelected(featured)}
-                    className="project-pill project-pill--sky inline-flex items-center rounded-full bg-accent-2 px-5 py-2.5 text-sm font-black uppercase tracking-wide"
+                    className="project-pill pop-btn pop-btn-secondary px-5 py-2.5 text-sm"
                   >
                     {t("aiMl.viewNotebook")}
                   </button>
-                  {featured.documentUrl ? (
-                    <a
-                      href={featured.documentUrl}
-                      download
-                      className="project-pill project-pill--pink inline-flex items-center gap-2 rounded-full bg-accent-3 px-5 py-2.5 text-sm font-black uppercase tracking-wide text-white"
-                    >
-                      <FileText size={16} />
-                      .ipynb
-                    </a>
-                  ) : null}
                   {featured.liveUrl ? (
                     <a
                       href={featured.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="project-pill project-pill--purple inline-flex items-center rounded-full bg-accent px-5 py-2.5 text-sm font-black uppercase tracking-wide text-white"
+                      className="project-pill pop-btn pop-btn-secondary px-5 py-2.5 text-sm"
                     >
                       {t("caseStudy.visitSite")}
                     </a>
@@ -578,7 +553,7 @@ export function AiMlGallery({ items }: AiMlGalleryProps) {
                 </div>
               </div>
 
-              <div className="relative lg:col-span-7">
+              <div className="relative lg:col-span-7 lg:self-center">
                 <button
                   type="button"
                   onClick={() => setSelected(featured)}
@@ -597,26 +572,21 @@ export function AiMlGallery({ items }: AiMlGalleryProps) {
 
         <div className="space-y-4">
           <div className="flex flex-wrap items-center gap-2">
-            <Filter size={16} className="text-muted" aria-hidden />
-            <span className="text-xs font-black uppercase tracking-widest text-muted">
-              {t("aiMl.filterLabel")}
-            </span>
             {filterThemes.map((theme) => (
               <button
                 key={theme}
                 type="button"
                 onClick={() => setActiveFilter(theme)}
                 className={cn(
-                  "rounded-full border-2 border-border px-3 py-1.5 text-[10px] font-black uppercase transition-colors sm:text-xs",
+                  "brutal-chip px-3 py-1.5 text-[10px] sm:text-xs",
                   activeFilter === theme
                     ? theme === "all"
-                      ? "bg-fg text-card"
+                      ? "brutal-chip--active"
                       : mlThemeStyles[theme as MlTheme].filterActive
-                    : "bg-card text-fg hover:bg-accent-2",
+                    : "",
                 )}
               >
                 {t(`aiMl.filters.${theme}`)}
-                {themeCounts[theme] ? ` (${themeCounts[theme]})` : ""}
               </button>
             ))}
           </div>
@@ -637,7 +607,7 @@ export function AiMlGallery({ items }: AiMlGalleryProps) {
                     exit={{ opacity: 0, scale: 0.96 }}
                     transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                     className={cn(
-                      "project-card group flex flex-col overflow-hidden rounded-3xl bg-card",
+                      "project-card project-category-card group flex flex-col overflow-hidden bg-card",
                       styles.card,
                     )}
                   >
@@ -655,14 +625,19 @@ export function AiMlGallery({ items }: AiMlGalleryProps) {
                       <div className="flex flex-wrap items-center gap-2">
                         <span
                           className={cn(
-                            "rounded-full px-2.5 py-1 text-[10px] font-black uppercase sm:text-xs",
+                            "brutal-tag px-2.5 py-1 text-[10px] sm:text-xs",
                             styles.badge,
                           )}
                         >
                           {t(`aiMl.filters.${theme}`)}
                         </span>
                         {project.metricHighlight ? (
-                          <span className="rounded-full border-2 border-border bg-accent px-2.5 py-1 text-[10px] font-black uppercase text-white sm:text-xs">
+                          <span
+                            className={cn(
+                              "brutal-tag px-2.5 py-1 text-[10px] sm:text-xs",
+                              styles.badge,
+                            )}
+                          >
                             {project.metricHighlight}
                           </span>
                         ) : null}
@@ -685,7 +660,10 @@ export function AiMlGallery({ items }: AiMlGalleryProps) {
                         {project.tags.slice(0, 3).map((tag) => (
                           <span
                             key={tag}
-                            className="rounded-full border-2 border-border bg-accent-2 px-2.5 py-0.5 text-[9px] font-black uppercase sm:text-[10px]"
+                            className={cn(
+                              "brutal-tag px-2.5 py-0.5 text-[9px] sm:text-[10px]",
+                              styles.badge,
+                            )}
                           >
                             {getProjectTagLabel(tag, tagLabels)}
                           </span>
@@ -696,7 +674,7 @@ export function AiMlGallery({ items }: AiMlGalleryProps) {
                         type="button"
                         onClick={() => setSelected(project)}
                         className={cn(
-                          "project-pill mt-auto inline-flex w-fit items-center rounded-full bg-accent-2 px-4 py-2 text-xs font-black uppercase tracking-wide sm:text-sm",
+                          "project-pill pop-btn mt-auto w-fit px-4 py-2 text-xs sm:text-sm",
                           styles.pill,
                         )}
                       >

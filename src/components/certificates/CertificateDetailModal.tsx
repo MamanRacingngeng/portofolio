@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Award, ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { Certificate } from "@/data/certificates";
 import { hasMultiPageDocument } from "@/data/certificates";
+import { certificateThemeStyles } from "@/lib/certificate-themes";
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/navigation";
 
@@ -14,13 +15,6 @@ interface CertificateDetailModalProps {
   certificate: Certificate | null;
   onClose: () => void;
 }
-
-const categoryAccent = {
-  certification: "bg-accent-4",
-  training: "bg-accent-2",
-  language: "bg-accent text-white",
-  achievement: "bg-accent-3",
-} as const;
 
 function getPreviewPages(certificate: Certificate) {
   if (certificate.previewImages?.length) return certificate.previewImages;
@@ -30,12 +24,14 @@ function getPreviewPages(certificate: Certificate) {
 
 function ModalPreview({
   certificate,
-  previewLabel,
   pageLabel,
+  badgeClass,
+  stickerClass,
 }: {
   certificate: Certificate;
-  previewLabel: string;
   pageLabel: (current: number, total: number) => string;
+  badgeClass: string;
+  stickerClass: string;
 }) {
   const [imageFailed, setImageFailed] = useState(false);
   const [pageIndex, setPageIndex] = useState(0);
@@ -64,12 +60,14 @@ function ModalPreview({
             sizes="(max-width: 768px) 100vw, 640px"
             onError={() => setImageFailed(true)}
           />
-          <span className="absolute left-3 top-3 rounded-full border-[3px] border-border bg-card px-2.5 py-1 text-[10px] font-black uppercase tracking-wide shadow-[3px_3px_0_var(--shadow)] sm:text-xs">
-            {previewLabel}
-          </span>
           {total > 1 ? (
             <>
-              <span className="absolute right-3 top-3 rounded-full border-[3px] border-border bg-card px-2.5 py-1 text-[10px] font-black uppercase shadow-[3px_3px_0_var(--shadow)] sm:text-xs">
+              <span
+                className={cn(
+                  "absolute right-3 top-3 px-2.5 py-1 text-[10px] sm:text-xs",
+                  badgeClass,
+                )}
+              >
                 {pageLabel(current + 1, total)}
               </span>
               <div className="absolute inset-x-0 bottom-3 flex items-center justify-center gap-2 px-3">
@@ -120,9 +118,6 @@ function ModalPreview({
   if (showPdf) {
     return (
       <div className="relative overflow-hidden border-b-[3px] border-border bg-surface">
-        <span className="absolute left-3 top-3 z-10 rounded-full border-[3px] border-border bg-card px-2.5 py-1 text-[10px] font-black uppercase tracking-wide shadow-[3px_3px_0_var(--shadow)] sm:text-xs">
-          {previewLabel}
-        </span>
         <iframe
           src={`${certificate.documentUrl}#toolbar=0&navpanes=0&view=FitH`}
           title={certificate.title}
@@ -134,10 +129,12 @@ function ModalPreview({
 
   return (
     <div className="relative flex aspect-[3/4] flex-col items-center justify-center gap-4 border-b-[3px] border-border bg-surface p-8 sm:aspect-[4/5]">
-      <span className="absolute left-3 top-3 rounded-full border-[3px] border-border bg-card px-2.5 py-1 text-[10px] font-black uppercase tracking-wide shadow-[3px_3px_0_var(--shadow)] sm:text-xs">
-        {previewLabel}
-      </span>
-      <div className="flex h-16 w-16 items-center justify-center rounded-2xl border-[3px] border-border bg-accent-2 shadow-[4px_4px_0_var(--shadow)] sm:h-20 sm:w-20">
+      <div
+        className={cn(
+          "flex h-16 w-16 items-center justify-center border-[3px] border-border shadow-[4px_4px_0_var(--shadow)] sm:h-20 sm:w-20",
+          stickerClass,
+        )}
+      >
         <Award size={32} className="text-fg" />
       </div>
       <p className="text-center text-sm font-black uppercase tracking-wide text-muted">
@@ -155,6 +152,9 @@ export function CertificateDetailModal({
   const competencyUnits = certificate
     ? (t.raw(`items.${certificate.id}.competencyUnits`) as string[] | undefined)
     : undefined;
+  const styles = certificate
+    ? certificateThemeStyles[certificate.category]
+    : null;
 
   useEffect(() => {
     if (!certificate) return;
@@ -194,7 +194,7 @@ export function CertificateDetailModal({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ type: "spring", stiffness: 120, damping: 16 }}
-            className="relative z-10 flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden rounded-2xl border-[3px] border-border bg-card shadow-[8px_8px_0_var(--shadow)] sm:rounded-3xl"
+            className="relative z-10 flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden border-[3px] border-border bg-card shadow-[8px_8px_0_var(--shadow)]"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex shrink-0 items-center justify-between gap-4 border-b-[3px] border-border bg-card px-4 py-3 sm:px-6 sm:py-4">
@@ -217,18 +217,14 @@ export function CertificateDetailModal({
             <div className="min-h-0 flex-1 overflow-y-auto">
               <ModalPreview
                 certificate={certificate}
-                previewLabel={t("preview")}
                 pageLabel={(current, total) => t("pageOf", { current, total })}
+                badgeClass={styles!.badge}
+                stickerClass={styles!.sticker}
               />
 
               <div className="space-y-4 p-5 sm:p-6">
                 <div className="flex flex-wrap items-center justify-between gap-3">
-                  <span
-                    className={cn(
-                      "rounded-full border-[3px] border-border px-3 py-1 text-[10px] font-black uppercase tracking-wide shadow-[3px_3px_0_var(--shadow)] sm:text-xs",
-                      categoryAccent[certificate.category],
-                    )}
-                  >
+                  <span className={cn("px-3 py-1 text-[10px] sm:text-xs", styles!.badge)}>
                     {t(`filters.${certificate.category}`)}
                   </span>
                 </div>
@@ -247,7 +243,7 @@ export function CertificateDetailModal({
                   </p>
                 </div>
 
-                <div className="border-[3px] border-border bg-accent-2 p-4 sm:p-5">
+                <div className={cn("border-[3px] border-border p-4 sm:p-5", styles!.panel)}>
                   <p className="text-sm font-medium leading-relaxed text-fg sm:text-base">
                     {t(`items.${certificate.id}.description`)}
                   </p>
@@ -264,7 +260,10 @@ export function CertificateDetailModal({
                           key={unit}
                           className="flex gap-2 text-sm leading-relaxed text-fg sm:text-base"
                         >
-                          <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                          <span
+                            aria-hidden
+                            className={cn("mt-2 h-1.5 w-1.5 shrink-0", styles!.stripe)}
+                          />
                           <span>{unit}</span>
                         </li>
                       ))}
@@ -276,7 +275,10 @@ export function CertificateDetailModal({
                   hasMultiPageDocument(certificate) ? (
                     <Link
                       href={`/sertifikat/dokumen/${certificate.id}`}
-                      className="project-pill project-pill--sky inline-flex w-fit items-center rounded-full bg-accent-2 px-6 py-2.5 text-sm font-black uppercase tracking-wide"
+                      className={cn(
+                        "project-pill pop-btn w-fit px-6 py-2.5 text-sm",
+                        styles!.pill,
+                      )}
                     >
                       {t("openDocument")}
                     </Link>
@@ -285,7 +287,10 @@ export function CertificateDetailModal({
                       href={certificate.documentUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="project-pill project-pill--sky inline-flex w-fit items-center rounded-full bg-accent-2 px-6 py-2.5 text-sm font-black uppercase tracking-wide"
+                      className={cn(
+                        "project-pill pop-btn w-fit px-6 py-2.5 text-sm",
+                        styles!.pill,
+                      )}
                     >
                       {t("openDocument")}
                     </a>

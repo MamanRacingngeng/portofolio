@@ -44,21 +44,21 @@ export const projects: ProjectItem[] = [
     category: "software-dev",
     liveUrl: "https://simagangporto.vercel.app/",
     image: "/images/projects/items/simagang-bbkb.png",
-    tags: ["nextjs", "full-stack", "community"],
+    tags: ["laravel", "full-stack", "community"],
   },
   {
     id: "udaracast",
     category: "software-dev",
     liveUrl: "https://forecastingpm2-5.vercel.app/",
     image: "/images/projects/items/udaracast.png",
-    tags: ["nextjs", "data", "forecasting"],
+    tags: ["laravel", "data", "forecasting"],
   },
   {
     id: "kedokploso",
     category: "software-dev",
     liveUrl: "https://webprojectkkn-delta.vercel.app/",
     image: "/images/projects/items/kedokploso.png",
-    tags: ["nextjs", "kkn", "community"],
+    tags: ["laravel", "kkn", "community"],
   },
   {
     id: "pm25-sca-lstm",
@@ -353,6 +353,24 @@ export const projects: ProjectItem[] = [
     mlTheme: "classification",
   },
 ];
+
+/** Featured on home page 3D project showcase */
+export const featuredProjectIds = [
+  "simagang-bbkb",
+  "istana-sayur-buah",
+  "udaracast",
+  "pertamina-lstm-pipes",
+  "exporetrade",
+  "pm25-sca-lstm",
+] as const;
+
+export type FeaturedProjectId = (typeof featuredProjectIds)[number];
+
+export function getFeaturedProjects(): ProjectItem[] {
+  return featuredProjectIds
+    .map((id) => projects.find((project) => project.id === id))
+    .filter((project): project is ProjectItem => Boolean(project));
+}
 
 export function getProjectsByCategory(categoryId: ProjectCategoryId): ProjectItem[] {
   return projects.filter((project) => project.category === categoryId);

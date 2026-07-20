@@ -64,10 +64,10 @@ export function Timeline() {
       )}
     >
       <div className="mx-auto max-w-4xl">
-        <SectionTitle title={t("title")} accent="lime" align="center" showPolkadots />
+        <div ref={containerRef} className="relative pt-16 sm:pt-[4.5rem]">
+          <SectionTitle title={t("title")} accent="lime" placement="corner" />
 
-        <div ref={containerRef} className="relative">
-          <div className="absolute bottom-0 left-[5px] top-0 w-[3px] sm:left-[7px]">
+          <div className="absolute bottom-0 left-[5px] top-16 w-[3px] sm:left-[7px] sm:top-[4.5rem]">
             <div className="absolute inset-0 bg-border/20" />
             <motion.div
               style={{ height: lineFill }}

@@ -93,7 +93,7 @@ export const certificates: Certificate[] = [
     category: "training",
     title: "Internship Certificate",
     issuer: "BBSPJIKB Yogyakarta",
-    detail: "Kementerian Perindustrian RI · Bagian Data dan Informasi",
+    detail: "Ministry of Industry of Indonesia · Data and Information Division",
     date: "Jan 2026",
     previewImage: "/images/certificates/magang-bbspjikb.png",
     documentUrl: "/images/certificates/magang-bbspjikb.png",

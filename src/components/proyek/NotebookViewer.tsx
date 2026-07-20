@@ -156,7 +156,7 @@ function NotebookFrame({
         </span>
       </div>
 
-      <div className="notebook-scroll h-[calc(100%-36px)] overflow-y-auto px-2 py-2 sm:px-3">
+      <div className="notebook-scroll h-[calc(100%-36px)] overflow-y-auto px-2 py-2 pt-8 sm:px-3 sm:pt-10">
         {loading ? (
           <div className="flex h-full items-center justify-center text-white/40">
             <Loader2 className="animate-spin" size={24} />

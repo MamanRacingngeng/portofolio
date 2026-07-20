@@ -19,6 +19,10 @@
  "guestbook": {
  "title": "Message Board — RAHN.",
  "description": "Leave a message — say hello or start a conversation."
+ },
+ "stack": {
+ "title": "Tech Stack — RAHN.",
+ "description": "Technologies and tools I use for data science, machine learning, and software development."
  }
  },
  "nav": {
@@ -52,14 +56,26 @@
  "social": {
  "github": "GitHub",
  "linkedin": "LinkedIn",
+ "discord": "Discord",
  "githubAria": "Visit GitHub profile",
- "linkedinAria": "Visit LinkedIn profile"
+ "linkedinAria": "Visit LinkedIn profile",
+ "discordAria": "Visit Discord profile @{username}"
  },
  "stats": {
  "projects": "Projects",
  "certs": "Certifications",
  "roles": "Roles"
  }
+ },
+ "homeShowcase": {
+ "label": "What I Build?",
+ "line1": "Web Apps, ML Dashboards, E-Commerce,",
+ "line2Before": "Data Platforms, ",
+ "headlineHighlight": "Internship Systems",
+ "line2After": ",",
+ "line3": "Forecasting Tools And More.",
+ "viewProjects": "View Projects",
+ "viewAll": "View all projects"
  },
  "timeline": {
  "title": "Experience",
@@ -116,6 +132,7 @@
  }
  },
  "tech": {
+ "label": "Stack",
  "title": "Tech Stack",
  "close": "Close",
  "categories": {
@@ -217,6 +234,7 @@
  "back": "Back to projects",
  "tagLabels": {
  "nextjs": "Next.js",
+ "laravel": "Laravel",
  "full-stack": "Full Stack",
  "marketplace": "Marketplace",
  "data": "Data",
@@ -412,7 +430,7 @@
  },
  "simagang-bbkb": {
  "title": "SIMAGANG BBKB",
- "description": "Internship registration and management portal for Balai Besar Kerajinan & Batik Yogyakarta — landing page, application workflow, internship listings, gallery, and demo admin access.",
+ "description": "Internship registration and management portal for the Center for Crafts & Batik (BBKB) Yogyakarta — landing page, application workflow, internship listings, gallery, and demo admin access.",
  "detail": "Internship Platform · Ministry of Industry · Vercel"
  },
  "udaracast": {
@@ -421,8 +439,8 @@
  "detail": "Air Quality Forecast · Vercel"
  },
  "kedokploso": {
- "title": "Dusun Kedokploso",
- "description": "Community profile website for Dusun Kedokploso — village history, local potential, interactive map, gallery, and contact information.",
+ "title": "Kedokploso Village",
+ "description": "Community profile website for Kedokploso Village — village history, local potential, interactive map, gallery, and contact information.",
  "detail": "KKN Community Website · Vercel"
  },
  "pipilo-agency": {
@@ -461,7 +479,7 @@
  "detail": "F&B Mobile · Home & Map Screens"
  },
  "freshly": {
- "title": "Freshly — Istana Toko Sayur dan Buah",
+ "title": "Freshly — Istana Vegetable & Fruit Store",
  "description": "End-to-end e-commerce web UI for a fresh produce store in Manokwari, Papua — organic hero messaging, category discovery, product catalog, trust-building About page, and a cohesive green brand system.",
  "detail": "Client Project · Manokwari, Papua · Web E-Commerce"
  },
@@ -751,7 +769,7 @@
  "exporetrade": "Exporetrade",
  "simagang-bbkb": "SIMAGANG BBKB",
  "udaracast": "UdaraCast",
- "kedokploso": "Dusun Kedokploso"
+ "kedokploso": "Kedokploso Village"
  },
  "items": {
  "istana-sayur-buah": {
@@ -815,7 +833,7 @@
  "result": "Successfully developed a production-ready marketplace platform with responsive UI and scalable architecture."
  },
  "simagang-bbkb": {
- "overview": "SIMAGANG is a web-based internship registration and management system for Balai Besar Kerajinan & Batik (BBKB) Yogyakarta under the Ministry of Industry. The platform digitizes internship administration — from public discovery and application submission to structured onboarding for craft and batik internship programs.",
+ "overview": "SIMAGANG is a web-based internship registration and management system for the Center for Crafts & Batik (BBKB) Yogyakarta under the Ministry of Industry. The platform digitizes internship administration — from public discovery and application submission to structured onboarding for craft and batik internship programs.",
  "problem": "Internship administration at BBKB was largely manual, making registration, document handling, applicant tracking, and communication inefficient for both participants and administrators.",
  "solution": "Built a modern web portal with a clear registration flow, internship listings, program information, gallery showcase, and demo system access — helping applicants and admins move through a structured digital workflow.",
  "roles": [
@@ -1048,7 +1066,7 @@
  ]
  },
  "freshly": {
- "overview": "Freshly is a client-facing e-commerce experience for Istana Toko Sayur dan Buah — a fresh vegetable and fruit retailer in Manokwari, Papua. The design translates a local produce business into a trustworthy digital storefront with clear navigation, category-led shopping, and brand storytelling that emphasizes organic quality and community trust.",
+ "overview": "Freshly is a client-facing e-commerce experience for Istana Sayur Buah — a fresh vegetable and fruit retailer in Manokwari, Papua. The design translates a local produce business into a trustworthy digital storefront with clear navigation, category-led shopping, and brand storytelling that emphasizes organic quality and community trust.",
  "highlights": [
  "Hero homepage with bold fresh-produce messaging and category entry points",
  "Shop catalog with vegetable, fruit, juice, and peanuts filters plus priced product cards",
@@ -2126,11 +2144,13 @@
  "social": {
  "github": "GitHub",
  "linkedin": "LinkedIn",
+ "discord": "Discord",
  "email": "Email",
  "resume": "CV",
  "whatsapp": "WhatsApp",
  "githubAria": "Visit GitHub profile",
  "linkedinAria": "Visit LinkedIn profile",
+ "discordAria": "Visit Discord profile @rusdidigital",
  "emailAria": "Send an email",
  "resumeAria": "Download CV",
  "whatsappAria": "Chat on WhatsApp"

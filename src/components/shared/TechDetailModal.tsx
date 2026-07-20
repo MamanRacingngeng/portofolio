@@ -27,7 +27,8 @@ function ModalTechIcon({ tech }: { tech: TechItem }) {
           unoptimized
           className={cn(
             "max-h-full max-w-full object-contain",
-            tech.logoBlend === "multiply" && "mix-blend-multiply",
+            tech.logoBlend === "multiply" && "mix-blend-multiply dark:mix-blend-normal",
+            tech.logoInvertDark && "dark:invert",
           )}
           style={
             scale !== 1

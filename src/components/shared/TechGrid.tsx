@@ -4,242 +4,169 @@ import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { techCategories, type TechItem } from "@/data/portfolio";
+import { techItems, type TechItem } from "@/data/portfolio";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { TechDetailModal } from "@/components/shared/TechDetailModal";
 import { cn } from "@/lib/utils";
-import {
-  hoverFloat,
-  hoverFloatResetTransition,
-  hoverFloatTransition,
-  revealViewport,
-  scrollRevealLeft,
-} from "@/lib/animations";
+import { revealViewport } from "@/lib/animations";
 
 interface TechGridProps {
   title?: string;
   showTitle?: boolean;
+  variant?: "strip" | "grid";
 }
 
-type CategoryTheme = (typeof categoryTheme)[number];
-
-const techCardReveal = {
-  hidden: { opacity: 0, y: 28 },
+const techItemReveal = {
+  hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       type: "spring" as const,
-      stiffness: 130,
-      damping: 16,
+      stiffness: 140,
+      damping: 18,
     },
   },
 };
 
-const techCardStagger = {
+const techItemStagger = {
   hidden: { opacity: 1 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.06, delayChildren: 0.04 },
+    transition: { staggerChildren: 0.03, delayChildren: 0.02 },
   },
 };
 
-const cardRest = {
-  y: 0,
-  x: 0,
-  rotate: 0,
-  backgroundColor: "var(--card)",
-  boxShadow: "5px 5px 0 #111",
-};
+function TechLogo({ tech, large }: { tech: TechItem; large?: boolean }) {
+  const scale = tech.logoScale ?? 1;
 
-function TechIcon({ tech }: { tech: TechItem }) {
   if (tech.logo) {
-    const scale = tech.logoScale ?? 1;
-
     return (
-      <div className="relative mb-2 flex h-11 w-full max-w-[132px] items-center justify-center sm:h-12 sm:max-w-[148px]">
+      <div
+        className={cn(
+          "relative flex w-full items-center justify-center",
+          large
+            ? "mb-3 h-12 sm:mb-3.5 sm:h-14 md:h-16"
+            : "mb-2.5 h-11 sm:mb-3 sm:h-12 md:h-14",
+        )}
+      >
         <Image
           src={tech.logo}
           alt=""
-          width={148}
-          height={48}
+          width={large ? 160 : 140}
+          height={large ? 56 : 48}
           unoptimized
           className={cn(
-            "max-h-full w-auto object-contain",
-            tech.logoBlend === "multiply" && "mix-blend-multiply",
+            "max-h-full w-auto object-contain transition-transform duration-200 group-hover:scale-110",
+            tech.logoBlend === "multiply" && "mix-blend-multiply dark:mix-blend-normal",
+            tech.logoInvertDark && "dark:invert",
           )}
           style={
             scale !== 1
               ? { transform: `scale(${scale})`, transformOrigin: "center" }
               : undefined
           }
-          sizes="148px"
+          sizes={large ? "160px" : "140px"}
         />
       </div>
     );
   }
 
-  return <span className="mb-2 text-3xl sm:text-4xl">{tech.icon}</span>;
-}
-
-function TechCard({
-  tech,
-  theme,
-}: {
-  tech: TechItem;
-  theme: CategoryTheme;
-}) {
-  const [hovered, setHovered] = useState(false);
-
   return (
-    <motion.div
-      onHoverStart={() => setHovered(true)}
-      onHoverEnd={() => setHovered(false)}
-      className="flex h-[148px] w-full flex-col items-center justify-center border-[3px] border-border bg-card px-3 py-5 text-center sm:h-[156px]"
-      animate={
-        hovered
-          ? {
-              ...hoverFloat,
-              backgroundColor: theme.cardHoverBg,
-              boxShadow: theme.cardHoverShadow,
-            }
-          : cardRest
-      }
-      transition={hovered ? hoverFloatTransition : hoverFloatResetTransition}
-    >
-      <TechIcon tech={tech} />
-      {tech.labelLines ? (
-        <div className="text-xs font-black uppercase leading-tight tracking-wide sm:text-sm">
-          <span className="block">{tech.labelLines[0]}</span>
-          <span className="block">{tech.labelLines[1]}</span>
-        </div>
-      ) : (
-        <p className="text-xs font-black uppercase leading-tight tracking-wide sm:text-sm">
-          {tech.name}
-        </p>
+    <span
+      className={cn(
+        "mb-2.5 leading-none sm:mb-3",
+        large ? "text-4xl sm:text-5xl md:text-[3.25rem]" : "text-3xl sm:text-4xl",
       )}
-    </motion.div>
+    >
+      {tech.icon}
+    </span>
   );
 }
 
-const categoryTheme = [
-  {
-    shadow: "5px 5px 0 #7c3aed",
-    hoverBg: "#7c3aed",
-    hoverColor: "#ffffff",
-    hoverShadow: "7px 7px 0 #f9a8b8",
-    cardHoverBg: "rgba(124, 58, 237, 0.1)",
-    cardHoverShadow: "7px 7px 0 #7c3aed",
-  },
-  {
-    shadow: "5px 5px 0 #d4f06a",
-    hoverBg: "#d4f06a",
-    hoverColor: "#111111",
-    hoverShadow: "7px 7px 0 #7dd3fc",
-    cardHoverBg: "rgba(212, 240, 106, 0.3)",
-    cardHoverShadow: "7px 7px 0 #d4f06a",
-  },
-  {
-    shadow: "5px 5px 0 #7dd3fc",
-    hoverBg: "#7dd3fc",
-    hoverColor: "#111111",
-    hoverShadow: "7px 7px 0 #7c3aed",
-    cardHoverBg: "rgba(125, 211, 252, 0.35)",
-    cardHoverShadow: "7px 7px 0 #7dd3fc",
-  },
-  {
-    shadow: "5px 5px 0 #f9a8b8",
-    hoverBg: "#f9a8b8",
-    hoverColor: "#111111",
-    hoverShadow: "7px 7px 0 #d4f06a",
-    cardHoverBg: "rgba(249, 168, 184, 0.3)",
-    cardHoverShadow: "7px 7px 0 #f9a8b8",
-  },
-];
+function TechLabel({ tech, large }: { tech: TechItem; large?: boolean }) {
+  const labelClass = cn(
+    "font-black uppercase leading-tight tracking-wide text-fg",
+    large ? "text-xs sm:text-sm md:text-[0.9375rem]" : "text-[11px] sm:text-xs md:text-sm",
+  );
 
-export function TechGrid({ title, showTitle = true }: TechGridProps) {
+  if (tech.labelLines) {
+    return (
+      <div className={labelClass}>
+        <span className="block">{tech.labelLines[0]}</span>
+        <span className="block">{tech.labelLines[1]}</span>
+      </div>
+    );
+  }
+
+  return <p className={labelClass}>{tech.name}</p>;
+}
+
+function TechTile({ tech, large }: { tech: TechItem; large?: boolean }) {
+  return (
+    <div className="group flex flex-col items-center justify-start px-1 py-2 text-center sm:px-2 sm:py-3">
+      <TechLogo tech={tech} large={large} />
+      <TechLabel tech={tech} large={large} />
+    </div>
+  );
+}
+
+export function TechGrid({
+  title,
+  showTitle = true,
+  variant = "strip",
+}: TechGridProps) {
   const t = useTranslations("tech");
-  const tCategories = useTranslations("tech.categories");
   const displayTitle = title ?? t("title");
   const [selectedTech, setSelectedTech] = useState<TechItem | null>(null);
+  const isHome = variant === "strip";
+
+  const openTech = (tech: TechItem) => setSelectedTech(tech);
 
   return (
-    <section className="overflow-x-hidden px-4 pb-16 pt-6 sm:px-6 sm:pb-20 sm:pt-8 lg:px-8">
+    <section
+      className={cn(
+        "overflow-x-hidden px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8",
+        isHome ? "pt-6 sm:pt-8" : "pt-4 sm:pt-6",
+      )}
+    >
       <TechDetailModal tech={selectedTech} onClose={() => setSelectedTech(null)} />
-      <div className="mx-auto max-w-5xl">
+
+      <div className={cn("mx-auto", isHome ? "max-w-6xl" : "max-w-5xl")}>
         {showTitle && (
-          <SectionTitle title={displayTitle} accent="sky" align="center" showPolkadots />
+          <SectionTitle
+            title={displayTitle}
+            accent="sky"
+            align="center"
+            showPolkadots
+          />
         )}
 
-        <div className="space-y-10">
-          {techCategories.map((category, catIndex) => {
-            const theme = categoryTheme[catIndex % categoryTheme.length];
-
-            return (
-              <div key={category.id}>
-                <motion.div
-                  variants={scrollRevealLeft}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={revealViewport}
-                  transition={{ delay: catIndex * 0.05 }}
-                  className="mb-5 flex items-center gap-4"
-                >
-                  <motion.h3
-                    className="shrink-0 rounded-full border-[3px] border-border bg-card px-4 py-2 font-display text-[11px] font-black uppercase tracking-widest sm:px-5 sm:py-2.5 sm:text-xs"
-                    initial={{ boxShadow: "0px 0px 0 transparent" }}
-                    whileInView={{ boxShadow: theme.shadow }}
-                    viewport={revealViewport}
-                    transition={{ delay: 0.1, duration: 0.35 }}
-                    whileHover={{
-                      backgroundColor: theme.hoverBg,
-                      color: theme.hoverColor,
-                      boxShadow: theme.hoverShadow,
-                      rotate: [0, -2, 2, 0],
-                      transition: { duration: 0.35 },
-                    }}
-                  >
-                    {tCategories(category.id as "dataScience" | "softwareDev" | "databaseTools" | "frontendUi")}
-                  </motion.h3>
-                  <motion.div
-                    className="h-[3px] flex-1 bg-border/15"
-                    initial={{ scaleX: 0, originX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={revealViewport}
-                    transition={{ delay: 0.2, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  />
-                </motion.div>
-
-                <motion.div
-                  variants={techCardStagger}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={revealViewport}
-                  className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
-                >
-                  {category.items.map((tech) => (
-                    <motion.div
-                      key={tech.id}
-                      variants={techCardReveal}
-                      className="w-full min-w-0 cursor-pointer"
-                      role="button"
-                      tabIndex={0}
-                      onClick={() => setSelectedTech(tech)}
-                      onKeyDown={(event) => {
-                        if (event.key === "Enter" || event.key === " ") {
-                          event.preventDefault();
-                          setSelectedTech(tech);
-                        }
-                      }}
-                    >
-                      <TechCard tech={tech} theme={theme} />
-                    </motion.div>
-                  ))}
-                </motion.div>
-              </div>
-            );
-          })}
-        </div>
+        <motion.ul
+          variants={techItemStagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={revealViewport}
+          className={cn(
+            "grid list-none p-0",
+            isHome
+              ? "grid-cols-3 gap-x-4 gap-y-7 sm:grid-cols-4 sm:gap-x-5 sm:gap-y-8 md:grid-cols-5 lg:grid-cols-6"
+              : "grid-cols-2 gap-x-4 gap-y-7 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-8 lg:grid-cols-4",
+          )}
+        >
+          {techItems.map((tech) => (
+            <motion.li key={tech.id} variants={techItemReveal} className="min-w-0">
+              <button
+                type="button"
+                onClick={() => openTech(tech)}
+                className="block w-full cursor-pointer text-left transition-opacity hover:opacity-90"
+                aria-label={tech.name}
+              >
+                <TechTile tech={tech} large={isHome} />
+              </button>
+            </motion.li>
+          ))}
+        </motion.ul>
       </div>
     </section>
   );

@@ -25,8 +25,8 @@ const dotThemes: Record<
 };
 
 const dotPositions = [
-  "right-0 top-0 translate-x-[calc(100%-6px)] -translate-y-[calc(100%-6px)] sm:translate-x-[calc(100%-7px)] sm:-translate-y-[calc(100%-7px)]",
-  "left-0 bottom-0 -translate-x-[calc(100%-6px)] translate-y-[calc(100%-6px)] sm:-translate-x-[calc(100%-7px)] sm:translate-y-[calc(100%-7px)]",
+  "right-0 top-0 translate-x-[calc(100%-4px)] -translate-y-[calc(100%-4px)] sm:translate-x-[calc(100%-5px)] sm:-translate-y-[calc(100%-5px)]",
+  "left-0 bottom-0 -translate-x-[calc(100%-4px)] translate-y-[calc(100%-4px)] sm:-translate-x-[calc(100%-5px)] sm:translate-y-[calc(100%-5px)]",
 ];
 
 const sideDotPositions = [

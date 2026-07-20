@@ -170,7 +170,7 @@ export function Hero() {
           initial="hidden"
           whileInView="visible"
           viewport={revealViewport}
-          className="relative z-0 mt-10 flex flex-wrap items-center gap-3 sm:mt-12 sm:gap-4"
+          className="relative z-0 mt-5 flex flex-wrap items-center gap-3 sm:mt-6 sm:gap-4"
         >
           <motion.div variants={scrollRevealStaggerItem}>
             <AccentButton variant="primary" href="/proyek" className="px-6 py-3.5">

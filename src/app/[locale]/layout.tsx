@@ -59,7 +59,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <AnimatedBackground />
             <ScrollProgress />
             <Navbar />
-            <main className="min-h-screen">{children}</main>
+            <main className="relative z-0 min-h-screen bg-bg">{children}</main>
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>

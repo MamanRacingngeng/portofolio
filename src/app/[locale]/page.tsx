@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero";
+import { ProjectShowcase } from "@/components/home/ProjectShowcase";
 import { Timeline } from "@/components/home/Timeline";
 import { TechGrid } from "@/components/shared/TechGrid";
 import { setRequestLocale } from "next-intl/server";
@@ -15,6 +16,7 @@ export default async function HomePage({ params }: Props) {
     <>
       <Hero />
       <Timeline />
+      <ProjectShowcase />
       <TechGrid />
     </>
   );

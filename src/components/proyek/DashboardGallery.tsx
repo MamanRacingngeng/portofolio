@@ -4,11 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  Factory,
-  Sparkles,
-  X,
-} from "lucide-react";
+import { ChevronDown, Factory, Sparkles, X } from "lucide-react";
 import type { DashboardTheme, ProjectItem } from "@/data/projects";
 import { cn } from "@/lib/utils";
 
@@ -42,47 +38,72 @@ const themeStyles: Record<
     stripe: string;
     badge: string;
     sticker: string;
-    frame: string;
+    panel: string;
+    heroTag: string;
+    metaPanel: string;
   }
 > = {
   lstm: {
     card: "project-card--sky",
-    pill: "project-pill--sky",
-    stripe: "bg-[#1d4ed8]",
-    badge: "bg-[#dbeafe] text-[#1e40af]",
+    pill: "pop-btn-secondary",
+    stripe: "bg-accent-4",
+    badge: "brutal-tag brutal-tag--sky",
     sticker: "bg-accent-4",
-    frame: "bg-[linear-gradient(160deg,#eff6ff_0%,#dbeafe_40%,#f8fafc_100%)]",
+    panel: "bg-accent-4",
+    heroTag: "brutal-tag brutal-tag--sky",
+    metaPanel: "bg-accent-4/25",
   },
   rf: {
     card: "project-card--lime",
-    pill: "project-pill--purple",
-    stripe: "bg-[#059669]",
-    badge: "bg-[#d1fae5] text-[#047857]",
+    pill: "pop-btn-primary",
+    stripe: "bg-accent-2",
+    badge: "brutal-tag brutal-tag--lime",
     sticker: "bg-accent-2",
-    frame: "bg-[linear-gradient(160deg,#ecfdf5_0%,#d1fae5_40%,#f8fafc_100%)]",
+    panel: "bg-accent-2",
+    heroTag: "brutal-tag brutal-tag--lime",
+    metaPanel: "bg-accent-2/40",
   },
   clustering: {
     card: "project-card--pink",
-    pill: "project-pill--pink",
-    stripe: "bg-[#d97706]",
-    badge: "bg-[#ffedd5] text-[#b45309]",
+    pill: "bg-accent-3",
+    stripe: "bg-accent-3",
+    badge: "brutal-tag brutal-tag--pink",
     sticker: "bg-accent-3",
-    frame: "bg-[linear-gradient(160deg,#fffbeb_0%,#fef3c7_40%,#f8fafc_100%)]",
+    panel: "bg-accent-3",
+    heroTag: "brutal-tag brutal-tag--pink",
+    metaPanel: "bg-accent-3/30",
   },
 };
 
+const heroTagVariants = [
+  "brutal-tag brutal-tag--sky",
+  "brutal-tag brutal-tag--lime",
+  "brutal-tag brutal-tag--pink",
+] as const;
+
+const heroMetaVariants = [
+  "bg-accent-4/25",
+  "bg-accent-2/40",
+  "bg-accent-3/30",
+  "bg-accent-4/25",
+] as const;
+
 function PipelineSteps({ steps }: { steps: string[] }) {
   return (
-    <ol className="grid gap-2 sm:grid-cols-2">
+    <ol className="space-y-0">
       {steps.map((step, index) => (
-        <li
-          key={step}
-          className="flex items-start gap-2 rounded-xl border-[3px] border-border bg-card px-3 py-2.5 text-sm font-bold"
-        >
-          <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent-2 text-[10px] font-black">
-            {index + 1}
+        <li key={step} className="flex flex-col items-center">
+          <span className="brutal-tag w-full px-3 py-2 text-center text-xs font-bold sm:text-sm">
+            {step}
           </span>
-          {step}
+          {index < steps.length - 1 ? (
+            <ChevronDown
+              size={18}
+              strokeWidth={3}
+              className="my-0.5 shrink-0 text-accent"
+              aria-hidden
+            />
+          ) : null}
         </li>
       ))}
     </ol>
@@ -92,30 +113,24 @@ function PipelineSteps({ steps }: { steps: string[] }) {
 function PosterFrame({
   src,
   alt,
-  theme,
   onClick,
   priority = false,
 }: {
   src: string;
   alt: string;
-  theme: DashboardTheme;
   onClick?: () => void;
   priority?: boolean;
 }) {
-  const styles = themeStyles[theme];
-
   return (
     <button
       type="button"
       onClick={onClick}
       className={cn(
-        "group/poster relative block w-full overflow-hidden rounded-2xl border-[3px] border-border p-3 shadow-[6px_6px_0_var(--shadow)] transition-transform duration-500 hover:-translate-y-1 sm:p-4",
-        styles.frame,
+        "group/poster relative block w-full overflow-hidden border-[3px] border-border bg-card p-3 shadow-[6px_6px_0_var(--shadow)] transition-transform duration-500 hover:-translate-y-1 sm:p-4",
         onClick ? "cursor-pointer text-left" : "cursor-default",
       )}
     >
-      <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(#000_1px,transparent_1px),linear-gradient(90deg,#000_1px,transparent_1px)] [background-size:24px_24px]" />
-      <div className="relative mx-auto aspect-[1190/1684] max-h-[min(72vh,920px)] w-full overflow-hidden rounded-xl border-[3px] border-border bg-white shadow-[inset_0_0_0_1px_rgba(0,0,0,0.04)]">
+      <div className="relative mx-auto aspect-[1190/1684] max-h-[min(72vh,920px)] w-full overflow-hidden border-[3px] border-border bg-white">
         <Image
           src={src}
           alt={alt}
@@ -182,7 +197,7 @@ function DashboardModal({
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 16, scale: 0.98 }}
           transition={{ type: "spring", stiffness: 120, damping: 16 }}
-          className="relative z-10 flex max-h-[94vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border-[3px] border-border bg-card shadow-[8px_8px_0_var(--shadow)] sm:rounded-3xl"
+          className="relative z-10 flex max-h-[94vh] w-full max-w-5xl flex-col overflow-hidden border-[3px] border-border bg-card shadow-[8px_8px_0_var(--shadow)]"
           onClick={(event) => event.stopPropagation()}
         >
           <div className="flex shrink-0 items-center justify-between gap-4 border-b-[3px] border-border px-4 py-3 sm:px-6 sm:py-4">
@@ -206,17 +221,13 @@ function DashboardModal({
 
           <div className="min-h-0 flex-1 overflow-y-auto">
             <div className="grid gap-0 lg:grid-cols-2">
-              <div className={cn("space-y-4 border-b-[3px] border-border p-4 sm:p-5 lg:border-b-0 lg:border-r-[3px]", styles.frame)}>
-                <PosterFrame src={project.image} alt={work.title} theme={theme} />
+              <div className="space-y-4 border-b-[3px] border-border bg-card p-4 sm:p-5 lg:border-b-0 lg:border-r-[3px]">
+                <PosterFrame src={project.image} alt={work.title} />
                 {visuals.length > 1 ? (
                   <div className="grid gap-3 sm:grid-cols-2">
                     {visuals.slice(1).map((src, index) => (
                       <div key={src} className="space-y-2">
-                        <PosterFrame
-                          src={src}
-                          alt={`${work.title} ${index + 2}`}
-                          theme={theme}
-                        />
+                        <PosterFrame src={src} alt={`${work.title} ${index + 2}`} />
                         {visualCaptions[index + 1] ? (
                           <p className="px-1 text-[11px] font-bold leading-relaxed text-muted sm:text-xs">
                             {visualCaptions[index + 1]}
@@ -239,23 +250,29 @@ function DashboardModal({
                 </p>
 
                 {caseStudy?.metrics ? (
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3">
                     {caseStudy.metrics.r2 ? (
-                      <div className="rounded-xl border-[3px] border-border bg-accent p-3 text-center text-white">
-                        <p className="text-[10px] font-black uppercase text-white/80">R²</p>
-                        <p className="font-display text-lg font-black">{caseStudy.metrics.r2}</p>
+                      <div className="brutal-metric p-3">
+                        <p className="text-[10px] font-black uppercase text-muted">R²</p>
+                        <p className="mt-1 font-display text-lg font-black sm:text-xl">
+                          {caseStudy.metrics.r2}
+                        </p>
                       </div>
                     ) : null}
                     {caseStudy.metrics.mae ? (
-                      <div className="rounded-xl border-[3px] border-border bg-accent-2 p-3 text-center">
+                      <div className="brutal-metric p-3">
                         <p className="text-[10px] font-black uppercase text-muted">MAE</p>
-                        <p className="font-display text-lg font-black">{caseStudy.metrics.mae}</p>
+                        <p className="mt-1 font-display text-lg font-black sm:text-xl">
+                          {caseStudy.metrics.mae}
+                        </p>
                       </div>
                     ) : null}
                     {caseStudy.metrics.mse ? (
-                      <div className="rounded-xl border-[3px] border-border bg-accent-4/30 p-3 text-center">
+                      <div className="brutal-metric p-3">
                         <p className="text-[10px] font-black uppercase text-muted">MSE</p>
-                        <p className="font-display text-lg font-black">{caseStudy.metrics.mse}</p>
+                        <p className="mt-1 font-display text-lg font-black sm:text-xl">
+                          {caseStudy.metrics.mse}
+                        </p>
                       </div>
                     ) : null}
                   </div>
@@ -263,13 +280,15 @@ function DashboardModal({
 
                 {caseStudy ? (
                   <>
-                    <div className="border-[3px] border-border bg-accent-2 p-4">
+                    <div className={cn("border-[3px] border-border p-4", styles.panel)}>
                       <h3 className="text-xs font-black uppercase tracking-widest sm:text-sm">
                         {tCase("labels.overview")}
                       </h3>
                       <p className="mt-2 text-sm leading-relaxed">{caseStudy.overview}</p>
                       {caseStudy.metricsSummary ? (
-                        <p className="mt-2 text-xs font-bold sm:text-sm">{caseStudy.metricsSummary}</p>
+                        <p className="mt-2 text-xs font-bold sm:text-sm">
+                          {caseStudy.metricsSummary}
+                        </p>
                       ) : null}
                     </div>
 
@@ -291,7 +310,11 @@ function DashboardModal({
                       <ul className="mt-3 space-y-2">
                         {caseStudy.highlights.map((item) => (
                           <li key={item} className="flex gap-2 text-sm leading-relaxed">
-                            <Sparkles size={14} className="mt-0.5 shrink-0 text-accent" aria-hidden />
+                            <Sparkles
+                              size={14}
+                              className="mt-0.5 shrink-0 text-accent"
+                              aria-hidden
+                            />
                             {item}
                           </li>
                         ))}
@@ -302,7 +325,7 @@ function DashboardModal({
                       {caseStudy.tools.map((tool) => (
                         <span
                           key={tool}
-                          className="rounded-full border-2 border-border bg-accent-4/20 px-3 py-1 text-xs font-black uppercase"
+                          className={cn("brutal-tag px-3 py-1 text-xs", styles.badge)}
                         >
                           {tool}
                         </span>
@@ -316,10 +339,7 @@ function DashboardModal({
                     href={project.documentUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={cn(
-                      "project-pill inline-flex items-center rounded-full bg-accent-2 px-5 py-2.5 text-sm font-black uppercase tracking-wide",
-                      styles.pill,
-                    )}
+                    className="project-pill pop-btn bg-accent-3 px-5 py-2.5 text-sm"
                   >
                     {t("dashboards.openPortfolio")}
                   </a>
@@ -344,6 +364,8 @@ export function DashboardGallery({ items }: DashboardGalleryProps) {
 
   const featured = items.find((item) => item.id === "pertamina-lstm-pipes") ?? items[0];
   const rest = items.filter((item) => item.id !== featured?.id);
+  const featuredTheme = featured?.dashboardTheme ?? "lstm";
+  const featuredStyles = themeStyles[featuredTheme];
 
   return (
     <>
@@ -353,36 +375,23 @@ export function DashboardGallery({ items }: DashboardGalleryProps) {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          className="relative overflow-hidden rounded-3xl border-[3px] border-border bg-[linear-gradient(135deg,#0f172a_0%,#1e3a8a_50%,#172554_100%)] p-5 text-white shadow-[8px_8px_0_var(--shadow)] sm:p-7 lg:p-8"
+          className="brutal-card border-[3px] border-border bg-card p-6 shadow-[8px_8px_0_var(--shadow)] sm:p-8 lg:p-10"
         >
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.12] [background-image:radial-gradient(circle,#fff_1px,transparent_1px)] [background-size:20px_20px]"
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/20 blur-3xl"
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute -bottom-20 -left-10 h-56 w-56 rounded-full bg-accent-4/15 blur-3xl"
-            aria-hidden
-          />
-
-          <div className="relative space-y-6">
-            <div className="space-y-3">
-              <span className="inline-flex items-center gap-2 rounded-full border-2 border-white/25 bg-white/10 px-3 py-1.5 text-[10px] font-black uppercase tracking-widest shadow-[3px_3px_0_rgba(0,0,0,0.35)] sm:text-xs">
-                <Factory size={14} strokeWidth={2.5} />
+          <div className="flex flex-col gap-6 sm:gap-7 lg:gap-8">
+            <div className="flex flex-col gap-4 sm:gap-5">
+              <span className="brutal-tag inline-flex w-fit items-center gap-2 px-3 py-1.5 text-[10px] sm:text-xs">
+                <Factory size={14} strokeWidth={3} />
                 {t("dashboards.caseStudyBadge")}
               </span>
-              <h3 className="font-display text-2xl font-black uppercase leading-[1.1] sm:text-3xl lg:text-[2.75rem]">
+              <h3 className="font-display text-2xl font-black uppercase leading-[1.1] sm:text-3xl lg:text-4xl">
                 {t("dashboards.heroTitle")}
               </h3>
-              <p className="max-w-3xl text-sm leading-relaxed text-white/90 sm:text-base lg:text-lg">
+              <p className="max-w-3xl text-sm leading-relaxed text-muted sm:text-base lg:text-lg">
                 {t("dashboards.heroDescription")}
               </p>
             </div>
 
-            <dl className="grid gap-0 overflow-hidden rounded-2xl border-2 border-white/20 bg-white/[0.07] backdrop-blur-sm sm:grid-cols-2">
+            <dl className="grid gap-3 sm:grid-cols-2 sm:gap-4">
               {(
                 [
                   ["metaIndustryLabel", "metaIndustry"],
@@ -394,32 +403,27 @@ export function DashboardGallery({ items }: DashboardGalleryProps) {
                 <div
                   key={valueKey}
                   className={cn(
-                    "flex items-baseline gap-3 border-white/10 px-4 py-3.5 sm:px-5 sm:py-4",
-                    index < 2 && "border-b",
-                    index % 2 === 0 && "sm:border-r",
+                    "border-[3px] border-border p-4 sm:p-5",
+                    heroMetaVariants[index],
                   )}
                 >
-                  <dt className="w-[5.75rem] shrink-0 text-[10px] font-black uppercase tracking-widest text-white/50 sm:w-[6.25rem] sm:text-xs">
-                    {t(`dashboards.${labelKey}`)}:
+                  <dt className="text-[10px] font-black uppercase tracking-widest text-muted sm:text-xs">
+                    {t(`dashboards.${labelKey}`)}
                   </dt>
-                  <dd className="min-w-0 text-sm font-bold leading-snug text-white sm:text-base">
+                  <dd className="mt-2 text-sm font-bold leading-snug sm:text-base">
                     {t(`dashboards.${valueKey}`)}
                   </dd>
                 </div>
               ))}
             </dl>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {(t.raw("dashboards.heroTags") as string[]).map((tag, index) => (
                 <span
                   key={tag}
                   className={cn(
-                    "rounded-full border-2 px-3 py-1.5 text-[10px] font-black uppercase tracking-wide shadow-[2px_2px_0_rgba(0,0,0,0.25)] sm:text-xs",
-                    index % 3 === 0
-                      ? "border-white/25 bg-white/15 text-white"
-                      : index % 3 === 1
-                        ? "border-accent-2/40 bg-accent-2/90 text-fg"
-                        : "border-accent-4/40 bg-accent-4/80 text-white",
+                    "brutal-tag px-3 py-1.5 text-[10px] sm:text-xs",
+                    heroTagVariants[index % heroTagVariants.length],
                   )}
                 >
                   {tag}
@@ -436,80 +440,87 @@ export function DashboardGallery({ items }: DashboardGalleryProps) {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             className={cn(
-              "project-card group relative overflow-hidden rounded-3xl bg-card",
-              themeStyles[featured.dashboardTheme ?? "lstm"].card,
+              "project-card project-category-card group relative overflow-hidden bg-card",
+              featuredStyles.card,
             )}
           >
             <div
-              className={cn("absolute inset-x-0 top-0 h-2", themeStyles[featured.dashboardTheme ?? "lstm"].stripe)}
+              className={cn(
+                "absolute inset-x-0 top-0 h-2 border-b-[3px] border-border",
+                featuredStyles.stripe,
+              )}
               aria-hidden
             />
 
-            <div className="grid gap-6 p-5 sm:p-7 lg:grid-cols-12 lg:items-start lg:gap-8 lg:p-8">
-              <div className="space-y-4 lg:col-span-5">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1 text-[10px] font-black uppercase text-white sm:text-xs">
-                    <Sparkles size={12} />
+            <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-12 lg:items-center lg:gap-12 lg:p-12 xl:gap-14">
+              <div className="flex flex-col justify-center gap-8 sm:gap-9 lg:col-span-5 lg:gap-10 lg:py-4 xl:gap-12">
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                  <span
+                    className={cn(
+                      "brutal-tag inline-flex items-center gap-1.5 px-3 py-1 text-[10px] sm:text-xs",
+                      featuredStyles.badge,
+                    )}
+                  >
+                    <Sparkles size={12} strokeWidth={3} />
                     {t("dashboards.featured")}
                   </span>
                   {featured.metricHighlight ? (
-                    <span className="rounded-full border-2 border-border bg-accent-2 px-3 py-1 text-[10px] font-black uppercase sm:text-xs">
+                    <span
+                      className={cn(
+                        "brutal-tag px-3 py-1 text-[10px] sm:text-xs",
+                        featuredStyles.badge,
+                      )}
+                    >
                       {featured.metricHighlight}
                     </span>
                   ) : null}
                 </div>
 
                 <div>
-                  <h3 className="font-display text-2xl font-black uppercase leading-tight sm:text-3xl">
+                  <h3 className="font-display text-2xl font-black uppercase leading-tight sm:text-3xl lg:text-4xl">
                     {copy[featured.id].title}
                   </h3>
-                  <p className="mt-2 text-sm font-bold text-fg">{copy[featured.id].detail}</p>
+                  <p className="mt-4 text-sm font-bold text-fg sm:mt-5 sm:text-base">
+                    {copy[featured.id].detail}
+                  </p>
                 </div>
 
-                <p className="text-sm leading-relaxed text-muted sm:text-base">
+                <p className="text-sm leading-relaxed text-muted sm:text-base lg:max-w-prose lg:text-[1.05rem] lg:leading-8">
                   {copy[featured.id].description}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3 sm:gap-4">
                   {featured.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border-2 border-border bg-accent-2 px-3 py-1 text-[10px] font-black uppercase sm:text-xs"
+                      className={cn(
+                        "brutal-tag px-3 py-1 text-[10px] sm:text-xs",
+                        featuredStyles.badge,
+                      )}
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-4 pt-2 sm:gap-5 sm:pt-4 lg:pt-6">
                   <button
                     type="button"
                     onClick={() => setSelected(featured)}
                     className={cn(
-                      "project-pill inline-flex items-center rounded-full bg-accent-2 px-5 py-2.5 text-sm font-black uppercase tracking-wide",
-                      themeStyles[featured.dashboardTheme ?? "lstm"].pill,
+                      "project-pill pop-btn px-5 py-2.5 text-sm",
+                      featuredStyles.pill,
                     )}
                   >
                     {t("dashboards.viewDashboard")}
                   </button>
-                  {featured.documentUrl ? (
-                    <a
-                      href={featured.documentUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-pill project-pill--pink inline-flex items-center rounded-full bg-accent-3 px-5 py-2.5 text-sm font-black uppercase tracking-wide text-white"
-                    >
-                      {t("dashboards.openPortfolio")}
-                    </a>
-                  ) : null}
                 </div>
               </div>
 
-              <div className="relative lg:col-span-7">
+              <div className="relative lg:col-span-7 lg:self-center">
                 <PosterFrame
                   src={featured.image}
                   alt={copy[featured.id].title}
-                  theme={featured.dashboardTheme ?? "lstm"}
                   onClick={() => setSelected(featured)}
                   priority
                 />
@@ -518,7 +529,7 @@ export function DashboardGallery({ items }: DashboardGalleryProps) {
           </motion.article>
         ) : null}
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
           {rest.map((project, index) => {
             const work = copy[project.id];
             const theme = project.dashboardTheme ?? "rf";
@@ -531,25 +542,40 @@ export function DashboardGallery({ items }: DashboardGalleryProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ delay: index * 0.08, duration: 0.5 }}
-                className={cn("project-card group overflow-hidden rounded-3xl bg-card", styles.card)}
+                className={cn(
+                  "project-card project-category-card group overflow-hidden bg-card",
+                  styles.card,
+                )}
               >
-                <div className={cn("h-1.5", styles.stripe)} aria-hidden />
+                <div
+                  className={cn("h-1.5 border-b-[3px] border-border", styles.stripe)}
+                  aria-hidden
+                />
 
                 <div className="space-y-4 p-4 sm:p-5">
                   <PosterFrame
                     src={project.image}
                     alt={work.title}
-                    theme={theme}
                     onClick={() => setSelected(project)}
                   />
 
-                  <div className="space-y-3 px-1">
+                  <div className="space-y-4 px-1">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className={cn("rounded-full px-2.5 py-1 text-[10px] font-black uppercase sm:text-xs", styles.badge)}>
+                      <span
+                        className={cn(
+                          "brutal-tag px-2.5 py-1 text-[10px] sm:text-xs",
+                          styles.badge,
+                        )}
+                      >
                         {t(`dashboards.themes.${theme}`)}
                       </span>
                       {project.metricHighlight ? (
-                        <span className="rounded-full border-2 border-border bg-accent px-2.5 py-1 text-[10px] font-black uppercase text-white sm:text-xs">
+                        <span
+                          className={cn(
+                            "brutal-tag px-2.5 py-1 text-[10px] sm:text-xs",
+                            styles.badge,
+                          )}
+                        >
                           {project.metricHighlight}
                         </span>
                       ) : null}
@@ -559,33 +585,23 @@ export function DashboardGallery({ items }: DashboardGalleryProps) {
                       <h3 className="font-display text-lg font-black uppercase leading-snug sm:text-xl">
                         {work.title}
                       </h3>
-                      <p className="mt-1 text-sm font-bold text-fg">{work.detail}</p>
+                      <p className="mt-2 text-sm font-bold text-fg">{work.detail}</p>
                     </div>
 
-                    <p className="line-clamp-3 text-sm leading-relaxed text-muted">{work.description}</p>
+                    <p className="line-clamp-3 text-sm leading-relaxed text-muted">
+                      {work.description}
+                    </p>
 
-                    <div className="flex flex-wrap gap-3 pt-1">
-                      <button
-                        type="button"
-                        onClick={() => setSelected(project)}
-                        className={cn(
-                          "project-pill inline-flex items-center rounded-full bg-accent-2 px-4 py-2 text-xs font-black uppercase sm:text-sm",
-                          styles.pill,
-                        )}
-                      >
-                        {t("dashboards.viewDashboard")}
-                      </button>
-                      {project.documentUrl ? (
-                        <a
-                          href={project.documentUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="project-pill project-pill--pink inline-flex items-center rounded-full bg-accent-3 px-4 py-2 text-xs font-black uppercase tracking-wide text-white sm:px-5 sm:py-2.5 sm:text-sm"
-                        >
-                          {t("dashboards.openPortfolio")}
-                        </a>
-                      ) : null}
-                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setSelected(project)}
+                      className={cn(
+                        "project-pill pop-btn px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm",
+                        styles.pill,
+                      )}
+                    >
+                      {t("dashboards.viewDashboard")}
+                    </button>
                   </div>
                 </div>
               </motion.article>

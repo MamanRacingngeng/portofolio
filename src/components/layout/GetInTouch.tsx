@@ -8,7 +8,7 @@ import { AccentButton } from "@/components/ui/AccentButton";
 import { cn } from "@/lib/utils";
 
 type ContactItem = {
-  id: "email" | "linkedin" | "github" | "resume" | "whatsapp";
+  id: "email" | "linkedin" | "github" | "discord" | "resume" | "whatsapp";
   href: string;
   external: boolean;
   className: string;
@@ -32,6 +32,12 @@ const contactItems: ContactItem[] = [
     href: siteConfig.social.github,
     external: true,
     className: "bg-card",
+  },
+  {
+    id: "discord",
+    href: siteConfig.social.discord,
+    external: true,
+    className: "bg-accent text-white",
   },
   {
     id: "resume",
