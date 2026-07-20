@@ -45,7 +45,7 @@
     ],
     "bio": "Saya membangun produk digital berbasis data dengan menggabungkan machine learning, analitik, dan pengembangan perangkat lunak full-stack untuk mengubah data menjadi solusi yang memberikan dampak nyata. Pekerjaan saya mencakup seluruh proses pengembangan, mulai dari eksplorasi data, feature engineering, pelatihan dan evaluasi model, hingga deployment aplikasi web yang siap digunakan oleh pengguna. Berbekal sertifikasi BNSP Associate Data Scientist, pengalaman riset machine learning, serta pengalaman mengembangkan berbagai aplikasi, saya mampu menjembatani dunia Data Science dan Software Development. Saya mengembangkan pipeline data, model prediktif, dashboard analitik, hingga aplikasi web modern menggunakan Python, TensorFlow, Next.js, React, dan Laravel, sehingga model yang dibangun tidak hanya akurat, tetapi juga dapat dimanfaatkan dalam produk yang siap digunakan. Saya percaya bahwa nilai sebuah model tidak berhenti pada metrik evaluasi, tetapi ketika berhasil diimplementasikan menjadi solusi digital yang stabil, skalabel, dan mampu membantu organisasi mengambil keputusan dengan lebih cepat, lebih tepat, dan berbasis data.",
  "exploreProjects": "Lihat Proyek",
- "downloadCv": "Unduh Resume",
+ "downloadCv": "Unduh CV",
  "profilePhoto": "Foto profil",
  "status": "Terbuka untuk peluang",
  "roleBadge": "Data & AI",
@@ -2127,12 +2127,12 @@
  "github": "GitHub",
  "linkedin": "LinkedIn",
  "email": "Email",
- "resume": "Resume",
+ "resume": "CV",
  "whatsapp": "WhatsApp",
  "githubAria": "Kunjungi profil GitHub",
  "linkedinAria": "Kunjungi profil LinkedIn",
  "emailAria": "Kirim email",
- "resumeAria": "Unduh resume",
+ "resumeAria": "Unduh CV",
  "whatsappAria": "Chat via WhatsApp"
  }
  },

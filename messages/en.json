@@ -45,7 +45,7 @@
     ],
     "bio": "I build data-driven digital products by combining machine learning, analytics, and full-stack software development to turn data into solutions that create real impact. My work spans the entire development process — from data exploration and feature engineering to model training, evaluation, and deploying web applications that users can rely on. With BNSP Associate Data Scientist certification, hands-on machine learning research, and experience building diverse applications, I bridge Data Science and Software Development. I develop data pipelines, predictive models, analytics dashboards, and modern web applications using Python, TensorFlow, Next.js, React, and Laravel — so the models I build are not only accurate, but also usable in production-ready products. I believe a model's value does not stop at evaluation metrics, but when it is implemented as a stable, scalable digital solution that helps organizations make faster, sharper, data-driven decisions.",
  "exploreProjects": "View Projects",
- "downloadCv": "Download Resume",
+ "downloadCv": "Download CV",
  "profilePhoto": "Profile photo",
  "status": "Open to opportunities",
  "roleBadge": "Data & AI",
@@ -2127,12 +2127,12 @@
  "github": "GitHub",
  "linkedin": "LinkedIn",
  "email": "Email",
- "resume": "Resume",
+ "resume": "CV",
  "whatsapp": "WhatsApp",
  "githubAria": "Visit GitHub profile",
  "linkedinAria": "Visit LinkedIn profile",
  "emailAria": "Send an email",
- "resumeAria": "Download resume",
+ "resumeAria": "Download CV",
  "whatsappAria": "Chat on WhatsApp"
  }
  },
