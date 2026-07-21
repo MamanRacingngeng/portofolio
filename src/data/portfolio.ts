@@ -9,6 +9,7 @@ export const siteConfig = {
   emailComposeUrl: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contactEmail)}`,
   profileImage: "/images/profile.png",
   resumeUrl: "/cv.pdf",
+  resumeFileName: "CV_Rahman_Nendhiarto.pdf",
   social: {
     github: "https://github.com/MamanRacingngeng",
     linkedin: "https://www.linkedin.com/in/rahmanarto",

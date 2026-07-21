@@ -9,6 +9,7 @@ type ButtonVariant = "primary" | "secondary" | "ghost";
 interface AccentButtonProps {
   variant?: ButtonVariant;
   href?: string;
+  download?: string;
   children: React.ReactNode;
   className?: string;
   type?: "button" | "submit";
@@ -33,6 +34,7 @@ function isAppRoute(href: string) {
 export function AccentButton({
   variant = "primary",
   href,
+  download,
   children,
   className,
   type = "button",
@@ -49,7 +51,7 @@ export function AccentButton({
       );
     }
     return (
-      <a href={href} className={classes}>
+      <a href={href} download={download} className={classes}>
         {children}
       </a>
     );

@@ -41,13 +41,13 @@
  "retry": "Coba lagi"
  },
  "hero": {
-    "badge": "SAINS DATA • PENGEMBANGAN PERANGKAT LUNAK",
+    "badge": "AI & MACHINE LEARNING • PENGEMBANGAN PERANGKAT LUNAK",
     "taglineLines": [
-      "Mengubah data menjadi insight dan",
-      "membangun solusi digital siap produksi",
-      "dengan machine learning sebagai inti."
+      "Membangun produk digital cerdas lewat",
+      "rekayasa perangkat lunak modern dan",
+      "teknologi berbasis data."
     ],
-    "bio": "Saya membangun produk digital berbasis data dengan menggabungkan machine learning, analitik, dan pengembangan perangkat lunak full-stack untuk mengubah data menjadi solusi yang memberikan dampak nyata. Pekerjaan saya mencakup seluruh proses pengembangan, mulai dari eksplorasi data, feature engineering, pelatihan dan evaluasi model, hingga deployment aplikasi web yang siap digunakan oleh pengguna. Berbekal sertifikasi BNSP Associate Data Scientist, pengalaman riset machine learning, serta pengalaman mengembangkan berbagai aplikasi, saya mampu menjembatani dunia Data Science dan Software Development. Saya mengembangkan pipeline data, model prediktif, dashboard analitik, hingga aplikasi web modern menggunakan Python, TensorFlow, Next.js, React, dan Laravel, sehingga model yang dibangun tidak hanya akurat, tetapi juga dapat dimanfaatkan dalam produk yang siap digunakan. Saya percaya bahwa nilai sebuah model tidak berhenti pada metrik evaluasi, tetapi ketika berhasil diimplementasikan menjadi solusi digital yang stabil, skalabel, dan mampu membantu organisasi mengambil keputusan dengan lebih cepat, lebih tepat, dan berbasis data.",
+    "bio": "Spesialis AI & Machine Learning dengan keahlian Software Development, berpengalaman membangun produk digital cerdas melalui rekayasa perangkat lunak modern dan teknologi berbasis data. Saya telah mengembangkan model AI prediktif, aplikasi web end-to-end, dan platform analitik interaktif dari konsep hingga deployment melalui riset, proyek klien, dan magang profesional. Saya berkomitmen menghadirkan perangkat lunak yang scalable, maintainable, dan berpusat pada pengguna untuk mengubah data kompleks menjadi solusi nyata yang berdampak.",
  "exploreProjects": "Lihat Proyek",
  "downloadCv": "Unduh CV",
  "profilePhoto": "Foto profil",
@@ -85,9 +85,24 @@
  "year": "2025",
  "entries": [
  {
- "title": "Riset Skripsi",
+ "title": "Machine Learning Developer",
  "hasDetail": true,
  "detailId": "ml-research"
+ },
+ {
+ "title": "Lead Developer & Project Manager",
+ "hasDetail": true,
+ "detailId": "istana-sayur"
+ },
+ {
+ "title": "Associate Data Scientist (BNSP)",
+ "hasDetail": true,
+ "detailId": "bnsp-cert"
+ },
+ {
+ "title": "AI & Machine Learning Trainee",
+ "hasDetail": true,
+ "detailId": "komdigi-trainee"
  },
  {
  "title": "Full Stack Developer Intern",
@@ -95,39 +110,43 @@
  "detailId": "bbkb-intern"
  }
  ]
- },
- {
- "year": "2024",
- "entries": [
- {
-        "title": "Lead Developer & Project Manager",
- "hasDetail": true,
- "detailId": "istana-sayur"
- }
- ]
  }
  ],
  "details": {
  "ml-research": {
  "period": "2025 – Sekarang",
- "role": "Undergraduate Researcher",
+ "role": "Machine Learning Developer",
  "organization": "Universitas Ahmad Dahlan",
- "project": "Riset Prediksi Kualitas Udara PM2.5",
- "description": "Melakukan riset skripsi fokus pada prediksi kualitas udara PM2.5 menggunakan model hybrid Sine Cosine Algorithm (SCA) dan Long Short-Term Memory (LSTM). Bertanggung jawab atas pengumpulan dan preprocessing dataset, feature engineering, optimasi model deep learning, serta evaluasi performa prediksi menggunakan RMSE, MAPE, dan R². Riset ini mendemonstrasikan penerapan praktis teknik machine learning untuk menyelesaikan tantangan lingkungan nyata dan menjadi fondasi publikasi ilmiah."
+ "project": "UdaraCast · Prediksi Kualitas Udara PM2.5",
+ "description": "Mengembangkan solusi forecasting kualitas udara PM2.5 end-to-end dengan mengintegrasikan Sine Cosine Algorithm (SCA) dan Long Short-Term Memory (LSTM) untuk mengoptimalkan performa prediksi. Merancang pipeline machine learning lengkap, termasuk preprocessing data, feature engineering, hyperparameter tuning, dan evaluasi performa menggunakan RMSE, MAPE, dan R². Mendesain dan mendeploy UdaraCast, platform forecasting berbasis web yang memungkinkan pengguna mengeksplorasi prediksi PM2.5 interaktif dan insight lingkungan di berbagai kota dan tahun."
  },
  "bbkb-intern": {
- "period": "2025",
+ "period": "Des 2025 – Jan 2026",
  "role": "Full Stack Developer Intern",
- "organization": "BBSPJIKB Yogyakarta",
- "project": "Kementerian Perindustrian Republik Indonesia",
- "description": "Berkontribusi dalam pengembangan SIMAGANG, sistem web pendaftaran dan manajemen magang yang dirancang untuk digitalisasi administrasi magang di BBSPJIKB Yogyakarta. Berkolaborasi dengan tim pengembang untuk membangun fitur frontend dan backend, mengintegrasikan fungsionalitas database, mengimplementasikan autentikasi, serta mengoptimalkan alur kerja aplikasi. Pengalaman ini memperkuat keterampilan praktis saya dalam pengembangan full-stack, kerja tim, dan penyampaian solusi digital yang aman, scalable, dan berpusat pada pengguna."
+ "organization": "Kementerian Perindustrian RI · BBSPJIKB Yogyakarta",
+ "project": "Platform Magang SIMAGANG",
+ "description": "Mengembangkan dan memelihara SIMAGANG, platform pendaftaran dan manajemen magang berbasis web yang mendigitalisasi administrasi magang di BBSPJIKB Yogyakarta. Mengimplementasikan fitur frontend dan backend, autentikasi, integrasi database, dan otomasi workflow menggunakan Laravel, MySQL, dan teknologi web modern. Berkolaborasi dengan tim lintas fungsi untuk menghadirkan aplikasi yang aman, scalable, dan berpusat pada pengguna guna meningkatkan proses pendaftaran dan manajemen magang."
  },
  "istana-sayur": {
- "period": "2024 – 2025",
+ "period": "2025 – Sekarang",
       "role": "Lead Developer & Project Manager",
       "organization": "Istana Sayur Buah",
-      "project": "Proyek E-Commerce Klien",
-      "description": "Memimpin pengembangan end-to-end website e-commerce produksi untuk Istana Sayur Buah, mengkoordinasikan tim multidisiplin dari perencanaan hingga deployment. Mengumpulkan kebutuhan bisnis bersama stakeholder, menentukan scope produk, dan mengirim storefront full-stack responsif dengan katalog berbasis kategori, halaman kepercayaan, dan alur belanja lengkap. Proyek ini memperkuat keahlian leadership, komunikasi, project management, dan delivery full-stack dalam engagement klien nyata."
+      "project": "Platform E-Commerce",
+      "description": "Memimpin pengembangan end-to-end platform e-commerce siap produksi untuk retailer sayur dan buah segar, dari analisis kebutuhan bisnis hingga deployment. Mengarahkan perencanaan proyek, mengkoordinasikan aktivitas pengembangan, dan mengimplementasikan aplikasi full-stack responsif dengan manajemen katalog produk, alur belanja, serta pengalaman pengguna yang berfokus pada pelanggan. Menghadirkan solusi digital yang scalable sambil memperkuat kepemimpinan, komunikasi stakeholder, dan kemampuan project management."
+ },
+ "komdigi-trainee": {
+ "period": "Agu 2025",
+ "role": "AI & Machine Learning Trainee",
+ "organization": "Digital Talent Scholarship · Komdigi",
+ "project": "Pelatihan AI/ML Berbasis Proyek",
+ "description": "Menyelesaikan program pelatihan intensif berbasis proyek di bidang Artificial Intelligence, Machine Learning, dan Data Science. Mengembangkan workflow machine learning end-to-end meliputi preprocessing data, feature engineering, predictive modeling, dan evaluasi model menggunakan Python, Pandas, Scikit-learn, dan TensorFlow. Menerapkan prinsip software engineering untuk membangun solusi berbasis AI pada dataset nyata sambil memperkuat keterampilan praktis pengembangan aplikasi cerdas."
+ },
+ "bnsp-cert": {
+ "period": "Sep 2025",
+ "role": "Associate Data Scientist Candidate",
+ "organization": "BNSP · LSP Universitas Ahmad Dahlan",
+ "project": "Uji Kompetensi Nasional",
+ "description": "Berhasil menyelesaikan uji kompetensi nasional kualifikasi Associate Data Scientist, mendemonstrasikan keahlian praktis di bidang Artificial Intelligence, machine learning, predictive analytics, preprocessing data, feature engineering, dan evaluasi model. Memvalidasi kompetensi teknis melalui asesmen berbasis kompetensi yang selaras dengan Standar Kompetensi Kerja Nasional Indonesia (SKKNI)."
  }
  }
  },

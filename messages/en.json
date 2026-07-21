@@ -41,13 +41,13 @@
  "retry": "Try again"
  },
  "hero": {
-    "badge": "DATA SCIENCE • SOFTWARE DEVELOPMENT",
+    "badge": "AI & MACHINE LEARNING • SOFTWARE DEVELOPMENT",
     "taglineLines": [
-      "Turning data into insight and",
-      "building production-ready digital solutions",
-      "with machine learning at the core."
+      "Building intelligent digital products through",
+      "modern software engineering and",
+      "data-driven technologies."
     ],
-    "bio": "I build data-driven digital products by combining machine learning, analytics, and full-stack software development to turn data into solutions that create real impact. My work spans the entire development process — from data exploration and feature engineering to model training, evaluation, and deploying web applications that users can rely on. With BNSP Associate Data Scientist certification, hands-on machine learning research, and experience building diverse applications, I bridge Data Science and Software Development. I develop data pipelines, predictive models, analytics dashboards, and modern web applications using Python, TensorFlow, Next.js, React, and Laravel — so the models I build are not only accurate, but also usable in production-ready products. I believe a model's value does not stop at evaluation metrics, but when it is implemented as a stable, scalable digital solution that helps organizations make faster, sharper, data-driven decisions.",
+    "bio": "AI & Machine Learning specialist with expertise in Software Development, experienced in building intelligent digital products through modern software engineering and data-driven technologies. I have developed predictive AI models, end-to-end web applications, and interactive analytics platforms from concept to deployment through research, client projects, and professional internships. I am passionate about delivering scalable, maintainable, and user-centered software that transforms complex data into impactful real-world solutions.",
  "exploreProjects": "View Projects",
  "downloadCv": "Download CV",
  "profilePhoto": "Profile photo",
@@ -85,9 +85,24 @@
  "year": "2025",
  "entries": [
  {
- "title": "Undergraduate Research",
+ "title": "Machine Learning Developer",
  "hasDetail": true,
  "detailId": "ml-research"
+ },
+ {
+ "title": "Lead Developer & Project Manager",
+ "hasDetail": true,
+ "detailId": "istana-sayur"
+ },
+ {
+ "title": "Associate Data Scientist (BNSP)",
+ "hasDetail": true,
+ "detailId": "bnsp-cert"
+ },
+ {
+ "title": "AI & Machine Learning Trainee",
+ "hasDetail": true,
+ "detailId": "komdigi-trainee"
  },
  {
  "title": "Full Stack Developer Intern",
@@ -95,39 +110,43 @@
  "detailId": "bbkb-intern"
  }
  ]
- },
- {
- "year": "2024",
- "entries": [
- {
-        "title": "Lead Developer & Project Manager",
- "hasDetail": true,
- "detailId": "istana-sayur"
- }
- ]
  }
  ],
  "details": {
  "ml-research": {
  "period": "2025 – Present",
- "role": "Undergraduate Researcher",
+ "role": "Machine Learning Developer",
  "organization": "Universitas Ahmad Dahlan",
- "project": "PM2.5 Air Quality Prediction Research",
- "description": "Conducting undergraduate research focused on PM2.5 air quality prediction using a hybrid Sine Cosine Algorithm (SCA) and Long Short-Term Memory (LSTM) model. Responsible for collecting and preprocessing datasets, performing feature engineering, optimizing deep learning models, and evaluating prediction performance using RMSE, MAPE, and R². The research demonstrates the practical application of machine learning techniques to address real-world environmental challenges and serves as the foundation for scientific publication."
+ "project": "UdaraCast · PM2.5 Air Quality Forecasting",
+ "description": "Developed an end-to-end PM2.5 air quality forecasting solution by integrating the Sine Cosine Algorithm (SCA) with Long Short-Term Memory (LSTM) to optimize predictive performance. Engineered the complete machine learning pipeline, including data preprocessing, feature engineering, hyperparameter tuning, and performance evaluation using RMSE, MAPE, and R². Designed and deployed UdaraCast, a web-based forecasting platform that enables users to explore interactive PM2.5 predictions and environmental insights across multiple cities and years."
  },
  "bbkb-intern": {
- "period": "2025",
+ "period": "Dec 2025 – Jan 2026",
  "role": "Full Stack Developer Intern",
- "organization": "BBSPJIKB Yogyakarta",
- "project": "Ministry of Industry of the Republic of Indonesia",
- "description": "Contributed to the development of SIMAGANG, a web-based internship registration and management system designed to digitize internship administration within BBSPJIKB Yogyakarta. Collaborated with the development team to build frontend and backend features, integrate database functionality, implement authentication, and optimize application workflows. This experience strengthened my practical skills in full-stack software development, teamwork, and delivering secure, scalable, and user-centered digital solutions."
+ "organization": "Ministry of Industry of Indonesia · BBSPJIKB Yogyakarta",
+ "project": "SIMAGANG Internship Platform",
+ "description": "Developed and maintained SIMAGANG, a web-based internship registration and management platform that digitizes internship administration at BBSPJIKB Yogyakarta. Implemented frontend and backend features, authentication, database integration, and workflow automation using Laravel, MySQL, and modern web technologies. Collaborated with cross-functional teams to deliver a secure, scalable, and user-centered application that improved internship registration and management processes."
  },
  "istana-sayur": {
- "period": "2024 – 2025",
+ "period": "2025 – Present",
       "role": "Lead Developer & Project Manager",
       "organization": "Istana Sayur Buah",
-      "project": "Client E-Commerce Project",
-      "description": "Led the end-to-end development of a production e-commerce website for Istana Sayur Buah, coordinating a multidisciplinary team from planning through deployment. Gathered business requirements with stakeholders, scoped the product, and delivered a responsive full-stack storefront with category-led catalog, trust pages, and a complete shopping flow. This project strengthened my leadership, communication, project management, and full-stack delivery skills in a real client engagement."
+      "project": "E-Commerce Platform",
+      "description": "Led the end-to-end development of a production-ready e-commerce platform for a fresh produce retailer, from business requirement analysis through deployment. Directed project planning, coordinated development activities, and implemented a responsive full-stack application featuring product catalog management, shopping workflows, and customer-focused user experiences. Delivered a scalable digital solution while strengthening leadership, stakeholder communication, and project management capabilities."
+ },
+ "komdigi-trainee": {
+ "period": "Aug 2025",
+ "role": "AI & Machine Learning Trainee",
+ "organization": "Digital Talent Scholarship · Komdigi",
+ "project": "Project-Based AI/ML Training",
+ "description": "Completed an intensive project-based training program in Artificial Intelligence, Machine Learning, and Data Science. Developed end-to-end machine learning workflows involving data preprocessing, feature engineering, predictive modeling, and model evaluation using Python, Pandas, Scikit-learn, and TensorFlow. Applied software engineering principles to build AI-driven solutions for real-world datasets while strengthening practical skills in intelligent application development."
+ },
+ "bnsp-cert": {
+ "period": "Sep 2025",
+ "role": "Associate Data Scientist Candidate",
+ "organization": "BNSP · LSP Universitas Ahmad Dahlan",
+ "project": "National Competency Assessment",
+ "description": "Successfully completed a national competency assessment for the Associate Data Scientist qualification, demonstrating practical expertise in Artificial Intelligence, machine learning, predictive analytics, data preprocessing, feature engineering, and model evaluation. Validated technical competencies through competency-based assessments aligned with the Indonesian National Work Competency Standards (SKKNI)."
  }
  }
  },
