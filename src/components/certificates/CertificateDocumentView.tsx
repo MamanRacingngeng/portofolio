@@ -39,31 +39,48 @@ export async function CertificateDocumentView({
         </div>
 
         <div className="space-y-6 sm:space-y-8">
-          {pages.map((page, index) => (
-            <article
-              key={page}
-              className="overflow-hidden border-[3px] border-border bg-card shadow-[6px_6px_0_var(--shadow)]"
-            >
-              {pages.length > 1 ? (
-                <div className={cn("border-b-[3px] border-border px-4 py-3 sm:px-5", styles.panel)}>
-                  <p className="text-xs font-black uppercase tracking-wide sm:text-sm">
-                    {t("pageOf", { current: index + 1, total: pages.length })}
-                  </p>
+          {pages.map((page, index) => {
+            const isPdf = page.toLowerCase().endsWith(".pdf");
+
+            return (
+              <article
+                key={page}
+                className="overflow-hidden border-[3px] border-border bg-card shadow-[6px_6px_0_var(--shadow)]"
+              >
+                {pages.length > 1 ? (
+                  <div
+                    className={cn(
+                      "border-b-[3px] border-border px-4 py-3 sm:px-5",
+                      styles.panel,
+                    )}
+                  >
+                    <p className="text-xs font-black uppercase tracking-wide sm:text-sm">
+                      {t("pageOf", { current: index + 1, total: pages.length })}
+                    </p>
+                  </div>
+                ) : null}
+                <div className="relative w-full bg-surface">
+                  {isPdf ? (
+                    <iframe
+                      src={`${page}#toolbar=0&navpanes=0&view=FitH`}
+                      title={`${certificate.title} — page ${index + 1}`}
+                      className="aspect-[3/4] w-full bg-surface sm:aspect-[4/5]"
+                    />
+                  ) : (
+                    <Image
+                      src={page}
+                      alt={`${certificate.title} — page ${index + 1}`}
+                      width={1200}
+                      height={1600}
+                      className="h-auto w-full object-contain"
+                      sizes="(max-width: 768px) 100vw, 896px"
+                      priority={index === 0}
+                    />
+                  )}
                 </div>
-              ) : null}
-              <div className="relative w-full bg-surface">
-                <Image
-                  src={page}
-                  alt={`${certificate.title} — page ${index + 1}`}
-                  width={1200}
-                  height={1600}
-                  className="h-auto w-full object-contain"
-                  sizes="(max-width: 768px) 100vw, 896px"
-                  priority={index === 0}
-                />
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

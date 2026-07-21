@@ -144,13 +144,24 @@ function ModalPreview({
   );
 }
 
+function getCompetencyUnits(
+  t: ReturnType<typeof useTranslations<"certificates">>,
+  certificateId: string,
+): string[] | undefined {
+  const key = `items.${certificateId}.competencyUnits`;
+  if (!t.has(key)) return undefined;
+
+  const units = t.raw(key);
+  return Array.isArray(units) && units.length > 0 ? units : undefined;
+}
+
 export function CertificateDetailModal({
   certificate,
   onClose,
 }: CertificateDetailModalProps) {
   const t = useTranslations("certificates");
   const competencyUnits = certificate
-    ? (t.raw(`items.${certificate.id}.competencyUnits`) as string[] | undefined)
+    ? getCompetencyUnits(t, certificate.id)
     : undefined;
   const styles = certificate
     ? certificateThemeStyles[certificate.category]
