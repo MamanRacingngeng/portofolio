@@ -13,6 +13,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { createPageMetadata } from "@/lib/seo/metadata";
+import { siteConfig } from "@/lib/site";
 import "../globals.css";
 
 const outfit = Outfit({
@@ -34,8 +36,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta.home" });
 
   return {
-    title: t("title"),
-    description: t("description"),
+    ...createPageMetadata({
+      title: t("title"),
+      description: t("description"),
+      locale,
+      path: "/",
+    }),
+    applicationName: siteConfig.name,
+    authors: [{ name: siteConfig.fullName, url: siteConfig.url }],
+    creator: siteConfig.fullName,
+    publisher: siteConfig.fullName,
+    category: "technology",
   };
 }
 

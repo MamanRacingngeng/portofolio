@@ -1,0 +1,39 @@
+# Rahman Nendhiarto — Portfolio
+
+> Data Scientist & Software Developer portfolio. Machine learning research, full-stack web apps, dashboards, and production deployments.
+
+Canonical site: https://nendhi.vercel.app
+Structured summary (JSON): https://nendhi.vercel.app/portfolio-summary.json
+Sitemap: https://nendhi.vercel.app/sitemap.xml
+
+## Main pages
+
+- [Home](https://nendhi.vercel.app/): Bio, experience timeline, featured work, tech stack
+- [Projects](https://nendhi.vercel.app/proyek): Project categories overview
+- [AI & Machine Learning](https://nendhi.vercel.app/proyek/ai-ml): 28 ML notebooks — PM2.5 SCA-LSTM forecasting (R² 0.9787), NLP, computer vision, signal processing
+- [Interactive Dashboards](https://nendhi.vercel.app/proyek/dashboards): Plotly analytics case studies on industrial datasets
+- [Software Development](https://nendhi.vercel.app/proyek/software-dev): UdaraCast, SIMAGANG, Exporetrade, Kedokploso Village, e-commerce
+- [Certificates](https://nendhi.vercel.app/sertifikat): BNSP Associate Data Scientist, Digital Talent Scholarship, ADEPT English
+- [Tech Stack](https://nendhi.vercel.app/tumpukan): Python, TensorFlow, Next.js, React, Laravel, MySQL, Power BI
+
+## Featured projects
+
+- [UdaraCast](https://forecastingpm2-5.vercel.app/): PM2.5 air quality forecasting platform by city and year
+- [Global PM2.5 Forecast — SCA-LSTM](https://nendhi.vercel.app/proyek/ai-ml): Research notebook, RMSE 0.1042, R² 0.9787
+- [SIMAGANG BBKB](https://simagangporto.vercel.app/): Internship registration portal, Ministry of Industry Indonesia
+- [Exporetrade](https://exporetrade.vercel.app/): Buyer-supplier marketplace
+- [Istana Sayur Buah](https://istanasayurbuah.com/): Fresh produce e-commerce (Freshly brand)
+
+## Experience
+
+- Undergraduate Researcher, Universitas Ahmad Dahlan (2025–Present): PM2.5 prediction with SCA-LSTM
+- Full Stack Developer Intern, BBSPJIKB Yogyakarta (2025): SIMAGANG internship system
+- Lead Developer & Project Manager, Istana Sayur Buah (2024–2025): Production e-commerce delivery
+
+## Contact
+
+- Email: rahmanarto634@gmail.com
+- GitHub: https://github.com/MamanRacingngeng
+- LinkedIn: https://www.linkedin.com/in/rahmanarto
+
+For full machine-readable project data, fetch /portfolio-summary.json first.

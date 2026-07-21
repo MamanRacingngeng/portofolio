@@ -115,7 +115,7 @@ function ProjectCard({
           >
             <Image
               src={project.image}
-              alt=""
+              alt={title}
               fill
               unoptimized
               className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"

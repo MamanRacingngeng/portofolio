@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000 --webpack",
-    "build": "next build",
+    "build": "node scripts/generate-portfolio-summary.mjs && next build",
     "start": "next start",
     "lint": "eslint",
     "cert-thumbnails": "node scripts/generate-cert-thumbnails.mjs",
     "dashboard-thumbnails": "node scripts/generate-dashboard-thumbnails.mjs",
     "process-notebooks": "node scripts/process-notebooks.mjs",
-    "project-images": "node scripts/regenerate-project-images.mjs"
+    "project-images": "node scripts/regenerate-project-images.mjs",
+    "portfolio-summary": "node scripts/generate-portfolio-summary.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

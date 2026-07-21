@@ -6,6 +6,9 @@ import type { ProjectCategoryId } from "@/data/portfolio";
 import { getProjectsByCategory } from "@/data/projects";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { GallerySkeleton } from "@/components/proyek/GallerySkeleton";
+import { CrawlableCategoryProjects } from "@/components/seo/CrawlableCategoryProjects";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { absoluteUrl } from "@/lib/seo/paths";
 
 const AiMlGallery = dynamic(
   () =>
@@ -42,16 +45,40 @@ const accentMap = {
 
 interface ProjectCategoryPageProps {
   categoryId: ProjectCategoryId;
+  locale: string;
 }
 
-export async function ProjectCategoryPage({ categoryId }: ProjectCategoryPageProps) {
+export async function ProjectCategoryPage({
+  categoryId,
+  locale,
+}: ProjectCategoryPageProps) {
   const t = await getTranslations("projects");
+  const tItems = await getTranslations("projects.items");
   const categories = t.raw("categories") as Record<ProjectCategoryId, CategoryCopy>;
   const copy = categories[categoryId];
   const categoryProjects = getProjectsByCategory(categoryId);
 
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: copy.title,
+    description: copy.description,
+    url: absoluteUrl(`/proyek/${categoryId}`),
+    numberOfItems: categoryProjects.length,
+    itemListElement: categoryProjects.map((project, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: tItems(`${project.id}.title`),
+      description: tItems(`${project.id}.description`),
+      url:
+        project.liveUrl ??
+        absoluteUrl(`/proyek/${categoryId}#project-${project.id}`),
+    })),
+  };
+
   return (
     <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <JsonLd data={itemListJsonLd} />
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 border-b-[3px] border-border/10 pb-6 sm:mb-10 sm:pb-8">
           <Link
@@ -91,6 +118,14 @@ export async function ProjectCategoryPage({ categoryId }: ProjectCategoryPagePro
             </p>
           </div>
         )}
+
+        {categoryProjects.length > 0 ? (
+          <CrawlableCategoryProjects
+            locale={locale}
+            categoryId={categoryId}
+            items={categoryProjects}
+          />
+        ) : null}
       </div>
     </section>
   );
