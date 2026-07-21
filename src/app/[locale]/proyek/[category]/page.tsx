@@ -7,7 +7,6 @@ import {
   type ProjectCategoryId,
 } from "@/data/portfolio";
 import { routing } from "@/i18n/routing";
-import { createPageMetadata } from "@/lib/seo/metadata";
 
 type Props = {
   params: Promise<{ locale: string; category: string }>;
@@ -39,12 +38,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   >;
 
   return {
-    ...createPageMetadata({
-      title: `${categories[category].title} — RAHN.`,
-      description: categories[category].description,
-      locale,
-      path: `/proyek/${category}`,
-    }),
+    title: `${categories[category].title} — RAHN.`,
+    description: categories[category].description,
   };
 }
 
@@ -56,5 +51,5 @@ export default async function ProjectCategoryRoute({ params }: Props) {
     notFound();
   }
 
-  return <ProjectCategoryPage categoryId={category} locale={locale} />;
+  return <ProjectCategoryPage categoryId={category} />;
 }
