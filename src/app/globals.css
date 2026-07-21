@@ -625,6 +625,27 @@ body {
   color: rgba(17, 17, 17, 0.62);
 }
 
+@keyframes stack-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(0, -6px, 0);
+  }
+  50% {
+    transform: translate3d(0, 3px, 0);
+  }
+  75% {
+    transform: translate3d(0, -5px, 0);
+  }
+}
+
+.stack-float {
+  animation: stack-float 17s ease-in-out infinite;
+  will-change: transform;
+}
+
 @keyframes drift {
   from { transform: translate3d(0, 0, 0); }
   to { transform: translate3d(-50%, 0, 0); }

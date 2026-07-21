@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { getFeaturedProjects, type ProjectItem } from "@/data/projects";
 import { Link } from "@/i18n/navigation";
 import { revealViewport } from "@/lib/animations";
+import { useHasMounted } from "@/lib/use-has-mounted";
 import { cn } from "@/lib/utils";
 
 const featuredProjects = getFeaturedProjects();
@@ -21,22 +22,12 @@ const CARD_W = 280;
 const CARD_H = 175;
 const GAP_X = 56;
 const GAP_Y = 36;
-const Z_STEP = 50;
-const GROUP_ROTATE_X = 20;
-const GROUP_ROTATE_Y = -35;
+const GROUP_ROTATE_X = 18;
+const GROUP_ROTATE_Y = -32;
 const OPTICAL_OFFSET_X = 64;
 const OPTICAL_OFFSET_Y = 8;
 
 const spring = { type: "spring" as const, stiffness: 220, damping: 28 };
-
-const stackFloat = {
-  animate: { y: [0, -6, 3, -5, 0] },
-  transition: {
-    duration: 17,
-    repeat: Infinity,
-    ease: "easeInOut" as const,
-  },
-};
 
 const lineReveal = {
   hidden: { opacity: 0, y: 20 },
@@ -66,64 +57,80 @@ function ProjectCard({
   title,
   isHovered,
   onHover,
+  enableMotion,
 }: {
   project: ProjectItem;
   index: number;
   title: string;
   isHovered: boolean;
   onHover: (index: number | null) => void;
+  enableMotion: boolean;
 }) {
   const href = project.liveUrl ?? categoryHref[project.category];
   const x = index * GAP_X + OPTICAL_OFFSET_X;
   const y = index * GAP_Y + OPTICAL_OFFSET_Y;
-  const z = index * Z_STEP;
+
+  const card = (
+    <Link
+      href={href}
+      target={project.liveUrl ? "_blank" : undefined}
+      rel={project.liveUrl ? "noopener noreferrer" : undefined}
+      className="group block"
+      aria-label={title}
+    >
+      <div className="overflow-hidden rounded-2xl border-[3px] border-border bg-card [transform:translateZ(0)] [backface-visibility:hidden]">
+        <div
+          className="relative overflow-hidden bg-surface [transform:translateZ(0)]"
+          style={{ width: CARD_W, height: CARD_H }}
+        >
+          <Image
+            src={project.image}
+            alt={title}
+            fill
+            unoptimized
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+            sizes="280px"
+          />
+        </div>
+      </div>
+    </Link>
+  );
+
+  if (!enableMotion) {
+    return (
+      <div
+        className="absolute left-0 top-0 isolate"
+        style={{
+          width: CARD_W,
+          transform: `translate3d(${x}px, ${y}px, 0)`,
+          zIndex: isHovered ? 20 : index + 1,
+        }}
+        onMouseEnter={() => onHover(index)}
+        onMouseLeave={() => onHover(null)}
+      >
+        {card}
+      </div>
+    );
+  }
 
   return (
     <motion.div
-      className="absolute left-0 top-0"
-      initial={{ opacity: 0, x, y, z }}
-      whileInView={{ opacity: 1, x, y, z }}
-      viewport={revealViewport}
+      className="absolute left-0 top-0 isolate"
+      initial={false}
       animate={{
         x,
         y,
-        z: z + (isHovered ? 64 : 0),
-        scale: isHovered ? 1.025 : 1,
+        scale: isHovered ? 1.04 : 1,
       }}
       transition={{ ...spring, delay: index * 0.05 }}
       style={{
         width: CARD_W,
         zIndex: isHovered ? 20 : index + 1,
-        transformStyle: "preserve-3d",
-        backfaceVisibility: "hidden",
-        WebkitBackfaceVisibility: "hidden",
       }}
       onHoverStart={() => onHover(index)}
       onHoverEnd={() => onHover(null)}
     >
-      <Link
-        href={href}
-        target={project.liveUrl ? "_blank" : undefined}
-        rel={project.liveUrl ? "noopener noreferrer" : undefined}
-        className="group block"
-        aria-label={title}
-      >
-        <div className="overflow-hidden rounded-2xl border-[3px] border-border bg-card">
-          <div
-            className="relative overflow-hidden bg-surface"
-            style={{ width: CARD_W, height: CARD_H }}
-          >
-            <Image
-              src={project.image}
-              alt=""
-              fill
-              unoptimized
-              className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-              sizes="280px"
-            />
-          </div>
-        </div>
-      </Link>
+      {card}
     </motion.div>
   );
 }
@@ -132,14 +139,20 @@ export function ProjectShowcase() {
   const t = useTranslations("homeShowcase");
   const tProjects = useTranslations("projects.items");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const mounted = useHasMounted();
 
   const groupSize = getGroupSize(featuredProjects.length);
+  const tiltStyle = {
+    width: groupSize.width + OPTICAL_OFFSET_X,
+    height: groupSize.height + OPTICAL_OFFSET_Y,
+    transform: `rotateX(${GROUP_ROTATE_X}deg) rotateY(${GROUP_ROTATE_Y}deg) translateZ(0)`,
+  } as const;
 
   return (
-    <section className="relative z-0 overflow-x-clip px-4 pt-10 pb-20 sm:px-6 sm:pt-12 sm:pb-24 lg:px-8">
+    <section className="relative z-0 isolate overflow-hidden px-4 pt-10 pb-20 sm:px-6 sm:pt-12 sm:pb-24 lg:px-8">
       <div className="mx-auto max-w-3xl text-center">
         <motion.p
-          initial={{ opacity: 0, y: 8 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={revealViewport}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
@@ -157,7 +170,7 @@ export function ProjectShowcase() {
           <motion.p
             custom={0.04}
             variants={lineReveal}
-            initial="hidden"
+            initial={false}
             whileInView="visible"
             viewport={revealViewport}
           >
@@ -167,7 +180,7 @@ export function ProjectShowcase() {
           <motion.p
             custom={0.1}
             variants={lineReveal}
-            initial="hidden"
+            initial={false}
             whileInView="visible"
             viewport={revealViewport}
             className="mt-0.5 sm:mt-1"
@@ -180,7 +193,7 @@ export function ProjectShowcase() {
           <motion.p
             custom={0.16}
             variants={lineReveal}
-            initial="hidden"
+            initial={false}
             whileInView="visible"
             viewport={revealViewport}
             className="mt-0.5 sm:mt-1"
@@ -193,29 +206,18 @@ export function ProjectShowcase() {
       <div className="mx-auto mt-8 flex max-w-4xl flex-col items-center sm:mt-10 lg:mt-11">
         <div className="relative hidden w-full justify-center sm:flex">
           <div
-            className="relative flex items-center justify-center overflow-visible pt-3 sm:pt-4"
+            className="relative flex items-center justify-center overflow-hidden [contain:paint]"
             style={{
               width: groupSize.width + OPTICAL_OFFSET_X + 120,
               height: groupSize.height + 140,
-              perspective: 2500,
-              perspectiveOrigin: "50% 50%",
+              perspective: 2200,
+              perspectiveOrigin: "50% 45%",
             }}
           >
-            <motion.div
-              {...stackFloat}
-              className="relative [transform-style:preserve-3d] [backface-visibility:hidden]"
-            >
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={revealViewport}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            <div className={cn("relative", mounted && "stack-float")}>
+              <div
                 className="relative [transform-style:preserve-3d] [backface-visibility:hidden]"
-                style={{
-                  width: groupSize.width + OPTICAL_OFFSET_X,
-                  height: groupSize.height + OPTICAL_OFFSET_Y,
-                  transform: `rotateX(${GROUP_ROTATE_X}deg) rotateY(${GROUP_ROTATE_Y}deg)`,
-                }}
+                style={tiltStyle}
               >
                 {featuredProjects.map((project, index) => (
                   <ProjectCard
@@ -225,10 +227,11 @@ export function ProjectShowcase() {
                     title={tProjects(`${project.id}.title`)}
                     isHovered={hoveredIndex === index}
                     onHover={setHoveredIndex}
+                    enableMotion={mounted}
                   />
                 ))}
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -236,7 +239,7 @@ export function ProjectShowcase() {
           {featuredProjects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 12 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={revealViewport}
               transition={{ delay: index * 0.06, ...spring }}
@@ -255,7 +258,7 @@ export function ProjectShowcase() {
                 >
                   <Image
                     src={project.image}
-                    alt=""
+                    alt={tProjects(`${project.id}.title`)}
                     fill
                     unoptimized
                     className="object-cover object-top"

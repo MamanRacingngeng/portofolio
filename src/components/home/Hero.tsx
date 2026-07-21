@@ -47,7 +47,7 @@ export function Hero() {
       <div className="relative mx-auto max-w-6xl">
         <motion.div style={{ y: badgeY }} className="mt-6 sm:mt-10">
           <motion.div
-            initial={{ opacity: 0, y: -20, rotate: -4 }}
+            initial={false}
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ type: "spring", stiffness: 120, damping: 14 }}
             className="relative inline-block"
@@ -70,7 +70,7 @@ export function Hero() {
           <motion.div style={{ y: textY }} className="min-w-0 flex-1">
             <motion.div {...spaceFloat(9, 0.4)}>
               <motion.h1
-                initial={{ opacity: 0, y: 24, clipPath: "inset(0 0 100% 0)" }}
+                initial={false}
                 animate={{ opacity: 1, y: 0, clipPath: "inset(0 0 0% 0)" }}
                 transition={{
                   delay: 0.08,
@@ -80,7 +80,7 @@ export function Hero() {
                 className="font-display text-5xl font-black uppercase leading-[0.9] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl"
               >
                 <motion.span
-                  initial={{ opacity: 0, x: -32 }}
+                  initial={false}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.15, type: "spring", stiffness: 100 }}
                   className="block"
@@ -88,7 +88,7 @@ export function Hero() {
                   {siteConfig.firstName}
                 </motion.span>
                 <motion.span
-                  initial={{ opacity: 0, x: 32, scale: 0.95 }}
+                  initial={false}
                   animate={{ opacity: 1, x: 0, scale: 1 }}
                   transition={{ delay: 0.28, type: "spring", stiffness: 100 }}
                   className="mt-1 block"
@@ -99,7 +99,7 @@ export function Hero() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 14 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={revealViewport}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -116,7 +116,7 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, rotate: 4 }}
+            initial={false}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ delay: 0.12, type: "spring", stiffness: 90, damping: 14 }}
             className="relative z-0 mx-auto mb-8 w-full shrink-0 sm:mx-0 sm:mb-0 sm:w-[260px] md:w-[280px] lg:w-[300px]"
@@ -149,13 +149,13 @@ export function Hero() {
 
         <motion.div
           variants={scrollRevealPop}
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={revealViewport}
           className="brutal-card relative z-10 mt-6 bg-card p-5 sm:mt-10 sm:p-7 lg:p-8"
         >
           <motion.p
-            initial={{ opacity: 0, y: 12 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={revealViewport}
             transition={{ delay: 0.15, duration: 0.5 }}
@@ -167,7 +167,7 @@ export function Hero() {
 
         <motion.div
           variants={scrollRevealStaggerContainer}
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={revealViewport}
           className="relative z-0 mt-5 flex flex-wrap items-center gap-3 sm:mt-6 sm:gap-4"

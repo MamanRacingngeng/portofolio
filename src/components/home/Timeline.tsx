@@ -81,7 +81,7 @@ export function Timeline() {
 
           <motion.div
             variants={scrollRevealStaggerContainer}
-            initial="hidden"
+            initial={false}
             whileInView="visible"
             viewport={revealViewport}
             className="space-y-8 sm:space-y-9"
@@ -105,7 +105,7 @@ export function Timeline() {
                 >
                   <motion.div
                     className="w-full border-[3px] border-border bg-card p-5 text-left shadow-[5px_5px_0_#111] sm:p-7"
-                    initial={{ boxShadow: "0px 0px 0 #111" }}
+                    initial={false}
                     whileInView={{ boxShadow: "5px 5px 0 #111" }}
                     viewport={revealViewport}
                     transition={{ delay: 0.15, duration: 0.4 }}

@@ -9,6 +9,7 @@ import { notFound } from "next/navigation";
 import { Outfit } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { MotionProvider } from "@/components/providers/MotionProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
@@ -56,11 +57,13 @@ export default async function LocaleLayout({ children, params }: Props) {
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-            <AnimatedBackground />
-            <ScrollProgress />
-            <Navbar />
-            <main className="relative z-0 min-h-screen bg-bg">{children}</main>
-            <Footer />
+            <MotionProvider>
+              <AnimatedBackground />
+              <ScrollProgress />
+              <Navbar />
+              <main className="relative z-0 min-h-screen bg-bg">{children}</main>
+              <Footer />
+            </MotionProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

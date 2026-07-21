@@ -144,7 +144,7 @@ export function TechGrid({
 
         <motion.ul
           variants={techItemStagger}
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={revealViewport}
           className={cn(
