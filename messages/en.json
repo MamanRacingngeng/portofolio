@@ -23,6 +23,10 @@
  "stack": {
  "title": "Tech Stack — RAHN.",
  "description": "Technologies and tools I use for data science, machine learning, and software development."
+ },
+ "cv": {
+ "title": "CV — RAHN.",
+ "description": "Preview and download Rahman Nendhiarto's curriculum vitae."
  }
  },
  "nav": {
@@ -49,6 +53,7 @@
     ],
     "bio": "AI & Machine Learning specialist with expertise in Software Development, experienced in building intelligent digital products through modern software engineering and data-driven technologies. I have developed predictive AI models, end-to-end web applications, and interactive analytics platforms from concept to deployment through research, client projects, and professional internships. I am passionate about delivering scalable, maintainable, and user-centered software that transforms complex data into impactful real-world solutions.",
  "exploreProjects": "View Projects",
+ "viewCv": "View CV",
  "downloadCv": "Download CV",
  "profilePhoto": "Profile photo",
  "status": "Open to opportunities",
@@ -2171,7 +2176,7 @@
  "linkedinAria": "Visit LinkedIn profile",
  "discordAria": "Visit Discord profile @rusdidigital",
  "emailAria": "Send an email",
- "resumeAria": "Download CV",
+ "resumeAria": "View CV",
  "whatsappAria": "Chat on WhatsApp"
  }
  },
@@ -2183,5 +2188,12 @@
  "label": "Language",
  "id": "Indonesia",
  "en": "English"
+ },
+ "cv": {
+ "title": "Curriculum Vitae",
+ "subtitle": "Preview the CV below, then download it when you're ready.",
+ "download": "Download CV",
+ "backHome": "Back to home",
+ "iframeTitle": "CV preview — Rahman Nendhiarto"
  }
 }

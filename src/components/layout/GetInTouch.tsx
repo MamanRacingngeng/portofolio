@@ -3,6 +3,7 @@
 import { useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/data/portfolio";
 import { AccentButton } from "@/components/ui/AccentButton";
 import { cn } from "@/lib/utils";
@@ -42,7 +43,7 @@ const contactItems: ContactItem[] = [
   {
     id: "resume",
     href: siteConfig.resumeUrl,
-    external: true,
+    external: false,
     className: "bg-accent-2",
   },
   {
@@ -118,19 +119,33 @@ export function GetInTouch({ className }: GetInTouchProps) {
               <ul className="mt-6 space-y-3">
                 {contactItems.map(({ id, href, external, className: itemClass }) => (
                   <li key={id}>
-                    <a
-                      href={href}
-                      target={external ? "_blank" : undefined}
-                      rel={external ? "noopener noreferrer" : undefined}
-                      aria-label={t(`social.${id}Aria`)}
-                      onClick={() => setOpen(false)}
-                      className={cn(
-                        "pop-btn w-full justify-center px-4 py-3.5 text-base normal-case tracking-normal",
-                        itemClass,
-                      )}
-                    >
-                      {t(`social.${id}`)}
-                    </a>
+                    {external ? (
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={t(`social.${id}Aria`)}
+                        onClick={() => setOpen(false)}
+                        className={cn(
+                          "pop-btn w-full justify-center px-4 py-3.5 text-base normal-case tracking-normal",
+                          itemClass,
+                        )}
+                      >
+                        {t(`social.${id}`)}
+                      </a>
+                    ) : (
+                      <Link
+                        href={href}
+                        aria-label={t(`social.${id}Aria`)}
+                        onClick={() => setOpen(false)}
+                        className={cn(
+                          "pop-btn w-full justify-center px-4 py-3.5 text-base normal-case tracking-normal",
+                          itemClass,
+                        )}
+                      >
+                        {t(`social.${id}`)}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

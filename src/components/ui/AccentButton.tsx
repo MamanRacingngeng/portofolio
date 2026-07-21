@@ -25,7 +25,6 @@ const variants: Record<ButtonVariant, string> = {
 function isAppRoute(href: string) {
   return (
     href.startsWith("/") &&
-    !href.startsWith("/cv") &&
     !href.endsWith(".pdf") &&
     !href.endsWith(".zip")
   );

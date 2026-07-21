@@ -181,10 +181,9 @@ export function Hero() {
             <AccentButton
               variant="secondary"
               href={siteConfig.resumeUrl}
-              download={siteConfig.resumeFileName}
               className="px-6 py-3.5"
             >
-              {t("downloadCv")}
+              {t("viewCv")}
             </AccentButton>
           </motion.div>
           <motion.div variants={scrollRevealStaggerItem}>

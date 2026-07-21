@@ -23,6 +23,10 @@
  "stack": {
  "title": "Tech Stack — RAHN.",
  "description": "Teknologi dan tools yang saya gunakan untuk data science, machine learning, dan pengembangan perangkat lunak."
+ },
+ "cv": {
+ "title": "CV — RAHN.",
+ "description": "Pratinjau dan unduh curriculum vitae Rahman Nendhiarto."
  }
  },
  "nav": {
@@ -49,6 +53,7 @@
     ],
     "bio": "Spesialis AI & Machine Learning dengan keahlian Software Development, berpengalaman membangun produk digital cerdas melalui rekayasa perangkat lunak modern dan teknologi berbasis data. Saya telah mengembangkan model AI prediktif, aplikasi web end-to-end, dan platform analitik interaktif dari konsep hingga deployment melalui riset, proyek klien, dan magang profesional. Saya berkomitmen menghadirkan perangkat lunak yang scalable, maintainable, dan berpusat pada pengguna untuk mengubah data kompleks menjadi solusi nyata yang berdampak.",
  "exploreProjects": "Lihat Proyek",
+ "viewCv": "Lihat CV",
  "downloadCv": "Unduh CV",
  "profilePhoto": "Foto profil",
  "status": "Terbuka untuk peluang",
@@ -2171,7 +2176,7 @@
  "linkedinAria": "Kunjungi profil LinkedIn",
  "discordAria": "Kunjungi profil Discord @rusdidigital",
  "emailAria": "Kirim email",
- "resumeAria": "Unduh CV",
+ "resumeAria": "Lihat CV",
  "whatsappAria": "Chat via WhatsApp"
  }
  },
@@ -2183,5 +2188,12 @@
  "label": "Bahasa",
  "id": "Indonesia",
  "en": "English"
+ },
+ "cv": {
+ "title": "Curriculum Vitae",
+ "subtitle": "Pratinjau CV di bawah ini, lalu unduh jika sudah siap.",
+ "download": "Unduh CV",
+ "backHome": "Kembali ke beranda",
+ "iframeTitle": "Pratinjau CV — Rahman Nendhiarto"
  }
 }
