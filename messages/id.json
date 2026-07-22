@@ -45,13 +45,13 @@
  "retry": "Coba lagi"
  },
  "hero": {
-    "badge": "AI & MACHINE LEARNING • PENGEMBANGAN PERANGKAT LUNAK",
+    "badge": "SAINS DATA • PENGEMBANGAN PERANGKAT LUNAK",
     "taglineLines": [
-      "Membangun produk digital cerdas lewat",
-      "rekayasa perangkat lunak modern dan",
-      "teknologi berbasis data."
+      "Mengubah data menjadi insight dan",
+      "membangun solusi digital siap produksi",
+      "dengan machine learning sebagai inti."
     ],
-    "bio": "Spesialis AI & Machine Learning dengan keahlian Software Development, berpengalaman membangun produk digital cerdas melalui rekayasa perangkat lunak modern dan teknologi berbasis data. Saya telah mengembangkan model AI prediktif, aplikasi web end-to-end, dan platform analitik interaktif dari konsep hingga deployment melalui riset, proyek klien, dan magang profesional. Saya berkomitmen menghadirkan perangkat lunak yang scalable, maintainable, dan berpusat pada pengguna untuk mengubah data kompleks menjadi solusi nyata yang berdampak.",
+    "bio": "Saya membangun produk digital berbasis data dengan menggabungkan machine learning, analitik, dan pengembangan perangkat lunak full-stack untuk mengubah data menjadi solusi yang memberikan dampak nyata. Pekerjaan saya mencakup seluruh proses pengembangan, mulai dari eksplorasi data, feature engineering, pelatihan dan evaluasi model, hingga deployment aplikasi web yang siap digunakan oleh pengguna. Berbekal sertifikasi BNSP Associate Data Scientist, pengalaman riset machine learning, serta pengalaman mengembangkan berbagai aplikasi, saya mampu menjembatani dunia Data Science dan Software Development. Saya mengembangkan pipeline data, model prediktif, dashboard analitik, hingga aplikasi web modern menggunakan Python, TensorFlow, Next.js, React, dan Laravel, sehingga model yang dibangun tidak hanya akurat, tetapi juga dapat dimanfaatkan dalam produk yang siap digunakan. Saya percaya bahwa nilai sebuah model tidak berhenti pada metrik evaluasi, tetapi ketika berhasil diimplementasikan menjadi solusi digital yang stabil, skalabel, dan mampu membantu organisasi mengambil keputusan dengan lebih cepat, lebih tepat, dan berbasis data.",
  "exploreProjects": "Lihat Proyek",
  "viewCv": "Lihat CV",
  "downloadCv": "Unduh CV",

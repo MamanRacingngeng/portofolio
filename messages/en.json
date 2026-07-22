@@ -45,13 +45,13 @@
  "retry": "Try again"
  },
  "hero": {
-    "badge": "AI & MACHINE LEARNING • SOFTWARE DEVELOPMENT",
+    "badge": "DATA SCIENCE • SOFTWARE DEVELOPMENT",
     "taglineLines": [
-      "Building intelligent digital products through",
-      "modern software engineering and",
-      "data-driven technologies."
+      "Turning data into insight and",
+      "building production-ready digital solutions",
+      "with machine learning at the core."
     ],
-    "bio": "AI & Machine Learning specialist with expertise in Software Development, experienced in building intelligent digital products through modern software engineering and data-driven technologies. I have developed predictive AI models, end-to-end web applications, and interactive analytics platforms from concept to deployment through research, client projects, and professional internships. I am passionate about delivering scalable, maintainable, and user-centered software that transforms complex data into impactful real-world solutions.",
+    "bio": "I build data-driven digital products by combining machine learning, analytics, and full-stack software development to turn data into solutions that create real impact. My work spans the entire development process — from data exploration and feature engineering to model training, evaluation, and deploying web applications that users can rely on. With BNSP Associate Data Scientist certification, hands-on machine learning research, and experience building diverse applications, I bridge Data Science and Software Development. I develop data pipelines, predictive models, analytics dashboards, and modern web applications using Python, TensorFlow, Next.js, React, and Laravel — so the models I build are not only accurate, but also usable in production-ready products. I believe a model's value does not stop at evaluation metrics, but when it is implemented as a stable, scalable digital solution that helps organizations make faster, sharper, data-driven decisions.",
  "exploreProjects": "View Projects",
  "viewCv": "View CV",
  "downloadCv": "Download CV",
