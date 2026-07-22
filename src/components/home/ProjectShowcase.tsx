@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
@@ -49,6 +49,29 @@ function getGroupSize(total: number) {
     width: CARD_W + last * GAP_X,
     height: CARD_H + last * GAP_Y,
   };
+}
+
+function useShowcaseScale(stageWidth: number) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const node = containerRef.current;
+    if (!node) return;
+
+    const update = () => {
+      const available = node.clientWidth;
+      if (available <= 0) return;
+      setScale(Math.min(1, available / stageWidth));
+    };
+
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [stageWidth]);
+
+  return { containerRef, scale };
 }
 
 function ProjectCard({
@@ -142,6 +165,9 @@ export function ProjectShowcase() {
   const mounted = useHasMounted();
 
   const groupSize = getGroupSize(featuredProjects.length);
+  const stageWidth = groupSize.width + OPTICAL_OFFSET_X + 120;
+  const stageHeight = groupSize.height + 140;
+  const { containerRef, scale } = useShowcaseScale(stageWidth);
   const tiltStyle = {
     width: groupSize.width + OPTICAL_OFFSET_X,
     height: groupSize.height + OPTICAL_OFFSET_Y,
@@ -203,71 +229,54 @@ export function ProjectShowcase() {
         </div>
       </div>
 
-      <div className="mx-auto mt-8 flex max-w-4xl flex-col items-center sm:mt-10 lg:mt-11">
-        <div className="relative hidden w-full justify-center sm:flex">
+      <div className="mx-auto mt-8 flex w-full max-w-4xl flex-col items-center sm:mt-10 lg:mt-11">
+        <div ref={containerRef} className="relative w-full overflow-hidden [contain:paint]">
           <div
-            className="relative flex items-center justify-center overflow-hidden [contain:paint]"
+            className="relative mx-auto"
             style={{
-              width: groupSize.width + OPTICAL_OFFSET_X + 120,
-              height: groupSize.height + 140,
-              perspective: 2200,
-              perspectiveOrigin: "50% 45%",
+              width: stageWidth * scale,
+              height: stageHeight * scale,
             }}
           >
-            <div className={cn("relative", mounted && "stack-float")}>
+            <div
+              className="absolute left-1/2 top-0 flex justify-center"
+              style={{
+                width: stageWidth,
+                height: stageHeight,
+                transform: `translateX(-50%) scale(${scale})`,
+                transformOrigin: "top center",
+              }}
+            >
               <div
-                className="relative [transform-style:preserve-3d] [backface-visibility:hidden]"
-                style={tiltStyle}
+                className="relative flex items-center justify-center"
+                style={{
+                  width: stageWidth,
+                  height: stageHeight,
+                  perspective: 2200,
+                  perspectiveOrigin: "50% 45%",
+                }}
               >
-                {featuredProjects.map((project, index) => (
-                  <ProjectCard
-                    key={project.id}
-                    project={project}
-                    index={index}
-                    title={tProjects(`${project.id}.title`)}
-                    isHovered={hoveredIndex === index}
-                    onHover={setHoveredIndex}
-                    enableMotion={mounted}
-                  />
-                ))}
+                <div className={cn("relative", mounted && "stack-float")}>
+                  <div
+                    className="relative [transform-style:preserve-3d] [backface-visibility:hidden]"
+                    style={tiltStyle}
+                  >
+                    {featuredProjects.map((project, index) => (
+                      <ProjectCard
+                        key={project.id}
+                        project={project}
+                        index={index}
+                        title={tProjects(`${project.id}.title`)}
+                        isHovered={hoveredIndex === index}
+                        onHover={setHoveredIndex}
+                        enableMotion={mounted}
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="flex w-full gap-5 overflow-x-auto pb-3 sm:hidden">
-          {featuredProjects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={revealViewport}
-              transition={{ delay: index * 0.06, ...spring }}
-              className="shrink-0"
-            >
-              <Link
-                href={project.liveUrl ?? categoryHref[project.category]}
-                target={project.liveUrl ? "_blank" : undefined}
-                rel={project.liveUrl ? "noopener noreferrer" : undefined}
-                aria-label={tProjects(`${project.id}.title`)}
-                className="block overflow-hidden rounded-2xl shadow-[0_16px_36px_-12px_rgba(17,17,17,0.25)]"
-              >
-                <div
-                  className="relative overflow-hidden bg-surface"
-                  style={{ width: CARD_W, height: CARD_H }}
-                >
-                  <Image
-                    src={project.image}
-                    alt={tProjects(`${project.id}.title`)}
-                    fill
-                    unoptimized
-                    className="object-cover object-top"
-                    sizes="280px"
-                  />
-                </div>
-              </Link>
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>
