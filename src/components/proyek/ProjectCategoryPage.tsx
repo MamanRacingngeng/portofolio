@@ -51,8 +51,8 @@ export async function ProjectCategoryPage({ categoryId }: ProjectCategoryPagePro
   const categoryProjects = getProjectsByCategory(categoryId);
 
   return (
-    <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-      <div className="mx-auto max-w-6xl">
+    <section className="page-section py-16 sm:py-20 lg:py-24">
+      <div className="page-container max-w-6xl">
         <div className="mb-8 border-b-[3px] border-border/10 pb-6 sm:mb-10 sm:pb-8">
           <Link
             href="/proyek"

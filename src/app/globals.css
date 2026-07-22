@@ -64,6 +64,50 @@ body {
   font-family: var(--font-display);
 }
 
+main {
+  overflow-x: clip;
+}
+
+/* Consistent horizontal gutters + prevent brutal shadows from causing scroll */
+.page-section {
+  overflow-x: clip;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 640px) {
+  .page-section {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-section {
+    padding-inline: 2rem;
+  }
+}
+
+.page-container {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.card-shadow-grid {
+  padding-bottom: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+@media (min-width: 640px) {
+  .card-shadow-grid {
+    padding-bottom: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+.section-title-wrap {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 /* Clean brutal — single black shadow */
 .brutal {
   border: 3px solid var(--border);
@@ -114,9 +158,11 @@ body {
   touch-action: manipulation;
 }
 
-.pop-btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: calc(var(--btn-offset) + 2px) calc(var(--btn-offset) + 2px) 0 var(--shadow);
+@media (hover: hover) and (pointer: fine) {
+  .pop-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: calc(var(--btn-offset) + 2px) calc(var(--btn-offset) + 2px) 0 var(--shadow);
+  }
 }
 
 .pop-btn:active {
@@ -187,12 +233,15 @@ body {
 /* Section titles — nailed sign board + hard black shadow */
 .section-heading-board {
   display: inline-block;
-  padding: 0.5rem 0.6rem 0.65rem;
+  max-width: 100%;
+  padding: 0.35rem 0.45rem 0.5rem;
+  box-sizing: border-box;
 }
 
 .section-heading__label {
   position: relative;
   display: inline-block;
+  max-width: min(100%, calc(100vw - 2.5rem));
   border: 3px solid var(--border);
   border-radius: 0;
   box-shadow: 4px 4px 0 var(--shadow);
@@ -201,12 +250,13 @@ body {
   color: var(--fg);
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: clamp(0.045em, 0.08em, 0.1em);
   line-height: 1.1;
   white-space: nowrap;
   transform: rotate(var(--section-tilt, -0.6deg));
   transform-origin: center center;
   -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
 }
 
 .section-heading__nail {
@@ -292,18 +342,18 @@ body {
 }
 
 .section-heading--sm {
-  padding: 0.8125rem 2.65rem;
-  font-size: 1.1875rem;
+  padding: 0.6875rem 1rem;
+  font-size: clamp(0.8125rem, 2.6vw + 0.4rem, 1.1875rem);
 }
 
 .section-heading--default {
-  padding: 1rem 3.75rem;
-  font-size: 1.4375rem;
+  padding: 0.75rem 1.125rem;
+  font-size: clamp(0.8125rem, 2.8vw + 0.45rem, 1.4375rem);
 }
 
 .section-heading--md {
-  padding: 1.0625rem 4rem;
-  font-size: 1.5rem;
+  padding: 0.8125rem 1.25rem;
+  font-size: clamp(0.875rem, 3vw + 0.45rem, 1.5rem);
 }
 
 @media (min-width: 640px) {
@@ -312,6 +362,8 @@ body {
   }
 
   .section-heading__label {
+    max-width: none;
+    letter-spacing: 0.1em;
     box-shadow: 6px 6px 0 var(--shadow);
   }
 
@@ -320,6 +372,23 @@ body {
     height: 0.5625rem;
   }
 
+  .section-heading--sm {
+    padding: 0.8125rem 2rem;
+    font-size: 1.1875rem;
+  }
+
+  .section-heading--default {
+    padding: 1rem 2.5rem;
+    font-size: 1.4375rem;
+  }
+
+  .section-heading--md {
+    padding: 1.0625rem 2.75rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
   .section-heading--sm {
     padding: 0.875rem 2.9rem;
     font-size: 1.3125rem;
@@ -434,28 +503,30 @@ body {
   outline: none;
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-}
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover {
+    transform: translateY(-6px);
+  }
 
-.project-card--sky:hover {
-  border-color: var(--accent-4);
-  box-shadow: 10px 12px 0 var(--accent-4);
-}
+  .project-card--sky:hover {
+    border-color: var(--accent-4);
+    box-shadow: 10px 12px 0 var(--accent-4);
+  }
 
-.project-card--pink:hover {
-  border-color: var(--accent-3);
-  box-shadow: 10px 12px 0 var(--accent-3);
-}
+  .project-card--pink:hover {
+    border-color: var(--accent-3);
+    box-shadow: 10px 12px 0 var(--accent-3);
+  }
 
-.project-card--lime:hover {
-  border-color: var(--accent-2);
-  box-shadow: 10px 12px 0 var(--accent-2);
-}
+  .project-card--lime:hover {
+    border-color: var(--accent-2);
+    box-shadow: 10px 12px 0 var(--accent-2);
+  }
 
-.project-card--purple:hover {
-  border-color: var(--accent);
-  box-shadow: 10px 12px 0 var(--accent);
+  .project-card--purple:hover {
+    border-color: var(--accent);
+    box-shadow: 10px 12px 0 var(--accent);
+  }
 }
 
 .notebook-scroll {

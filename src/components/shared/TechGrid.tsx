@@ -126,7 +126,7 @@ export function TechGrid({
   return (
     <section
       className={cn(
-        "overflow-x-hidden px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8",
+        "page-section overflow-x-clip pb-16 sm:pb-20",
         isHome ? "pt-6 sm:pt-8" : "pt-4 sm:pt-6",
       )}
     >

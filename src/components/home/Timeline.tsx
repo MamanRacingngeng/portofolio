@@ -57,7 +57,7 @@ export function Timeline() {
   return (
     <section
       className={cn(
-        "px-4 sm:px-6 lg:px-8",
+        "page-section overflow-x-clip",
         siteConfig.showWavyPolkaDivider
           ? "pt-0 pb-0"
           : "pt-10 pb-16 sm:pt-12 sm:pb-20",

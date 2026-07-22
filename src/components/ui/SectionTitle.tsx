@@ -51,7 +51,7 @@ export function SectionTitle({
   return (
     <div
       className={cn(
-        "relative w-full",
+        "section-title-wrap relative w-full",
         corner
           ? "section-title-wrap--corner"
           : "mb-8 sm:mb-10",
@@ -64,7 +64,7 @@ export function SectionTitle({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={revealViewport}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        className={cn(centered && "mx-auto")}
+        className={cn(centered && "mx-auto max-w-full")}
       >
         <div
           className={cn(

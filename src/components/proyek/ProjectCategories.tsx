@@ -45,11 +45,11 @@ export function ProjectCategories({
   categories,
 }: ProjectCategoriesProps) {
   return (
-    <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-      <div className="mx-auto max-w-6xl">
+    <section className="page-section py-16 sm:py-20 lg:py-24">
+      <div className="page-container max-w-6xl">
         <SectionTitle title={title} subtitle={subtitle} accent="pink" />
 
-        <div className="grid items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-9">
+        <div className="card-shadow-grid grid items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-9">
           {projectCategories.map((category, index) => {
             const copy = categories[category.id];
             const accent = cardAccents[index % cardAccents.length];

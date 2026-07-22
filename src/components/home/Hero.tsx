@@ -40,7 +40,7 @@ export function Hero() {
     <section
       ref={sectionRef}
       className={cn(
-        "relative overflow-x-hidden px-4 pt-14 sm:px-6 sm:pt-20 lg:px-8 lg:pt-24",
+        "page-section relative overflow-x-clip pt-14 sm:pt-20 lg:pt-24",
         siteConfig.showWavyPolkaDivider ? "pb-0" : "pb-14 sm:pb-16 lg:pb-20",
       )}
     >

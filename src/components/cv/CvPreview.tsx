@@ -7,8 +7,8 @@ export async function CvPreview() {
   const t = await getTranslations("cv");
 
   return (
-    <section className="min-h-screen px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
-      <div className="mx-auto max-w-4xl">
+    <section className="page-section min-h-screen py-10 sm:py-14">
+      <div className="page-container max-w-4xl">
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
           <div>
             <h1 className="font-display text-2xl font-black uppercase sm:text-3xl">

@@ -131,13 +131,13 @@ export function CertificatesGrid() {
   }, [activeFilter]);
 
   return (
-    <section className="overflow-x-hidden px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+    <section className="page-section overflow-x-clip py-20 sm:py-24">
       <CertificateDetailModal
         certificate={selectedCertificate}
         onClose={() => setSelectedCertificate(null)}
       />
 
-      <div className="mx-auto max-w-6xl">
+      <div className="page-container max-w-6xl">
         <SectionTitle
           title={t("title")}
           subtitle={t("subtitle")}
@@ -184,7 +184,7 @@ export function CertificatesGrid() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={revealViewport}
-                className="grid items-stretch gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3 lg:gap-8"
+                className="card-shadow-grid grid items-stretch gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3 lg:gap-8"
               >
                 {filteredCertificates.map((certificate) => {
                   const styles = certificateThemeStyles[certificate.category];

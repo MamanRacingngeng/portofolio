@@ -175,7 +175,7 @@ export function ProjectShowcase() {
   } as const;
 
   return (
-    <section className="relative z-0 isolate overflow-hidden px-4 pt-10 pb-20 sm:px-6 sm:pt-12 sm:pb-24 lg:px-8">
+    <section className="page-section relative isolate overflow-x-clip pt-10 pb-20 sm:pt-12 sm:pb-24">
       <div className="mx-auto max-w-3xl text-center">
         <motion.p
           initial={false}

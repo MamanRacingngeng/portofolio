@@ -54,7 +54,7 @@ export function ProjectCategoryList({ items }: ProjectCategoryListProps) {
         onClose={() => setCaseStudyProject(null)}
       />
 
-      <div className="grid items-stretch gap-6 sm:gap-7 lg:grid-cols-2">
+      <div className="card-shadow-grid grid items-stretch gap-6 sm:gap-7 lg:grid-cols-2">
         {items.map((project, index) => {
           const projectCopy = copy[project.id];
           const theme = cardThemes[index % cardThemes.length];
