@@ -364,7 +364,7 @@ export const projects: ProjectItem[] = [
 /** Featured on home page 3D project showcase */
 export const featuredProjectIds = [
   "simagang-bbkb",
-  "istana-sayur-buah",
+  "suma-briket",
   "udaracast",
   "pertamina-lstm-pipes",
   "exporetrade",
