@@ -138,7 +138,7 @@ function PosterFrame({
           priority={priority}
           quality={100}
           unoptimized
-          className="object-contain object-center grayscale transition-all duration-500 group-hover/poster:scale-[1.02] group-hover/poster:grayscale-0"
+          className="object-contain object-center grayscale transition-all duration-500 group-active/poster:scale-[1.02] group-active/poster:grayscale-0 group-focus-within/poster:grayscale-0 [@media(hover:hover)_and_(pointer:fine)]:group-hover/poster:scale-[1.02] [@media(hover:hover)_and_(pointer:fine)]:group-hover/poster:grayscale-0"
           sizes="(max-width: 768px) 100vw, 560px"
         />
       </div>

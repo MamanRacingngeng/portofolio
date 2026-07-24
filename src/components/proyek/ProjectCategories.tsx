@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { projectCategories, type ProjectCategoryId } from "@/data/portfolio";
 import { Link } from "@/i18n/navigation";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { mediaRevealZoomSmClass } from "@/lib/media-reveal";
 import { cn } from "@/lib/utils";
 import { revealViewport } from "@/lib/animations";
 
@@ -91,7 +92,7 @@ export function ProjectCategories({
                         fill
                         quality={100}
                         unoptimized
-                        className="object-cover grayscale transition-all duration-500 group-hover:scale-[1.03] group-hover:grayscale-0"
+                        className={cn("object-cover", mediaRevealZoomSmClass)}
                         sizes="(max-width: 1024px) 100vw, 33vw"
                       />
                     </div>

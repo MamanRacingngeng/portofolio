@@ -14,6 +14,7 @@ import {
 import { CertificateDetailModal } from "@/components/certificates/CertificateDetailModal";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { certificateThemeStyles } from "@/lib/certificate-themes";
+import { mediaRevealOverlayClass, mediaRevealZoomLgClass } from "@/lib/media-reveal";
 import { revealViewport } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
@@ -63,11 +64,16 @@ function CertificatePreview({
           src={certificate.previewImage!}
           alt={certificate.title}
           fill
-          className="object-cover object-top grayscale transition-all duration-500 group-hover:scale-[1.05] group-hover:grayscale-0"
+          className={cn("object-cover object-top", mediaRevealZoomLgClass)}
           sizes="(max-width: 640px) 100vw, 50vw"
           onError={() => setImageFailed(true)}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-fg/30 via-fg/5 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-40" />
+        <div
+          className={cn(
+            "absolute inset-0 bg-gradient-to-t from-fg/30 via-fg/5 to-transparent opacity-70",
+            mediaRevealOverlayClass,
+          )}
+        />
         <span
           className={cn(
             "absolute bottom-4 right-4 inline-flex items-center gap-1.5 px-3 py-1.5 text-[10px] sm:text-xs",

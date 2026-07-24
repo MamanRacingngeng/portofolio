@@ -173,7 +173,7 @@ function NotebookPreview({
           width={imageWidth}
           height={imageHeight}
           decoding="async"
-          className="notebook-image block h-auto w-full max-w-none grayscale transition-all duration-500 group-hover:grayscale-0 group-focus-within:grayscale-0"
+          className="notebook-image block h-auto w-full max-w-none grayscale transition-all duration-500 group-active:grayscale-0 group-focus-within:grayscale-0 [@media(hover:hover)_and_(pointer:fine)]:group-hover:grayscale-0"
         />
       </div>
 

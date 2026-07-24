@@ -7,6 +7,10 @@ import { motion } from "framer-motion";
 import type { ProjectItem } from "@/data/projects";
 import { ProjectCaseStudyModal } from "@/components/proyek/ProjectCaseStudyModal";
 import { getProjectTagLabel } from "@/lib/project-tags";
+import {
+  mediaRevealOverlayClass,
+  mediaRevealZoomClass,
+} from "@/lib/media-reveal";
 import { cn } from "@/lib/utils";
 import { revealViewport } from "@/lib/animations";
 
@@ -71,7 +75,7 @@ export function ProjectCategoryList({ items }: ProjectCategoryListProps) {
                 ease: [0.22, 1, 0.36, 1],
               }}
               className={cn(
-                "project-card project-category-card flex h-full flex-col overflow-hidden bg-card",
+                "group project-card project-category-card flex h-full flex-col overflow-hidden bg-card",
                 theme.card,
               )}
             >
@@ -82,20 +86,25 @@ export function ProjectCategoryList({ items }: ProjectCategoryListProps) {
                   src={project.image}
                   alt={projectCopy.title}
                   fill
-                  className="object-cover object-top grayscale transition-all duration-500 group-hover:scale-[1.04] group-hover:grayscale-0"
+                  className={cn("object-cover object-top", mediaRevealZoomClass)}
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-fg/30 via-fg/5 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-40" />
+                <div
+                  className={cn(
+                    "absolute inset-0 bg-gradient-to-t from-fg/30 via-fg/5 to-transparent opacity-70",
+                    mediaRevealOverlayClass,
+                  )}
+                />
               </div>
 
               <div className="flex min-h-0 flex-1 flex-col p-5 sm:p-6">
                 <div className="min-h-[4.75rem]">
-                  <h3 className="line-clamp-2 font-display text-base font-black uppercase leading-snug transition-colors duration-300 group-hover:text-accent sm:text-lg">
+                  <h3 className="line-clamp-2 font-display text-base font-black uppercase leading-snug transition-colors duration-300 group-active:text-accent group-focus-within:text-accent [@media(hover:hover)_and_(pointer:fine)]:group-hover:text-accent sm:text-lg">
                     {projectCopy.title}
                   </h3>
                   <div
                     className={cn(
-                      "mt-3 h-[3px] w-10 transition-all duration-300 group-hover:w-16",
+                      "mt-3 h-[3px] w-10 transition-all duration-300 group-active:w-16 group-focus-within:w-16 [@media(hover:hover)_and_(pointer:fine)]:group-hover:w-16",
                       theme.bar,
                     )}
                   />

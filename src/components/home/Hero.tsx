@@ -132,7 +132,7 @@ export function Hero() {
                   alt={`${siteConfig.firstName} ${siteConfig.lastName}`}
                   width={300}
                   height={400}
-                  className="aspect-[3/4] h-auto w-full object-cover object-top grayscale transition-all duration-500 group-hover/profile:grayscale-0"
+                  className="aspect-[3/4] h-auto w-full object-cover object-top grayscale transition-all duration-500 group-active/profile:grayscale-0 group-focus-within/profile:grayscale-0 [@media(hover:hover)_and_(pointer:fine)]:group-hover/profile:grayscale-0"
                   priority
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 280px, 300px"
                 />

@@ -256,7 +256,7 @@ function ArtFrame({
         priority={priority}
         quality={100}
         unoptimized
-        className="object-contain object-center grayscale transition-all duration-500 group-hover:scale-[1.02] group-hover:grayscale-0 group-focus-within:grayscale-0"
+        className="object-contain object-center grayscale transition-all duration-500 group-active:scale-[1.02] group-active:grayscale-0 group-focus-within:grayscale-0 [@media(hover:hover)_and_(pointer:fine)]:group-hover:scale-[1.02] [@media(hover:hover)_and_(pointer:fine)]:group-hover:grayscale-0"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 960px"
       />
     </div>
