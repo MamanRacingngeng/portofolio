@@ -40,6 +40,13 @@ export const projects: ProjectItem[] = [
     tags: ["nextjs", "full-stack", "marketplace"],
   },
   {
+    id: "suma-briket",
+    category: "software-dev",
+    liveUrl: "https://sumabriketindonesia.vercel.app/",
+    image: "/images/projects/items/suma-briket.png",
+    tags: ["nextjs", "full-stack", "landing-page", "export"],
+  },
+  {
     id: "simagang-bbkb",
     category: "software-dev",
     liveUrl: "https://simagangporto.vercel.app/",

@@ -100,6 +100,11 @@
  "detailId": "istana-sayur"
  },
  {
+ "title": "Full Stack Developer",
+ "hasDetail": true,
+ "detailId": "suma-briket"
+ },
+ {
  "title": "Associate Data Scientist (BNSP)",
  "hasDetail": true,
  "detailId": "bnsp-cert"
@@ -138,6 +143,13 @@
       "organization": "Istana Sayur Buah",
       "project": "E-Commerce Platform",
       "description": "Led the end-to-end development of a production-ready e-commerce platform for a fresh produce retailer, from business requirement analysis through deployment. Directed project planning, coordinated development activities, and implemented a responsive full-stack application featuring product catalog management, shopping workflows, and customer-focused user experiences. Delivered a scalable digital solution while strengthening leadership, stakeholder communication, and project management capabilities."
+ },
+ "suma-briket": {
+ "period": "2026 – Present",
+ "role": "Full Stack Developer",
+ "organization": "PT SUMA BRIKET PREMIUM · Lampung Selatan",
+ "project": "Export Company Website",
+ "description": "Designed and developed a bilingual corporate website for an international coconut shell charcoal briquette exporter — showcasing BBQ and shisha product lines, export credentials, production process, and global buyer testimonials. Built a conversion-focused experience with WhatsApp lead generation, product catalog sections, and Indonesian/English localization to support domestic and overseas buyers."
  },
  "komdigi-trainee": {
  "period": "Aug 2025",
@@ -281,6 +293,8 @@
  "editorial": "Editorial",
  "automotive": "Automotive",
  "e-commerce": "E-Commerce",
+ "landing-page": "Landing Page",
+ "export": "Export",
  "manokwari": "Manokwari",
  "mobile-app": "Mobile App",
  "health": "Health",
@@ -451,6 +465,11 @@
  "title": "Exporetrade",
  "description": "Global product sourcing platform connecting buyers and suppliers — submit requests, send offers, and manage delivery in one place.",
  "detail": "Buyer & Supplier Marketplace · Vercel"
+ },
+ "suma-briket": {
+ "title": "PT Suma Briket Premium",
+ "description": "Bilingual export company website for premium coconut shell charcoal briquettes — product catalog for BBQ and shisha lines, production process, global export reach, and WhatsApp inquiry flow for international buyers.",
+ "detail": "Client Project · Export Landing Page · Vercel"
  },
  "simagang-bbkb": {
  "title": "SIMAGANG BBKB",
@@ -791,6 +810,7 @@
  "titles": {
  "istana-sayur-buah": "Istana Sayur Buah",
  "exporetrade": "Exporetrade",
+ "suma-briket": "PT Suma Briket Premium",
  "simagang-bbkb": "SIMAGANG BBKB",
  "udaracast": "UdaraCast",
  "kedokploso": "Kedokploso Village"
@@ -855,6 +875,35 @@
  ],
  "challenges": "Designing a scalable marketplace workflow that supports multiple user roles while maintaining a simple user experience.",
  "result": "Successfully developed a production-ready marketplace platform with responsive UI and scalable architecture."
+ },
+ "suma-briket": {
+ "overview": "PT Suma Briket Premium is a production bilingual website for a coconut shell charcoal briquette exporter based in Lampung Selatan, Indonesia. The site positions the company for international buyers with clear product differentiation between BBQ and shisha briquettes, export credibility signals, and a streamlined WhatsApp inquiry flow.",
+ "problem": "The company needed a professional digital presence to reach export buyers beyond offline channels — with product specifications, trust signals, and a fast way for domestic and international clients to request quotes.",
+ "solution": "Delivered a modern landing-page experience with structured sections for products, company story, production process, global export reach, testimonials, and contact — optimized for mobile and desktop with Indonesian/English language switching.",
+ "roles": [
+ "Full Stack Developer",
+ "UI Implementation",
+ "Content Structure",
+ "Localization",
+ "Deployment"
+ ],
+ "features": [
+ "Bilingual ID/EN language switcher",
+ "Hero with export positioning and trust metrics",
+ "Product catalog: BBQ, Shisha, and Custom/Private Label",
+ "About, advantages, and production process sections",
+ "Global export showcase and buyer testimonials",
+ "WhatsApp CTA and inquiry form with product selection",
+ "Responsive layout for mobile and desktop"
+ ],
+ "techStack": [
+ "Next.js",
+ "TypeScript",
+ "Tailwind CSS",
+ "Vercel"
+ ],
+ "challenges": "Translating an export-focused B2B offering into a clear, trustworthy web experience that works for both Indonesian and international buyers while keeping lead generation friction low.",
+ "result": "Successfully launched a production website deployed at sumabriketindonesia.vercel.app, giving PT Suma Briket Premium a credible digital storefront for domestic and export sales."
  },
  "simagang-bbkb": {
  "overview": "SIMAGANG is a web-based internship registration and management system for the Center for Crafts & Batik (BBKB) Yogyakarta under the Ministry of Industry. The platform digitizes internship administration — from public discovery and application submission to structured onboarding for craft and batik internship programs.",
