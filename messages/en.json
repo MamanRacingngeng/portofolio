@@ -87,32 +87,27 @@
  "subtitle": "A visual map of my academic, professional, and research milestones.",
  "years": [
  {
+ "year": "2026",
+ "entries": [
+ {
+ "title": "Web Developer",
+ "hasDetail": true,
+ "detailId": "suma-briket"
+ }
+ ]
+ },
+ {
  "year": "2025",
  "entries": [
  {
- "title": "Machine Learning Developer",
+ "title": "Machine Learning Researcher",
  "hasDetail": true,
  "detailId": "ml-research"
  },
  {
- "title": "Lead Developer & Project Manager",
+ "title": "Lead Developer and Project Manager",
  "hasDetail": true,
  "detailId": "istana-sayur"
- },
- {
- "title": "Full Stack Developer",
- "hasDetail": true,
- "detailId": "suma-briket"
- },
- {
- "title": "Associate Data Scientist (BNSP)",
- "hasDetail": true,
- "detailId": "bnsp-cert"
- },
- {
- "title": "AI & Machine Learning Trainee",
- "hasDetail": true,
- "detailId": "komdigi-trainee"
  },
  {
  "title": "Full Stack Developer Intern",
@@ -123,47 +118,33 @@
  }
  ],
  "details": {
- "ml-research": {
- "period": "2025 – Present",
- "role": "Machine Learning Developer",
- "organization": "Universitas Ahmad Dahlan",
- "project": "UdaraCast · PM2.5 Air Quality Forecasting",
- "description": "Developed an end-to-end PM2.5 air quality forecasting solution by integrating the Sine Cosine Algorithm (SCA) with Long Short-Term Memory (LSTM) to optimize predictive performance. Engineered the complete machine learning pipeline, including data preprocessing, feature engineering, hyperparameter tuning, and performance evaluation using RMSE, MAPE, and R². Designed and deployed UdaraCast, a web-based forecasting platform that enables users to explore interactive PM2.5 predictions and environmental insights across multiple cities and years."
+ "suma-briket": {
+ "period": "Jul 2026 – Present",
+ "role": "Web Developer",
+ "organization": "PT Suma Briket Premium · Lampung, Indonesia",
+ "project": "Corporate Website",
+ "description": "Designed, developed, and deployed the company's corporate website using Next.js, React.js, Tailwind CSS, and Vercel. Developed responsive and user-centered interfaces for company profiles, product showcases, production processes, and customer communication channels while optimizing website performance, accessibility, SEO readiness, and cross-device compatibility. Contributed to strengthening the company's digital presence and supporting international marketing initiatives through a modern and scalable web platform."
  },
- "bbkb-intern": {
- "period": "Dec 2025 – Jan 2026",
- "role": "Full Stack Developer Intern",
- "organization": "Ministry of Industry of Indonesia · BBSPJIKB Yogyakarta",
- "project": "SIMAGANG Internship Platform",
- "description": "Developed and maintained SIMAGANG, a web-based internship registration and management platform that digitizes internship administration at BBSPJIKB Yogyakarta. Implemented frontend and backend features, authentication, database integration, and workflow automation using Laravel, MySQL, and modern web technologies. Collaborated with cross-functional teams to deliver a secure, scalable, and user-centered application that improved internship registration and management processes."
+ "ml-research": {
+ "period": "Jan 2025 – Present",
+ "role": "Machine Learning Researcher",
+ "organization": "Universitas Ahmad Dahlan · Yogyakarta, Indonesia",
+ "project": "UdaraCast · PM2.5 Air Quality Forecasting",
+ "description": "Conducted an undergraduate research project under faculty supervision to develop an AI-powered PM2.5 air quality forecasting system. Managed the end-to-end machine learning workflow, including data collection, preprocessing, exploratory data analysis, feature engineering, LSTM-based predictive modeling, hyperparameter optimization using the Sine Cosine Algorithm (SCA), and model evaluation using RMSE, MAPE, and R² metrics. Collaborated with faculty supervisors and integrated the optimized prediction model into the UdaraCast web application using Laravel and MySQL. Achieved an RMSE of 0.1042, MAPE of 0.8847, and an R² score of 0.9787, demonstrating strong predictive performance and successful integration into an AI-based application."
  },
  "istana-sayur": {
- "period": "2025 – Present",
-      "role": "Lead Developer & Project Manager",
-      "organization": "Istana Sayur Buah",
-      "project": "E-Commerce Platform",
-      "description": "Led the end-to-end development of a production-ready e-commerce platform for a fresh produce retailer, from business requirement analysis through deployment. Directed project planning, coordinated development activities, and implemented a responsive full-stack application featuring product catalog management, shopping workflows, and customer-focused user experiences. Delivered a scalable digital solution while strengthening leadership, stakeholder communication, and project management capabilities."
+ "period": "Feb 2025 – Present",
+ "role": "Lead Developer and Project Manager",
+ "organization": "Istana Sayur Buah · Manokwari, Indonesia",
+ "project": "E-Commerce Platform",
+ "description": "Led the end-to-end development of a business ready e-commerce platform, from requirement analysis to deployment. Managed project planning, coordinated development activities, and supervised technical implementation while designing system architecture, product catalog management, shopping workflows, database integration, and responsive user interfaces using Laravel, MySQL, JavaScript, and Bootstrap. Delivered a reliable digital commerce solution while improving stakeholder collaboration and supporting business digitalization."
  },
- "suma-briket": {
- "period": "2026 – Present",
- "role": "Full Stack Developer",
- "organization": "PT SUMA BRIKET PREMIUM · Lampung Selatan",
- "project": "Export Company Website",
- "description": "Designed and developed a bilingual corporate website for an international coconut shell charcoal briquette exporter — showcasing BBQ and shisha product lines, export credentials, production process, and global buyer testimonials. Built a conversion-focused experience with WhatsApp lead generation, product catalog sections, and Indonesian/English localization to support domestic and overseas buyers."
- },
- "komdigi-trainee": {
- "period": "Aug 2025",
- "role": "AI & Machine Learning Trainee",
- "organization": "Digital Talent Scholarship · Komdigi",
- "project": "Project-Based AI/ML Training",
- "description": "Completed an intensive project-based training program in Artificial Intelligence, Machine Learning, and Data Science. Developed end-to-end machine learning workflows involving data preprocessing, feature engineering, predictive modeling, and model evaluation using Python, Pandas, Scikit-learn, and TensorFlow. Applied software engineering principles to build AI-driven solutions for real-world datasets while strengthening practical skills in intelligent application development."
- },
- "bnsp-cert": {
- "period": "Sep 2025",
- "role": "Associate Data Scientist Candidate",
- "organization": "BNSP · LSP Universitas Ahmad Dahlan",
- "project": "National Competency Assessment",
- "description": "Successfully completed a national competency assessment for the Associate Data Scientist qualification, demonstrating practical expertise in Artificial Intelligence, machine learning, predictive analytics, data preprocessing, feature engineering, and model evaluation. Validated technical competencies through competency-based assessments aligned with the Indonesian National Work Competency Standards (SKKNI)."
+ "bbkb-intern": {
+ "period": "Oct 2025 – Jan 2026",
+ "role": "Full Stack Developer Intern",
+ "organization": "Ministry of Industry of Indonesia · Yogyakarta, Indonesia",
+ "project": "SIMAGANG Internship Platform",
+ "description": "Developed SIMAGANG, a web-based internship registration and management information system for BBSPJIKB Yogyakarta. Implemented frontend and backend functionalities, authentication systems, database integration, and workflow automation using Laravel, MySQL, JavaScript, and Bootstrap. Collaborated with stakeholders to deliver a scalable and user-centered application that streamlined internship administration, digitized business processes, and improved operational efficiency."
  }
  }
  },

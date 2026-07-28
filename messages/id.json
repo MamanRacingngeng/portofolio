@@ -87,32 +87,27 @@
  "subtitle": "Peta visual milestone akademik, profesional, dan riset saya.",
  "years": [
  {
+ "year": "2026",
+ "entries": [
+ {
+ "title": "Web Developer",
+ "hasDetail": true,
+ "detailId": "suma-briket"
+ }
+ ]
+ },
+ {
  "year": "2025",
  "entries": [
  {
- "title": "Machine Learning Developer",
+ "title": "Machine Learning Researcher",
  "hasDetail": true,
  "detailId": "ml-research"
  },
  {
- "title": "Lead Developer & Project Manager",
+ "title": "Lead Developer and Project Manager",
  "hasDetail": true,
  "detailId": "istana-sayur"
- },
- {
- "title": "Full Stack Developer",
- "hasDetail": true,
- "detailId": "suma-briket"
- },
- {
- "title": "Associate Data Scientist (BNSP)",
- "hasDetail": true,
- "detailId": "bnsp-cert"
- },
- {
- "title": "AI & Machine Learning Trainee",
- "hasDetail": true,
- "detailId": "komdigi-trainee"
  },
  {
  "title": "Full Stack Developer Intern",
@@ -123,47 +118,33 @@
  }
  ],
  "details": {
- "ml-research": {
- "period": "2025 – Sekarang",
- "role": "Machine Learning Developer",
- "organization": "Universitas Ahmad Dahlan",
- "project": "UdaraCast · Prediksi Kualitas Udara PM2.5",
- "description": "Mengembangkan solusi forecasting kualitas udara PM2.5 end-to-end dengan mengintegrasikan Sine Cosine Algorithm (SCA) dan Long Short-Term Memory (LSTM) untuk mengoptimalkan performa prediksi. Merancang pipeline machine learning lengkap, termasuk preprocessing data, feature engineering, hyperparameter tuning, dan evaluasi performa menggunakan RMSE, MAPE, dan R². Mendesain dan mendeploy UdaraCast, platform forecasting berbasis web yang memungkinkan pengguna mengeksplorasi prediksi PM2.5 interaktif dan insight lingkungan di berbagai kota dan tahun."
+ "suma-briket": {
+ "period": "Jul 2026 – Sekarang",
+ "role": "Web Developer",
+ "organization": "PT Suma Briket Premium · Lampung, Indonesia",
+ "project": "Website Korporat",
+ "description": "Merancang, mengembangkan, dan mendeploy website korporat perusahaan menggunakan Next.js, React.js, Tailwind CSS, dan Vercel. Membangun antarmuka responsif dan berpusat pada pengguna untuk profil perusahaan, showcase produk, proses produksi, dan saluran komunikasi pelanggan sambil mengoptimalkan performa website, aksesibilitas, kesiapan SEO, dan kompatibilitas lintas perangkat. Berkontribusi memperkuat kehadiran digital perusahaan dan mendukung inisiatif pemasaran internasional melalui platform web modern yang scalable."
  },
- "bbkb-intern": {
- "period": "Des 2025 – Jan 2026",
- "role": "Full Stack Developer Intern",
- "organization": "Kementerian Perindustrian RI · BBSPJIKB Yogyakarta",
- "project": "Platform Magang SIMAGANG",
- "description": "Mengembangkan dan memelihara SIMAGANG, platform pendaftaran dan manajemen magang berbasis web yang mendigitalisasi administrasi magang di BBSPJIKB Yogyakarta. Mengimplementasikan fitur frontend dan backend, autentikasi, integrasi database, dan otomasi workflow menggunakan Laravel, MySQL, dan teknologi web modern. Berkolaborasi dengan tim lintas fungsi untuk menghadirkan aplikasi yang aman, scalable, dan berpusat pada pengguna guna meningkatkan proses pendaftaran dan manajemen magang."
+ "ml-research": {
+ "period": "Jan 2025 – Sekarang",
+ "role": "Machine Learning Researcher",
+ "organization": "Universitas Ahmad Dahlan · Yogyakarta, Indonesia",
+ "project": "UdaraCast · Prediksi Kualitas Udara PM2.5",
+ "description": "Melaksanakan proyek riset skripsi di bawah supervisi dosen untuk mengembangkan sistem forecasting kualitas udara PM2.5 berbasis AI. Mengelola workflow machine learning end-to-end, termasuk pengumpulan data, preprocessing, exploratory data analysis, feature engineering, predictive modeling berbasis LSTM, optimasi hyperparameter menggunakan Sine Cosine Algorithm (SCA), dan evaluasi model dengan metrik RMSE, MAPE, dan R². Berkolaborasi dengan dosen pembimbing dan mengintegrasikan model prediksi yang dioptimalkan ke aplikasi web UdaraCast menggunakan Laravel dan MySQL. Mencapai RMSE 0.1042, MAPE 0.8847, dan skor R² 0.9787, menunjukkan performa prediksi yang kuat dan integrasi yang sukses ke aplikasi berbasis AI."
  },
  "istana-sayur": {
- "period": "2025 – Sekarang",
-      "role": "Lead Developer & Project Manager",
-      "organization": "Istana Sayur Buah",
-      "project": "Platform E-Commerce",
-      "description": "Memimpin pengembangan end-to-end platform e-commerce siap produksi untuk retailer sayur dan buah segar, dari analisis kebutuhan bisnis hingga deployment. Mengarahkan perencanaan proyek, mengkoordinasikan aktivitas pengembangan, dan mengimplementasikan aplikasi full-stack responsif dengan manajemen katalog produk, alur belanja, serta pengalaman pengguna yang berfokus pada pelanggan. Menghadirkan solusi digital yang scalable sambil memperkuat kepemimpinan, komunikasi stakeholder, dan kemampuan project management."
+ "period": "Feb 2025 – Sekarang",
+ "role": "Lead Developer and Project Manager",
+ "organization": "Istana Sayur Buah · Manokwari, Indonesia",
+ "project": "Platform E-Commerce",
+ "description": "Memimpin pengembangan end-to-end platform e-commerce siap bisnis, dari analisis kebutuhan hingga deployment. Mengelola perencanaan proyek, mengkoordinasikan aktivitas pengembangan, dan mensupervisi implementasi teknis sambil merancang arsitektur sistem, manajemen katalog produk, alur belanja, integrasi database, dan antarmuka responsif menggunakan Laravel, MySQL, JavaScript, dan Bootstrap. Menghadirkan solusi digital commerce yang andal sambil meningkatkan kolaborasi stakeholder dan mendukung digitalisasi bisnis."
  },
- "suma-briket": {
- "period": "2026 – Sekarang",
- "role": "Full Stack Developer",
- "organization": "PT SUMA BRIKET PREMIUM · Lampung Selatan",
- "project": "Website Perusahaan Ekspor",
- "description": "Merancang dan mengembangkan website korporat bilingual untuk eksportir briket arang tempurung kelapa premium — menampilkan lini produk BBQ dan shisha, kredibilitas ekspor, proses produksi, serta testimoni buyer internasional. Membangun pengalaman conversion-focused dengan lead generation via WhatsApp, katalog produk, dan lokalisasi Indonesia/Inggris untuk buyer domestik maupun luar negeri."
- },
- "komdigi-trainee": {
- "period": "Agu 2025",
- "role": "AI & Machine Learning Trainee",
- "organization": "Digital Talent Scholarship · Komdigi",
- "project": "Pelatihan AI/ML Berbasis Proyek",
- "description": "Menyelesaikan program pelatihan intensif berbasis proyek di bidang Artificial Intelligence, Machine Learning, dan Data Science. Mengembangkan workflow machine learning end-to-end meliputi preprocessing data, feature engineering, predictive modeling, dan evaluasi model menggunakan Python, Pandas, Scikit-learn, dan TensorFlow. Menerapkan prinsip software engineering untuk membangun solusi berbasis AI pada dataset nyata sambil memperkuat keterampilan praktis pengembangan aplikasi cerdas."
- },
- "bnsp-cert": {
- "period": "Sep 2025",
- "role": "Associate Data Scientist Candidate",
- "organization": "BNSP · LSP Universitas Ahmad Dahlan",
- "project": "Uji Kompetensi Nasional",
- "description": "Berhasil menyelesaikan uji kompetensi nasional kualifikasi Associate Data Scientist, mendemonstrasikan keahlian praktis di bidang Artificial Intelligence, machine learning, predictive analytics, preprocessing data, feature engineering, dan evaluasi model. Memvalidasi kompetensi teknis melalui asesmen berbasis kompetensi yang selaras dengan Standar Kompetensi Kerja Nasional Indonesia (SKKNI)."
+ "bbkb-intern": {
+ "period": "Okt 2025 – Jan 2026",
+ "role": "Full Stack Developer Intern",
+ "organization": "Kementerian Perindustrian RI · Yogyakarta, Indonesia",
+ "project": "Platform Magang SIMAGANG",
+ "description": "Mengembangkan SIMAGANG, sistem informasi pendaftaran dan manajemen magang berbasis web untuk BBSPJIKB Yogyakarta. Mengimplementasikan fungsionalitas frontend dan backend, sistem autentikasi, integrasi database, dan otomasi workflow menggunakan Laravel, MySQL, JavaScript, dan Bootstrap. Berkolaborasi dengan stakeholder untuk menghadirkan aplikasi yang scalable dan berpusat pada pengguna guna merampingkan administrasi magang, mendigitalisasi proses bisnis, dan meningkatkan efisiensi operasional."
  }
  }
  },
