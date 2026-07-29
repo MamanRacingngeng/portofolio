@@ -47,6 +47,20 @@ export const projects: ProjectItem[] = [
     tags: ["nextjs", "full-stack", "landing-page", "export"],
   },
   {
+    id: "samudra-supply",
+    category: "software-dev",
+    liveUrl: "https://samudra-supply.vercel.app/",
+    image: "/images/projects/items/samudra-supply.png",
+    tags: ["nextjs", "full-stack", "marketplace", "export"],
+  },
+  {
+    id: "cv-studio",
+    category: "software-dev",
+    liveUrl: "https://cv-ai-silk.vercel.app/",
+    image: "/images/projects/items/cv-studio.png",
+    tags: ["nextjs", "full-stack", "landing-page"],
+  },
+  {
     id: "simagang-bbkb",
     category: "software-dev",
     liveUrl: "https://simagangporto.vercel.app/",

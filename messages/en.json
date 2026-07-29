@@ -452,6 +452,16 @@
  "description": "Bilingual export company website for premium coconut shell charcoal briquettes — product catalog for BBQ and shisha lines, production process, global export reach, and WhatsApp inquiry flow for international buyers.",
  "detail": "Client Project · Export Landing Page · Vercel"
  },
+ "samudra-supply": {
+ "title": "Samudra Supply",
+ "description": "Indonesia commodity export platform connecting global buyers with verified Indonesian suppliers — curated directory, RFQ inquiry flow, 12 commodity categories, and supplier registration for export-ready B2B trade.",
+ "detail": "Export Marketplace · Supplier Directory · Vercel"
+ },
+ "cv-studio": {
+ "title": "CV Studio",
+ "description": "Professional resume builder with ATS-friendly templates, flexible profile forms, job description matching, live preview, and one-click PDF export — optimized for mobile, tablet, and desktop.",
+ "detail": "Resume Builder · ATS Templates · Vercel"
+ },
  "simagang-bbkb": {
  "title": "SIMAGANG BBKB",
  "description": "Internship registration and management portal for the Center for Crafts & Batik (BBKB) Yogyakarta — landing page, application workflow, internship listings, gallery, and demo admin access.",
@@ -792,6 +802,8 @@
  "istana-sayur-buah": "Istana Sayur Buah",
  "exporetrade": "Exporetrade",
  "suma-briket": "PT Suma Briket Premium",
+ "samudra-supply": "Samudra Supply",
+ "cv-studio": "CV Studio",
  "simagang-bbkb": "SIMAGANG BBKB",
  "udaracast": "UdaraCast",
  "kedokploso": "Kedokploso Village"
@@ -885,6 +897,66 @@
  ],
  "challenges": "Translating an export-focused B2B offering into a clear, trustworthy web experience that works for both Indonesian and international buyers while keeping lead generation friction low.",
  "result": "Successfully launched a production website deployed at sumabriketindonesia.vercel.app, giving PT Suma Briket Premium a credible digital storefront for domestic and export sales."
+ },
+ "samudra-supply": {
+ "overview": "Samudra Supply is a production B2B export platform that connects global buyers with verified Indonesian commodity suppliers. The site positions Indonesia's export potential through a curated marketplace built for trust, transparency, and long-term international trade — from coffee and spices to seafood, furniture, and manufacturing.",
+ "problem": "Many high-quality Indonesian suppliers lack a professional digital identity that can compete on the global stage, while international buyers struggle to discover credible export-ready partners across fragmented channels.",
+ "solution": "Built a modern export marketplace experience with supplier directory, commodity categories, RFQ inquiry forms, registration workflows, and trust-building sections that help suppliers appear credible and help buyers find partners efficiently.",
+ "roles": [
+ "Full Stack Developer",
+ "UI Implementation",
+ "Content Structure",
+ "Form & Inquiry Flow",
+ "Deployment"
+ ],
+ "features": [
+ "Hero with export positioning and platform stats",
+ "12 commodity categories (coffee, spices, coconut, seafood, and more)",
+ "How It Works — 6-step supplier-to-deal workflow",
+ "Featured supplier directory with RFQ actions",
+ "Supplier and buyer benefit sections",
+ "FAQ, testimonials, and contact forms",
+ "Supplier registration form with capacity and export experience fields",
+ "Dark mode and responsive layout for mobile and desktop"
+ ],
+ "techStack": [
+ "Next.js",
+ "TypeScript",
+ "Tailwind CSS",
+ "Vercel"
+ ],
+ "challenges": "Designing a B2B export platform that communicates credibility to international buyers while keeping supplier onboarding and RFQ flows simple and conversion-friendly.",
+ "result": "Successfully launched a production platform at samudra-supply.vercel.app, giving Indonesian suppliers a digital gateway to global commodity markets."
+ },
+ "cv-studio": {
+ "overview": "CV Studio is a production web application for building professional, ATS-friendly resumes in minutes. The platform guides users through profile input, template selection, and PDF export with a bright, approachable interface that works across phone, tablet, and desktop.",
+ "problem": "Many job seekers need a fast way to create recruiter-ready resumes without wrestling with complex document tools or layouts that fail ATS parsing.",
+ "solution": "Developed a streamlined CV builder with flexible profile forms, multiple professional templates, live preview, job description matching, and one-click PDF download — all in a mobile-first experience.",
+ "roles": [
+ "Full Stack Developer",
+ "UI Implementation",
+ "Template System",
+ "PDF Export Flow",
+ "Deployment"
+ ],
+ "features": [
+ "Landing page with clear 3-step build flow",
+ "Flexible profile form with customizable fields",
+ "3 pro templates: ATS, Modern, and Executive",
+ "Job matcher — paste JD and see match score",
+ "Live resume preview",
+ "One-click print-ready PDF download",
+ "My CVs and template browsing pages",
+ "Responsive layout for mobile, tablet, and desktop"
+ ],
+ "techStack": [
+ "Next.js",
+ "TypeScript",
+ "Tailwind CSS",
+ "Vercel"
+ ],
+ "challenges": "Balancing a fun, approachable UI with recruiter-ready output and ATS-friendly structure across multiple template layouts and screen sizes.",
+ "result": "Successfully deployed CV Studio at cv-ai-silk.vercel.app as a free, mobile-ready resume builder with instant PDF export."
  },
  "simagang-bbkb": {
  "overview": "SIMAGANG is a web-based internship registration and management system for the Center for Crafts & Batik (BBKB) Yogyakarta under the Ministry of Industry. The platform digitizes internship administration — from public discovery and application submission to structured onboarding for craft and batik internship programs.",
