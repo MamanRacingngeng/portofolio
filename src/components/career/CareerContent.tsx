@@ -1,23 +1,24 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { GraduationCap, Award, BookOpen, ExternalLink } from "lucide-react";
-import { Link } from "@/i18n/navigation";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { CertificateDetailModal } from "@/components/certificates/CertificateDetailModal";
+import { certificates, type Certificate } from "@/data/certificates";
 import {
-  certificationDocumentIds,
-  certificationIds,
+  careerSections,
   educationIds,
   educationLogos,
   researchIds,
+  sectionAccents,
+  sectionHeaderImages,
+  type CareerSectionId,
 } from "@/data/career";
-import {
-  revealViewport,
-  scrollRevealStaggerContainer,
-  scrollRevealStaggerItem,
-} from "@/lib/animations";
+import { certificateThemeStyles } from "@/lib/certificate-themes";
+import { mediaRevealZoomSmClass } from "@/lib/media-reveal";
+import { revealViewport } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
 type EducationItem = {
@@ -29,13 +30,6 @@ type EducationItem = {
   thesis: string;
 };
 
-type CertificationItem = {
-  title: string;
-  issuer: string;
-  period: string;
-  description: string;
-};
-
 type ResearchItem = {
   title: string;
   role: string;
@@ -44,212 +38,230 @@ type ResearchItem = {
   description: string;
 };
 
-const sectionIcons = {
-  education: GraduationCap,
-  certifications: Award,
-  research: BookOpen,
-} as const;
-
-function CareerCard({
+function CareerSectionCard({
+  sectionId,
+  index,
   children,
-  className,
 }: {
+  sectionId: CareerSectionId;
+  index: number;
   children: React.ReactNode;
-  className?: string;
 }) {
+  const t = useTranslations("career");
+  const accent = sectionAccents[index % sectionAccents.length];
+  const headerImage = sectionHeaderImages[sectionId];
+  const logoSrc =
+    sectionId === "education" ? educationLogos[educationIds[0]] : undefined;
+
   return (
     <motion.article
-      variants={scrollRevealStaggerItem}
-      className={cn(
-        "border-[3px] border-border bg-card p-5 text-left shadow-[5px_5px_0_#111] sm:p-7",
-        className,
-      )}
-      whileHover={{
-        backgroundColor: "rgba(212, 240, 106, 0.1)",
-        boxShadow: "7px 7px 0 #f9a8b8",
-        transition: { duration: 0.25 },
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={revealViewport}
+      transition={{
+        delay: index * 0.08,
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
       }}
+      className={cn(
+        "project-card project-category-card flex h-full flex-col bg-card",
+        accent.card,
+      )}
     >
-      {children}
+      <div
+        className={cn(
+          "h-1.5 w-full border-b-[3px] border-border sm:h-2",
+          accent.bar,
+        )}
+      />
+
+      <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b-[3px] border-border bg-surface">
+        {logoSrc ? (
+          <Image
+            src={logoSrc}
+            alt={t("sections.education")}
+            width={220}
+            height={110}
+            className="h-auto w-40 object-contain mix-blend-lighten sm:w-44 dark:mix-blend-normal"
+          />
+        ) : headerImage ? (
+          <Image
+            src={headerImage}
+            alt=""
+            fill
+            quality={100}
+            unoptimized
+            className={cn("object-cover object-top", mediaRevealZoomSmClass)}
+            sizes="(max-width: 1024px) 100vw, 33vw"
+          />
+        ) : null}
+      </div>
+
+      <div className="flex min-h-0 flex-1 flex-col p-5 sm:p-6">
+        <h2 className="font-display text-lg font-black uppercase leading-snug text-fg sm:text-xl">
+          {t(`sections.${sectionId}`)}
+        </h2>
+        <div className={cn("mt-3 h-[3px] w-10", accent.bar)} />
+        <div className="mt-4 min-h-0 flex-1 space-y-4">{children}</div>
+      </div>
     </motion.article>
   );
 }
 
-function SectionBlock({
-  sectionKey,
-  accent,
-  children,
+function CertificateListItem({
+  certificate,
+  onSelect,
 }: {
-  sectionKey: keyof typeof sectionIcons;
-  accent: "lime" | "sky" | "pink";
-  children: React.ReactNode;
+  certificate: Certificate;
+  onSelect: (certificate: Certificate) => void;
 }) {
-  const t = useTranslations("career.sections");
-  const Icon = sectionIcons[sectionKey];
+  const styles = certificateThemeStyles[certificate.category];
 
   return (
-    <section className="space-y-5 sm:space-y-6">
-      <div className="flex items-center gap-3">
-        <span
-          className={cn(
-            "inline-flex h-11 w-11 items-center justify-center border-[3px] border-border bg-card shadow-[3px_3px_0_#111] sm:h-12 sm:w-12",
-            accent === "sky" && "bg-accent-4",
-            accent === "lime" && "bg-accent-3",
-            accent === "pink" && "bg-accent-2",
-          )}
-        >
-          <Icon className="h-5 w-5" aria-hidden />
-        </span>
-        <h2 className="font-display text-xl font-black uppercase tracking-tight sm:text-2xl">
-          {t(sectionKey)}
-        </h2>
+    <button
+      type="button"
+      onClick={() => onSelect(certificate)}
+      className={cn(
+        "group/cert w-full border-[3px] border-border bg-card text-left shadow-[3px_3px_0_#111] transition-colors",
+        "hover:bg-accent-3/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+      )}
+    >
+      <div className="flex gap-3 p-3 sm:gap-4 sm:p-4">
+        <div className="relative h-14 w-20 shrink-0 overflow-hidden border-[2px] border-border bg-surface sm:h-16 sm:w-24">
+          <Image
+            src={certificate.previewImage}
+            alt=""
+            fill
+            className="object-cover object-top"
+            sizes="96px"
+          />
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="line-clamp-2 font-display text-xs font-black uppercase leading-snug sm:text-sm">
+            {certificate.title}
+          </p>
+          <p className="mt-1 text-[11px] font-bold text-fg sm:text-xs">
+            {certificate.issuer}
+          </p>
+          <span
+            className={cn(
+              "mt-2 inline-block px-2 py-0.5 text-[10px] font-black uppercase",
+              styles.badge,
+            )}
+          >
+            {certificate.date}
+          </span>
+        </div>
       </div>
-      {children}
-    </section>
+    </button>
   );
 }
 
 export function CareerContent() {
   const t = useTranslations("career");
   const education = t.raw("education") as Record<string, EducationItem>;
-  const certifications = t.raw("certifications") as Record<string, CertificationItem>;
   const research = t.raw("research") as Record<string, ResearchItem>;
+  const [selectedCertificate, setSelectedCertificate] =
+    useState<Certificate | null>(null);
 
   return (
-    <section className="page-section min-h-screen py-10 sm:py-14">
-      <div className="page-container max-w-4xl">
+    <section className="page-section py-16 sm:py-20 lg:py-24">
+      <CertificateDetailModal
+        certificate={selectedCertificate}
+        onClose={() => setSelectedCertificate(null)}
+      />
+
+      <div className="page-container max-w-6xl">
         <SectionTitle
           title={t("title")}
           subtitle={t("subtitle")}
-          accent="sky"
-          align="left"
+          accent="pink"
         />
 
-        <motion.div
-          variants={scrollRevealStaggerContainer}
-          initial={false}
-          whileInView="visible"
-          viewport={revealViewport}
-          className="space-y-12 sm:space-y-14"
-        >
-          <SectionBlock sectionKey="education" accent="sky">
-            <div className="space-y-5">
-              {educationIds.map((id) => {
-                const item = education[id];
-                if (!item) return null;
-                const logoSrc = educationLogos[id];
+        <div className="card-shadow-grid grid items-stretch gap-8 lg:grid-cols-3 lg:gap-9">
+          {careerSections.map((sectionId, index) => (
+            <CareerSectionCard
+              key={sectionId}
+              sectionId={sectionId}
+              index={index}
+            >
+              {sectionId === "education"
+                ? educationIds.map((id) => {
+                    const item = education[id];
+                    if (!item) return null;
 
-                return (
-                  <CareerCard key={id}>
-                    <span className="inline-block border-[3px] border-border bg-accent-4 px-3 py-1.5 text-[10px] font-black uppercase tracking-wide shadow-[4px_4px_0_#38bdf8] sm:px-4 sm:py-2 sm:text-xs">
-                      {item.period}
-                    </span>
-                    <div className="mt-4 flex flex-col gap-4 sm:mt-5 sm:flex-row sm:items-start sm:gap-5">
-                      {logoSrc ? (
-                        <div className="shrink-0 self-start overflow-hidden border-[3px] border-border bg-black p-3 shadow-[4px_4px_0_#111] sm:p-4">
-                          <Image
-                            src={logoSrc}
-                            alt={item.institution}
-                            width={200}
-                            height={96}
-                            className="h-auto w-36 object-contain sm:w-40"
-                          />
+                    return (
+                      <div key={id} className="space-y-4">
+                        <span className="inline-block border-[3px] border-border bg-accent-4 px-3 py-1 text-[10px] font-black uppercase tracking-wide shadow-[3px_3px_0_#38bdf8] sm:text-xs">
+                          {item.period}
+                        </span>
+                        <div>
+                          <p className="font-display text-sm font-black uppercase leading-snug sm:text-base">
+                            {item.institution}
+                          </p>
+                          <p className="mt-2 text-sm font-bold text-fg">
+                            {item.degree}
+                          </p>
+                          <p className="mt-1 text-sm text-muted">{item.gpa}</p>
                         </div>
-                      ) : null}
-                      <div className="min-w-0 flex-1">
-                        <h3 className="font-display text-xl font-black uppercase leading-tight sm:text-2xl">
-                          {item.institution}
-                        </h3>
-                        <p className="mt-2 text-sm font-bold text-fg sm:text-base">
-                          {item.degree}
-                        </p>
-                        <p className="mt-1 text-sm font-medium text-muted sm:text-base">
-                          {item.gpa}
-                        </p>
+                        <div className="border-t-[3px] border-border pt-4">
+                          <p className="text-[10px] font-black uppercase tracking-wide text-muted sm:text-xs">
+                            {item.thesisLabel}
+                          </p>
+                          <p className="mt-2 text-sm leading-relaxed text-fg">
+                            {item.thesis}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <hr className="my-5 border-t-[3px] border-border" />
-                    <p className="text-xs font-black uppercase tracking-wide text-muted sm:text-sm">
-                      {item.thesisLabel}
-                    </p>
-                    <p className="mt-2 text-sm leading-relaxed text-fg sm:text-base sm:leading-[1.75]">
-                      {item.thesis}
-                    </p>
-                  </CareerCard>
-                );
-              })}
-            </div>
-          </SectionBlock>
+                    );
+                  })
+                : null}
 
-          <SectionBlock sectionKey="certifications" accent="lime">
-            <div className="space-y-5">
-              {certificationIds.map((id) => {
-                const item = certifications[id];
-                if (!item) return null;
-                const documentId = certificationDocumentIds[id];
+              {sectionId === "certifications" ? (
+                <div className="max-h-[28rem] space-y-3 overflow-y-auto pr-1 sm:max-h-[32rem]">
+                  {certificates.map((certificate) => (
+                    <CertificateListItem
+                      key={certificate.id}
+                      certificate={certificate}
+                      onSelect={setSelectedCertificate}
+                    />
+                  ))}
+                </div>
+              ) : null}
 
-                return (
-                  <CareerCard key={id}>
-                    <span className="inline-block border-[3px] border-border bg-accent-3 px-3 py-1.5 text-[10px] font-black uppercase tracking-wide shadow-[4px_4px_0_#111] sm:px-4 sm:py-2 sm:text-xs">
-                      {item.period}
-                    </span>
-                    <h3 className="mt-3 font-display text-xl font-black uppercase leading-tight sm:mt-4 sm:text-2xl">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-sm font-bold text-fg sm:text-base">
-                      {item.issuer}
-                    </p>
-                    <hr className="my-5 border-t-[3px] border-border" />
-                    <p className="text-justify text-sm leading-relaxed text-fg sm:text-base sm:leading-[1.75]">
-                      {item.description}
-                    </p>
-                    {documentId ? (
-                      <Link
-                        href={`/sertifikat/dokumen/${documentId}`}
-                        className="project-pill pop-btn pop-btn-secondary mt-5 inline-flex items-center gap-2 px-4 py-2.5 text-sm"
-                      >
-                        {t("viewCertificate")}
-                        <ExternalLink className="h-4 w-4" aria-hidden />
-                      </Link>
-                    ) : null}
-                  </CareerCard>
-                );
-              })}
-            </div>
-          </SectionBlock>
+              {sectionId === "research"
+                ? researchIds.map((id) => {
+                    const item = research[id];
+                    if (!item) return null;
 
-          <SectionBlock sectionKey="research" accent="pink">
-            <div className="space-y-5">
-              {researchIds.map((id) => {
-                const item = research[id];
-                if (!item) return null;
-
-                return (
-                  <CareerCard key={id}>
-                    <span className="inline-block border-[3px] border-border bg-accent-2 px-3 py-1.5 text-[10px] font-black uppercase tracking-wide shadow-[4px_4px_0_#111] sm:px-4 sm:py-2 sm:text-xs">
-                      {item.status}
-                    </span>
-                    <h3 className="mt-3 font-display text-lg font-black uppercase leading-tight sm:mt-4 sm:text-xl lg:text-2xl">
-                      {item.title}
-                    </h3>
-                    <div className="mt-4 space-y-1">
-                      <p className="text-sm font-bold text-fg sm:text-base">
-                        {item.role}
-                      </p>
-                      <p className="text-sm font-medium text-muted sm:text-base">
-                        {item.submittedTo}
-                      </p>
-                    </div>
-                    <hr className="my-5 border-t-[3px] border-border" />
-                    <p className="text-justify text-sm leading-relaxed text-fg sm:text-base sm:leading-[1.75]">
-                      {item.description}
-                    </p>
-                  </CareerCard>
-                );
-              })}
-            </div>
-          </SectionBlock>
-        </motion.div>
+                    return (
+                      <div key={id} className="space-y-4">
+                        <span className="inline-block border-[3px] border-border bg-accent-2 px-3 py-1 text-[10px] font-black uppercase tracking-wide shadow-[3px_3px_0_#111] sm:text-xs">
+                          {item.status}
+                        </span>
+                        <p className="font-display text-sm font-black uppercase leading-snug sm:text-base">
+                          {item.title}
+                        </p>
+                        <div className="space-y-1">
+                          <p className="text-sm font-bold text-fg">
+                            {item.role}
+                          </p>
+                          <p className="text-sm text-muted">
+                            {item.submittedTo}
+                          </p>
+                        </div>
+                        <div className="border-t-[3px] border-border pt-4">
+                          <p className="text-sm leading-relaxed text-fg">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })
+                : null}
+            </CareerSectionCard>
+          ))}
+        </div>
       </div>
     </section>
   );
