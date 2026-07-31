@@ -2,7 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { researchIds } from "@/data/career";
+import { ExternalLink } from "lucide-react";
+import { researchIds, researchJournalLinks } from "@/data/career";
 import { scrollRevealStaggerContainer, scrollRevealStaggerItem } from "@/lib/animations";
 
 type ResearchItem = {
@@ -28,6 +29,7 @@ export function CareerResearchSection() {
       {researchIds.map((id) => {
         const item = research[id];
         if (!item) return null;
+        const journalUrl = researchJournalLinks[id];
 
         return (
           <motion.article
@@ -55,6 +57,18 @@ export function CareerResearchSection() {
             <p className="text-justify text-sm leading-relaxed text-fg sm:text-base sm:leading-[1.75]">
               {item.description}
             </p>
+
+            {journalUrl ? (
+              <a
+                href={journalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-pill pop-btn pop-btn-primary mt-6 inline-flex w-fit items-center gap-2 px-5 py-2.5 text-sm"
+              >
+                {t("viewJournal")}
+                <ExternalLink className="h-4 w-4" aria-hidden />
+              </a>
+            ) : null}
           </motion.article>
         );
       })}

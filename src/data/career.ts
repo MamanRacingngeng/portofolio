@@ -14,6 +14,13 @@ export const educationLogos: Partial<Record<(typeof educationIds)[number], strin
 
 export const researchIds = ["sca-lstm-thesis"] as const;
 
+export const researchJournalLinks: Partial<
+  Record<(typeof researchIds)[number], string>
+> = {
+  "sca-lstm-thesis":
+    "https://jurnal.fikom.umi.ac.id/index.php/BUSITI/author",
+};
+
 export const sectionHeaderImages: Record<CareerSectionId, string> = {
   education: "/images/career/education.png",
   certifications: "/images/career/certifications.png",

@@ -2310,6 +2310,7 @@
  "back": "Back to career",
  "viewCertificate": "View certificate",
  "backToCareer": "Back to career",
+ "viewJournal": "View journal",
  "sections": {
  "education": "Education",
  "certifications": "Professional Certifications",
@@ -2358,7 +2359,7 @@
  "title": "Performance of the Sine-Cosine Algorithm for LSTM Hyperparameter Tuning in PM2.5 Air Quality Forecasting",
  "role": "Role: First Author",
  "status": "Under Review",
- "submittedTo": "Submitted to: SINTA 2 Accredited Journal",
+ "submittedTo": "Submitted to: BUSITI (Buletin Sistem Informasi dan Teknologi Islam) — SINTA 2",
  "description": "Conducted research on optimizing Long Short-Term Memory (LSTM) hyperparameters using the Sine-Cosine Algorithm (SCA) for PM2.5 air quality forecasting, with the manuscript currently under peer review."
  }
  }

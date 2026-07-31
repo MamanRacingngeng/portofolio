@@ -44,13 +44,13 @@ export function CareerEducationSection() {
 
             <div className="mt-5 flex flex-col gap-5 sm:flex-row sm:items-start">
               {logoSrc ? (
-                <div className="flex shrink-0 items-center justify-center self-start rounded-none bg-surface p-3 sm:p-4">
+                <div className="flex shrink-0 items-center justify-center self-start border-[3px] border-border bg-[#111] p-3 sm:p-4">
                   <Image
                     src={logoSrc}
                     alt={item.institution}
                     width={200}
                     height={96}
-                    className="h-auto w-36 object-contain mix-blend-screen sm:w-40 dark:mix-blend-normal"
+                    className="h-auto w-36 object-contain sm:w-40"
                   />
                 </div>
               ) : null}
