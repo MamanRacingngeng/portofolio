@@ -8,7 +8,6 @@ const outputDir = path.join(root, "public", "images", "certificates");
 const sources = [
   { id: "ads-digital-talent", pdf: "ads-digital-talent.pdf" },
   { id: "pelatihan-data-science", pdf: "pelatihan-data-science.pdf" },
-  { id: "ui-ux", pdf: "ui-ux.pdf" },
   { id: "adept-uad", pdf: "toefl-itp.pdf" },
   { id: "literasi-ms-word", pdf: "literasi-ms-word.pdf" },
   { id: "literasi-database", pdf: "literasi-database.pdf" },
