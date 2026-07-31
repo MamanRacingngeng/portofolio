@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
 import { researchIds, researchJournalLinks } from "@/data/career";
 import { scrollRevealStaggerContainer, scrollRevealStaggerItem } from "@/lib/animations";
 
@@ -63,10 +62,9 @@ export function CareerResearchSection() {
                 href={journalUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="project-pill pop-btn pop-btn-primary mt-6 inline-flex w-fit items-center gap-2 px-5 py-2.5 text-sm"
+                className="project-pill pop-btn pop-btn-primary mt-6 inline-flex w-fit px-5 py-2.5 text-sm"
               >
                 {t("viewJournal")}
-                <ExternalLink className="h-4 w-4" aria-hidden />
               </a>
             ) : null}
           </motion.article>
