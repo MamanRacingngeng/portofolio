@@ -124,7 +124,11 @@ function CertificatePreview({
   );
 }
 
-export function CertificatesGrid() {
+interface CertificatesGridProps {
+  embedded?: boolean;
+}
+
+export function CertificatesGrid({ embedded = false }: CertificatesGridProps) {
   const t = useTranslations("certificates");
   const [activeFilter, setActiveFilter] = useState<FilterId>("all");
   const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(
@@ -136,22 +140,29 @@ export function CertificatesGrid() {
     return certificates.filter((item) => item.category === activeFilter);
   }, [activeFilter]);
 
-  return (
-    <section className="page-section overflow-x-clip py-20 sm:py-24">
+  const content = (
+    <>
       <CertificateDetailModal
         certificate={selectedCertificate}
         onClose={() => setSelectedCertificate(null)}
       />
 
-      <div className="page-container max-w-6xl">
-        <SectionTitle
-          title={t("title")}
-          subtitle={t("subtitle")}
-          accent="lime"
-          showPolkadots
-        />
+      <div className={embedded ? undefined : "page-container max-w-6xl"}>
+        {!embedded ? (
+          <SectionTitle
+            title={t("title")}
+            subtitle={t("subtitle")}
+            accent="lime"
+            showPolkadots
+          />
+        ) : null}
 
-        <div className="mb-10 flex flex-wrap items-center justify-center gap-2 sm:mb-12">
+        <div
+          className={cn(
+            "flex flex-wrap items-center justify-center gap-2",
+            embedded ? "mb-8 sm:mb-10" : "mb-10 sm:mb-12",
+          )}
+        >
           {filterIds.map((filterId) => {
             const isActive = activeFilter === filterId;
 
@@ -304,6 +315,16 @@ export function CertificatesGrid() {
           )}
         </AnimatePresence>
       </div>
+    </>
+  );
+
+  if (embedded) {
+    return content;
+  }
+
+  return (
+    <section className="page-section overflow-x-clip py-20 sm:py-24">
+      {content}
     </section>
   );
 }

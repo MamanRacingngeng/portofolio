@@ -2306,12 +2306,28 @@
  "career": {
  "title": "Career",
  "subtitle": "Education, professional certifications, and research publications that shape my journey in data science and software development.",
+ "explore": "Explore",
+ "back": "Back to career",
  "viewCertificate": "View certificate",
  "backToCareer": "Back to career",
  "sections": {
  "education": "Education",
  "certifications": "Professional Certifications",
  "research": "Research & Publications"
+ },
+ "categories": {
+ "education": {
+ "title": "Education",
+ "description": "Academic background, GPA, and undergraduate thesis at Universitas Ahmad Dahlan."
+ },
+ "certifications": {
+ "title": "Professional Certifications",
+ "description": "National competency certificates, data science training, and professional development records."
+ },
+ "research": {
+ "title": "Research & Publications",
+ "description": "Research manuscripts, publication status, and peer-review milestones."
+ }
  },
  "education": {
  "uad-informatics": {

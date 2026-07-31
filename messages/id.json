@@ -2306,12 +2306,28 @@
  "career": {
  "title": "Karir",
  "subtitle": "Pendidikan, sertifikasi profesional, dan publikasi riset yang membentuk perjalanan saya di data science dan pengembangan perangkat lunak.",
+ "explore": "Masuk",
+ "back": "Kembali ke karir",
  "viewCertificate": "Lihat sertifikat",
  "backToCareer": "Kembali ke karir",
  "sections": {
  "education": "Pendidikan",
  "certifications": "Sertifikasi Profesional",
  "research": "Riset & Publikasi"
+ },
+ "categories": {
+ "education": {
+ "title": "Pendidikan",
+ "description": "Latar belakang akademik, IPK, dan skripsi sarjana di Universitas Ahmad Dahlan."
+ },
+ "certifications": {
+ "title": "Sertifikasi Profesional",
+ "description": "Sertifikat kompetensi nasional, pelatihan data science, dan rekam jejak pengembangan profesional."
+ },
+ "research": {
+ "title": "Riset & Publikasi",
+ "description": "Naskah riset, status publikasi, dan milestone peer review."
+ }
  },
  "education": {
  "uad-informatics": {

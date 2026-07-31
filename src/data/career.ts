@@ -1,6 +1,10 @@
-export const careerSections = ["education", "certifications", "research"] as const;
+export const careerSectionCategories = [
+  { id: "education" as const, slug: "education" },
+  { id: "certifications" as const, slug: "certifications" },
+  { id: "research" as const, slug: "research" },
+] as const;
 
-export type CareerSectionId = (typeof careerSections)[number];
+export type CareerSectionId = (typeof careerSectionCategories)[number]["id"];
 
 export const educationIds = ["uad-informatics"] as const;
 
@@ -10,10 +14,10 @@ export const educationLogos: Partial<Record<(typeof educationIds)[number], strin
 
 export const researchIds = ["sca-lstm-thesis"] as const;
 
-export const sectionHeaderImages: Record<CareerSectionId, string | null> = {
-  education: null,
-  certifications: "/images/certificates/ads-bnsp.png",
-  research: "/images/projects/ai-ml/pm25-sca-lstm.png",
+export const sectionHeaderImages: Record<CareerSectionId, string> = {
+  education: "/images/career/education.png",
+  certifications: "/images/career/certifications.png",
+  research: "/images/career/research.png",
 };
 
 export const sectionAccents = [
@@ -33,3 +37,14 @@ export const sectionAccents = [
     btn: "pop-btn-primary",
   },
 ] as const;
+
+export function isCareerSection(value: string): value is CareerSectionId {
+  return careerSectionCategories.some((item) => item.slug === value);
+}
+
+export function getCareerSectionSlug(sectionId: CareerSectionId): string {
+  return (
+    careerSectionCategories.find((item) => item.id === sectionId)?.slug ??
+    sectionId
+  );
+}

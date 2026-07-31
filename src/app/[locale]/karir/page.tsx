@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { CareerContent } from "@/components/career/CareerContent";
+import { CareerCategories } from "@/components/career/CareerCategories";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -20,5 +20,5 @@ export default async function KarirPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <CareerContent />;
+  return <CareerCategories />;
 }
