@@ -8,7 +8,6 @@ import {
   scrollRevealStaggerContainer,
   scrollRevealStaggerItem,
 } from "@/lib/animations";
-import { cn } from "@/lib/utils";
 
 type EducationItem = {
   institution: string;
@@ -41,20 +40,11 @@ export function CareerEducationSection() {
             key={id}
             variants={scrollRevealStaggerItem}
             className="project-card project-card--sky overflow-hidden bg-card"
-            whileHover={{
-              backgroundColor: "rgba(56, 189, 248, 0.06)",
-              transition: { duration: 0.25 },
-            }}
           >
             <div className="h-2 border-b-[3px] border-border bg-accent-4" />
 
-            <div className="relative overflow-hidden border-b-[3px] border-border bg-gradient-to-br from-accent-4/20 via-surface/70 to-card px-5 py-6 sm:px-8 sm:py-8">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-accent-4/20 blur-2xl"
-              />
-
-              <div className="relative flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:gap-8">
+            <div className="border-b-[3px] border-border bg-card px-5 py-6 sm:px-8 sm:py-8">
+              <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:gap-8">
                 {logoSrc ? (
                   <div className="flex shrink-0 items-center justify-center">
                     <Image
@@ -62,7 +52,7 @@ export function CareerEducationSection() {
                       alt={item.institution}
                       width={240}
                       height={128}
-                      className="h-auto w-36 object-contain drop-shadow-sm sm:w-44"
+                      className="h-auto w-36 object-contain sm:w-44"
                     />
                   </div>
                 ) : null}
@@ -76,7 +66,7 @@ export function CareerEducationSection() {
                   </p>
 
                   <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:justify-start">
-                    <span className="brutal-chip brutal-chip--sky brutal-chip--active px-3 py-1.5 text-[10px] sm:text-xs">
+                    <span className="brutal-chip brutal-chip--active px-3 py-1.5 text-[10px] sm:text-xs">
                       {item.period}
                     </span>
                     <span className="brutal-chip px-3 py-1.5 text-[10px] sm:text-xs">
@@ -88,13 +78,8 @@ export function CareerEducationSection() {
             </div>
 
             <div className="p-5 sm:p-7">
-              <div
-                className={cn(
-                  "border-[3px] border-border bg-surface/90 p-5 shadow-[4px_4px_0_#38bdf8] sm:p-6",
-                  "transition-colors duration-300 hover:bg-surface",
-                )}
-              >
-                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-accent-4 sm:text-xs">
+              <div className="border-[3px] border-border bg-surface p-5 shadow-[4px_4px_0_#111] sm:p-6">
+                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-muted sm:text-xs">
                   {item.thesisLabel}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-fg sm:text-base sm:leading-[1.75]">
