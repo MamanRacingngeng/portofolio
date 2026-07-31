@@ -14,6 +14,7 @@ export async function CertificateDocumentView({
   certificate,
 }: CertificateDocumentViewProps) {
   const t = await getTranslations("certificates");
+  const tCareer = await getTranslations("career");
   const pages = getCertificateDocumentPages(certificate);
   const styles = certificateThemeStyles[certificate.category];
 
@@ -31,10 +32,10 @@ export async function CertificateDocumentView({
             <p className="mt-2 text-sm font-bold text-fg">{certificate.issuer}</p>
           </div>
           <Link
-            href="/sertifikat"
+            href="/karir"
             className={cn("project-pill pop-btn w-fit px-5 py-2.5 text-sm", styles.pill)}
           >
-            {t("backToCertificates")}
+            {tCareer("backToCareer")}
           </Link>
         </div>
 

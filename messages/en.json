@@ -16,6 +16,10 @@
  "title": "Certificates — RAHN.",
  "description": "Professional certifications, training records, language proficiency, and achievements."
  },
+ "career": {
+ "title": "Career — RAHN.",
+ "description": "Education, professional certifications, and research publications."
+ },
  "guestbook": {
  "title": "Message Board — RAHN.",
  "description": "Leave a message — say hello or start a conversation."
@@ -34,6 +38,7 @@
  "projects": "Projects",
  "blog": "Blog",
  "certificates": "Certificates",
+ "career": "Career",
  "guestbook": "Guestbook",
  "openMenu": "Open menu",
  "closeMenu": "Close menu"
@@ -2297,5 +2302,49 @@
  "download": "Download Resume",
  "backHome": "Back to home",
  "iframeTitle": "Resume preview — Rahman Nendhiarto"
+ },
+ "career": {
+ "title": "Career",
+ "subtitle": "Education, professional certifications, and research publications that shape my journey in data science and software development.",
+ "viewCertificate": "View certificate",
+ "backToCareer": "Back to career",
+ "sections": {
+ "education": "Education",
+ "certifications": "Professional Certifications",
+ "research": "Research & Publications"
+ },
+ "education": {
+ "uad-informatics": {
+ "institution": "Universitas Ahmad Dahlan",
+ "degree": "Bachelor of Informatics Engineering",
+ "period": "2022 – 2026",
+ "gpa": "GPA: 3.52 / 4.00",
+ "thesisLabel": "Thesis",
+ "thesis": "Performance of the Sine-Cosine Algorithm for LSTM Hyperparameter Tuning in PM2.5 Air Quality Forecasting"
+ }
+ },
+ "certifications": {
+ "ads-bnsp": {
+ "title": "Associate Data Scientist",
+ "issuer": "National Professional Certification Board (BNSP)",
+ "period": "September 2025 – September 2028",
+ "description": "Successfully obtained the Associate Data Scientist professional certification by demonstrating competencies in data preprocessing, feature engineering, machine learning, predictive analytics, artificial intelligence, and model evaluation based on the Indonesian National Work Competency Standards (SKKNI)."
+ },
+ "data-science-training": {
+ "title": "Data Science Training Program",
+ "issuer": "Digital Talent Scholarship – Vocational School Graduate Academy",
+ "period": "September 2025",
+ "description": "Completed a project-based data science training program covering Python, data preprocessing, feature engineering, machine learning, predictive modeling, TensorFlow, and model evaluation through practical implementation."
+ }
+ },
+ "research": {
+ "sca-lstm-thesis": {
+ "title": "Performance of the Sine-Cosine Algorithm for LSTM Hyperparameter Tuning in PM2.5 Air Quality Forecasting",
+ "role": "Role: First Author",
+ "status": "Under Review",
+ "submittedTo": "Submitted to: SINTA 2 Accredited Journal",
+ "description": "Conducted research on optimizing Long Short-Term Memory (LSTM) hyperparameters using the Sine-Cosine Algorithm (SCA) for PM2.5 air quality forecasting, with the manuscript currently under peer review."
+ }
+ }
  }
 }

@@ -16,6 +16,10 @@
  "title": "Sertifikat — RAHN.",
  "description": "Sertifikasi profesional, rekam jejak pelatihan, kemampuan bahasa, dan pencapaian."
  },
+ "career": {
+ "title": "Karir — RAHN.",
+ "description": "Pendidikan, sertifikasi profesional, dan publikasi riset."
+ },
  "guestbook": {
  "title": "Ruang Pesan — RAHN.",
  "description": "Tinggalkan pesan — sapa atau mulai percakapan."
@@ -34,6 +38,7 @@
  "projects": "Proyek",
  "blog": "Catatan",
  "certificates": "Sertifikat",
+ "career": "Karir",
  "guestbook": "Buku Tamu",
  "openMenu": "Buka menu",
  "closeMenu": "Tutup menu"
@@ -2297,5 +2302,49 @@
  "download": "Unduh Resume",
  "backHome": "Kembali ke beranda",
  "iframeTitle": "Pratinjau Resume — Rahman Nendhiarto"
+ },
+ "career": {
+ "title": "Karir",
+ "subtitle": "Pendidikan, sertifikasi profesional, dan publikasi riset yang membentuk perjalanan saya di data science dan pengembangan perangkat lunak.",
+ "viewCertificate": "Lihat sertifikat",
+ "backToCareer": "Kembali ke karir",
+ "sections": {
+ "education": "Pendidikan",
+ "certifications": "Sertifikasi Profesional",
+ "research": "Riset & Publikasi"
+ },
+ "education": {
+ "uad-informatics": {
+ "institution": "Universitas Ahmad Dahlan",
+ "degree": "Sarjana Teknik Informatika",
+ "period": "2022 – 2026",
+ "gpa": "IPK: 3,52 / 4,00",
+ "thesisLabel": "Skripsi",
+ "thesis": "Performance of the Sine-Cosine Algorithm for LSTM Hyperparameter Tuning in PM2.5 Air Quality Forecasting"
+ }
+ },
+ "certifications": {
+ "ads-bnsp": {
+ "title": "Associate Data Scientist",
+ "issuer": "Badan Nasional Sertifikasi Profesi (BNSP)",
+ "period": "September 2025 – September 2028",
+ "description": "Berhasil memperoleh sertifikasi profesional Associate Data Scientist dengan mendemonstrasikan kompetensi preprocessing data, feature engineering, machine learning, predictive analytics, artificial intelligence, dan evaluasi model berdasarkan Standar Kompetensi Kerja Nasional Indonesia (SKKNI)."
+ },
+ "data-science-training": {
+ "title": "Program Pelatihan Data Science",
+ "issuer": "Digital Talent Scholarship – Vocational School Graduate Academy",
+ "period": "September 2025",
+ "description": "Menyelesaikan program pelatihan data science berbasis proyek meliputi Python, preprocessing data, feature engineering, machine learning, predictive modeling, TensorFlow, dan evaluasi model melalui implementasi praktis."
+ }
+ },
+ "research": {
+ "sca-lstm-thesis": {
+ "title": "Performance of the Sine-Cosine Algorithm for LSTM Hyperparameter Tuning in PM2.5 Air Quality Forecasting",
+ "role": "Peran: First Author",
+ "status": "Under Review",
+ "submittedTo": "Diajukan ke: Jurnal Terakreditasi SINTA 2",
+ "description": "Melakukan riset optimasi hyperparameter Long Short-Term Memory (LSTM) menggunakan Sine-Cosine Algorithm (SCA) untuk forecasting kualitas udara PM2.5, dengan naskah saat ini sedang dalam proses peer review."
+ }
+ }
  }
 }

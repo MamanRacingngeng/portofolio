@@ -26,7 +26,7 @@ export const navRoutes = [
   { key: "home" as const, href: "/" },
   { key: "projects" as const, href: "/proyek" },
   { key: "blog" as const, href: "/blog" },
-  { key: "certificates" as const, href: "/sertifikat" },
+  { key: "career" as const, href: "/karir" },
   { key: "guestbook" as const, href: "/buku-tamu" },
 ];
 
