@@ -41,7 +41,7 @@ export function CareerEducationSection() {
             variants={scrollRevealStaggerItem}
             className="project-card project-card--sky overflow-hidden bg-card"
           >
-            <div className="h-2 border-b-[3px] border-border bg-accent-4" />
+            <div className="h-1.5 border-b-[3px] border-border bg-accent-4/35" />
 
             <div className="border-b-[3px] border-border bg-card px-5 py-6 sm:px-8 sm:py-8">
               <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:gap-8">
@@ -66,7 +66,7 @@ export function CareerEducationSection() {
                   </p>
 
                   <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:justify-start">
-                    <span className="brutal-chip brutal-chip--active px-3 py-1.5 text-[10px] sm:text-xs">
+                    <span className="inline-flex items-center border-2 border-border bg-accent-4/20 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wide text-fg sm:text-xs">
                       {item.period}
                     </span>
                     <span className="brutal-chip px-3 py-1.5 text-[10px] sm:text-xs">
