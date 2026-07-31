@@ -4,7 +4,11 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { educationIds, educationLogos } from "@/data/career";
-import { scrollRevealStaggerContainer, scrollRevealStaggerItem } from "@/lib/animations";
+import {
+  scrollRevealStaggerContainer,
+  scrollRevealStaggerItem,
+} from "@/lib/animations";
+import { cn } from "@/lib/utils";
 
 type EducationItem = {
   institution: string;
@@ -36,46 +40,68 @@ export function CareerEducationSection() {
           <motion.article
             key={id}
             variants={scrollRevealStaggerItem}
-            className="border-[3px] border-border bg-card p-5 shadow-[5px_5px_0_#111] sm:p-7"
+            className="project-card project-card--sky overflow-hidden bg-card"
+            whileHover={{
+              backgroundColor: "rgba(56, 189, 248, 0.06)",
+              transition: { duration: 0.25 },
+            }}
           >
-            <span className="inline-block border-[3px] border-border bg-accent-4 px-3 py-1.5 text-[10px] font-black uppercase tracking-wide shadow-[4px_4px_0_#38bdf8] sm:px-4 sm:py-2 sm:text-xs">
-              {item.period}
-            </span>
+            <div className="h-2 border-b-[3px] border-border bg-accent-4" />
 
-            <div className="mt-5 flex flex-col gap-5 sm:flex-row sm:items-start">
-              {logoSrc ? (
-                <div className="flex shrink-0 items-center justify-center self-start border-[3px] border-border bg-surface p-4 sm:p-5">
-                  <Image
-                    src={logoSrc}
-                    alt={item.institution}
-                    width={220}
-                    height={120}
-                    className="h-auto w-40 object-contain sm:w-44"
-                  />
+            <div className="relative overflow-hidden border-b-[3px] border-border bg-gradient-to-br from-accent-4/20 via-surface/70 to-card px-5 py-6 sm:px-8 sm:py-8">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-accent-4/20 blur-2xl"
+              />
+
+              <div className="relative flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:gap-8">
+                {logoSrc ? (
+                  <div className="flex shrink-0 items-center justify-center">
+                    <Image
+                      src={logoSrc}
+                      alt={item.institution}
+                      width={240}
+                      height={128}
+                      className="h-auto w-36 object-contain drop-shadow-sm sm:w-44"
+                    />
+                  </div>
+                ) : null}
+
+                <div className="min-w-0 flex-1 text-center sm:text-left">
+                  <h3 className="font-display text-xl font-black uppercase leading-tight sm:text-2xl lg:text-[1.75rem]">
+                    {item.institution}
+                  </h3>
+                  <p className="mt-2 text-sm font-bold leading-snug text-fg sm:text-base">
+                    {item.degree}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:justify-start">
+                    <span className="brutal-chip brutal-chip--sky brutal-chip--active px-3 py-1.5 text-[10px] sm:text-xs">
+                      {item.period}
+                    </span>
+                    <span className="brutal-chip px-3 py-1.5 text-[10px] sm:text-xs">
+                      {item.gpa}
+                    </span>
+                  </div>
                 </div>
-              ) : null}
-
-              <div className="min-w-0 flex-1">
-                <h3 className="font-display text-xl font-black uppercase leading-tight sm:text-2xl">
-                  {item.institution}
-                </h3>
-                <p className="mt-2 text-sm font-bold text-fg sm:text-base">
-                  {item.degree}
-                </p>
-                <p className="mt-1 text-sm font-medium text-muted sm:text-base">
-                  {item.gpa}
-                </p>
               </div>
             </div>
 
-            <hr className="my-6 border-t-[3px] border-border" />
-
-            <p className="text-xs font-black uppercase tracking-wide text-muted sm:text-sm">
-              {item.thesisLabel}
-            </p>
-            <p className="mt-2 text-sm leading-relaxed text-fg sm:text-base sm:leading-[1.75]">
-              {item.thesis}
-            </p>
+            <div className="p-5 sm:p-7">
+              <div
+                className={cn(
+                  "border-[3px] border-border bg-surface/90 p-5 shadow-[4px_4px_0_#38bdf8] sm:p-6",
+                  "transition-colors duration-300 hover:bg-surface",
+                )}
+              >
+                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-accent-4 sm:text-xs">
+                  {item.thesisLabel}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-fg sm:text-base sm:leading-[1.75]">
+                  {item.thesis}
+                </p>
+              </div>
+            </div>
           </motion.article>
         );
       })}
