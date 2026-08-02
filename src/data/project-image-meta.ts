@@ -337,6 +337,10 @@ export const projectImageMeta: Record<string, ImageDimensions> = {
   "dl6-fastrcnn.png": {
     "width": 1600,
     "height": 4844
+  },
+  "sign-language-mnist-cnn.png": {
+    "width": 1600,
+    "height": 7954
   }
 };
 

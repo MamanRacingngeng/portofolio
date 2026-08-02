@@ -772,6 +772,11 @@
  "description": "Klasifikasi gambar CIFAR-10 dengan CNN Sequential TensorFlow Keras — dari load data hingga training dan evaluasi model.",
  "detail": "Deep Learning · CNN · CIFAR-10"
  },
+ "sign-language-mnist-cnn": {
+ "title": "Klasifikasi Bahasa Isyarat — CNN",
+ "description": "Klasifikasi huruf American Sign Language pada dataset Sign Language MNIST Kaggle menggunakan deep CNN — data augmentation, training callbacks, dan evaluasi confusion matrix.",
+ "detail": "Deep Learning · CNN · Sign Language MNIST · J-Team"
+ },
  "dl5-transfer-learning": {
  "title": "Deep Learning — Transfer Learning",
  "description": "Transfer learning dengan VGG16 dan ResNet50 pre-trained (ImageNet) diterapkan pada dataset klasifikasi citra custom dengan fine-tuning.",
@@ -1757,6 +1762,27 @@
  "TensorFlow",
  "Keras",
  "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "sign-language-mnist-cnn": {
+ "overview": "Proyek tim (J-Team) untuk klasifikasi huruf American Sign Language dari dataset Kaggle Sign Language MNIST — 27.455 data latih dan 7.172 data uji dengan 25 kelas (A–Y kecuali J dan Z) menggunakan deep CNN dengan augmentasi data dan callback training.",
+ "highlights": [
+ "Dataset Sign Language MNIST dari Kaggle (citra grayscale 28×28)",
+ "Deep CNN dengan layer Conv2D, MaxPooling, Dropout, dan Dense",
+ "Data augmentation: rotasi, zoom, shift, dan horizontal flip",
+ "Callback ModelCheckpoint dan ReduceLROnPlateau",
+ "Confusion matrix dan visualisasi prediksi sampel"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "Pandas",
+ "NumPy",
+ "Seaborn",
+ "Scikit-learn",
  "Matplotlib",
  "Jupyter"
  ]

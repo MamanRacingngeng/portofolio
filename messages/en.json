@@ -772,6 +772,11 @@
  "description": "Image classification on CIFAR-10 using a Sequential CNN built with TensorFlow Keras — from data loading to training and evaluation.",
  "detail": "Deep Learning · CNN · CIFAR-10"
  },
+ "sign-language-mnist-cnn": {
+ "title": "Sign Language Classification — CNN",
+ "description": "American Sign Language letter classification on the Kaggle Sign Language MNIST dataset using a deep CNN — data augmentation, training callbacks, and confusion matrix evaluation.",
+ "detail": "Deep Learning · CNN · Sign Language MNIST · J-Team"
+ },
  "dl5-transfer-learning": {
  "title": "Deep Learning — Transfer Learning",
  "description": "Transfer learning with pre-trained VGG16 and ResNet50 (ImageNet) applied to a custom image classification dataset with fine-tuning.",
@@ -1757,6 +1762,27 @@
  "TensorFlow",
  "Keras",
  "NumPy",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "sign-language-mnist-cnn": {
+ "overview": "Team project (J-Team) classifying American Sign Language letters from the Kaggle Sign Language MNIST dataset — 27,455 training and 7,172 test samples across 25 classes (A–Y excluding J and Z) using a deep CNN with data augmentation and callback-based training.",
+ "highlights": [
+ "Sign Language MNIST dataset from Kaggle (28×28 grayscale images)",
+ "Deep CNN with Conv2D, MaxPooling, Dropout, and Dense layers",
+ "Data augmentation with rotation, zoom, shift, and flip",
+ "ModelCheckpoint and ReduceLROnPlateau training callbacks",
+ "Confusion matrix and sample prediction visualization"
+ ],
+ "tools": [
+ "Python",
+ "TensorFlow",
+ "Keras",
+ "Pandas",
+ "NumPy",
+ "Seaborn",
+ "Scikit-learn",
  "Matplotlib",
  "Jupyter"
  ]

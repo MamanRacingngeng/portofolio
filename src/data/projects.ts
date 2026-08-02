@@ -347,6 +347,16 @@ export const projects: ProjectItem[] = [
     mlTheme: "classification",
   },
   {
+    id: "sign-language-mnist-cnn",
+    category: "ai-ml",
+    image: "/images/projects/ai-ml/sign-language-mnist-cnn.png",
+    documentUrl: "/notebooks/sign-language-mnist-cnn.ipynb",
+    tags: ["cnn", "sign-language", "kaggle", "classification"],
+    layout: "notebook",
+    mlTheme: "classification",
+    metricHighlight: "Acc. 100%",
+  },
+  {
     id: "dl4-cnn",
     category: "ai-ml",
     image: "/images/projects/ai-ml/dl4-cnn.png",

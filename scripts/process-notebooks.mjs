@@ -141,6 +141,10 @@ const NOTEBOOKS = [
     slug: "dl6-fastrcnn",
     src: "Praktikum_6_FastRCNN_based_Object_Detection.ipynb",
   },
+  {
+    slug: "sign-language-mnist-cnn",
+    src: "J-Team Klasifikasi Bahasa Isyarat Dengan CNN Pada Dataset MNIST Di Kaggle.ipynb",
+  },
 ];
 
 function resolveSource(filename) {
