@@ -29,8 +29,8 @@
  "description": "Technologies and tools I use for data science, machine learning, and software development."
  },
  "cv": {
- "title": "Resume — RAHN.",
- "description": "Preview and download Rahman Nendhiarto's resume."
+ "title": "CV & Resume — RAHN.",
+ "description": "Preview and download Rahman Nendhiarto's CV and resume."
  }
  },
  "nav": {
@@ -58,8 +58,8 @@
     ],
     "bio": "I build data-driven digital products by combining machine learning, analytics, and full-stack software development to turn data into solutions that create real impact. My work spans the entire development process — from data exploration and feature engineering to model training, evaluation, and deploying web applications that users can rely on. With BNSP Associate Data Scientist certification, hands-on machine learning research, and experience building diverse applications, I bridge Data Science and Software Development. I develop data pipelines, predictive models, analytics dashboards, and modern web applications using Python, TensorFlow, Next.js, React, and Laravel — so the models I build are not only accurate, but also usable in production-ready products. I believe a model's value does not stop at evaluation metrics, but when it is implemented as a stable, scalable digital solution that helps organizations make faster, sharper, data-driven decisions.",
  "exploreProjects": "View Projects",
- "viewCv": "View Resume",
- "downloadCv": "Download Resume",
+ "viewCv": "View CV",
+ "downloadCv": "Download CV",
  "profilePhoto": "Profile photo",
  "status": "Open to opportunities",
  "roleBadge": "Data & AI",
@@ -2306,13 +2306,13 @@
  "linkedin": "LinkedIn",
  "discord": "Discord",
  "email": "Email",
- "resume": "Resume",
+ "resume": "CV",
  "whatsapp": "WhatsApp",
  "githubAria": "Visit GitHub profile",
  "linkedinAria": "Visit LinkedIn profile",
  "discordAria": "Visit Discord profile @rusdidigital",
  "emailAria": "Send an email",
- "resumeAria": "View Resume",
+ "resumeAria": "View CV and resume",
  "whatsappAria": "Chat on WhatsApp"
  }
  },
@@ -2326,11 +2326,17 @@
  "en": "English"
  },
  "cv": {
- "title": "Resume",
- "subtitle": "Preview the resume below, then download it when you're ready.",
- "download": "Download Resume",
+ "title": "CV & Resume",
+ "subtitle": "Preview the document below, then download the CV or resume.",
+ "tabs": {
+ "cv": "CV",
+ "resume": "Resume"
+ },
+ "downloadCv": "Download CV",
+ "downloadResume": "Download Resume",
  "backHome": "Back to home",
- "iframeTitle": "Resume preview — Rahman Nendhiarto"
+ "iframeTitleCv": "CV preview — Rahman Nendhiarto",
+ "iframeTitleResume": "Resume preview — Rahman Nendhiarto"
  },
  "career": {
  "title": "Career",

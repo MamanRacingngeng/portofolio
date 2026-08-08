@@ -29,8 +29,8 @@
  "description": "Teknologi dan tools yang saya gunakan untuk data science, machine learning, dan pengembangan perangkat lunak."
  },
  "cv": {
- "title": "Resume — RAHN.",
- "description": "Pratinjau dan unduh resume Rahman Nendhiarto."
+ "title": "CV & Resume — RAHN.",
+ "description": "Pratinjau dan unduh CV serta resume Rahman Nendhiarto."
  }
  },
  "nav": {
@@ -58,8 +58,8 @@
     ],
     "bio": "Saya membangun produk digital berbasis data dengan menggabungkan machine learning, analitik, dan pengembangan perangkat lunak full-stack untuk mengubah data menjadi solusi yang memberikan dampak nyata. Pekerjaan saya mencakup seluruh proses pengembangan, mulai dari eksplorasi data, feature engineering, pelatihan dan evaluasi model, hingga deployment aplikasi web yang siap digunakan oleh pengguna. Berbekal sertifikasi BNSP Associate Data Scientist, pengalaman riset machine learning, serta pengalaman mengembangkan berbagai aplikasi, saya mampu menjembatani dunia Data Science dan Software Development. Saya mengembangkan pipeline data, model prediktif, dashboard analitik, hingga aplikasi web modern menggunakan Python, TensorFlow, Next.js, React, dan Laravel, sehingga model yang dibangun tidak hanya akurat, tetapi juga dapat dimanfaatkan dalam produk yang siap digunakan. Saya percaya bahwa nilai sebuah model tidak berhenti pada metrik evaluasi, tetapi ketika berhasil diimplementasikan menjadi solusi digital yang stabil, skalabel, dan mampu membantu organisasi mengambil keputusan dengan lebih cepat, lebih tepat, dan berbasis data.",
  "exploreProjects": "Lihat Proyek",
- "viewCv": "Lihat Resume",
- "downloadCv": "Unduh Resume",
+ "viewCv": "Lihat CV",
+ "downloadCv": "Unduh CV",
  "profilePhoto": "Foto profil",
  "status": "Terbuka untuk peluang",
  "roleBadge": "Data & AI",
@@ -2306,13 +2306,13 @@
  "linkedin": "LinkedIn",
  "discord": "Discord",
  "email": "Email",
- "resume": "Resume",
+ "resume": "CV",
  "whatsapp": "WhatsApp",
  "githubAria": "Kunjungi profil GitHub",
  "linkedinAria": "Kunjungi profil LinkedIn",
  "discordAria": "Kunjungi profil Discord @rusdidigital",
  "emailAria": "Kirim email",
- "resumeAria": "Lihat Resume",
+ "resumeAria": "Lihat CV dan resume",
  "whatsappAria": "Chat via WhatsApp"
  }
  },
@@ -2326,11 +2326,17 @@
  "en": "English"
  },
  "cv": {
- "title": "Resume",
- "subtitle": "Pratinjau resume di bawah ini, lalu unduh jika sudah siap.",
- "download": "Unduh Resume",
+ "title": "CV & Resume",
+ "subtitle": "Pratinjau dokumen di bawah, lalu unduh CV atau resume.",
+ "tabs": {
+ "cv": "CV",
+ "resume": "Resume"
+ },
+ "downloadCv": "Unduh CV",
+ "downloadResume": "Unduh Resume",
  "backHome": "Kembali ke beranda",
- "iframeTitle": "Pratinjau Resume — Rahman Nendhiarto"
+ "iframeTitleCv": "Pratinjau CV — Rahman Nendhiarto",
+ "iframeTitleResume": "Pratinjau Resume — Rahman Nendhiarto"
  },
  "career": {
  "title": "Karir",
