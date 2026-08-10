@@ -1,13 +1,17 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useTranslations, useMessages } from "next-intl";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { siteConfig } from "@/data/portfolio";
 import { AccentButton } from "@/components/ui/AccentButton";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import {
+  revealViewport,
+  scrollRevealPop,
+  scrollRevealStaggerContainer,
+  scrollRevealStaggerItem,
   spaceFloat,
   spaceFloatGentle,
   spaceFloatTilt,
@@ -23,25 +27,17 @@ export function Hero() {
   };
   const taglineLines = hero.taglineLines;
   const sectionRef = useRef<HTMLElement>(null);
-  const detailsRef = useRef<HTMLDivElement>(null);
+  const [bioVisible, setBioVisible] = useState(false);
 
   const { scrollY } = useScroll();
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
-  const { scrollYProgress: detailsProgress } = useScroll({
-    target: detailsRef,
-    offset: ["start 0.92", "start 0.58"],
-  });
 
-  const scrollGate = useTransform(scrollY, [0, 48, 160], [0, 0, 1]);
-  const inViewGate = useTransform(detailsProgress, [0, 1], [0, 1]);
-  const detailsOpacity = useTransform(
-    [scrollGate, inViewGate],
-    ([gate, view]) => Math.max(gate as number, view as number),
-  );
-  const detailsY = useTransform(detailsOpacity, [0, 1], [14, 0]);
+  useMotionValueEvent(scrollY, "change", (value) => {
+    if (value > 48) setBioVisible(true);
+  });
 
   const textY = useTransform(scrollYProgress, [0, 1], [0, -24]);
   const badgeY = useTransform(scrollYProgress, [0, 1], [0, -12]);
@@ -69,7 +65,7 @@ export function Hero() {
             />
             <motion.div
               {...spaceFloatTilt(8, 0)}
-              className="sticker mb-8 inline-block bg-accent-3 px-4 py-2 text-xs font-black uppercase tracking-widest text-fg sm:mb-10 sm:text-sm"
+              className="sticker mb-10 inline-block bg-accent-3 px-4 py-2 text-xs font-black uppercase tracking-widest text-fg sm:mb-12 sm:text-sm"
             >
               {t("badge")}
             </motion.div>
@@ -113,7 +109,8 @@ export function Hero() {
 
             <motion.div
               initial={false}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={revealViewport}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="mt-5 max-w-xl border-l-[5px] border-accent-2 pl-4 sm:mt-6 sm:pl-5"
             >
@@ -160,20 +157,29 @@ export function Hero() {
         </div>
 
         <motion.div
-          ref={detailsRef}
-          style={{ opacity: detailsOpacity, y: detailsY }}
-          className="relative z-10 mt-8 sm:mt-10"
+          variants={scrollRevealPop}
+          initial="hidden"
+          animate={bioVisible ? "visible" : "hidden"}
+          className="brutal-card relative z-10 mt-6 bg-card p-5 sm:mt-10 sm:p-7 lg:p-8"
         >
-          <div className="brutal-card bg-card p-5 sm:p-7 lg:p-8">
-            <p className="text-pretty text-justify text-[0.975rem] font-medium leading-[1.8] text-fg sm:text-lg sm:leading-[1.85]">
-              {hero.bio}
-            </p>
-          </div>
+          <p className="text-pretty text-justify text-[0.975rem] font-medium leading-[1.8] text-fg sm:text-lg sm:leading-[1.85]">
+            {hero.bio}
+          </p>
+        </motion.div>
 
-          <div className="mt-5 flex flex-wrap items-center gap-3 sm:mt-6 sm:gap-4">
+        <motion.div
+          variants={scrollRevealStaggerContainer}
+          initial={false}
+          whileInView="visible"
+          viewport={revealViewport}
+          className="relative z-0 mt-5 flex flex-wrap items-center gap-3 sm:mt-6 sm:gap-4"
+        >
+          <motion.div variants={scrollRevealStaggerItem}>
             <AccentButton variant="primary" href="/proyek" className="px-6 py-3.5">
               {t("exploreProjects")}
             </AccentButton>
+          </motion.div>
+          <motion.div variants={scrollRevealStaggerItem}>
             <AccentButton
               variant="secondary"
               href={siteConfig.resumeUrl}
@@ -181,6 +187,8 @@ export function Hero() {
             >
               {t("viewCv")}
             </AccentButton>
+          </motion.div>
+          <motion.div variants={scrollRevealStaggerItem}>
             <a
               href={siteConfig.social.github}
               target="_blank"
@@ -191,6 +199,8 @@ export function Hero() {
               <GithubIcon size={20} />
               {t("social.github")}
             </a>
+          </motion.div>
+          <motion.div variants={scrollRevealStaggerItem}>
             <a
               href={siteConfig.social.linkedin}
               target="_blank"
@@ -201,7 +211,7 @@ export function Hero() {
               <LinkedinIcon size={20} />
               {t("social.linkedin")}
             </a>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
       {siteConfig.showWavyPolkaDivider ? <WavyPolkaDivider /> : null}
