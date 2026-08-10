@@ -66,7 +66,7 @@ export function Hero() {
           </motion.div>
         </motion.div>
 
-        <div className="flex flex-col gap-10 sm:flex-row sm:items-end sm:justify-between sm:gap-8 lg:gap-12">
+        <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between sm:gap-8 lg:gap-12">
           <motion.div style={{ y: textY }} className="min-w-0 flex-1">
             <motion.div {...spaceFloat(9, 0.4)}>
               <motion.h1
@@ -119,7 +119,7 @@ export function Hero() {
             initial={false}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ delay: 0.12, type: "spring", stiffness: 90, damping: 14 }}
-            className="relative z-0 mx-auto mb-8 w-full shrink-0 sm:mx-0 sm:mb-0 sm:w-[260px] md:w-[280px] lg:w-[300px]"
+            className="relative z-0 mx-auto mb-8 w-full shrink-0 sm:mx-0 sm:mb-0 sm:self-end sm:w-[260px] md:w-[280px] lg:w-[300px]"
           >
             <div className="group/profile relative">
               <div
