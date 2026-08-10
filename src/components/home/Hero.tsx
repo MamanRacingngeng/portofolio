@@ -66,44 +66,46 @@ export function Hero() {
           </motion.div>
         </motion.div>
 
-        <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between sm:gap-8 lg:gap-12">
-          <motion.div style={{ y: textY }} className="min-w-0 flex-1">
-            <motion.div {...spaceFloat(9, 0.4)}>
-              <motion.h1
-                initial={false}
-                animate={{ opacity: 1, y: 0, clipPath: "inset(0 0 0% 0)" }}
-                transition={{
-                  delay: 0.08,
-                  duration: 0.7,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="font-display text-5xl font-black uppercase leading-[0.9] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl"
-              >
-                <motion.span
+        <div className="grid gap-10 sm:grid-cols-[minmax(0,1fr)_260px] sm:grid-rows-[auto_auto] sm:gap-x-8 sm:gap-y-0 md:grid-cols-[minmax(0,1fr)_280px] lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-x-12">
+          <motion.div style={{ y: textY }} className="contents">
+            <div className="min-w-0 sm:col-start-1 sm:row-start-1">
+              <motion.div {...spaceFloat(9, 0.4)}>
+                <motion.h1
                   initial={false}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.15, type: "spring", stiffness: 100 }}
-                  className="block"
+                  animate={{ opacity: 1, y: 0, clipPath: "inset(0 0 0% 0)" }}
+                  transition={{
+                    delay: 0.08,
+                    duration: 0.7,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="font-display text-5xl font-black uppercase leading-[0.9] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl"
                 >
-                  {siteConfig.firstName}
-                </motion.span>
-                <motion.span
-                  initial={false}
-                  animate={{ opacity: 1, x: 0, scale: 1 }}
-                  transition={{ delay: 0.28, type: "spring", stiffness: 100 }}
-                  className="mt-1 block"
-                >
-                  <span className="name-highlight">{siteConfig.lastName}</span>
-                </motion.span>
-              </motion.h1>
-            </motion.div>
+                  <motion.span
+                    initial={false}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.15, type: "spring", stiffness: 100 }}
+                    className="block"
+                  >
+                    {siteConfig.firstName}
+                  </motion.span>
+                  <motion.span
+                    initial={false}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    transition={{ delay: 0.28, type: "spring", stiffness: 100 }}
+                    className="mt-1 block"
+                  >
+                    <span className="name-highlight">{siteConfig.lastName}</span>
+                  </motion.span>
+                </motion.h1>
+              </motion.div>
+            </div>
 
             <motion.div
               initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={revealViewport}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-5 max-w-xl border-l-[5px] border-accent-2 pl-4 sm:mt-6 sm:pl-5"
+              className="mt-5 max-w-xl border-l-[5px] border-accent-2 pl-4 sm:col-start-1 sm:row-start-2 sm:mt-6 sm:pl-5"
             >
               <p className="font-display text-[0.975rem] font-bold leading-[1.35] text-muted sm:text-lg sm:leading-[1.4]">
                 {taglineLines.map((line, index) => (
@@ -119,7 +121,7 @@ export function Hero() {
             initial={false}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ delay: 0.12, type: "spring", stiffness: 90, damping: 14 }}
-            className="relative z-0 mx-auto mb-8 w-full shrink-0 sm:mx-0 sm:mb-0 sm:self-end sm:w-[260px] md:w-[280px] lg:w-[300px]"
+            className="relative z-0 mx-auto mb-8 w-full shrink-0 sm:col-start-2 sm:row-span-2 sm:row-start-1 sm:mx-0 sm:mb-0 sm:self-end sm:w-[260px] md:w-[280px] lg:w-[300px]"
           >
             <div className="group/profile relative">
               <div
