@@ -66,7 +66,7 @@ export function Hero() {
           </motion.div>
         </motion.div>
 
-        <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between sm:gap-8 lg:gap-12">
+        <div className="flex flex-col gap-10 sm:flex-row sm:items-end sm:justify-between sm:gap-8 lg:gap-12">
           <motion.div style={{ y: textY }} className="min-w-0 flex-1">
             <motion.div {...spaceFloat(9, 0.4)}>
               <motion.h1
