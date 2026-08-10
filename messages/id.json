@@ -158,7 +158,7 @@
  "title": "Tech Stack",
  "close": "Tutup",
  "categories": {
- "dataScience": "Machine Learning & AI",
+ "dataScience": "Ilmu Data",
  "softwareDev": "Pengembangan Perangkat Lunak",
  "databaseTools": "Database & Tools",
  "frontendUi": "Pengembangan Frontend"
@@ -429,8 +429,8 @@
  "categoryEmptyDescription": "Karya dalam kategori ini sedang disiapkan. Pantau terus untuk notebook, dashboard, dan aplikasi.",
  "categories": {
  "ai-ml": {
- "title": "AI & Machine Learning",
- "description": "Membangun model prediktif dan sistem cerdas berbasis machine learning dan deep learning."
+ "title": "Ilmu Data",
+ "description": "Karya data science end-to-end — dari analisis eksplorasi dan pemodelan statistik hingga machine learning, deep learning, dan optimasi."
  },
  "dashboards": {
  "title": "Interactive Dashboards",

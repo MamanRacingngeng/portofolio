@@ -158,7 +158,7 @@
  "title": "Tech Stack",
  "close": "Close",
  "categories": {
-      "dataScience": "Machine Learning & AI",
+      "dataScience": "Data Science",
       "softwareDev": "Software Development",
       "databaseTools": "Database & Tools",
       "frontendUi": "Frontend Development"
@@ -429,8 +429,8 @@
  "categoryEmptyDescription": "Works in this category are being prepared. Check back soon for notebooks, dashboards, and apps.",
  "categories": {
  "ai-ml": {
- "title": "AI & Machine Learning",
- "description": "Building predictive models and intelligent systems powered by machine learning and deep learning."
+ "title": "Data Science",
+ "description": "End-to-end data science work — from exploratory analysis and statistical modeling to machine learning, deep learning, and optimization."
  },
  "dashboards": {
  "title": "Interactive Dashboards",
