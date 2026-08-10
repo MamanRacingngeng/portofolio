@@ -52,11 +52,11 @@
  "hero": {
     "badge": "SAINS DATA • PENGEMBANGAN PERANGKAT LUNAK",
     "taglineLines": [
-      "Mengubah data menjadi insight dan",
-      "membangun solusi digital siap produksi",
-      "dengan machine learning sebagai inti."
+      "Mengubah data menjadi solusi praktis dan",
+      "membangun produk digital yang andal",
+      "dengan ilmu data dan pengembangan perangkat lunak."
     ],
-    "bio": "Saya membangun produk digital berbasis data dengan menggabungkan machine learning, analitik, dan pengembangan perangkat lunak full-stack untuk mengubah data menjadi solusi yang memberikan dampak nyata. Pekerjaan saya mencakup seluruh proses pengembangan, mulai dari eksplorasi data, feature engineering, pelatihan dan evaluasi model, hingga deployment aplikasi web yang siap digunakan oleh pengguna. Berbekal sertifikasi BNSP Associate Data Scientist, pengalaman riset machine learning, serta pengalaman mengembangkan berbagai aplikasi, saya mampu menjembatani dunia Data Science dan Software Development. Saya mengembangkan pipeline data, model prediktif, dashboard analitik, hingga aplikasi web modern menggunakan Python, TensorFlow, Next.js, React, dan Laravel, sehingga model yang dibangun tidak hanya akurat, tetapi juga dapat dimanfaatkan dalam produk yang siap digunakan. Saya percaya bahwa nilai sebuah model tidak berhenti pada metrik evaluasi, tetapi ketika berhasil diimplementasikan menjadi solusi digital yang stabil, skalabel, dan mampu membantu organisasi mengambil keputusan dengan lebih cepat, lebih tepat, dan berbasis data.",
+    "bio": "Saya membangun produk digital berbasis data dengan menggabungkan data science, machine learning, dan pengembangan perangkat lunak untuk mengubah data menjadi solusi praktis. Pekerjaan saya mencakup proses pengembangan dari eksplorasi data dan feature engineering hingga pengembangan model, evaluasi, dan deployment ke aplikasi web yang dapat digunakan. Berbekal pengalaman langsung dalam riset machine learning, analitik data, dan pengembangan full-stack, saya menjembatani kesenjangan antara model analitis dan produk digital di dunia nyata. Saya membangun model prediktif, dashboard interaktif, dan aplikasi web modern menggunakan Python, TensorFlow, Next.js, React, dan Laravel. Saya percaya nilai sebuah model tidak hanya terletak pada metrik evaluasinya — melainkan seberapa efektif model tersebut diubah menjadi solusi digital yang andal dan bermanfaat.",
  "exploreProjects": "Lihat Proyek",
  "viewCv": "Lihat CV dan Resume",
  "downloadCv": "Unduh CV",
@@ -2322,7 +2322,7 @@
  },
  "footer": {
  "roles": "Sains Data • Pengembangan Perangkat Lunak",
- "description": "Membangun solusi digital cerdas melalui pengembangan perangkat lunak modern dan teknologi berbasis data.",
+ "description": "Membangun solusi digital praktis melalui ilmu data, machine learning, dan pengembangan perangkat lunak.",
  "getInTouch": "Get In Touch",
  "marquee": "ENGINEERING IDEAS INTO IMPACTFUL DIGITAL SOLUTIONS",
  "modal": {

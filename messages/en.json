@@ -52,11 +52,11 @@
  "hero": {
     "badge": "DATA SCIENCE • SOFTWARE DEVELOPMENT",
     "taglineLines": [
-      "Turning data into insight and",
-      "building production-ready digital solutions",
-      "with machine learning at the core."
+      "Turning data into practical solutions and",
+      "building reliable digital products",
+      "with data science and software development."
     ],
-    "bio": "I build data-driven digital products by combining machine learning, analytics, and full-stack software development to turn data into solutions that create real impact. My work spans the entire development process — from data exploration and feature engineering to model training, evaluation, and deploying web applications that users can rely on. With BNSP Associate Data Scientist certification, hands-on machine learning research, and experience building diverse applications, I bridge Data Science and Software Development. I develop data pipelines, predictive models, analytics dashboards, and modern web applications using Python, TensorFlow, Next.js, React, and Laravel — so the models I build are not only accurate, but also usable in production-ready products. I believe a model's value does not stop at evaluation metrics, but when it is implemented as a stable, scalable digital solution that helps organizations make faster, sharper, data-driven decisions.",
+    "bio": "I build data-driven digital products by combining data science, machine learning, and software development to turn data into practical solutions. My work spans the development process from data exploration and feature engineering to model development, evaluation, and deployment into usable web applications. With hands-on experience in machine learning research, data analytics, and full-stack development, I bridge the gap between analytical models and real-world digital products. I build predictive models, interactive dashboards, and modern web applications using Python, TensorFlow, Next.js, React, and Laravel. I believe the value of a model goes beyond its evaluation metrics — it comes from how effectively it can be transformed into a reliable and useful digital solution.",
  "exploreProjects": "View Projects",
  "viewCv": "View CV and Resume",
  "downloadCv": "Download CV",
@@ -2322,7 +2322,7 @@
  },
  "footer": {
     "roles": "Data Science • Software Development",
- "description": "Building intelligent digital solutions through modern software development and data-driven technologies.",
+ "description": "Building practical digital solutions through data science, machine learning, and software development.",
  "getInTouch": "Get In Touch",
  "marquee": "ENGINEERING IDEAS INTO IMPACTFUL DIGITAL SOLUTIONS",
  "modal": {
