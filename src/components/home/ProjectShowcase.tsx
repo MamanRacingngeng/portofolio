@@ -174,17 +174,17 @@ export function ProjectShowcase() {
   const stackY = useTransform(
     scrollYProgress,
     [0, 1],
-    reduceMotion ? [0, 0] : [40, -40],
+    reduceMotion ? [0, 0] : [90, -90],
   );
   const stackRotateX = useTransform(
     scrollYProgress,
     [0, 1],
-    reduceMotion ? [GROUP_ROTATE_X, GROUP_ROTATE_X] : [GROUP_ROTATE_X + 5, GROUP_ROTATE_X - 2],
+    reduceMotion ? [GROUP_ROTATE_X, GROUP_ROTATE_X] : [GROUP_ROTATE_X + 10, GROUP_ROTATE_X - 4],
   );
   const stackRotateY = useTransform(
     scrollYProgress,
     [0, 1],
-    reduceMotion ? [GROUP_ROTATE_Y, GROUP_ROTATE_Y] : [GROUP_ROTATE_Y - 2, GROUP_ROTATE_Y + 3],
+    reduceMotion ? [GROUP_ROTATE_Y, GROUP_ROTATE_Y] : [GROUP_ROTATE_Y - 5, GROUP_ROTATE_Y + 6],
   );
 
   const groupSize = getGroupSize(featuredProjects.length);

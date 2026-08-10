@@ -143,7 +143,7 @@ export function TechGrid({
           />
         )}
 
-        <ParallaxLayer speed={0.2} offset={40}>
+        <ParallaxLayer speed={0.45} offset={72}>
         <motion.ul
           variants={techItemStagger}
           initial={false}

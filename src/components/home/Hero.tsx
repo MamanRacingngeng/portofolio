@@ -39,11 +39,11 @@ export function Hero() {
     if (value > 48) setBioVisible(true);
   });
 
-  const textY = useTransform(scrollYProgress, [0, 1], [0, -24]);
-  const badgeY = useTransform(scrollYProgress, [0, 1], [0, -12]);
-  const photoY = useTransform(scrollYProgress, [0, 1], [0, -36]);
-  const photoScale = useTransform(scrollYProgress, [0, 1], [1, 1.04]);
-  const taglineX = useTransform(scrollYProgress, [0, 1], [0, -12]);
+  const textY = useTransform(scrollYProgress, [0, 1], [0, -56]);
+  const badgeY = useTransform(scrollYProgress, [0, 1], [0, -20]);
+  const photoY = useTransform(scrollYProgress, [0, 1], [0, -88]);
+  const photoScale = useTransform(scrollYProgress, [0, 1], [1, 1.06]);
+  const taglineX = useTransform(scrollYProgress, [0, 1], [0, -28]);
 
   return (
     <section

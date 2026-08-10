@@ -61,7 +61,7 @@ export default async function LocaleLayout({ children, params }: Props) {
               <AnimatedBackground />
               <ScrollProgress />
               <Navbar />
-              <main className="relative z-[1] min-h-screen overflow-x-clip bg-bg">{children}</main>
+              <main className="relative z-[1] min-h-screen overflow-x-clip">{children}</main>
               <Footer />
             </MotionProvider>
           </ThemeProvider>
