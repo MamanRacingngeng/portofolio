@@ -341,6 +341,10 @@ export const projectImageMeta: Record<string, ImageDimensions> = {
   "sign-language-mnist-cnn.png": {
     "width": 1600,
     "height": 7954
+  },
+  "pltu-multiobjective-ml.png": {
+    "width": 1600,
+    "height": 9995
   }
 };
 

@@ -347,6 +347,15 @@ export const projects: ProjectItem[] = [
     mlTheme: "classification",
   },
   {
+    id: "pltu-multiobjective-ml",
+    category: "ai-ml",
+    image: "/images/projects/ai-ml/pltu-multiobjective-ml.png",
+    documentUrl: "/notebooks/pltu-multiobjective-ml.ipynb",
+    tags: ["xgboost", "multi-objective", "pltu", "optimization", "shap"],
+    layout: "notebook",
+    mlTheme: "forecast",
+  },
+  {
     id: "sign-language-mnist-cnn",
     category: "ai-ml",
     image: "/images/projects/ai-ml/sign-language-mnist-cnn.png",

@@ -145,6 +145,10 @@ const NOTEBOOKS = [
     slug: "sign-language-mnist-cnn",
     src: "J-Team Klasifikasi Bahasa Isyarat Dengan CNN Pada Dataset MNIST Di Kaggle.ipynb",
   },
+  {
+    slug: "pltu-multiobjective-ml",
+    src: "Optimasi Multi Objektif Kondisi Operasional PLTU Berbasis Machine Learning untuk Meningkatkan Efisiensi Pembangkitan dan Menurunkan Emisi.ipynb",
+  },
 ];
 
 function resolveSource(filename) {

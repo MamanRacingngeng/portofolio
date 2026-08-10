@@ -777,6 +777,11 @@
  "description": "Klasifikasi huruf American Sign Language pada dataset Sign Language MNIST Kaggle menggunakan deep CNN — data augmentation, training callbacks, dan evaluasi confusion matrix.",
  "detail": "Deep Learning · CNN · Sign Language MNIST · J-Team"
  },
+ "pltu-multiobjective-ml": {
+ "title": "Optimasi Multi-Objektif Operasional PLTU — ML",
+ "description": "Pipeline machine learning untuk optimasi operasional PLTU — prediksi efisiensi boiler dan emisi (NOx, debu) dengan XGBoost, interpretasi SHAP, dan analisis Pareto frontier.",
+ "detail": "Machine Learning · XGBoost · Multi-Objektif · PLTU"
+ },
  "dl5-transfer-learning": {
  "title": "Deep Learning — Transfer Learning",
  "description": "Transfer learning dengan VGG16 dan ResNet50 pre-trained (ImageNet) diterapkan pada dataset klasifikasi citra custom dengan fine-tuning.",
@@ -1783,6 +1788,29 @@
  "NumPy",
  "Seaborn",
  "Scikit-learn",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "pltu-multiobjective-ml": {
+ "overview": "Notebook riset machine learning end-to-end untuk optimasi multi-objektif kondisi operasional PLTU — memaksimalkan efisiensi boiler sambil meminimalkan emisi NOx dan debu menggunakan data sensor operasional Kaggle tahun 2022.",
+ "highlights": [
+ "Dataset PLTU Kaggle dengan time-series split kronologis 70/15/15",
+ "Perbandingan baseline: Linear Regression, Random Forest, dan XGBoost",
+ "Feature engineering lag, rolling window, dan target lag",
+ "Analisis SHAP untuk interpretasi dampak parameter operasional",
+ "Optimasi Differential Evolution dan analisis trade-off Pareto frontier",
+ "Validasi keamanan operasional terhadap batas historis desain"
+ ],
+ "tools": [
+ "Python",
+ "XGBoost",
+ "Scikit-learn",
+ "SHAP",
+ "SciPy",
+ "Pandas",
+ "NumPy",
+ "Seaborn",
  "Matplotlib",
  "Jupyter"
  ]

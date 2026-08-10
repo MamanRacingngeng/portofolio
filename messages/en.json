@@ -777,6 +777,11 @@
  "description": "American Sign Language letter classification on the Kaggle Sign Language MNIST dataset using a deep CNN — data augmentation, training callbacks, and confusion matrix evaluation.",
  "detail": "Deep Learning · CNN · Sign Language MNIST · J-Team"
  },
+ "pltu-multiobjective-ml": {
+ "title": "PLTU Multi-Objective Operational Optimization — ML",
+ "description": "Machine learning pipeline for coal power plant (PLTU) operational optimization — predicting boiler efficiency and emissions (NOx, dust) with XGBoost, SHAP explainability, and Pareto frontier analysis.",
+ "detail": "Machine Learning · XGBoost · Multi-Objective · PLTU"
+ },
  "dl5-transfer-learning": {
  "title": "Deep Learning — Transfer Learning",
  "description": "Transfer learning with pre-trained VGG16 and ResNet50 (ImageNet) applied to a custom image classification dataset with fine-tuning.",
@@ -1783,6 +1788,29 @@
  "NumPy",
  "Seaborn",
  "Scikit-learn",
+ "Matplotlib",
+ "Jupyter"
+ ]
+ },
+ "pltu-multiobjective-ml": {
+ "overview": "End-to-end machine learning research notebook for multi-objective optimization of coal power plant (PLTU) operational conditions — maximizing boiler efficiency while minimizing NOx and dust emissions using Kaggle operational sensor data from 2022.",
+ "highlights": [
+ "Kaggle PLTU dataset with chronological 70/15/15 time-series split",
+ "Baseline comparison: Linear Regression, Random Forest, and XGBoost",
+ "Feature engineering with lag, rolling window, and target lag features",
+ "SHAP analysis for explainable operational parameter impact",
+ "Differential Evolution optimization and Pareto frontier trade-off analysis",
+ "Operational safety validation against historical design limits"
+ ],
+ "tools": [
+ "Python",
+ "XGBoost",
+ "Scikit-learn",
+ "SHAP",
+ "SciPy",
+ "Pandas",
+ "NumPy",
+ "Seaborn",
  "Matplotlib",
  "Jupyter"
  ]
