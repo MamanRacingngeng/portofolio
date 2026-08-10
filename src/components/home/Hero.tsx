@@ -23,15 +23,25 @@ export function Hero() {
   };
   const taglineLines = hero.taglineLines;
   const sectionRef = useRef<HTMLElement>(null);
+  const detailsRef = useRef<HTMLDivElement>(null);
 
   const { scrollY } = useScroll();
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
+  const { scrollYProgress: detailsProgress } = useScroll({
+    target: detailsRef,
+    offset: ["start 0.92", "start 0.58"],
+  });
 
-  const detailsOpacity = useTransform(scrollY, [120, 260], [0, 1]);
-  const detailsY = useTransform(scrollY, [120, 260], [12, 0]);
+  const scrollGate = useTransform(scrollY, [0, 48, 160], [0, 0, 1]);
+  const inViewGate = useTransform(detailsProgress, [0, 1], [0, 1]);
+  const detailsOpacity = useTransform(
+    [scrollGate, inViewGate],
+    ([gate, view]) => Math.max(gate as number, view as number),
+  );
+  const detailsY = useTransform(detailsOpacity, [0, 1], [14, 0]);
 
   const textY = useTransform(scrollYProgress, [0, 1], [0, -24]);
   const badgeY = useTransform(scrollYProgress, [0, 1], [0, -12]);
@@ -59,16 +69,15 @@ export function Hero() {
             />
             <motion.div
               {...spaceFloatTilt(8, 0)}
-              className="sticker mb-10 inline-block bg-accent-3 px-4 py-2 text-xs font-black uppercase tracking-widest text-fg sm:mb-12 sm:text-sm"
+              className="sticker mb-8 inline-block bg-accent-3 px-4 py-2 text-xs font-black uppercase tracking-widest text-fg sm:mb-10 sm:text-sm"
             >
               {t("badge")}
             </motion.div>
           </motion.div>
         </motion.div>
 
-        <div className="relative min-h-[calc(100svh-9.5rem)] sm:min-h-[calc(100svh-11rem)]">
-          <div className="relative">
-            <motion.div
+        <div className="relative">
+          <motion.div
             style={{ y: textY }}
             className="min-w-0 sm:max-w-[calc(100%-17.5rem)] md:max-w-[calc(100%-19rem)] lg:max-w-[calc(100%-21rem)]"
           >
@@ -148,12 +157,12 @@ export function Hero() {
               </motion.span>
             </div>
           </motion.div>
-          </div>
         </div>
 
         <motion.div
+          ref={detailsRef}
           style={{ opacity: detailsOpacity, y: detailsY }}
-          className="relative z-10 pt-2 sm:pt-4"
+          className="relative z-10 mt-8 sm:mt-10"
         >
           <div className="brutal-card bg-card p-5 sm:p-7 lg:p-8">
             <p className="text-pretty text-justify text-[0.975rem] font-medium leading-[1.8] text-fg sm:text-lg sm:leading-[1.85]">
