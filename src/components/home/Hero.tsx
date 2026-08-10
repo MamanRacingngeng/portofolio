@@ -41,6 +41,9 @@ export function Hero() {
 
   const textY = useTransform(scrollYProgress, [0, 1], [0, -24]);
   const badgeY = useTransform(scrollYProgress, [0, 1], [0, -12]);
+  const photoY = useTransform(scrollYProgress, [0, 1], [0, -36]);
+  const photoScale = useTransform(scrollYProgress, [0, 1], [1, 1.04]);
+  const taglineX = useTransform(scrollYProgress, [0, 1], [0, -12]);
 
   return (
     <section
@@ -108,9 +111,9 @@ export function Hero() {
             </motion.div>
 
             <motion.div
+              style={{ x: taglineX }}
               initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={revealViewport}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="mt-5 max-w-xl border-l-[5px] border-accent-2 pl-4 sm:mt-6 sm:pl-5"
             >
@@ -125,10 +128,11 @@ export function Hero() {
           </motion.div>
 
           <motion.div
+            style={{ y: photoY, scale: photoScale }}
             initial={false}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            animate={{ opacity: 1, rotate: 0 }}
             transition={{ delay: 0.12, type: "spring", stiffness: 90, damping: 14 }}
-            className="relative z-0 mx-auto mb-8 mt-10 w-full max-w-[280px] shrink-0 sm:absolute sm:right-0 sm:bottom-0 sm:mx-0 sm:mb-0 sm:mt-0 sm:w-[260px] md:w-[280px] lg:w-[300px]"
+            className="relative z-0 mx-auto mb-8 mt-10 w-full max-w-[280px] shrink-0 will-change-transform sm:absolute sm:right-0 sm:bottom-0 sm:mx-0 sm:mb-0 sm:mt-0 sm:w-[260px] md:w-[280px] lg:w-[300px]"
           >
             <div className="group/profile relative">
               <div

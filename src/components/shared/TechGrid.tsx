@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { techItems, type TechItem } from "@/data/portfolio";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { ParallaxLayer } from "@/components/ui/ParallaxLayer";
 import { TechDetailModal } from "@/components/shared/TechDetailModal";
 import { cn } from "@/lib/utils";
 import { revealViewport } from "@/lib/animations";
@@ -142,6 +143,7 @@ export function TechGrid({
           />
         )}
 
+        <ParallaxLayer speed={0.2} offset={40}>
         <motion.ul
           variants={techItemStagger}
           initial={false}
@@ -167,6 +169,7 @@ export function TechGrid({
             </motion.li>
           ))}
         </motion.ul>
+        </ParallaxLayer>
       </div>
     </section>
   );
