@@ -1,15 +1,14 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useTranslations, useMessages } from "next-intl";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { siteConfig } from "@/data/portfolio";
 import { AccentButton } from "@/components/ui/AccentButton";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import {
   revealViewport,
-  scrollRevealPop,
   scrollRevealStaggerContainer,
   scrollRevealStaggerItem,
   spaceFloat,
@@ -28,9 +27,15 @@ export function Hero() {
   const taglineLines = hero.taglineLines;
   const sectionRef = useRef<HTMLElement>(null);
 
-  const { scrollYProgress } = useScroll({
+  const { scrollY, scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
+  });
+
+  const [bioRevealed, setBioRevealed] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (value) => {
+    setBioRevealed(value > 72);
   });
 
   const textY = useTransform(scrollYProgress, [0, 1], [0, -24]);
@@ -151,21 +156,20 @@ export function Hero() {
         </div>
 
         <motion.div
-          variants={scrollRevealPop}
-          initial={false}
-          whileInView="visible"
-          viewport={revealViewport}
-          className="brutal-card relative z-10 mt-6 bg-card p-5 sm:mt-10 sm:p-7 lg:p-8"
+          animate={
+            bioRevealed
+              ? { opacity: 1, y: 0, maxHeight: 640, marginTop: 24 }
+              : { opacity: 0, y: 28, maxHeight: 0, marginTop: 0 }
+          }
+          initial={{ opacity: 0, y: 28, maxHeight: 0, marginTop: 0 }}
+          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          className="brutal-card relative z-10 overflow-hidden bg-card p-5 sm:mt-10 sm:p-7 lg:mt-10 lg:p-8"
+          style={{ pointerEvents: bioRevealed ? "auto" : "none" }}
+          aria-hidden={!bioRevealed}
         >
-          <motion.p
-            initial={false}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={revealViewport}
-            transition={{ delay: 0.15, duration: 0.5 }}
-            className="text-pretty text-justify text-[0.975rem] font-medium leading-[1.8] text-fg sm:text-lg sm:leading-[1.85]"
-          >
+          <p className="text-pretty text-justify text-[0.975rem] font-medium leading-[1.8] text-fg sm:text-lg sm:leading-[1.85]">
             {hero.bio}
-          </motion.p>
+          </p>
         </motion.div>
 
         <motion.div
