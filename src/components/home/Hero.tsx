@@ -158,41 +158,45 @@ export function Hero() {
           initial="hidden"
           whileInView="visible"
           viewport={revealViewport}
-          className="relative z-0 mt-5 flex flex-wrap items-center gap-3 sm:mt-6 sm:gap-4"
+          className="relative z-0 mt-5 grid grid-cols-2 items-stretch gap-3 sm:mt-6 sm:flex sm:flex-wrap sm:items-center sm:gap-4"
         >
-          <motion.div variants={scrollRevealStaggerItem}>
-            <AccentButton variant="primary" href="/proyek" className="px-6 py-3.5">
+          <motion.div variants={scrollRevealStaggerItem} className="min-w-0">
+            <AccentButton
+              variant="primary"
+              href="/proyek"
+              className="w-full justify-center px-3 py-3 text-center text-xs leading-snug sm:w-auto sm:px-6 sm:py-3.5 sm:text-sm"
+            >
               {t("exploreProjects")}
             </AccentButton>
           </motion.div>
-          <motion.div variants={scrollRevealStaggerItem}>
+          <motion.div variants={scrollRevealStaggerItem} className="min-w-0">
             <AccentButton
               variant="secondary"
               href={siteConfig.resumeUrl}
-              className="px-6 py-3.5"
+              className="w-full justify-center px-3 py-3 text-center text-xs leading-snug sm:w-auto sm:px-6 sm:py-3.5 sm:text-sm"
             >
               {t("viewCv")}
             </AccentButton>
           </motion.div>
-          <motion.div variants={scrollRevealStaggerItem}>
+          <motion.div variants={scrollRevealStaggerItem} className="min-w-0">
             <a
               href={siteConfig.social.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={t("social.githubAria")}
-              className="pop-btn bg-card px-5 py-3.5 text-fg"
+              className="pop-btn flex w-full justify-center bg-card px-3 py-3 text-center text-xs leading-snug text-fg sm:w-auto sm:px-5 sm:py-3.5 sm:text-sm"
             >
               <GithubIcon size={20} />
               {t("social.github")}
             </a>
           </motion.div>
-          <motion.div variants={scrollRevealStaggerItem}>
+          <motion.div variants={scrollRevealStaggerItem} className="min-w-0">
             <a
               href={siteConfig.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={t("social.linkedinAria")}
-              className="pop-btn bg-accent-3 px-5 py-3.5 text-fg"
+              className="pop-btn flex w-full justify-center bg-accent-3 px-3 py-3 text-center text-xs leading-snug text-fg sm:w-auto sm:px-5 sm:py-3.5 sm:text-sm"
             >
               <LinkedinIcon size={20} />
               {t("social.linkedin")}
