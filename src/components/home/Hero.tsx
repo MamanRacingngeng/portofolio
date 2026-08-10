@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useTranslations, useMessages } from "next-intl";
-import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Image from "next/image";
 import { siteConfig } from "@/data/portfolio";
 import { AccentButton } from "@/components/ui/AccentButton";
@@ -26,35 +26,23 @@ export function Hero() {
     bio: string;
   };
   const taglineLines = hero.taglineLines;
-  const sectionRef = useRef<HTMLElement>(null);
   const [bioVisible, setBioVisible] = useState(false);
 
   const { scrollY } = useScroll();
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end start"],
-  });
 
   useMotionValueEvent(scrollY, "change", (value) => {
     if (value > 48) setBioVisible(true);
   });
 
-  const textY = useTransform(scrollYProgress, [0, 1], [0, -56]);
-  const badgeY = useTransform(scrollYProgress, [0, 1], [0, -20]);
-  const photoY = useTransform(scrollYProgress, [0, 1], [0, -88]);
-  const photoScale = useTransform(scrollYProgress, [0, 1], [1, 1.06]);
-  const taglineX = useTransform(scrollYProgress, [0, 1], [0, -28]);
-
   return (
     <section
-      ref={sectionRef}
       className={cn(
         "page-section relative overflow-x-clip pt-14 sm:pt-20 lg:pt-24",
         siteConfig.showWavyPolkaDivider ? "pb-0" : "pb-14 sm:pb-16 lg:pb-20",
       )}
     >
       <div className="relative mx-auto max-w-6xl">
-        <motion.div style={{ y: badgeY }} className="mt-6 sm:mt-10">
+        <div className="mt-6 sm:mt-10">
           <motion.div
             initial={false}
             animate={{ opacity: 1, y: 0, rotate: 0 }}
@@ -73,11 +61,10 @@ export function Hero() {
               {t("badge")}
             </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
 
         <div className="relative">
-          <motion.div
-            style={{ y: textY }}
+          <div
             className="min-w-0 sm:max-w-[calc(100%-17.5rem)] md:max-w-[calc(100%-19rem)] lg:max-w-[calc(100%-21rem)]"
           >
             <motion.div {...spaceFloat(9, 0.4)}>
@@ -111,9 +98,9 @@ export function Hero() {
             </motion.div>
 
             <motion.div
-              style={{ x: taglineX }}
               initial={false}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={revealViewport}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="mt-5 max-w-xl border-l-[5px] border-accent-2 pl-4 sm:mt-6 sm:pl-5"
             >
@@ -125,14 +112,13 @@ export function Hero() {
                 ))}
               </p>
             </motion.div>
-          </motion.div>
+          </div>
 
           <motion.div
-            style={{ y: photoY, scale: photoScale }}
             initial={false}
-            animate={{ opacity: 1, rotate: 0 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ delay: 0.12, type: "spring", stiffness: 90, damping: 14 }}
-            className="relative z-0 mx-auto mb-8 mt-10 w-full max-w-[280px] shrink-0 will-change-transform sm:absolute sm:right-0 sm:bottom-0 sm:mx-0 sm:mb-0 sm:mt-0 sm:w-[260px] md:w-[280px] lg:w-[300px]"
+            className="relative z-0 mx-auto mb-8 mt-10 w-full max-w-[280px] shrink-0 sm:absolute sm:right-0 sm:bottom-0 sm:mx-0 sm:mb-0 sm:mt-0 sm:w-[260px] md:w-[280px] lg:w-[300px]"
           >
             <div className="group/profile relative">
               <div

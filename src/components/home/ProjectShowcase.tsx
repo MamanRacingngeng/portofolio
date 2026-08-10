@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { getFeaturedProjects, type ProjectItem } from "@/data/projects";
 import { Link } from "@/i18n/navigation";
 import { revealViewport } from "@/lib/animations";
@@ -163,40 +163,19 @@ export function ProjectShowcase() {
   const tProjects = useTranslations("projects.items");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const mounted = useHasMounted();
-  const sectionRef = useRef<HTMLElement>(null);
-  const reduceMotion = useReducedMotion();
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
-
-  const stackY = useTransform(
-    scrollYProgress,
-    [0, 1],
-    reduceMotion ? [0, 0] : [90, -90],
-  );
-  const stackRotateX = useTransform(
-    scrollYProgress,
-    [0, 1],
-    reduceMotion ? [GROUP_ROTATE_X, GROUP_ROTATE_X] : [GROUP_ROTATE_X + 10, GROUP_ROTATE_X - 4],
-  );
-  const stackRotateY = useTransform(
-    scrollYProgress,
-    [0, 1],
-    reduceMotion ? [GROUP_ROTATE_Y, GROUP_ROTATE_Y] : [GROUP_ROTATE_Y - 5, GROUP_ROTATE_Y + 6],
-  );
 
   const groupSize = getGroupSize(featuredProjects.length);
   const stageWidth = groupSize.width + OPTICAL_OFFSET_X + 120;
   const stageHeight = groupSize.height + 140;
   const { containerRef, scale } = useShowcaseScale(stageWidth);
+  const tiltStyle = {
+    width: groupSize.width + OPTICAL_OFFSET_X,
+    height: groupSize.height + OPTICAL_OFFSET_Y,
+    transform: `rotateX(${GROUP_ROTATE_X}deg) rotateY(${GROUP_ROTATE_Y}deg) translateZ(0)`,
+  } as const;
 
   return (
-    <section
-      ref={sectionRef}
-      className="page-section relative isolate overflow-x-clip pt-10 pb-20 sm:pt-12 sm:pb-24"
-    >
+    <section className="page-section relative isolate overflow-x-clip pt-10 pb-20 sm:pt-12 sm:pb-24">
       <div className="mx-auto max-w-3xl text-center">
         <motion.p
           initial={false}
@@ -277,15 +256,10 @@ export function ProjectShowcase() {
                   perspectiveOrigin: "50% 45%",
                 }}
               >
-                <motion.div className={cn("relative", mounted && "stack-float")} style={{ y: stackY }}>
-                  <motion.div
+                <div className={cn("relative", mounted && "stack-float")}>
+                  <div
                     className="relative [transform-style:preserve-3d] [backface-visibility:hidden]"
-                    style={{
-                      width: groupSize.width + OPTICAL_OFFSET_X,
-                      height: groupSize.height + OPTICAL_OFFSET_Y,
-                      rotateX: stackRotateX,
-                      rotateY: stackRotateY,
-                    }}
+                    style={tiltStyle}
                   >
                     {featuredProjects.map((project, index) => (
                       <ProjectCard
@@ -298,8 +272,8 @@ export function ProjectShowcase() {
                         enableMotion={mounted}
                       />
                     ))}
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
