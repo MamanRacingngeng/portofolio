@@ -178,7 +178,7 @@ export function ProjectShowcase() {
     <section className="page-section relative isolate overflow-x-clip pt-10 pb-20 sm:pt-12 sm:pb-24">
       <div className="mx-auto max-w-3xl text-center">
         <motion.p
-          initial={false}
+          initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={revealViewport}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
@@ -196,7 +196,7 @@ export function ProjectShowcase() {
           <motion.p
             custom={0.04}
             variants={lineReveal}
-            initial={false}
+            initial="hidden"
             whileInView="visible"
             viewport={revealViewport}
           >
@@ -206,7 +206,7 @@ export function ProjectShowcase() {
           <motion.p
             custom={0.1}
             variants={lineReveal}
-            initial={false}
+            initial="hidden"
             whileInView="visible"
             viewport={revealViewport}
             className="mt-0.5 sm:mt-1"
@@ -219,7 +219,7 @@ export function ProjectShowcase() {
           <motion.p
             custom={0.16}
             variants={lineReveal}
-            initial={false}
+            initial="hidden"
             whileInView="visible"
             viewport={revealViewport}
             className="mt-0.5 sm:mt-1"
@@ -256,7 +256,13 @@ export function ProjectShowcase() {
                   perspectiveOrigin: "50% 45%",
                 }}
               >
-                <div className={cn("relative", mounted && "stack-float")}>
+                <motion.div
+                  className={cn("relative", mounted && "stack-float")}
+                  initial={{ opacity: 0, y: 36 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={revealViewport}
+                  transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
+                >
                   <div
                     className="relative [transform-style:preserve-3d] [backface-visibility:hidden]"
                     style={tiltStyle}
@@ -273,7 +279,7 @@ export function ProjectShowcase() {
                       />
                     ))}
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

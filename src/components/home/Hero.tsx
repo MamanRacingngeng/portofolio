@@ -155,7 +155,7 @@ export function Hero() {
 
         <motion.div
           variants={scrollRevealStaggerContainer}
-          initial={false}
+          initial="hidden"
           whileInView="visible"
           viewport={revealViewport}
           className="relative z-0 mt-5 flex flex-wrap items-center gap-3 sm:mt-6 sm:gap-4"

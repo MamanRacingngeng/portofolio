@@ -81,7 +81,7 @@ export function Timeline() {
 
           <motion.div
             variants={scrollRevealStaggerContainer}
-            initial={false}
+            initial="hidden"
             whileInView="visible"
             viewport={revealViewport}
             className="space-y-8 sm:space-y-9"

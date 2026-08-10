@@ -8,7 +8,7 @@ import { techItems, type TechItem } from "@/data/portfolio";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { TechDetailModal } from "@/components/shared/TechDetailModal";
 import { cn } from "@/lib/utils";
-import { revealViewport } from "@/lib/animations";
+import { revealViewport, scrollRevealSoftStaggerContainer, scrollRevealSoftStaggerItem } from "@/lib/animations";
 
 interface TechGridProps {
   title?: string;
@@ -16,26 +16,9 @@ interface TechGridProps {
   variant?: "strip" | "grid";
 }
 
-const techItemReveal = {
-  hidden: { opacity: 0, y: 16 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring" as const,
-      stiffness: 140,
-      damping: 18,
-    },
-  },
-};
+const techItemReveal = scrollRevealSoftStaggerItem;
 
-const techItemStagger = {
-  hidden: { opacity: 1 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.03, delayChildren: 0.02 },
-  },
-};
+const techItemStagger = scrollRevealSoftStaggerContainer;
 
 function TechLogo({ tech, large }: { tech: TechItem; large?: boolean }) {
   const scale = tech.logoScale ?? 1;
@@ -144,7 +127,7 @@ export function TechGrid({
 
         <motion.ul
           variants={techItemStagger}
-          initial={false}
+          initial="hidden"
           whileInView="visible"
           viewport={revealViewport}
           className={cn(

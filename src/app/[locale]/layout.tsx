@@ -12,6 +12,7 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { MotionProvider } from "@/components/providers/MotionProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import "../globals.css";
 
 const outfit = Outfit({
@@ -56,6 +57,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <MotionProvider>
+              <ScrollProgress />
               <Navbar />
               <main className="relative z-0 min-h-screen overflow-x-clip bg-bg">{children}</main>
               <Footer />
