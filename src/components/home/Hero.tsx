@@ -42,31 +42,27 @@ export function Hero() {
       )}
     >
       <div className="relative mx-auto max-w-6xl">
-        <div className="mt-6 sm:mt-10">
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ type: "spring", stiffness: 120, damping: 14 }}
-            className="relative inline-block"
-          >
-            <motion.span
-              aria-hidden
-              {...spaceFloatGentle(12, 0.2)}
-              className="pointer-events-none absolute -right-2 -top-2 z-10 h-4 w-4 rounded-full border-[3px] border-border bg-accent-2 shadow-[2px_2px_0_var(--border)] sm:-right-3 sm:-top-3 sm:h-5 sm:w-5"
-            />
-            <motion.div
-              {...spaceFloatTilt(8, 0)}
-              className="sticker mb-10 inline-block bg-accent-3 px-4 py-2 text-xs font-black uppercase tracking-widest text-fg sm:mb-12 sm:text-sm"
-            >
-              {t("badge")}
-            </motion.div>
-          </motion.div>
-        </div>
-
         <div className="relative">
-          <div
-            className="min-w-0 sm:max-w-[calc(100%-17.5rem)] md:max-w-[calc(100%-19rem)] lg:max-w-[calc(100%-21rem)]"
-          >
+          <div className="min-w-0 sm:max-w-[calc(100%-17.5rem)] md:max-w-[calc(100%-19rem)] lg:max-w-[calc(100%-21rem)] sm:pt-6 md:pt-8 lg:pt-10">
+            <motion.div
+              initial={false}
+              animate={{ opacity: 1, y: 0, rotate: 0 }}
+              transition={{ type: "spring", stiffness: 120, damping: 14 }}
+              className="relative inline-block"
+            >
+              <motion.span
+                aria-hidden
+                {...spaceFloatGentle(12, 0.2)}
+                className="pointer-events-none absolute -right-2 -top-2 z-10 h-4 w-4 rounded-full border-[3px] border-border bg-accent-2 shadow-[2px_2px_0_var(--border)] sm:-right-3 sm:-top-3 sm:h-5 sm:w-5"
+              />
+              <motion.div
+                {...spaceFloatTilt(8, 0)}
+                className="sticker mb-10 inline-block bg-accent-3 px-4 py-2 text-xs font-black uppercase tracking-widest text-fg sm:mb-12 sm:text-sm"
+              >
+                {t("badge")}
+              </motion.div>
+            </motion.div>
+
             <motion.div {...spaceFloat(9, 0.4)}>
               <motion.h1
                 initial={false}
