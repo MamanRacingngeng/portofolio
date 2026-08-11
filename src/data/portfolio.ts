@@ -10,9 +10,9 @@ export const siteConfig = {
   profileImage: "/images/profile.png",
   resumeUrl: "/cv",
   cvPdfUrl: "/CV.pdf",
-  cvFileName: "CV_Rahman_Nendhiarto.pdf",
+  cvFileName: "CV_Rahman_Nendhiarto_Terbaru.pdf",
   resumePdfUrl: "/Resume.pdf",
-  resumeFileName: "Resume.pdf",
+  resumeFileName: "Resume_Rahman_Nendhiarto_New.pdf",
   social: {
     github: "https://github.com/MamanRacingngeng",
     linkedin: "https://www.linkedin.com/in/rahmanarto",
