@@ -2,7 +2,7 @@
  "meta": {
  "home": {
     "title": "RAHMAN NENDHIARTO — Data Scientist & Software Developer",
-    "description": "Portofolio Rahman Nendhiarto — Data Scientist dan Software Developer yang membangun aplikasi berbasis ML dan solusi web yang scalable."
+    "description": "Portofolio Rahman Nendhiarto — profesional Sains Data dan Pengembangan Perangkat Lunak yang membangun aplikasi berbasis ML dan solusi web yang scalable."
  },
  "projects": {
  "title": "Proyek — RAHN.",
@@ -56,7 +56,7 @@
       "membangun produk digital yang andal",
       "dengan ilmu data dan pengembangan perangkat lunak."
     ],
-    "bio": "Saya membangun produk digital berbasis data dengan menggabungkan data science, machine learning, dan pengembangan perangkat lunak untuk mengubah data menjadi solusi praktis. Pekerjaan saya mencakup proses pengembangan dari eksplorasi data dan feature engineering hingga pengembangan model, evaluasi, dan deployment ke aplikasi web yang dapat digunakan. Berbekal pengalaman langsung dalam riset machine learning, analitik data, dan pengembangan full-stack, saya menjembatani kesenjangan antara model analitis dan produk digital di dunia nyata. Saya membangun model prediktif, dashboard interaktif, dan aplikasi web modern menggunakan Python, TensorFlow, Next.js, React, dan Laravel. Saya percaya nilai sebuah model tidak hanya terletak pada metrik evaluasinya — melainkan seberapa efektif model tersebut diubah menjadi solusi digital yang andal dan bermanfaat.",
+    "bio": "Profesional Sains Data dan Pengembangan Perangkat Lunak yang berfokus pada Machine Learning, Deep Learning, dan pengembangan perangkat lunak berbasis AI. Berpengalaman merancang model prediktif, mengembangkan aplikasi cerdas, dan membangun solusi web yang scalable melalui riset, pengalaman profesional, dan proyek perangkat lunak. Passionate menciptakan produk digital yang andal, maintainable, dan berpusat pada pengguna untuk menyelesaikan tantangan nyata.",
  "exploreProjects": "Lihat Proyek",
  "viewCv": "Lihat CV dan Resume",
  "downloadCv": "Unduh CV",
@@ -124,32 +124,32 @@
  ],
  "details": {
  "suma-briket": {
- "period": "Jul 2026 – Sekarang",
+ "period": "Jul 2026 – Agu 2026 · Remote",
  "role": "Web Developer",
  "organization": "PT Suma Briket Premium · Lampung, Indonesia",
  "project": "Website Korporat",
- "description": "Merancang, mengembangkan, dan mendeploy website korporat perusahaan menggunakan Next.js, React.js, Tailwind CSS, dan Vercel. Membangun antarmuka responsif dan berpusat pada pengguna untuk profil perusahaan, showcase produk, proses produksi, dan saluran komunikasi pelanggan sambil mengoptimalkan performa website, aksesibilitas, kesiapan SEO, dan kompatibilitas lintas perangkat. Berkontribusi memperkuat kehadiran digital perusahaan dan mendukung inisiatif pemasaran internasional melalui platform web modern yang scalable."
+ "description": "Memimpin pengembangan dan deployment website korporat perusahaan untuk memperkuat kehadiran digital dan mendukung inisiatif pemasaran domestik maupun internasional. Berkolaborasi dengan stakeholder untuk menerjemahkan kebutuhan bisnis menjadi platform web modern yang berpusat pada pengguna sambil memastikan usability, aksesibilitas, kesiapan SEO, dan kompatibilitas lintas perangkat. Menghadirkan solusi scalable yang meningkatkan branding perusahaan dan engagement pelanggan."
  },
  "ml-research": {
- "period": "Jan 2025 – Sekarang",
+ "period": "Jan 2025 – Jun 2026 · On-site",
  "role": "Machine Learning Researcher",
  "organization": "Universitas Ahmad Dahlan · Yogyakarta, Indonesia",
  "project": "UdaraCast · Prediksi Kualitas Udara PM2.5",
- "description": "Melaksanakan proyek riset skripsi di bawah supervisi dosen untuk mengembangkan sistem forecasting kualitas udara PM2.5 berbasis AI. Mengelola workflow machine learning end-to-end, termasuk pengumpulan data, preprocessing, exploratory data analysis, feature engineering, predictive modeling berbasis LSTM, optimasi hyperparameter menggunakan Sine Cosine Algorithm (SCA), dan evaluasi model dengan metrik RMSE, MAPE, dan R². Berkolaborasi dengan dosen pembimbing dan mengintegrasikan model prediksi yang dioptimalkan ke aplikasi web UdaraCast menggunakan Laravel dan MySQL. Mencapai RMSE 0.1042, MAPE 0.8847, dan skor R² 0.9787, menunjukkan performa prediksi yang kuat dan integrasi yang sukses ke aplikasi berbasis AI."
+ "description": "Melaksanakan riset skripsi di bawah supervisi dosen untuk mengembangkan sistem forecasting kualitas udara PM2.5 berbasis AI. Mengelola siklus riset secara lengkap, dari perumusan masalah dan eksperimen hingga validasi model dan deployment. Berkolaborasi dengan dosen pembimbing untuk mengintegrasikan model prediksi yang dioptimalkan ke aplikasi web UdaraCast, mencapai RMSE 0.1042, MAPE 0.8847, dan R² 0.9787, menunjukkan performa prediksi yang kuat dan aplikabilitas praktis."
  },
  "istana-sayur": {
- "period": "Feb 2025 – Sekarang",
+ "period": "Feb 2025 – Jun 2026 · Remote",
  "role": "Lead Developer and Project Manager",
  "organization": "Istana Sayur Buah · Manokwari, Indonesia",
  "project": "Platform E-Commerce",
- "description": "Memimpin pengembangan end-to-end platform e-commerce siap bisnis, dari analisis kebutuhan hingga deployment. Mengelola perencanaan proyek, mengkoordinasikan aktivitas pengembangan, dan mensupervisi implementasi teknis sambil merancang arsitektur sistem, manajemen katalog produk, alur belanja, integrasi database, dan antarmuka responsif menggunakan Laravel, MySQL, JavaScript, dan Bootstrap. Menghadirkan solusi digital commerce yang andal sambil meningkatkan kolaborasi stakeholder dan mendukung digitalisasi bisnis."
+ "description": "Memimpin pengiriman end-to-end platform e-commerce siap bisnis dengan mengelola perencanaan proyek, koordinasi pengembangan, eksekusi teknis, dan deployment. Bekerja erat dengan stakeholder untuk menyelaraskan tujuan bisnis dengan solusi teknis sambil memastikan kualitas proyek dan ketepatan waktu. Berhasil menghadirkan platform digital commerce yang scalable, meningkatkan efisiensi operasional, dan mempercepat transformasi digital klien."
  },
  "bbkb-intern": {
- "period": "Okt 2025 – Jan 2026",
+ "period": "Okt 2025 – Jan 2026 · On-site",
  "role": "Full Stack Developer Intern",
  "organization": "Kementerian Perindustrian RI · Yogyakarta, Indonesia",
  "project": "Platform Magang SIMAGANG",
- "description": "Mengembangkan SIMAGANG, sistem informasi pendaftaran dan manajemen magang berbasis web untuk BBSPJIKB Yogyakarta. Mengimplementasikan fungsionalitas frontend dan backend, sistem autentikasi, integrasi database, dan otomasi workflow menggunakan Laravel, MySQL, JavaScript, dan Bootstrap. Berkolaborasi dengan stakeholder untuk menghadirkan aplikasi yang scalable dan berpusat pada pengguna guna merampingkan administrasi magang, mendigitalisasi proses bisnis, dan meningkatkan efisiensi operasional."
+ "description": "Berkontribusi pada pengembangan SIMAGANG, sistem informasi pendaftaran dan manajemen magang berbasis web untuk BBSPJIKB Yogyakarta. Berkolaborasi dengan supervisor dan stakeholder untuk mendigitalisasi administrasi magang melalui penataan pendaftaran peserta, alur manajemen, dan proses administratif. Menghadirkan sistem informasi yang andal yang meningkatkan efisiensi operasional, menstandarkan proses bisnis, dan memperbaiki pengalaman manajemen magang secara keseluruhan."
  }
  }
  },
@@ -445,7 +445,7 @@
  "istana-sayur-buah": {
  "title": "Istana Sayur Buah",
  "description": "Website e-commerce produksi untuk toko sayur dan buah segar di Manokwari — katalog produk berbasis kategori, storytelling brand organik, halaman kepercayaan pelanggan, dan alur belanja responsif dengan brand Freshly. Sempat di-deploy di istanasayurbuah.com; domain sudah expired karena klien tidak melanjutkan pemeliharaan.",
- "detail": "Proyek Klien · E-Commerce · istanasayurbuah.com"
+ "detail": "Proyek Klien · Jan 2025 – Jun 2026 · E-Commerce"
  },
  "exporetrade": {
  "title": "Exporetrade",
@@ -455,27 +455,27 @@
  "suma-briket": {
  "title": "PT Suma Briket Premium",
  "description": "Website perusahaan ekspor bilingual untuk briket arang tempurung kelapa premium — katalog produk BBQ dan shisha, proses produksi, jangkauan ekspor global, dan alur inquiry WhatsApp untuk buyer internasional.",
- "detail": "Proyek Klien · Landing Page Ekspor · Vercel"
+ "detail": "Proyek Klien · Jul 2026 – Agu 2026 · Vercel"
  },
  "samudra-supply": {
  "title": "Samudra Supply",
  "description": "Platform ekspor komoditas Indonesia yang menghubungkan buyer global dengan supplier Indonesia terverifikasi — direktori kurasi, alur inquiry RFQ, 12 kategori komoditas, dan pendaftaran supplier untuk perdagangan B2B siap ekspor.",
- "detail": "Marketplace Ekspor · Direktori Supplier · Vercel"
+ "detail": "Marketplace Ekspor · Nov 2025 – Sekarang · Vercel"
  },
  "cv-studio": {
  "title": "CV Studio",
  "description": "Resume builder profesional dengan template ATS-friendly, form profil fleksibel, job matching, preview live, dan export PDF sekali klik — dioptimalkan untuk mobile, tablet, dan desktop.",
- "detail": "Resume Builder · Template ATS · Vercel"
+ "detail": "Resume Builder · Jul 2026 – Sekarang · Vercel"
  },
  "simagang-bbkb": {
  "title": "SIMAGANG BBKB",
  "description": "Portal pendaftaran dan manajemen magang untuk Balai Besar Kerajinan & Batik Yogyakarta — landing page, alur pendaftaran, lowongan magang, galeri, dan akses demo admin.",
- "detail": "Platform Magang · Kemenperin · Vercel"
+ "detail": "Platform Magang · Okt 2025 – Jan 2026 · Vercel"
  },
  "udaracast": {
  "title": "UdaraCast",
  "description": "Platform informasi kualitas udara untuk prediksi PM2.5 per kota dan tahun, lengkap dengan kategori kesehatan berbasis data Global Air Quality.",
- "detail": "Prediksi Kualitas Udara · Vercel"
+ "detail": "Prediksi Kualitas Udara · Jan 2025 – Jun 2026 · Vercel"
  },
  "kedokploso": {
  "title": "Dusun Kedokploso",
@@ -550,7 +550,7 @@
  "pm25-sca-lstm": {
  "title": "Prediksi PM2.5 Global — SCA-LSTM",
  "description": "Notebook riset tuning LSTM sine-cosine untuk forecasting PM2.5 global — pipeline lengkap dari preprocessing hingga evaluasi RMSE, MAPE, dan R².",
- "detail": "Deep Learning · Prediksi Kualitas Udara"
+ "detail": "Deep Learning · Jan 2025 – Jun 2026"
  },
  "imdb-sentiment-lstm": {
  "title": "Analisis Sentimen IMDB — LSTM",
@@ -640,7 +640,7 @@
  "pertamina-lstm-pipes": {
  "title": "Kehilangan Ketebalan Pipa — Dashboard LSTM",
  "description": "Dashboard studi kasus Kaggle untuk predictive maintenance pipa minyak & gas — diagnostik distribusi dan korelasi, actual vs predicted LSTM, serta analisis residual yang menunjukkan reliabilitas model.",
- "detail": "Studi Kasus Kaggle · LSTM · Plotly"
+ "detail": "Predictive Maintenance · Apr 2025 – Jul 2026 · Plotly"
  },
  "pertamina-rf-pipes": {
  "title": "Analitik Pipa — Dashboard Random Forest",
@@ -2322,7 +2322,7 @@
  },
  "footer": {
  "roles": "Sains Data • Pengembangan Perangkat Lunak",
- "description": "Membangun solusi digital praktis melalui ilmu data, machine learning, dan pengembangan perangkat lunak.",
+ "description": "Merancang model prediktif, aplikasi cerdas, dan solusi web scalable untuk tantangan nyata.",
  "getInTouch": "Get In Touch",
  "marquee": "ENGINEERING IDEAS INTO IMPACTFUL DIGITAL SOLUTIONS",
  "modal": {
@@ -2412,9 +2412,9 @@
  },
  "data-science-training": {
  "title": "Program Pelatihan Data Science",
- "issuer": "Digital Talent Scholarship – Vocational School Graduate Academy",
+ "issuer": "Digital Talent Scholarship – Vocational School Graduate Academy (Komdigi)",
  "period": "September 2025",
- "description": "Menyelesaikan program pelatihan data science berbasis proyek meliputi Python, preprocessing data, feature engineering, machine learning, predictive modeling, TensorFlow, dan evaluasi model melalui implementasi praktis."
+ "description": "Menyelesaikan program pelatihan data science berbasis proyek yang mencakup siklus Data Science lengkap, termasuk preprocessing data, feature engineering, predictive modeling, machine learning, dan evaluasi model menggunakan Python, Pandas, Scikit-learn, dan TensorFlow."
  }
  },
  "research": {
